@@ -761,6 +761,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/nunito-sans@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/nunito-sans@npm:4.5.10"
+  checksum: 148aa29c466efecf0adc9f47028729d1df66668a9ff2a0be2fbcf992d2e90fd290c1e0602e1ca9ba38cc8babf61bf0745139c58cce8f1b83c5f33350ef743c86
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -844,6 +851,7 @@ __metadata:
     "@astrojs/vue": ^1.1.0
     "@commitlint/cli": ^17.1.2
     "@commitlint/config-conventional": ^17.1.0
+    "@fontsource/nunito-sans": ^4.5.10
     astro: ^1.0.0
     astro-vanilla-extract: ^1.1.0
     husky: ^8.0.1

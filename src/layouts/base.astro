@@ -1,4 +1,8 @@
 ---
+import '@styles/reset.css';
+import '@fontsource/nunito-sans';
+import * as styles from './base.css';
+
 export interface Props {
     title: string;
     description?: string;
@@ -21,8 +25,8 @@ const { title, description } = Astro.props;
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
-    <body>
-        <main>
+    <body class={styles.body}>
+        <main class={styles.container}>
             <slot />
         </main>
     </body>
