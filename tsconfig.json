@@ -15,7 +15,8 @@
         "jsx": "preserve",
         "paths": {
             "@styles/*": ["src/styles/*"],
-            "@layouts/*": ["src/layouts/*"]
+            "@layouts/*": ["src/layouts/*"],
+            "@components/*": ["src/components/*"]
         }
     },
     "extends": "astro/tsconfigs/base"
