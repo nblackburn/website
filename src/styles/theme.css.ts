@@ -15,6 +15,7 @@ export const secondaryAccent = createVar();
 export const vars = createGlobalTheme(':root', {
     sizes: {
         nano: calcUnitStyle(1),
+        tiny: calcUnitStyle(2),
         small: calcUnitStyle(4),
         medium: calcUnitStyle(8),
         large: calcUnitStyle(16)
