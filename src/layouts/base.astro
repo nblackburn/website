@@ -2,6 +2,7 @@
 import '@styles/reset.css';
 import '@fontsource/nunito-sans';
 import * as styles from './base.css';
+import { defaultPalette } from '@styles/palettes.css';
 
 export interface Props {
     title: string;
@@ -25,7 +26,7 @@ const { title, description } = Astro.props;
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
-    <body class={styles.body}>
+    <body class:list={[styles.body, defaultPalette]}>
         <main class={styles.container}>
             <slot />
         </main>

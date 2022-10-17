@@ -1,4 +1,4 @@
-import { createGlobalTheme } from '@vanilla-extract/css';
+import { createGlobalTheme, createVar } from '@vanilla-extract/css';
 
 const BASE_UNIT = 'rem';
 const BASE_VALUE = 0.25;
@@ -8,6 +8,9 @@ const calcUnitStyle = (value: number) => {
 
     return `${multValue}${BASE_UNIT}`;
 };
+
+export const primaryAccent = createVar();
+export const secondaryAccent = createVar();
 
 export const vars = createGlobalTheme(':root', {
     sizes: {
