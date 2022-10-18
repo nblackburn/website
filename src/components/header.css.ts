@@ -1,5 +1,5 @@
-import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
+import { vars, containers } from '@styles/theme.css';
 
 export const header = style({
     top: 0,
@@ -23,5 +23,5 @@ export const container = style({
     alignItems: 'center',
     padding: vars.sizes.small,
     justifyContent: 'space-between',
-    maxWidth: vars.containers.xtraLarge
+    maxWidth: containers.xtraLarge
 });

@@ -1,5 +1,5 @@
-import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
+import { vars, containers } from '@styles/theme.css';
 
 export const main = style({
     flex: 1,
@@ -8,5 +8,5 @@ export const main = style({
     display: 'flex',
     flexDirection: 'column',
     padding: vars.sizes.small,
-    maxWidth: vars.containers.xtraLarge
+    maxWidth: containers.xtraLarge
 });

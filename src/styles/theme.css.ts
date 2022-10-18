@@ -12,6 +12,13 @@ const calcUnitStyle = (value: number) => {
 export const primaryAccent = createVar();
 export const secondaryAccent = createVar();
 
+export const containers = {
+    small: '640px',
+    medium: '768px',
+    large: '1024px',
+    xtraLarge: '1280px'
+};
+
 export const breakpoints = {
     small: '(max-width: 640px)',
     medium: '(max-width: 768px)',
@@ -26,12 +33,6 @@ export const vars = createGlobalTheme(':root', {
         small: calcUnitStyle(4),
         medium: calcUnitStyle(8),
         large: calcUnitStyle(16)
-    },
-    containers: {
-        small: '640px',
-        medium: '768px',
-        large: '1024px',
-        xtraLarge: '1280px'
     },
     colors: {
         white: '#ffffff',
