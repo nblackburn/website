@@ -2,6 +2,7 @@
 import '@styles/reset.css';
 import '@fontsource/nunito-sans';
 import * as styles from './base.css';
+import Main from '@components/main.vue';
 import Header from '@components/header.vue';
 import { defaultPalette } from '@styles/palettes.css';
 
@@ -30,8 +31,8 @@ const { title, description } = Astro.props;
     </head>
     <body class:list={[styles.body, defaultPalette]}>
         <Header route={pathname} />
-        <main class={styles.container}>
+        <Main>
             <slot />
-        </main>
+        </Main>
     </body>
 </html>

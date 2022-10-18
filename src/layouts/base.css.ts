@@ -2,6 +2,8 @@ import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const body = style({
+    display: 'flex',
+    flexDirection: 'column',
     fontFamily: 'Nunito Sans',
     color: vars.colors.eerieBlack,
     background: vars.colors.white,
@@ -11,9 +13,4 @@ export const body = style({
             background: vars.colors.richBlack
         }
     }
-});
-
-export const container = style({
-    margin: 'auto',
-    maxWidth: vars.containers.xtraLarge
 });
