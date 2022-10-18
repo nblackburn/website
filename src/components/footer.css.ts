@@ -1,5 +1,5 @@
-import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
+import { vars, breakpoints } from '@styles/theme.css';
 
 export const footer = style({
     marginTop: vars.sizes.small,
@@ -19,7 +19,7 @@ export const container = style({
     justifyContent: 'space-between',
     maxWidth: vars.containers.xtraLarge,
     '@media': {
-        '(max-width: 768px)': {
+        [breakpoints.medium]: {
             flexDirection: 'column'
         }
     }
@@ -27,7 +27,7 @@ export const container = style({
 
 export const copyright = style({
     '@media': {
-        '(max-width: 768px)': {
+        [breakpoints.medium]: {
             marginBottom: vars.sizes.small
         }
     }

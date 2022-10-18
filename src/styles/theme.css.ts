@@ -12,6 +12,13 @@ const calcUnitStyle = (value: number) => {
 export const primaryAccent = createVar();
 export const secondaryAccent = createVar();
 
+export const breakpoints = {
+    small: '(max-width: 640px)',
+    medium: '(max-width: 768px)',
+    large: '(max-width: 1024px)',
+    xtraLarge: '(max-width: 1280px)'
+};
+
 export const vars = createGlobalTheme(':root', {
     sizes: {
         nano: calcUnitStyle(1),
