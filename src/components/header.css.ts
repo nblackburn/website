@@ -1,12 +1,12 @@
 import { style } from '@vanilla-extract/css';
-import { vars, containers } from '@styles/theme.css';
+import { vars, sizes, containers } from '@styles/theme.css';
 
 export const header = style({
     top: 0,
     zIndex: 10,
     position: 'sticky',
+    marginBottom: sizes.small,
     backdropFilter: 'blur(10px)',
-    marginBottom: vars.sizes.small,
     background: `rgba(255 255 255 / 0.9)`,
     borderBottom: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
@@ -20,8 +20,8 @@ export const header = style({
 export const container = style({
     margin: 'auto',
     display: 'flex',
+    padding: sizes.small,
     alignItems: 'center',
-    padding: vars.sizes.small,
     justifyContent: 'space-between',
     maxWidth: containers.xtraLarge
 });

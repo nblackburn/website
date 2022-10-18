@@ -26,14 +26,15 @@ export const breakpoints = {
     xtraLarge: '(max-width: 1280px)'
 };
 
+export const sizes = {
+    nano: calcUnitStyle(1),
+    tiny: calcUnitStyle(2),
+    small: calcUnitStyle(4),
+    medium: calcUnitStyle(8),
+    large: calcUnitStyle(16)
+};
+
 export const vars = createGlobalTheme(':root', {
-    sizes: {
-        nano: calcUnitStyle(1),
-        tiny: calcUnitStyle(2),
-        small: calcUnitStyle(4),
-        medium: calcUnitStyle(8),
-        large: calcUnitStyle(16)
-    },
     colors: {
         white: '#ffffff',
         flame: '#d96226',

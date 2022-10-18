@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { vars, primaryAccent } from '@styles/theme.css';
+import { sizes, primaryAccent } from '@styles/theme.css';
 
 export const navBar = style({
     position: 'relative'
@@ -16,7 +16,7 @@ export const item = style({
     display: 'inline-block',
     selectors: {
         '&:not(&:last-child)': {
-            marginRight: vars.sizes.tiny
+            marginRight: sizes.tiny
         }
     }
 });
@@ -27,7 +27,7 @@ export const link = style({
     textDecoration: 'none',
     borderRadius: '9999px',
     border: `2px transparent solid`,
-    padding: `${vars.sizes.tiny} ${vars.sizes.small}`
+    padding: `${sizes.tiny} ${sizes.small}`
 });
 
 export const linkActive = style({
