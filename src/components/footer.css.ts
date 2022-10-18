@@ -2,7 +2,6 @@ import { style } from '@vanilla-extract/css';
 import { vars, sizes, breakpoints, containers } from '@styles/theme.css';
 
 export const footer = style({
-    marginTop: sizes.small,
     borderTop: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {

@@ -5,7 +5,6 @@ export const header = style({
     top: 0,
     zIndex: 10,
     position: 'sticky',
-    marginBottom: sizes.small,
     backdropFilter: 'blur(10px)',
     background: `rgba(255 255 255 / 0.9)`,
     borderBottom: `1px ${vars.colors.silverChalice} solid`,
