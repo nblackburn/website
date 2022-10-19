@@ -20,16 +20,3 @@ export const item = style({
         }
     }
 });
-
-export const link = style({
-    color: 'inherit',
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    borderRadius: '9999px',
-    border: `2px transparent solid`,
-    padding: `${sizes.tiny} ${sizes.small}`
-});
-
-export const linkActive = style({
-    borderColor: primaryAccent
-});
