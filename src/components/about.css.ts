@@ -28,7 +28,21 @@ export const summary = style({
 
 export const readMore = style({
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'space-between',
+    '@media': {
+        [breakpoints.large]: {
+            flexDirection: 'column'
+        }
+    }
+});
+
+export const socialLinks = style({
+    '@media': {
+        [breakpoints.large]: {
+            margin: 'auto',
+            marginBottom: sizes.small
+        }
+    }
 });
 
 export const image = style({

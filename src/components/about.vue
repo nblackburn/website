@@ -16,6 +16,7 @@
                 </p>
             </div>
             <div :class="styles.readMore">
+                <SocialLinks :class="styles.socialLinks" />
                 <NavLink href="/about">More about me</NavLink>
             </div>
         </div>
@@ -30,9 +31,10 @@
 <script lang="ts">
 import * as styles from './about.css';
 import NavLink from '@components/navLink.vue';
+import SocialLinks from '@components/socialLinks.vue';
 
 export default {
-    components: { NavLink },
+    components: { NavLink, SocialLinks },
 
     setup() {
         return { styles };
