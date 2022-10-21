@@ -1,6 +1,6 @@
 <template>
     <a
-        :class="[styles.navLink, active ? styles.navLinkActive : '']"
+        :class="[styles.navLink, active ? styles.active : '']"
         :href="href"
     >
         <slot />

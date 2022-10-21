@@ -21,7 +21,7 @@ export const navLink = style({
     }
 });
 
-export const navLinkActive = style({
+export const active = style({
     borderColor: primaryAccent,
     '@media': {
         '(prefers-color-scheme: dark)': {
