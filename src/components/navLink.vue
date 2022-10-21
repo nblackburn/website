@@ -1,6 +1,10 @@
 <template>
     <a
-        :class="[styles.navLink, active ? styles.active : '']"
+        :class="[
+            styles.navLink,
+            active ? styles.active : '',
+            icon ? styles.icon : ''
+        ]"
         :href="href"
     >
         <slot />
@@ -17,6 +21,10 @@ export default {
         },
 
         active: {
+            type: Boolean
+        },
+
+        icon: {
             type: Boolean
         }
     },
