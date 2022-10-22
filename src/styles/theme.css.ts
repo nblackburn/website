@@ -31,7 +31,8 @@ export const sizes = {
     tiny: calcUnitStyle(2),
     small: calcUnitStyle(4),
     medium: calcUnitStyle(8),
-    large: calcUnitStyle(16)
+    large: calcUnitStyle(16),
+    xtraLarge: calcUnitStyle(32)
 };
 
 export const vars = createGlobalTheme(':root', {

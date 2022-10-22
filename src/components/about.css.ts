@@ -3,15 +3,19 @@ import { vars, sizes, breakpoints } from '@styles/theme.css';
 
 export const about = style({
     display: 'grid',
-    fontSize: '1.1rem',
+    fontSize: '1.2rem',
     rowGap: sizes.small,
     textAlign: 'justify',
     alignItems: 'center',
-    columnGap: sizes.large,
     paddingTop: sizes.large,
     paddingBottom: sizes.large,
+    columnGap: sizes.xtraLarge,
     gridTemplateColumns: '1fr 1fr',
     '@media': {
+        [breakpoints.large]: {
+            columnGap: sizes.large
+        },
+
         [breakpoints.small]: {
             gridTemplateColumns: '1fr'
         }
@@ -23,7 +27,7 @@ export const detail = style({
 });
 
 export const summary = style({
-    marginBottom: sizes.medium
+    marginBottom: sizes.large
 });
 
 export const readMore = style({
