@@ -58,6 +58,12 @@ export const image = style({
     objectPosition: 'top',
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
-    background: vars.colors.eerieBlack,
-    border: `2px ${vars.colors.eerieBlack} solid`
+    background: vars.colors.silverChalice,
+    border: `2px ${vars.colors.silverChalice} solid`,
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            background: vars.colors.eerieBlack,
+            borderColor: vars.colors.eerieBlack
+        }
+    }
 });
