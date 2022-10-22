@@ -1,14 +1,15 @@
 import { style } from '@vanilla-extract/css';
-import { vars, sizes, primaryAccent } from '@styles/theme.css';
+import { vars, sizes, primaryAccent, secondaryAccent } from '@styles/theme.css';
 
 export const hero = style({
-    height: '30rem',
     display: 'flex',
     fontWeight: 'bold',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: sizes.small,
+    paddingTop: sizes.xtraLarge,
+    paddingBottom: sizes.xtraLarge,
     borderBottom: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
@@ -23,9 +24,16 @@ export const strapLine = style({
 });
 
 export const highlight = style({
-    color: primaryAccent,
     textUnderlineOffset: '8px',
     textDecoration: 'underline',
     textDecorationStyle: 'wavy',
     textDecorationThickness: 'from-font'
+});
+
+export const primary = style({
+    color: primaryAccent
+});
+
+export const secondary = style({
+    color: secondaryAccent
 });
