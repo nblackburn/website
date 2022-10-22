@@ -17,6 +17,7 @@
             "@app/*": ["*"],
             "@styles/*": ["src/styles/*"],
             "@layouts/*": ["src/layouts/*"],
+            "@utilities/*": ["src/utilities/*"],
             "@components/*": ["src/components/*"]
         }
     },

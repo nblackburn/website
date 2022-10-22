@@ -7,3 +7,17 @@ export const defaultPalette = style({
         [secondaryAccent]: vars.colors.hanPurple
     }
 });
+
+export const halloweenPalette = style({
+    vars: {
+        [primaryAccent]: vars.colors.flame,
+        [secondaryAccent]: vars.colors.seaGreen
+    }
+});
+
+export const christmasPalette = style({
+    vars: {
+        [primaryAccent]: vars.colors.venetianRed,
+        [secondaryAccent]: vars.colors.seaGreen
+    }
+});
