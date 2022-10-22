@@ -39,15 +39,15 @@ export const vars = createGlobalTheme(':root', {
     colors: {
         white: '#ffffff',
         flame: '#d96226',
-        seaGreen: '#2d8659',
-        hanPurple: '#611ee6',
+        seaGreen: '#2e8a5b',
+        hanPurple: '#8758e2',
         steelPink: '#c431c4',
         davyGrey: '#4d4d4d',
         richBlack: '#0d0d0d',
         eerieBlack: '#1a1a1a',
-        venetianRed: '#ca1616',
-        ceruleanBlue: '#2b57da',
-        naplesYellow: '#ebcf47',
+        venetianRed: '#d54141',
+        ceruleanBlue: '#2d78c8',
+        naplesYellow: '#857528',
         silverChalice: '#b2b2b2'
     }
 });
