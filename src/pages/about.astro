@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '@layouts/base.astro';
+import PageHeader from '@components/pageHeader.vue';
 
 const title = 'About';
 const description = 'A little bit about myself';
 ---
 
-<BaseLayout title={title} description={description} />
+<BaseLayout title={title} description={description}>
+    <PageHeader title={title} subTitle={description} />
+</BaseLayout>
