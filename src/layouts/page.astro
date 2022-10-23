@@ -5,12 +5,13 @@ import PageHeader from '@components/pageHeader.vue';
 export interface Props {
     title: string;
     subTitle?: string;
+    activePage: string;
 }
 
-const { title, subTitle } = Astro.props;
+const { title, subTitle, activePage } = Astro.props;
 ---
 
-<BaseLayout title={title} description={subTitle}>
+<BaseLayout title={title} description={subTitle} activePage={activePage}>
     <PageHeader title={title} subTitle={subTitle} />
     <slot />
 </BaseLayout>

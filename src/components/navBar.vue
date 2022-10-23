@@ -25,7 +25,7 @@ export default defineComponent({
     },
 
     props: {
-        route: {
+        activePage: {
             type: String,
             default: undefined
         },
@@ -44,9 +44,9 @@ export default defineComponent({
 
     methods: {
         isActive(link: Link) {
-            const route = this.route;
+            const activePage = this.activePage;
 
-            return route === link.href;
+            return activePage === link.id;
         }
     }
 });

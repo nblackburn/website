@@ -57,11 +57,12 @@ const links = [
 ];
 
 const title = 'About';
+const activePage = 'about';
 const groups = groupItems(types, links);
 const subTitle = 'A little bit about myself';
 ---
 
-<SidePanelLayout title={title} subTitle={subTitle}>
+<SidePanelLayout title={title} subTitle={subTitle} activePage={activePage}>
     <Story>
         <Image
             src={rigUrl}

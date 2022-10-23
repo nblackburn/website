@@ -10,12 +10,13 @@ import getPalette from '@utilities/getPalette';
 
 export interface Props {
     title: string;
+    activePage: string;
     description?: string;
 }
 
 const { pathname } = Astro.url;
 const colorPalette = getPalette();
-const { title, description } = Astro.props;
+const { title, description, activePage } = Astro.props;
 const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
 ---
 
@@ -48,7 +49,7 @@ const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
     </head>
     <body class:list={[styles.body, colorPalette]}>
         <Icons />
-        <Header route={pathname} />
+        <Header activePage={activePage} />
         <Main>
             <slot />
         </Main>
