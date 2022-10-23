@@ -1,7 +1,9 @@
 ---
 import Hero from '@components/hero.vue';
 import About from '@components/about.vue';
+import avatarUrl from '@assets/img/me.jpg';
 import BaseLayout from '@layouts/base.astro';
+import { Image } from '@astrojs/image/components';
 
 const title = 'Home';
 const description =
@@ -10,5 +12,14 @@ const description =
 
 <BaseLayout title={title} description={description}>
     <Hero />
-    <About />
+    <About>
+        <Image
+            src={avatarUrl}
+            alt="Nathaniel Blackburn"
+            width={556}
+            height={450}
+            format="webp"
+            slot="image"
+        />
+    </About>
 </BaseLayout>
