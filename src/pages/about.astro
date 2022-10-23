@@ -1,6 +1,6 @@
 ---
-import * as styles from './about.css';
 import rigUrl from '@assets/img/rig.jpg';
+import Story from '@components/story.vue';
 import groupItems from '@utilities/groupItems';
 import { Image } from '@astrojs/image/components';
 import LinkGroups from '@components/linkGroups.vue';
@@ -62,7 +62,7 @@ const subTitle = 'A little bit about myself';
 ---
 
 <SidePanelLayout title={title} subTitle={subTitle}>
-    <div class={styles.image}>
+    <Story>
         <Image
             src={rigUrl}
             alt="My desktop"
@@ -71,35 +71,8 @@ const subTitle = 'A little bit about myself';
             fit="cover"
             position="center"
             format="webp"
+            slot="image"
         />
-    </div>
-    <div class={styles.story}>
-        <p class={styles.paragraph}>
-            I'm Nathaniel, it's nice to see a new face around here.
-        </p>
-        <p class={styles.paragraph}>
-            I created this little place to share a little about what makes
-            me....well me. My story is perhaps a little different from the usual
-            as i am entirely self-taught. You see, i have always had a love for
-            computers. I started my journey at the age of 13 making little tools
-            for people.
-        </p>
-        <p class={styles.paragraph}>
-            Being a developer is not easy, especially when you are self-taught.
-            I have been faced so much rejection that it no longer has an effect
-            on me. But here is the thing, you have to keep going and use it as a
-            driving force. I simply wanted to be here enough that i kept on
-            fighting.
-        </p>
-        <p class={styles.paragraph}>
-            My aim is simple, i love making people happy in any way i can. This
-            website is one of reflection to show off some of those things in the
-            hope that they can reach others.
-        </p>
-        <p class={styles.paragraph}>
-            Have a look around, stay a while and let's build something
-            beautiful....together.
-        </p>
-    </div>
+    </Story>
     <LinkGroups groups={groups} slot="sidepanel" />
 </SidePanelLayout>
