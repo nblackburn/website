@@ -19,11 +19,9 @@
                 <SocialLinks :class="styles.socialLinks" />
             </div>
         </div>
-        <img
-            :class="styles.image"
-            src="/img/me.jpg"
-            alt="Nathaniel Blackburn"
-        />
+        <div :class="styles.image">
+            <slot name="image" />
+        </div>
     </section>
 </template>
 

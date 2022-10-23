@@ -11,11 +11,12 @@
         "forceConsistentCasingInFileNames": true,
         "esModuleInterop": true,
         "strict": true,
-        "types": ["astro/client"],
+        "types": ["@astrojs/image/client"],
         "jsx": "preserve",
         "paths": {
             "@app/*": ["*"],
             "@styles/*": ["src/styles/*"],
+            "@assets/*": ["src/assets/*"],
             "@layouts/*": ["src/layouts/*"],
             "@utilities/*": ["src/utilities/*"],
             "@components/*": ["src/components/*"]
