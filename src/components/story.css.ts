@@ -1,6 +1,11 @@
 import { style } from '@vanilla-extract/css';
 import { vars, sizes } from '@styles/theme.css';
 
+export const story = style({
+    fontSize: '1.2rem',
+    textAlign: 'justify'
+});
+
 export const image = style({
     width: '100%',
     height: '400px',
@@ -19,11 +24,6 @@ export const image = style({
             borderColor: vars.colors.eerieBlack
         }
     }
-});
-
-export const story = style({
-    fontSize: '1.2rem',
-    textAlign: 'justify'
 });
 
 export const paragraph = style({
