@@ -1,10 +1,63 @@
 ---
 import * as styles from './about.css';
 import rigUrl from '@assets/img/rig.jpg';
+import groupItems from '@utilities/groupItems';
 import { Image } from '@astrojs/image/components';
+import LinkGroups from '@components/linkGroups.vue';
 import SidePanelLayout from '@layouts/sidePanel.astro';
 
+const types = [
+    { id: 'music', name: 'Music' },
+    { id: 'development', name: 'Development' },
+    { id: 'design', name: 'Design' },
+    { id: 'tools', name: 'Tools' }
+];
+
+const links = [
+    {
+        title: 'Auturia Keylab 61 Essential',
+        href: 'https://www.arturia.com/products/hybrid-synths/keylab-essential/overview?ref=nblackburn.uk',
+        type: 'music'
+    },
+    {
+        title: 'Bitwig Studio',
+        href: 'https://bitwig.com?ref=nblackburn.uk',
+        type: 'music'
+    },
+    {
+        title: 'Visual Studio Code',
+        href: 'https://code.visualstudio.com?ref=nblackburn.uk',
+        type: 'development'
+    },
+    {
+        title: 'Fork',
+        href: 'https://git-fork.com?ref=nblackburn.uk',
+        type: 'development'
+    },
+    {
+        title: 'Affinity Designer',
+        href: 'https://affinity.serif.com?ref=nblackburn.uk',
+        type: 'design'
+    },
+    {
+        title: 'Figma',
+        href: 'https://figma.com?ref=nblackburn.uk',
+        type: 'design'
+    },
+    {
+        title: 'Notion',
+        href: 'https://notion.so?ref=nblackburn.uk',
+        type: 'tools'
+    },
+    {
+        title: '1Password',
+        href: 'https://1password.com?ref=nblackburn.uk',
+        type: 'tools'
+    }
+];
+
 const title = 'About';
+const groups = groupItems(types, links);
 const subTitle = 'A little bit about myself';
 ---
 
@@ -48,4 +101,5 @@ const subTitle = 'A little bit about myself';
             beautiful....together.
         </p>
     </div>
+    <LinkGroups groups={groups} slot="sidepanel" />
 </SidePanelLayout>
