@@ -6,7 +6,7 @@ export const main = style({
     width: '100%',
     margin: 'auto',
     display: 'flex',
-    padding: sizes.small,
     flexDirection: 'column',
+    padding: `0 ${sizes.small}`,
     maxWidth: containers.xtraLarge
 });
