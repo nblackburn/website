@@ -23,7 +23,10 @@ export type Link = {
     href: string;
 };
 
-const links: Link[] = [{ id: 'home', title: 'Home', href: '/' }];
+const links: Link[] = [
+    { id: 'home', title: 'Home', href: '/' },
+    { id: 'about', title: 'About', href: '/about' }
+];
 
 export default defineComponent({
     props: {
