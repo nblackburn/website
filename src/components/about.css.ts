@@ -59,7 +59,7 @@ export const image = style({
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
     background: vars.colors.silverChalice,
-    border: `2px ${vars.colors.silverChalice} solid`,
+    border: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: vars.colors.eerieBlack,
