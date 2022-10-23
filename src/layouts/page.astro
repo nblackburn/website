@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@layouts/base.astro';
+import PageHeader from '@components/pageHeader.vue';
+
+export interface Props {
+    title: string;
+    subTitle?: string;
+}
+
+const { title, subTitle } = Astro.props;
+---
+
+<BaseLayout title={title} description={subTitle}>
+    <PageHeader title={title} subTitle={subTitle} />
+    <slot />
+</BaseLayout>
