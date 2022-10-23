@@ -67,3 +67,17 @@ export const image = style({
         }
     }
 });
+
+export const title = style({
+    margin: '0 0 0.75rem 0',
+    fontSize: sizes.medium
+});
+
+export const paragraph = style({
+    color: vars.colors.davyGrey,
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            color: vars.colors.silverChalice
+        }
+    }
+});

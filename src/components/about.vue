@@ -2,14 +2,14 @@
     <section :class="styles.about">
         <div :class="styles.detail">
             <div :class="styles.summary">
-                <h2>About me</h2>
-                <p>
+                <h2 :class="styles.title">About me</h2>
+                <p :class="styles.paragraph">
                     My name is Nathaniel and I come from the United Kingdom
                     where it rains quite a lot but don't let that dampen the
                     mood. I specialise in creating experiences which empower
                     people and bring them together for good.
                 </p>
-                <p>
+                <p :class="styles.paragraph">
                     I have over 10 years of experience and am always looking
                     expand my skills. More recently i started learning music and
                     have released a few tracks.
