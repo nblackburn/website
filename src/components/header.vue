@@ -5,7 +5,7 @@
             <a href="/">
                 <Logo />
             </a>
-            <Navbar :links="links" :route="route" />
+            <Navbar :links="links" :active-page="activePage" />
         </div>
     </header>
 </template>
@@ -30,7 +30,7 @@ const links: Link[] = [
 
 export default defineComponent({
     props: {
-        route: {
+        activePage: {
             type: String,
             default: undefined
         }

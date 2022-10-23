@@ -6,11 +6,12 @@ import BaseLayout from '@layouts/base.astro';
 import { Image } from '@astrojs/image/components';
 
 const title = 'Home';
+const activePage = 'home';
 const description =
     'Specialist in experiences which empower and bring people together.';
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} activePage={activePage}>
     <Hero />
     <About>
         <Image
