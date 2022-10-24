@@ -6,6 +6,7 @@ import Main from '@components/main.vue';
 import Icons from '@components/icons.vue';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
+import DynamicPalette from '@components/dynamicPalette.vue';
 import { getActivePalette } from '@utilities/paletteManager';
 
 export interface Props {
@@ -47,6 +48,7 @@ const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
         }
     </head>
     <body class:list={[styles.body, activePalette]}>
+        <DynamicPalette client:load />
         <Icons />
         <Header activePage={activePage} />
         <Main>
