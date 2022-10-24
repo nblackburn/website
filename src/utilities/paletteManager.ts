@@ -5,7 +5,7 @@ import {
     halloweenPalette
 } from '@styles/palettes.css';
 
-export default () => {
+export const getActivePalette = (): string => {
     const now = new Date();
     const currentDate = getDate(now);
     const currentMonth = getMonth(now);

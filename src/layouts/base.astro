@@ -6,7 +6,7 @@ import Main from '@components/main.vue';
 import Icons from '@components/icons.vue';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
-import getPalette from '@utilities/getPalette';
+import { getActivePalette } from '@utilities/paletteManager';
 
 export interface Props {
     title: string;
@@ -14,8 +14,7 @@ export interface Props {
     description?: string;
 }
 
-const { pathname } = Astro.url;
-const colorPalette = getPalette();
+const activePalette = getActivePalette();
 const { title, description, activePage } = Astro.props;
 const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
 ---
@@ -47,7 +46,7 @@ const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
             )
         }
     </head>
-    <body class:list={[styles.body, colorPalette]}>
+    <body class:list={[styles.body, activePalette]}>
         <Icons />
         <Header activePage={activePage} />
         <Main>
