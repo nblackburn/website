@@ -13,11 +13,11 @@ const { title, subTitle, activePage } = Astro.props;
 
 <PageLayout title={title} subTitle={subTitle} activePage={activePage}>
     <div class={styles.sidePanel}>
-        <div class={styles.left}>
+        <section class={styles.left}>
             <slot />
-        </div>
-        <div class={styles.right}>
+        </section>
+        <aside class={styles.right}>
             <slot name="sidepanel" />
-        </div>
+        </aside>
     </div>
 </PageLayout>
