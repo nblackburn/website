@@ -48,6 +48,6 @@ export const vars = createGlobalTheme(':root', {
         venetianRed: '#d54141',
         ceruleanBlue: '#2d78c8',
         naplesYellow: '#857528',
-        silverChalice: '#b2b2b2'
+        silverChalice: '#e5e5e5'
     }
 });
