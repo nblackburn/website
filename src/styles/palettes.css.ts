@@ -21,3 +21,9 @@ export const christmasPalette = style({
         [secondaryAccent]: vars.colors.seaGreen
     }
 });
+
+export const paletteClasses = [
+    defaultPalette,
+    halloweenPalette,
+    christmasPalette
+];
