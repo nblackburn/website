@@ -2,9 +2,9 @@
     <header :class="styles.header">
         <AccentBar />
         <div :class="styles.container">
-            <a href="/">
+            <Link href="/">
                 <Logo />
-            </a>
+            </Link>
             <Navbar :links="links" :active-page="activePage" />
         </div>
     </header>
@@ -14,6 +14,7 @@
 import { defineComponent } from 'vue';
 import * as styles from './header.css';
 import Logo from '@components/logo.vue';
+import Link from '@components/link.vue';
 import Navbar from '@components/navBar.vue';
 import AccentBar from '@components/accentBar.vue';
 
@@ -38,6 +39,7 @@ export default defineComponent({
 
     components: {
         Logo,
+        Link,
         Navbar,
         AccentBar
     },
