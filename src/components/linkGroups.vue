@@ -13,12 +13,12 @@
                     :key="item.id"
                     :class="styles.item"
                 >
-                    <a :href="item.href" :class="styles.link" target="_blank">
+                    <Link :href="item.href" :class="styles.link">
                         <svg width="24" height="24" :class="styles.icon">
                             <use href="#url" />
                         </svg>
                         <span>{{ item.title }}</span>
-                    </a>
+                    </Link>
                 </li>
             </ol>
         </div>
@@ -27,6 +27,7 @@
 
 <script lang="ts">
 import { PropType } from 'vue';
+import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
 
 type Item = {
@@ -42,6 +43,10 @@ type Group = {
 };
 
 export default {
+    components: {
+        Link
+    },
+
     props: {
         groups: {
             type: Array as PropType<Group[]>,
