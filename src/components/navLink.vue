@@ -1,5 +1,5 @@
 <template>
-    <a
+    <Link
         :class="[
             styles.navLink,
             active ? styles.active : '',
@@ -8,16 +8,22 @@
         :href="href"
     >
         <slot />
-    </a>
+    </Link>
 </template>
 
 <script lang="ts">
+import Link from '@components/link.vue';
 import * as styles from './navLink.css';
 
 export default {
+    components: {
+        Link
+    },
+
     props: {
         href: {
-            type: String
+            type: String,
+            required: true
         },
 
         active: {
