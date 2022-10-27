@@ -9,17 +9,21 @@ export const navLink = style({
     textDecoration: 'none',
     borderRadius: '9999px',
     justifyContent: 'center',
+    border: `2px transparent solid`,
     padding: `0.75rem ${sizes.small}`,
     transition: 'border 0.2s ease-in-out',
-    border: `2px ${vars.colors.silverChalice} solid`,
     selectors: {
         '&:hover': {
-            borderColor: primaryAccent
+            borderColor: vars.colors.silverChalice
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            selectors: {
+                '&:hover': {
+                    borderColor: vars.colors.eerieBlack
+                }
+            }
         }
     }
 });
