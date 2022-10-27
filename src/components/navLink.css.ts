@@ -30,9 +30,18 @@ export const navLink = style({
 
 export const active = style({
     borderColor: primaryAccent,
+    selectors: {
+        '&:hover': {
+            borderColor: primaryAccent
+        }
+    },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: primaryAccent
+            selectors: {
+                '&:hover': {
+                    borderColor: primaryAccent
+                }
+            }
         }
     }
 });
