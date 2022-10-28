@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.5.3",
+    "version": "1.6.0",
     "scripts": {
         "start": "astro dev",
         "build": "astro build",
@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@astrojs/image": "^0.11.0",
+        "@astrojs/sitemap": "^1.0.0",
         "@astrojs/vue": "^1.2.1",
         "@fontsource/nunito-sans": "^4.5.10",
         "astro": "^1.6.0",

@@ -1,5 +1,6 @@
 import vue from '@astrojs/vue';
 import image from '@astrojs/image';
+import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import vanillaExtract from 'astro-vanilla-extract';
 
@@ -8,5 +9,6 @@ const imageConfig = {
 };
 
 export default defineConfig({
-    integrations: [vue(), vanillaExtract(), image(imageConfig)]
+    site: 'https://nblackburn.uk',
+    integrations: [vue(), vanillaExtract(), image(imageConfig), sitemap()]
 });
