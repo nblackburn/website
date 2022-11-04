@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "@astrojs/image@npm:0.11.0"
+"@astrojs/image@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "@astrojs/image@npm:0.11.1"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
@@ -47,12 +47,13 @@ __metadata:
     magic-string: ^0.25.9
     mime: ^3.0.0
     slash: ^4.0.0
+    web-streams-polyfill: ^3.2.1
   peerDependencies:
     sharp: ">=0.31.0"
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: 1b3ec3ed2e54844b0c88d03184c86d747c70bc8311dbf43b36969790426859b89490a3b85e45b2ac04379cdd44f6e36cf156160ca5bde0a97322884041566fbc
+  checksum: 035365c6a4840fc51213c9757f7c2bc2835e6db0270918801c9878b5e94f4e0bc40d7c9d1d9ccc7c7964071b485f4c8fd3a16cf3c21fb20d3fe08aa96a78ec44
   languageName: node
   linkType: hard
 
@@ -885,7 +886,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/image": ^0.11.0
+    "@astrojs/image": ^0.11.1
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/vue": ^1.2.1
     "@commitlint/cli": ^17.2.0
@@ -7590,7 +7591,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-streams-polyfill@npm:^3.0.3":
+"web-streams-polyfill@npm:^3.0.3, web-streams-polyfill@npm:^3.2.1":
   version: 3.2.1
   resolution: "web-streams-polyfill@npm:3.2.1"
   checksum: b119c78574b6d65935e35098c2afdcd752b84268e18746606af149e3c424e15621b6f1ff0b42b2676dc012fc4f0d313f964b41a4b5031e525faa03997457da02
