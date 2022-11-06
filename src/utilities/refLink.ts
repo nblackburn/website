@@ -1,11 +1,15 @@
-export const isExternalLink = (link: string): boolean => {
+export const isExternalLink = (link?: string): boolean => {
     const protocols = ['http', 'https'];
+
+    if (!link) {
+        return false;
+    }
 
     return protocols.some((protocol) => link.indexOf(protocol) === 0);
 };
 
-export const buildRefLink = (link: string, ref?: string) => {
-    if (!isExternalLink(link)) {
+export const buildRefLink = (link?: string, ref?: string) => {
+    if (!link || !isExternalLink(link)) {
         return link;
     }
 

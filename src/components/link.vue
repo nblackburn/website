@@ -15,8 +15,7 @@ import { isExternalLink, buildRefLink } from '@utilities/refLink';
 export default {
     props: {
         href: {
-            type: String,
-            required: true
+            type: String
         },
 
         ref: {

@@ -22,8 +22,7 @@ export default {
 
     props: {
         href: {
-            type: String,
-            required: true
+            type: String
         },
 
         active: {
