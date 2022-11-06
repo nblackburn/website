@@ -6,9 +6,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import * as styles from './pageHeader.css';
 
-export default {
+export default defineComponent({
     props: {
         title: {
             type: String
@@ -22,5 +23,5 @@ export default {
     setup() {
         return { styles };
     }
-};
+});
 </script>

@@ -9,10 +9,10 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue';
+import { computed, defineComponent } from 'vue';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
-export default {
+export default defineComponent({
     props: {
         href: {
             type: String
@@ -30,5 +30,5 @@ export default {
 
         return { isExternal, refLink };
     }
-};
+});
 </script>

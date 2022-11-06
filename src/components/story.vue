@@ -30,11 +30,12 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import * as styles from './story.css';
 
-export default {
+export default defineComponent({
     setup() {
         return { styles };
     }
-};
+});
 </script>

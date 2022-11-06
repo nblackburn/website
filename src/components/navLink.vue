@@ -13,10 +13,11 @@
 </template>
 
 <script lang="ts">
-import Link from '@components/link.vue';
+import { defineComponent } from 'vue';
 import * as styles from './navLink.css';
+import Link from '@components/link.vue';
 
-export default {
+export default defineComponent({
     components: {
         Link
     },
@@ -42,5 +43,5 @@ export default {
     setup() {
         return { styles };
     }
-};
+});
 </script>

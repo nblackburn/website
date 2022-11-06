@@ -31,10 +31,10 @@
 </template>
 
 <script lang="ts">
-import { PropType } from 'vue';
 import Link from '@components/link.vue';
 import * as styles from './projectCard.css';
 import { format, parseISO } from 'date-fns';
+import { defineComponent, PropType } from 'vue';
 
 export type Project = {
     url: string;
@@ -45,7 +45,7 @@ export type Project = {
     publishedDate: string;
 };
 
-export default {
+export default defineComponent({
     components: {
         Link
     },
@@ -68,5 +68,5 @@ export default {
 
         return { styles, publishDate };
     }
-};
+});
 </script>

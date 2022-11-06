@@ -15,6 +15,7 @@
 <script lang="ts">
 import * as styles from './socialLinks.css';
 import NavLink from '@components/navLink.vue';
+import { defineComponent } from 'vue';
 
 const socialLinks = [
     { id: 'email', name: 'Email', href: 'mailto:support@nblackburn.uk' },
@@ -40,7 +41,7 @@ const socialLinks = [
     }
 ];
 
-export default {
+export default defineComponent({
     components: {
         NavLink
     },
@@ -48,6 +49,5 @@ export default {
     setup() {
         return { styles, socialLinks };
     }
-};
+});
 </script>
-,

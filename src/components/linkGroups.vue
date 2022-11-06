@@ -26,9 +26,9 @@
 </template>
 
 <script lang="ts">
-import { PropType } from 'vue';
 import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
+import { defineComponent, PropType } from 'vue';
 
 type Item = {
     id: string;
@@ -42,7 +42,7 @@ type Group = {
     items: Item[];
 };
 
-export default {
+export default defineComponent({
     components: {
         Link
     },
@@ -59,5 +59,5 @@ export default {
     setup() {
         return { styles };
     }
-};
+});
 </script>
