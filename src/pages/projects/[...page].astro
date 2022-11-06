@@ -3,6 +3,7 @@ import Link from '@components/link.vue';
 import PageLayout from '@layouts/page.astro';
 import { GetStaticPaths, Page } from 'astro';
 import { Image } from '@astrojs/image/components';
+import Pagination from '@components/pagination.vue';
 import ProjectCard from '@components/projectCard.vue';
 import ProjectList from '@components/projectList.vue';
 
@@ -63,4 +64,5 @@ const subTitle = 'Some of the things i have worked on';
             ))
         }
     </ProjectList>
+    <Pagination links={page.url} />
 </PageLayout>
