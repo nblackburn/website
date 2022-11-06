@@ -11,9 +11,6 @@ export const projectCard = style({
     transition: 'border 0.2s ease-in-out',
     border: `2px ${vars.colors.silverChalice} solid`,
     selectors: {
-        '&:not(:last-child)': {
-            marginBottom: sizes.small
-        },
         '&:hover': {
             borderColor: primaryAccent,
             boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'

@@ -4,6 +4,7 @@ import PageLayout from '@layouts/page.astro';
 import { GetStaticPaths, Page } from 'astro';
 import { Image } from '@astrojs/image/components';
 import ProjectCard from '@components/projectCard.vue';
+import ProjectList from '@components/projectList.vue';
 
 interface Props {
     page: Page;
@@ -45,19 +46,21 @@ const subTitle = 'Some of the things i have worked on';
 ---
 
 <PageLayout title={title} subTitle={subTitle} activePage={activePage}>
-    {
-        page.data.map(({ props }) => (
-            <ProjectCard project={props}>
-                <Link href={props.url} slot="thumbnail">
-                    <Image
-                        src={props.thumbnail}
-                        alt={props.title}
-                        width={768}
-                        height={200}
-                        format="webp"
-                    />
-                </Link>
-            </ProjectCard>
-        ))
-    }
+    <ProjectList>
+        {
+            page.data.map(({ props }) => (
+                <ProjectCard project={props}>
+                    <Link href={props.url} slot="thumbnail">
+                        <Image
+                            src={props.thumbnail}
+                            alt={props.title}
+                            width={768}
+                            height={200}
+                            format="webp"
+                        />
+                    </Link>
+                </ProjectCard>
+            ))
+        }
+    </ProjectList>
 </PageLayout>
