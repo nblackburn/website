@@ -74,10 +74,10 @@ export const title = style({
 });
 
 export const paragraph = style({
-    color: vars.colors.davyGrey,
+    color: vars.colors.sonicSilver,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.silverChalice
+            color: vars.colors.davyGrey
         }
     }
 });

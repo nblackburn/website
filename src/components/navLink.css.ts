@@ -52,7 +52,7 @@ export const icon = style({
 
 export const disabled = style({
     cursor: 'not-allowed',
-    color: vars.colors.silverChalice,
+    color: vars.colors.sonicSilver,
     selectors: {
         '&:hover': {
             borderColor: 'transparent'
@@ -60,7 +60,7 @@ export const disabled = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.eerieBlack,
+            color: vars.colors.davyGrey,
             selectors: {
                 '&:hover': {
                     borderColor: 'transparent'
