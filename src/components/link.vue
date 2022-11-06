@@ -1,15 +1,5 @@
-<template>
-    <a
-        :href="refLink"
-        :rel="isExternal ? 'noopener' : ''"
-        :target="isExternal ? '_blank' : ''"
-    >
-        <slot />
-    </a>
-</template>
-
 <script lang="ts">
-import { computed } from 'vue';
+import { h } from 'vue';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
 export default {
@@ -24,11 +14,23 @@ export default {
         }
     },
 
-    setup(props) {
-        const isExternal = computed(() => isExternalLink(props.href));
-        const refLink = computed(() => buildRefLink(props.href, props.ref));
+    setup(props, { slots }) {
+        const tag = props.href ? 'a' : 'span';
+        const isExternal = isExternalLink(props.href);
+        const href = buildRefLink(props.href, props.ref);
+        const rel = isExternal ? 'noopener' : undefined;
+        const target = isExternal ? '_blank' : undefined;
 
-        return { isExternal, refLink };
+        return () =>
+            h(
+                tag,
+                {
+                    rel,
+                    href,
+                    target
+                },
+                slots.default()
+            );
     }
 };
 </script>
