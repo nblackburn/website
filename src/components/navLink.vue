@@ -2,8 +2,9 @@
     <Link
         :class="[
             styles.navLink,
+            icon ? styles.icon : '',
             active ? styles.active : '',
-            icon ? styles.icon : ''
+            disabled ? styles.disabled : ''
         ]"
         :href="href"
     >
@@ -22,8 +23,7 @@ export default {
 
     props: {
         href: {
-            type: String,
-            required: true
+            type: String
         },
 
         active: {
@@ -31,6 +31,10 @@ export default {
         },
 
         icon: {
+            type: Boolean
+        },
+
+        disabled: {
             type: Boolean
         }
     },

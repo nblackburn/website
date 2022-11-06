@@ -5,7 +5,7 @@ export const pageHeader = style({
     fontSize: '1.2rem',
     textAlign: 'center',
     paddingTop: sizes.large,
-    marginBottom: sizes.medium,
+    marginBottom: sizes.large,
     paddingBottom: sizes.large,
     borderBottom: `1px ${vars.colors.silverChalice} solid`,
     '@media': {

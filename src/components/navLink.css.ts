@@ -49,3 +49,23 @@ export const active = style({
 export const icon = style({
     padding: '0.75rem'
 });
+
+export const disabled = style({
+    cursor: 'not-allowed',
+    color: vars.colors.silverChalice,
+    selectors: {
+        '&:hover': {
+            borderColor: 'transparent'
+        }
+    },
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            color: vars.colors.eerieBlack,
+            selectors: {
+                '&:hover': {
+                    borderColor: 'transparent'
+                }
+            }
+        }
+    }
+});

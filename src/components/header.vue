@@ -26,6 +26,7 @@ export type Link = {
 
 const links: Link[] = [
     { id: 'home', title: 'Home', href: '/' },
+    { id: 'projects', title: 'Projects', href: '/projects' },
     { id: 'about', title: 'About', href: '/about' }
 ];
 
