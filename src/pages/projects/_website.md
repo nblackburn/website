@@ -2,7 +2,7 @@
 title: Personal Website
 publishedDate: 2022-10-23
 url: https://nblackburn.uk
-thumbnail: src/assets/img/projects/thumbnails/website.png
+thumbnail: ./src/assets/img/projects/thumbnails/website.png
 description: My little corner on the internet.
 tags:
     - app
