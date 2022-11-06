@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, defineComponent } from 'vue';
 import { getActivePalette, applyPalette } from '@utilities/paletteManager';
 
-export default {
+export default defineComponent({
     setup() {
         onMounted(() => {
             const bodyElement = document.body;
@@ -15,5 +15,5 @@ export default {
             applyPalette(activePalette, bodyElement);
         });
     }
-};
+});
 </script>

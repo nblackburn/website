@@ -1,8 +1,8 @@
 <script lang="ts">
-import { h } from 'vue';
+import { h, defineComponent } from 'vue';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
-export default {
+export default defineComponent({
     props: {
         href: {
             type: String
@@ -32,5 +32,5 @@ export default {
                 slots.default()
             );
     }
-};
+});
 </script>

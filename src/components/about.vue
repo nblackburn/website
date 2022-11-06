@@ -27,15 +27,16 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import * as styles from './about.css';
 import NavLink from '@components/navLink.vue';
 import SocialLinks from '@components/socialLinks.vue';
 
-export default {
+export default defineComponent({
     components: { SocialLinks, NavLink },
 
     setup() {
         return { styles };
     }
-};
+});
 </script>
