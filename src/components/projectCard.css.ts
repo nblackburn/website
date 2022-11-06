@@ -84,10 +84,10 @@ export const link = style({
 
 export const description = style({
     margin: 0,
-    color: vars.colors.davyGrey,
+    color: vars.colors.sonicSilver,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.silverChalice
+            color: vars.colors.davyGrey
         }
     }
 });

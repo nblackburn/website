@@ -42,10 +42,11 @@ export const vars = createGlobalTheme(':root', {
         seaGreen: '#2e8a5b',
         hanPurple: '#8758e2',
         steelPink: '#c431c4',
-        davyGrey: '#4d4d4d',
+        davyGrey: '#7a7a7a',
         richBlack: '#0d0d0d',
         eerieBlack: '#1a1a1a',
         venetianRed: '#d54141',
+        sonicSilver: '#767575',
         ceruleanBlue: '#2d78c8',
         naplesYellow: '#857528',
         silverChalice: '#e5e5e5'

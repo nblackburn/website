@@ -22,10 +22,12 @@ export const title = style({
 
 export const subTitle = style({
     margin: 0,
-    color: vars.colors.davyGrey,
+    fontSize: '1.2rem',
+    fontWeight: 'normal',
+    color: vars.colors.sonicSilver,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.silverChalice
+            color: vars.colors.davyGrey
         }
     }
 });
