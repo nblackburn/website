@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
         };
     });
 
-    return paginate(mappedProjects, { pageSize: 6 });
+    return paginate(mappedProjects, { pageSize: 4 });
 };
 
 const title = 'Projects';
