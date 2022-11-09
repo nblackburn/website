@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.11.1":
-  version: 0.11.1
-  resolution: "@astrojs/image@npm:0.11.1"
+"@astrojs/image@npm:^0.11.2":
+  version: 0.11.2
+  resolution: "@astrojs/image@npm:0.11.2"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
@@ -53,7 +53,7 @@ __metadata:
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: 035365c6a4840fc51213c9757f7c2bc2835e6db0270918801c9878b5e94f4e0bc40d7c9d1d9ccc7c7964071b485f4c8fd3a16cf3c21fb20d3fe08aa96a78ec44
+  checksum: fb225d2790c7484dde9c68e898c92563819ceef7979d79051716df8ced24d6ef7d06c9c761a2ac58ebfffa7e0c6d44bea8d6e011bc7adcfe8e7601295a57fba7
   languageName: node
   linkType: hard
 
@@ -886,13 +886,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/image": ^0.11.1
+    "@astrojs/image": ^0.11.2
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/vue": ^1.2.1
     "@commitlint/cli": ^17.2.0
     "@commitlint/config-conventional": ^17.2.0
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^1.6.4
+    astro: ^1.6.5
     astro-vanilla-extract: ^1.1.0
     date-fns: ^2.29.3
     husky: ^8.0.2
@@ -1788,9 +1788,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.6.4":
-  version: 1.6.4
-  resolution: "astro@npm:1.6.4"
+"astro@npm:^1.6.5":
+  version: 1.6.5
+  resolution: "astro@npm:1.6.5"
   dependencies:
     "@astrojs/compiler": ^0.29.5
     "@astrojs/language-server": ^0.26.2
@@ -1856,7 +1856,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 05f5da73f8643b2b593ea608ebc8f1816f242d64a9ec769e8a7c3f0fb9dae0d3c1899067dc00506a33217281f2536c5232b84437dedc2161f54ae9c6d5c17494
+  checksum: 9f0ac95494db523e8bfb399a6f3c980eabbec6bac80f7d72c48b8ea2132e43f4125d4d17e8baf3d5591f71c98c3f124a4fad489e7d190ba8a0a99fd3f9ff485e
   languageName: node
   linkType: hard
 
