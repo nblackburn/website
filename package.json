@@ -26,6 +26,6 @@
         "astro-vanilla-extract": "^1.1.0",
         "date-fns": "^2.29.3",
         "sharp": ">=0.31.2",
-        "vue": "^3.2.42"
+        "vue": "^3.2.44"
     }
 }
