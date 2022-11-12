@@ -11,11 +11,11 @@
 </template>
 
 <script lang="ts">
+import { nav } from '@config/nav';
 import { defineComponent } from 'vue';
 import * as styles from './header.css';
 import Logo from '@components/logo.vue';
 import Link from '@components/link.vue';
-import { nav } from '@app/src/config/nav';
 import Navbar from '@components/navBar.vue';
 import AccentBar from '@components/accentBar.vue';
 
