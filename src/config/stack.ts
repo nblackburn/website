@@ -41,12 +41,22 @@ export const stack: StackItem[] = [
     },
     {
         title: 'Affinity Designer',
-        href: 'https://affinity.serif.com',
+        href: 'https://affinity.serif.com/en-gb/designer',
         type: StackType.DESIGN
     },
     {
-        title: 'Figma',
-        href: 'https://figma.com',
+        title: 'Affinity Photo',
+        href: 'https://affinity.serif.com/en-gb/photo',
+        type: StackType.DESIGN
+    },
+    {
+        title: 'Affinity Publisher',
+        href: 'https://affinity.serif.com/en-gb/publisher',
+        type: StackType.DESIGN
+    },
+    {
+        title: 'Stark',
+        href: 'https://www.getstark.co',
         type: StackType.DESIGN
     },
     {
