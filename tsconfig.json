@@ -15,6 +15,7 @@
         "jsx": "preserve",
         "paths": {
             "@app/*": ["*"],
+            "@config/*": ["src/config/*"],
             "@styles/*": ["src/styles/*"],
             "@assets/*": ["src/assets/*"],
             "@layouts/*": ["src/layouts/*"],
