@@ -5,7 +5,7 @@
             <Link href="/">
                 <Logo />
             </Link>
-            <Navbar :links="links" :active-page="activePage" />
+            <Navbar :links="nav" :active-page="activePage" />
         </div>
     </header>
 </template>
@@ -15,20 +15,9 @@ import { defineComponent } from 'vue';
 import * as styles from './header.css';
 import Logo from '@components/logo.vue';
 import Link from '@components/link.vue';
+import { nav } from '@app/src/config/nav';
 import Navbar from '@components/navBar.vue';
 import AccentBar from '@components/accentBar.vue';
-
-export type Link = {
-    id: string;
-    title: string;
-    href: string;
-};
-
-const links: Link[] = [
-    { id: 'home', title: 'Home', href: '/' },
-    { id: 'projects', title: 'Projects', href: '/projects' },
-    { id: 'about', title: 'About', href: '/about' }
-];
 
 export default defineComponent({
     props: {
@@ -46,7 +35,7 @@ export default defineComponent({
     },
 
     setup() {
-        return { styles, links };
+        return { styles, nav };
     }
 });
 </script>
