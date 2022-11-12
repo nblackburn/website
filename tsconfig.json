@@ -14,7 +14,8 @@
         "types": ["@astrojs/image/client"],
         "jsx": "preserve",
         "paths": {
-            "@app/*": ["*"],
+            "@root/*": ["*"],
+            "@app/*": ["src/*"],
             "@config/*": ["src/config/*"],
             "@styles/*": ["src/styles/*"],
             "@assets/*": ["src/assets/*"],

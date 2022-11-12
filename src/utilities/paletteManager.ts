@@ -1,7 +1,7 @@
+import config from '@app/config';
 import { getDate, getMonth } from 'date-fns';
 import {
     paletteClasses,
-    defaultPalette,
     christmasPalette,
     halloweenPalette
 } from '@styles/palettes.css';
@@ -19,7 +19,7 @@ export const getActivePalette = (): string => {
         return christmasPalette;
     }
 
-    return defaultPalette;
+    return config.palette.default;
 };
 
 export const getAppliedPalettes = (element: HTMLElement): string[] => {

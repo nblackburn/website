@@ -1,4 +1,5 @@
 <script lang="ts">
+import config from '@app/config';
 import { h, defineComponent } from 'vue';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
@@ -10,7 +11,7 @@ export default defineComponent({
 
         ref: {
             type: String,
-            default: 'nblackburn.uk'
+            default: config.seo.ref
         }
     },
 

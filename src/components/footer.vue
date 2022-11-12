@@ -13,7 +13,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import * as styles from './footer.css';
-import { version } from '@app/package.json';
+import { version } from '@root/package.json';
 
 export default defineComponent({
     setup() {
