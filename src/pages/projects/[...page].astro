@@ -1,4 +1,5 @@
 ---
+import config from '@app/config';
 import Link from '@components/link.vue';
 import PageLayout from '@layouts/page.astro';
 import { GetStaticPaths, Page } from 'astro';
@@ -37,7 +38,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
         };
     });
 
-    return paginate(mappedProjects, { pageSize: 4 });
+    return paginate(mappedProjects, { pageSize: config.pagination.limit });
 };
 
 const title = 'Projects';
