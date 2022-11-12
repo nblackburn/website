@@ -1,3 +1,9 @@
+import { defaultPalette } from '@styles/palettes.css';
+
+type PaletteConfig = {
+    default: string;
+};
+
 type SEOConfig = {
     ref: string;
 };
@@ -8,6 +14,7 @@ type PaginationConfig = {
 
 interface Config {
     seo: SEOConfig;
+    palette: PaletteConfig;
     pagination: PaginationConfig;
 }
 
@@ -18,6 +25,10 @@ const config: Config = {
 
     pagination: {
         limit: 4
+    },
+
+    palette: {
+        default: defaultPalette
     }
 };
 
