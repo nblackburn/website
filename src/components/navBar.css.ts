@@ -1,5 +1,5 @@
+import { sizes } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
-import { sizes, primaryAccent } from '@styles/theme.css';
 
 export const navBar = style({
     position: 'relative'
