@@ -13,12 +13,15 @@ type PaginationConfig = {
 };
 
 interface Config {
+    url: string;
     seo: SEOConfig;
     palette: PaletteConfig;
     pagination: PaginationConfig;
 }
 
 const config: Config = {
+    url: 'https://nblackburn.uk',
+
     seo: {
         ref: 'nblackburn.uk'
     },
