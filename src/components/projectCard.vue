@@ -32,18 +32,10 @@
 
 <script lang="ts">
 import Link from '@components/link.vue';
+import { Project } from '@config/project';
 import * as styles from './projectCard.css';
 import { format, parseISO } from 'date-fns';
 import { defineComponent, PropType } from 'vue';
-
-export type Project = {
-    url: string;
-    slug: string;
-    title: string;
-    tags: string[];
-    description: string;
-    publishedDate: string;
-};
 
 export default defineComponent({
     components: {
