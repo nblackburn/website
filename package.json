@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.11.0",
+    "version": "1.11.1",
     "scripts": {
         "start": "astro dev",
         "build": "astro build",
@@ -28,5 +28,8 @@
         "date-fns": "^2.29.3",
         "sharp": ">=0.31.2",
         "vue": "^3.2.45"
+    },
+    "resolutions": {
+        "deep-object-diff": "^1.1.9"
     }
 }
