@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.11.5":
-  version: 0.11.5
-  resolution: "@astrojs/image@npm:0.11.5"
+"@astrojs/image@npm:^0.11.6":
+  version: 0.11.6
+  resolution: "@astrojs/image@npm:0.11.6"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
@@ -53,7 +53,7 @@ __metadata:
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: 9e2ed03b69992786f7d28e657d84555a390c3ff04349d02b0f73e1e02a42dfcc76bfe2f55fd10a2ff2e707f687ffff7c4c9f9663238958842f6eeede2cc02bed
+  checksum: 1fdcd109076ad6d396732f3edd571998b72864e9b1883a08b003400c69df5f2115cc3539052a983e94bb00acf0f480ad29988452548c2704976275252c42f275
   languageName: node
   linkType: hard
 
@@ -895,20 +895,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/image": ^0.11.5
+    "@astrojs/image": ^0.11.6
     "@astrojs/rss": ^1.0.3
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/vue": ^1.2.1
     "@commitlint/cli": ^17.2.0
     "@commitlint/config-conventional": ^17.2.0
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^1.6.9
+    astro: ^1.6.10
     astro-vanilla-extract: ^1.1.0
     date-fns: ^2.29.3
     husky: ^8.0.2
     lint-staged: ^13.0.3
     prettier: ^2.7.1
-    sharp: ">=0.31.2"
+    sharp: ^0.31.2
     vue: ^3.2.45
   languageName: unknown
   linkType: soft
@@ -1798,9 +1798,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.6.9":
-  version: 1.6.9
-  resolution: "astro@npm:1.6.9"
+"astro@npm:^1.6.10":
+  version: 1.6.10
+  resolution: "astro@npm:1.6.10"
   dependencies:
     "@astrojs/compiler": ^0.29.15
     "@astrojs/language-server": ^0.28.3
@@ -1865,7 +1865,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 1f420e27f5fc507ad7a6a1d79bb86ebad6c8a1306859ebff2e8465225b089a660151460e992249905c90af96ef15c01830cf74e74fc80953477e1ed5087a1617
+  checksum: 644458cea3e394a15e0a5ea2ffc183ec593d7971bbd4f80fdb213f19c70f15585fd3d75fbffb4dec7781eaa912a4902bb469423d076e3709167ea95d335e1626
   languageName: node
   linkType: hard
 
@@ -6528,7 +6528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:>=0.31.2":
+"sharp@npm:^0.31.2":
   version: 0.31.2
   resolution: "sharp@npm:0.31.2"
   dependencies:

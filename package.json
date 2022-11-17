@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.11.1",
+    "version": "1.11.2",
     "scripts": {
         "start": "astro dev",
         "build": "astro build",
@@ -18,15 +18,15 @@
         "prettier": "^2.7.1"
     },
     "dependencies": {
-        "@astrojs/image": "^0.11.5",
+        "@astrojs/image": "^0.11.6",
         "@astrojs/rss": "^1.0.3",
         "@astrojs/sitemap": "^1.0.0",
         "@astrojs/vue": "^1.2.1",
         "@fontsource/nunito-sans": "^4.5.10",
-        "astro": "^1.6.9",
+        "astro": "^1.6.10",
         "astro-vanilla-extract": "^1.1.0",
         "date-fns": "^2.29.3",
-        "sharp": ">=0.31.2",
+        "sharp": "^0.31.2",
         "vue": "^3.2.45"
     },
     "resolutions": {
