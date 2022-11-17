@@ -31,3 +31,12 @@ export const showSmall = style({
         }
     }
 });
+
+export const hideSmall = style({
+    display: 'block',
+    '@media': {
+        [breakpoints.small]: {
+            display: 'none'
+        }
+    }
+});

@@ -1,7 +1,7 @@
 <template>
     <nav :class="styles.navBar">
         <ol :class="styles.items">
-            <li v-for="link in links" :class="styles.item">
+            <li v-for="link in links" :class="[styles.item, styles.hideSmall]">
                 <NavLink
                     :href="link.href"
                     :key="link.id"
