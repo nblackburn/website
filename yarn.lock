@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.11.4":
-  version: 0.11.4
-  resolution: "@astrojs/image@npm:0.11.4"
+"@astrojs/image@npm:^0.11.5":
+  version: 0.11.5
+  resolution: "@astrojs/image@npm:0.11.5"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
@@ -53,7 +53,7 @@ __metadata:
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: a65493ee04a059bc7a178c861097ee205280f651c3ad20b6aa572bb99f551ef608f771dac86848b2468e85bbde408895fef1b0e10f143c70c6605e93d09c0854
+  checksum: 9e2ed03b69992786f7d28e657d84555a390c3ff04349d02b0f73e1e02a42dfcc76bfe2f55fd10a2ff2e707f687ffff7c4c9f9663238958842f6eeede2cc02bed
   languageName: node
   linkType: hard
 
@@ -895,7 +895,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/image": ^0.11.4
+    "@astrojs/image": ^0.11.5
     "@astrojs/rss": ^1.0.3
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/vue": ^1.2.1
