@@ -100,5 +100,34 @@
                 </g>
             </g>
         </symbol>
+        <symbol id="menu" viewBox="0 0 48 48">
+            <title>Menu</title>
+            <g>
+                <rect
+                    x="2"
+                    y="22"
+                    width="44"
+                    height="4"
+                    stroke="none"
+                    fill="currentColor"
+                ></rect>
+                <rect
+                    x="2"
+                    y="8"
+                    fill="currentColor"
+                    width="44"
+                    height="4"
+                    stroke="none"
+                ></rect>
+                <rect
+                    x="2"
+                    y="36"
+                    fill="currentColor"
+                    width="44"
+                    height="4"
+                    stroke="none"
+                ></rect>
+            </g>
+        </symbol>
     </svg>
 </template>
