@@ -10,6 +10,13 @@
                     >{{ link.title }}</NavLink
                 >
             </li>
+            <li :class="[styles.item, styles.showSmall]">
+                <NavLink href="#" title="Menu" icon>
+                    <svg width="24" height="24">
+                        <use href="#menu" />
+                    </svg>
+                </NavLink>
+            </li>
         </ol>
     </nav>
 </template>
