@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts">
+import { NavItem } from '@config/nav';
 import * as styles from './navBar.css';
-import { Link } from '@components/header.vue';
 import NavLink from '@components/navLink.vue';
 import { defineComponent, PropType } from 'vue';
 
@@ -32,7 +32,7 @@ export default defineComponent({
         },
 
         links: {
-            type: Array as PropType<Link[]>,
+            type: Array as PropType<NavItem[]>,
             default() {
                 return [];
             }
@@ -44,7 +44,7 @@ export default defineComponent({
     },
 
     methods: {
-        isActive(link: Link) {
+        isActive(link: NavItem) {
             const activePage = this.activePage;
 
             return activePage === link.id;
