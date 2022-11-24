@@ -10,9 +10,9 @@
                     people and bring them together for good.
                 </p>
                 <p :class="styles.paragraph">
-                    I have over 10 years of experience and am always looking
-                    expand my skills. More recently i started learning music and
-                    have released a few tracks.
+                    I have over 10 years of experience and keep looking to
+                    expand my skills. Recently I started learning music and have
+                    released a few tracks.
                 </p>
             </div>
             <div :class="styles.readMore">
