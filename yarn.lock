@@ -908,7 +908,7 @@ __metadata:
     "@commitlint/cli": ^17.3.0
     "@commitlint/config-conventional": ^17.3.0
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^1.6.10
+    astro: ^1.6.13
     astro-vanilla-extract: ^1.2.0
     date-fns: ^2.29.3
     husky: ^8.0.2
@@ -1804,9 +1804,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.6.10":
-  version: 1.6.10
-  resolution: "astro@npm:1.6.10"
+"astro@npm:^1.6.13":
+  version: 1.6.13
+  resolution: "astro@npm:1.6.13"
   dependencies:
     "@astrojs/compiler": ^0.29.15
     "@astrojs/language-server": ^0.28.3
@@ -1832,7 +1832,6 @@ __metadata:
     deepmerge-ts: ^4.2.2
     diff: ^5.1.0
     es-module-lexer: ^0.10.5
-    esbuild: ^0.14.43
     execa: ^6.1.0
     fast-glob: ^3.2.11
     github-slugger: ^1.4.0
@@ -1865,13 +1864,13 @@ __metadata:
     typescript: "*"
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-    vite: ~3.2.4
+    vite: ~3.2.5
     vitefu: ^0.2.1
     yargs-parser: ^21.0.1
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 644458cea3e394a15e0a5ea2ffc183ec593d7971bbd4f80fdb213f19c70f15585fd3d75fbffb4dec7781eaa912a4902bb469423d076e3709167ea95d335e1626
+  checksum: 6a1d8f62842ca2cf2efcdcbaf262732c3baae200315e999f9e9efa5aa6b0c196b11355d8cd47531dd66cf8e15559413c612707bca76eaf68b4037840e8401601
   languageName: node
   linkType: hard
 
@@ -3042,7 +3041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.14.0, esbuild@npm:^0.14.43":
+"esbuild@npm:^0.14.0":
   version: 0.14.54
   resolution: "esbuild@npm:0.14.54"
   dependencies:
@@ -7580,9 +7579,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:~3.2.4":
-  version: 3.2.4
-  resolution: "vite@npm:3.2.4"
+"vite@npm:~3.2.5":
+  version: 3.2.5
+  resolution: "vite@npm:3.2.5"
   dependencies:
     esbuild: ^0.15.9
     fsevents: ~2.3.2
@@ -7614,7 +7613,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 0f3e8f89c15809bd6bd8dec54b04b7c9b87374314d00928035f9d70190b4b220e8206b5d77a1e4097a5019cebf7862df4fbc11fbbb35c4f75f359999123d2c25
+  checksum: ad35b7008c2b62a167d1d1a82f0a0c60fa457733f1969e9eedf0b0077f67a7ac74b4c9477e75a397895150f09b6551f0c17841c5b05c34d9fe302bb0b5dc28a8
   languageName: node
   linkType: hard
 
