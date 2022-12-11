@@ -5,6 +5,7 @@ import PageLayout from '@layouts/page.astro';
 import { GetStaticPaths, Page } from 'astro';
 import { Image } from '@astrojs/image/components';
 import Pagination from '@components/pagination.vue';
+import buildProjects from '@utilities/buildProjects';
 import ProjectCard from '@components/projectCard.vue';
 import ProjectList from '@components/projectList.vue';
 
@@ -13,21 +14,9 @@ interface Props {
 }
 
 export const getProjects = async () => {
-    const projects = await Astro.glob('./*.md');
+    const pages = await Astro.glob('./*.md');
 
-    return projects
-        .map((project) => {
-            const { frontmatter } = project;
-
-            return frontmatter;
-        })
-        .sort((a, b) => {
-            if (a.publishedDate === b.publishedDate) {
-                return 0;
-            }
-
-            return a.publishedDate < b.publishedDate ? 1 : -1;
-        });
+    return buildProjects(pages);
 };
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
