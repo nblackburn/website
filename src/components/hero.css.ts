@@ -20,14 +20,31 @@ export const hero = style({
 
 export const strapLine = style({
     margin: 0,
-    fontSize: '3rem'
+    fontSize: '3rem',
+    textShadow: '1px 1px 5px rgb(0 0 0 / 50%)'
 });
 
 export const highlight = style({
+    position: 'relative',
     textUnderlineOffset: '8px',
     textDecoration: 'underline',
     textDecorationStyle: 'wavy',
-    textDecorationThickness: 'from-font'
+    textDecorationThickness: 'from-font',
+    selectors: {
+        '&:before': {
+            top: '50%',
+            left: '50%',
+            opacity: 0.1,
+            width: '300%',
+            height: '700%',
+            content: '\\0020',
+            filter: 'blur(30px)',
+            position: 'absolute',
+            borderRadius: '9999px',
+            background: 'currentcolor',
+            transform: 'translate(-50%, -50%)'
+        }
+    }
 });
 
 export const primary = style({
