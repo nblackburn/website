@@ -30,6 +30,11 @@ export const stack: StackItem[] = [
         type: StackType.MUSIC
     },
     {
+        title: 'Splice',
+        href: 'https://splice.com',
+        type: StackType.MUSIC
+    },
+    {
         title: 'Visual Studio Code',
         href: 'https://code.visualstudio.com',
         type: StackType.DEVELOPMENT
@@ -67,6 +72,16 @@ export const stack: StackItem[] = [
     {
         title: '1Password',
         href: 'https://1password.com',
+        type: StackType.TOOLS
+    },
+    {
+        title: 'Morgen',
+        href: 'https://morgen.so',
+        type: StackType.TOOLS
+    },
+    {
+        title: 'Todoist',
+        href: 'https://todoist.com',
         type: StackType.TOOLS
     }
 ];
