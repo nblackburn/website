@@ -7,11 +7,16 @@
             <div :class="styles.header">
                 <ol :class="styles.tags">
                     <li
-                        :class="styles.tag"
                         v-for="tag in project.tags"
-                        :key="tag"
+                        :class="[
+                            styles.tag,
+                            activeTag === tag.slug ? styles.activeTag : ''
+                        ]"
+                        :key="tag.slug"
                     >
-                        {{ tag }}
+                        <Link :href="tag.url" :class="styles.link">{{
+                            tag.name
+                        }}</Link>
                     </li>
                 </ol>
                 <time
@@ -48,6 +53,10 @@ export default defineComponent({
             default() {
                 return [];
             }
+        },
+
+        activeTag: {
+            type: String
         }
     },
 

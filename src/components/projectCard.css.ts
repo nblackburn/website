@@ -1,5 +1,11 @@
 import { style, globalStyle } from '@vanilla-extract/css';
-import { sizes, vars, breakpoints, primaryAccent } from '@styles/theme.css';
+import {
+    sizes,
+    vars,
+    breakpoints,
+    primaryAccent,
+    secondaryAccent
+} from '@styles/theme.css';
 
 export const projectCard = style({
     display: 'grid',
@@ -108,15 +114,33 @@ export const tag = style({
     borderRadius: '9999px',
     display: 'inline-block',
     padding: `0.2rem 0.75rem`,
+    transition: 'all 0.2s ease-in-out',
     background: vars.colors.silverChalice,
     selectors: {
         '&:not(:last-child)': {
             marginRight: '0.5rem'
+        },
+        '&:hover': {
+            background: secondaryAccent
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: vars.colors.eerieBlack
+        }
+    }
+});
+
+export const activeTag = style({
+    background: secondaryAccent,
+    selectors: {
+        '&:hover': {
+            background: secondaryAccent
+        }
+    },
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            background: secondaryAccent
         }
     }
 });

@@ -1,11 +1,11 @@
 ---
 import config from '@app/config';
 import Link from '@components/link.vue';
+import buildTags from '@utilities/buildTags';
 import PageLayout from '@layouts/page.astro';
 import { GetStaticPaths, Page } from 'astro';
 import { Image } from '@astrojs/image/components';
 import Pagination from '@components/pagination.vue';
-import buildProjects from '@utilities/buildProjects';
 import ProjectCard from '@components/projectCard.vue';
 import ProjectList from '@components/projectList.vue';
 
@@ -13,26 +13,34 @@ interface Props {
     page: Page;
 }
 
-export const getProjects = async () => {
-    const pages = await Astro.glob('./*.md');
+export const getTags = async () => {
+    const pages = await Astro.glob('../../*.md');
 
-    return buildProjects(pages);
+    return buildTags(pages);
 };
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-    const projects = await getProjects();
-    const mappedProjects = projects.map((project) => {
-        return {
-            props: project
-        };
-    });
+    const tags = await getTags();
 
-    return paginate(mappedProjects, { pageSize: config.pagination.limit });
+    return tags.map(({ slug, items }) => {
+        const mappedItems = items.map((item) => {
+            return {
+                props: item,
+                params: { tag: slug }
+            };
+        });
+
+        return paginate(mappedItems, {
+            props: { tag: slug },
+            params: { tag: slug },
+            pageSize: config.pagination.limit
+        });
+    });
 };
 
 const title = 'Projects';
-const { page } = Astro.props;
 const activePage = 'projects';
+const { page, tag } = Astro.props;
 const subTitle = 'Some of the things i have worked on';
 ---
 
@@ -40,7 +48,7 @@ const subTitle = 'Some of the things i have worked on';
     <ProjectList>
         {
             page.data.map(({ props }) => (
-                <ProjectCard project={props}>
+                <ProjectCard project={props} activeTag={tag}>
                     <Link href={props.url} slot="thumbnail">
                         <Image
                             src={props.thumbnail}
