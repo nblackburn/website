@@ -9,13 +9,11 @@
                     <li
                         :class="styles.tag"
                         v-for="tag in project.tags"
-                        :key="tag"
+                        :key="tag.slug"
                     >
-                        <Link
-                            :href="'/projects/tag/' + tag"
-                            :class="styles.link"
-                            >{{ tag }}</Link
-                        >
+                        <Link :href="tag.url" :class="styles.link">{{
+                            tag.name
+                        }}</Link>
                     </li>
                 </ol>
                 <time
