@@ -1,5 +1,11 @@
 import { style, globalStyle } from '@vanilla-extract/css';
-import { sizes, vars, breakpoints, primaryAccent, secondaryAccent } from '@styles/theme.css';
+import {
+    sizes,
+    vars,
+    breakpoints,
+    primaryAccent,
+    secondaryAccent
+} from '@styles/theme.css';
 
 export const projectCard = style({
     display: 'grid',
@@ -121,6 +127,20 @@ export const tag = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: vars.colors.eerieBlack
+        }
+    }
+});
+
+export const activeTag = style({
+    background: secondaryAccent,
+    selectors: {
+        '&:hover': {
+            background: secondaryAccent
+        }
+    },
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            background: secondaryAccent
         }
     }
 });

@@ -31,6 +31,7 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
         });
 
         return paginate(mappedItems, {
+            props: { tag: slug },
             params: { tag: slug },
             pageSize: config.pagination.limit
         });
@@ -38,8 +39,8 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 };
 
 const title = 'Projects';
-const { page } = Astro.props;
 const activePage = 'projects';
+const { page, tag } = Astro.props;
 const subTitle = 'Some of the things i have worked on';
 ---
 
@@ -47,7 +48,7 @@ const subTitle = 'Some of the things i have worked on';
     <ProjectList>
         {
             page.data.map(({ props }) => (
-                <ProjectCard project={props}>
+                <ProjectCard project={props} activeTag={tag}>
                     <Link href={props.url} slot="thumbnail">
                         <Image
                             src={props.thumbnail}
