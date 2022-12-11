@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { emerge } from '@styles/animations.css';
 import { vars, sizes, primaryAccent, secondaryAccent } from '@styles/theme.css';
 
 export const hero = style({
@@ -42,6 +43,7 @@ export const highlight = style({
             position: 'absolute',
             borderRadius: '9999px',
             background: 'currentcolor',
+            animation: `${emerge} 1s ease-in`,
             transform: 'translate(-50%, -50%)'
         }
     }
