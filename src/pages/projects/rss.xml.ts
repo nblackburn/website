@@ -7,9 +7,9 @@ import buildProjects from '@utilities/buildProjects';
 type GlobImport = Record<string, Record<string, any>>;
 
 export const getProjects = async () => {
+    const globImport: GlobImport = import.meta.glob('./*.md', { eager: true });
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const pages: Record<string, any>[] = Object.values(globImport);
-    const globImport: GlobImport = import.meta.glob('./*.md', { eager: true });
 
     return buildProjects(pages);
 };
