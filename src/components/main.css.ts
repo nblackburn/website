@@ -6,6 +6,7 @@ export const main = style({
     width: '100%',
     margin: 'auto',
     display: 'flex',
+    overflow: 'hidden',
     flexDirection: 'column',
     marginBottom: sizes.large,
     padding: `0 ${sizes.small}`,
