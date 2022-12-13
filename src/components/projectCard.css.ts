@@ -18,7 +18,7 @@ export const projectCard = style({
     border: `2px ${vars.colors.silverChalice} solid`,
     selectors: {
         '&:hover': {
-            borderColor: primaryAccent,
+            borderColor: secondaryAccent,
             boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
         }
     },
