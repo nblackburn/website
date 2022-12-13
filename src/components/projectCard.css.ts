@@ -13,7 +13,9 @@ export const projectCard = style({
     rowGap: sizes.small,
     columnGap: sizes.small,
     borderRadius: sizes.small,
+    backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
+    background: 'rgba(255 255 255 / 30%)',
     transition: 'border 0.2s ease-in-out',
     border: `2px ${vars.colors.silverChalice} solid`,
     selectors: {
@@ -24,6 +26,7 @@ export const projectCard = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
+            background: 'rgba(0 0 0 / 30%)',
             borderColor: vars.colors.eerieBlack
         },
         [breakpoints.small]: {
