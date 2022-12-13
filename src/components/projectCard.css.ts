@@ -17,7 +17,7 @@ export const projectCard = style({
     gridTemplateColumns: '1fr 3fr',
     background: 'rgba(255 255 255 / 30%)',
     transition: 'border 0.2s ease-in-out',
-    border: `2px ${vars.colors.silverChalice} solid`,
+    border: `1px ${vars.colors.silverChalice} solid`,
     selectors: {
         '&:hover': {
             borderColor: secondaryAccent,
