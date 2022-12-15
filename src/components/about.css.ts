@@ -8,9 +8,11 @@ export const about = style({
     textAlign: 'justify',
     alignItems: 'center',
     paddingTop: sizes.large,
+    marginBottom: sizes.large,
     paddingBottom: sizes.large,
     columnGap: sizes.xtraLarge,
     gridTemplateColumns: '1fr 1fr',
+    borderBottom: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         [breakpoints.large]: {
             columnGap: sizes.large
@@ -18,6 +20,10 @@ export const about = style({
 
         [breakpoints.small]: {
             gridTemplateColumns: '1fr'
+        },
+
+        '(prefers-color-scheme: dark)': {
+            borderColor: vars.colors.eerieBlack
         }
     }
 });

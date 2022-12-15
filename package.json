@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.19.2",
+    "version": "1.20.0",
     "scripts": {
         "start": "astro dev",
         "build": "astro build",
