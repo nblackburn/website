@@ -6,6 +6,7 @@
                     :href="link.href"
                     :key="link.id"
                     :active="isActive(link)"
+                    secondary
                     >{{ link.title }}</NavLink
                 >
             </li>

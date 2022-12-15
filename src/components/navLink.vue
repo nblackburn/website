@@ -4,7 +4,8 @@
             styles.navLink,
             icon ? styles.icon : '',
             active ? styles.active : '',
-            disabled ? styles.disabled : ''
+            disabled ? styles.disabled : '',
+            secondary ? styles.secondary : styles.primary
         ]"
         :href="href"
     >
@@ -36,6 +37,10 @@ export default defineComponent({
         },
 
         disabled: {
+            type: Boolean
+        },
+
+        secondary: {
             type: Boolean
         }
     },
