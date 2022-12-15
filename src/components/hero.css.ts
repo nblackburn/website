@@ -33,6 +33,7 @@ export const highlight = style({
     textDecorationThickness: 'from-font',
     selectors: {
         '&:before': {
+            zIndex: -1,
             top: '50%',
             left: '50%',
             opacity: 0.1,

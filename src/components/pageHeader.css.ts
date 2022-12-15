@@ -27,6 +27,7 @@ export const highlight = style({
     textShadow: '1px 1px 5px rgb(0 0 0 / 50%)',
     selectors: {
         '&:before': {
+            zIndex: -1,
             top: '50%',
             left: '50%',
             opacity: 0.1,
