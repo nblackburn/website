@@ -1,23 +1,28 @@
 <template>
     <nav :class="styles.navBar">
-        <ol :class="styles.items">
-            <li v-for="link in links" :class="[styles.item, styles.hideSmall]">
-                <NavLink
-                    :href="link.href"
-                    :key="link.id"
-                    :active="isActive(link)"
-                    secondary
-                    >{{ link.title }}</NavLink
-                >
-            </li>
-            <li :class="[styles.item, styles.showSmall]">
-                <NavLink href="#" title="Menu" icon>
+        <input type="checkbox" id="toggle" :class="styles.toggle" />
+        <div :class="styles.tray">
+            <ol :class="styles.items">
+                <li v-for="link in links" :class="styles.item">
+                    <NavLink
+                        :href="link.href"
+                        :key="link.id"
+                        :active="isActive(link)"
+                        secondary
+                        >{{ link.title }}</NavLink
+                    >
+                </li>
+            </ol>
+        </div>
+        <div :class="[styles.item, styles.showSmall]">
+            <label for="toggle" :class="styles.toggleLabel">
+                <NavLink title="Menu" icon>
                     <svg width="24" height="24">
                         <use href="#menu" />
                     </svg>
                 </NavLink>
-            </li>
-        </ol>
+            </label>
+        </div>
     </nav>
 </template>
 

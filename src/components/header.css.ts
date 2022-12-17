@@ -19,6 +19,7 @@ export const header = style({
 export const container = style({
     margin: 'auto',
     display: 'flex',
+    position: 'relative',
     padding: sizes.small,
     alignItems: 'center',
     justifyContent: 'space-between',
