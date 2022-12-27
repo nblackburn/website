@@ -908,7 +908,7 @@ __metadata:
     "@commitlint/cli": ^17.3.0
     "@commitlint/config-conventional": ^17.3.0
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^1.6.15
+    astro: ^1.7.2
     astro-vanilla-extract: ^1.2.2
     date-fns: ^2.29.3
     husky: ^8.0.2
@@ -1804,9 +1804,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.6.15":
-  version: 1.6.15
-  resolution: "astro@npm:1.6.15"
+"astro@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "astro@npm:1.7.2"
   dependencies:
     "@astrojs/compiler": ^0.31.0
     "@astrojs/language-server": ^0.28.3
@@ -1830,8 +1830,9 @@ __metadata:
     cookie: ^0.5.0
     debug: ^4.3.4
     deepmerge-ts: ^4.2.2
+    devalue: ^4.2.0
     diff: ^5.1.0
-    es-module-lexer: ^0.10.5
+    es-module-lexer: ^1.1.0
     execa: ^6.1.0
     fast-glob: ^3.2.11
     github-slugger: ^1.4.0
@@ -1870,7 +1871,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: d5085560c432c634d67849b0d590be743a35b68d337f7c2b3d51fa548eea6b03231ec7a94ffdaad7512df8c27469083d86b2cb6e1e400d5e489eb8ccee86964a
+  checksum: c79502af52cb1713655cb11cd8823cf027479e81f4d6f205be710729c071f35e2a1a145d14f8e6ed491e47dc6dd58a7ffc9c32fab5df86adb26850e17c5e07fe
   languageName: node
   linkType: hard
 
@@ -2622,6 +2623,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"devalue@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "devalue@npm:4.2.0"
+  checksum: 29f29f72255b6330030773e02def96aa118dc410f5f2d2d389d674068bd2a698668421a0d2176d7c98e7941cbe5d535a251002d589ecc222f6e2b16783351b3d
+  languageName: node
+  linkType: hard
+
 "diff@npm:^4.0.1":
   version: 4.0.2
   resolution: "diff@npm:4.0.2"
@@ -2738,10 +2746,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^0.10.5":
-  version: 0.10.5
-  resolution: "es-module-lexer@npm:0.10.5"
-  checksum: d2f9debd9d913323322095934653e0558bb8220177645eb76d316b4afd911e8d83ffee0b748b0faa9f3ce1560db3eee4a0ac68d6c2f750c11f4250adce84cf02
+"es-module-lexer@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "es-module-lexer@npm:1.1.0"
+  checksum: 3e9f5019b69c6b2f04eb8478c4fdb4ed72cb8b4c97511b5dd39c1f498386ed8f5083c32067c15efcfabc7e8460cb65ed4627dd32405475715a898009922f41fa
   languageName: node
   linkType: hard
 
