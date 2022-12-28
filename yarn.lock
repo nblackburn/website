@@ -137,12 +137,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@astrojs/rss@npm:1.2.1"
+"@astrojs/rss@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@astrojs/rss@npm:2.0.0"
   dependencies:
     fast-xml-parser: ^4.0.8
-  checksum: b531da26d8b2fdab43e81ea0c5d2fe7c04043635ad67c2ab1f0f77850aee24c7a56038f787c99a8e57743ade7d34414d171cd36b07f87780cd46e6c95d470b53
+  checksum: 82db559099b6e867c242a7cda891ad3cf8c43896ac98e8f932c33325dae328497e9ac035f34a41ca32eb1ca125d8f960c8e6f070d72aecf32fce52f1a04cb13b
   languageName: node
   linkType: hard
 
@@ -902,7 +902,7 @@ __metadata:
   resolution: "@nblackburn/website@workspace:."
   dependencies:
     "@astrojs/image": ^0.12.1
-    "@astrojs/rss": ^1.2.1
+    "@astrojs/rss": ^2.0.0
     "@astrojs/sitemap": ^1.0.0
     "@astrojs/vue": ^1.2.2
     "@commitlint/cli": ^17.3.0
