@@ -908,7 +908,7 @@ __metadata:
     "@commitlint/cli": ^17.3.0
     "@commitlint/config-conventional": ^17.3.0
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^1.8.0
+    astro: ^1.9.1
     astro-vanilla-extract: ^1.2.2
     date-fns: ^2.29.3
     husky: ^8.0.2
@@ -1813,9 +1813,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.8.0":
-  version: 1.8.0
-  resolution: "astro@npm:1.8.0"
+"astro@npm:^1.9.1":
+  version: 1.9.1
+  resolution: "astro@npm:1.9.1"
   dependencies:
     "@astrojs/compiler": ^0.31.0
     "@astrojs/language-server": ^0.28.3
@@ -1846,7 +1846,7 @@ __metadata:
     estree-walker: ^3.0.1
     execa: ^6.1.0
     fast-glob: ^3.2.11
-    github-slugger: ^1.4.0
+    github-slugger: ^2.0.0
     gray-matter: ^4.0.3
     html-entities: ^2.3.3
     html-escaper: ^3.0.3
@@ -1882,7 +1882,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 2cb66863687c81ffb4f9511e610f4a2df80ebc76d50cffbd04007b44fd81027c179ecf41576a4add00368fa8fe3367433503b0379727b51f980bd4653ae73ca2
+  checksum: befc8ebff7ce3cfd772e73431190878546eb831b0748abe7dfa1924bb1c97dcc2902f179afdf899ec950830fb4b4030edbac048e70a60999c9585aa57369c978
   languageName: node
   linkType: hard
 
@@ -3585,6 +3585,13 @@ __metadata:
   version: 1.4.0
   resolution: "github-slugger@npm:1.4.0"
   checksum: 4f52e7a21f5c6a4c5328f01fe4fe13ae8881fea78bfe31f9e72c4038f97e3e70d52fb85aa7633a52c501dc2486874474d9abd22aa61cbe9b113099a495551c6b
+  languageName: node
+  linkType: hard
+
+"github-slugger@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "github-slugger@npm:2.0.0"
+  checksum: 250375cde2058f21454872c2c79f72c4637340c30c51ff158ca4ec71cbc478f33d54477d787a662f9207aeb095a2060f155bc01f15329ba8a5fb6698e0fc81f8
   languageName: node
   linkType: hard
 
