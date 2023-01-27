@@ -23,8 +23,8 @@
         "@astrojs/sitemap": "^1.0.0",
         "@astrojs/vue": "^1.2.2",
         "@fontsource/nunito-sans": "^4.5.10",
-        "astro": "^1.9.2",
-        "astro-vanilla-extract": "^1.2.2",
+        "astro": "^2.0.2",
+        "astro-vanilla-extract": "^2.0.0",
         "date-fns": "^2.29.3",
         "sharp": "^0.31.3",
         "vue": "^3.2.45"
