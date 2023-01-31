@@ -20,7 +20,7 @@
     "dependencies": {
         "@astrojs/image": "^0.12.1",
         "@astrojs/rss": "^2.0.0",
-        "@astrojs/sitemap": "^1.0.0",
+        "@astrojs/sitemap": "^1.0.1",
         "@astrojs/vue": "^1.2.2",
         "@fontsource/nunito-sans": "^4.5.10",
         "astro": "^1.9.2",
