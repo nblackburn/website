@@ -29,10 +29,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@astrojs/compiler@npm:1.0.1"
-  checksum: 1ccbe6258c03e74020e15ff654425a1d4fa97ec9763f357b9007bceffece6935c1fe2fd3e385550ede995e411be0b02140208eebd12f30a54ae6898d0f315182
+"@astrojs/compiler@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@astrojs/compiler@npm:1.1.0"
+  checksum: f31ea14ff1ab9dc9021c6a37529caa9cb1bc34ce7c9904817db09afafc17c03910313f4c80692552a62c05c75845c01a1d0060a2c4e803e42e0253f3b3ac7b4a
   languageName: node
   linkType: hard
 
@@ -1174,7 +1174,7 @@ __metadata:
     "@commitlint/cli": ^17.4.2
     "@commitlint/config-conventional": ^17.4.2
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^2.0.5
+    astro: ^2.0.9
     astro-vanilla-extract: ^2.0.0
     date-fns: ^2.29.3
     husky: ^8.0.3
@@ -1984,11 +1984,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "astro@npm:2.0.5"
+"astro@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "astro@npm:2.0.9"
   dependencies:
-    "@astrojs/compiler": ^1.0.1
+    "@astrojs/compiler": ^1.1.0
     "@astrojs/language-server": ^0.28.3
     "@astrojs/markdown-remark": ^2.0.1
     "@astrojs/telemetry": ^2.0.0
@@ -2042,7 +2042,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: e586d62cedac488ba5424ff7048f983b64cc02d51de3caeb53c7aae0bdb008f3e920c8ad92d29d2c6a02b8930a897f20abecf0b60e93d892585088dba21524c2
+  checksum: 0e59b21ce55a4cfc0a23b587effd8fd591c5b8ec4698bc4c96debbbe3dda5140d01ddd57912d7bfd8d628401231a253385275d46f7823e7fc41cb80af5b04bc0
   languageName: node
   linkType: hard
 
