@@ -21,11 +21,9 @@
                         >
                     </li>
                 </ol>
-                <time
-                    :class="styles.publishedDate"
-                    :datetime="project.data.pubDate"
-                    >{{ publishDate }}</time
-                >
+                <time :class="styles.publishedDate" :datetime="isoDate">{{
+                    pubDate
+                }}</time>
             </div>
             <h3 :class="styles.title">
                 <Link :class="styles.link" :href="project.data.url">{{
@@ -41,6 +39,7 @@
 import Link from '@components/link.vue';
 import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
+import { format, formatISO } from 'date-fns';
 import { defineComponent, PropType } from 'vue';
 import type { CollectionEntry } from 'astro:content';
 
@@ -64,9 +63,10 @@ export default defineComponent({
 
     setup(props) {
         const { project } = props;
-        const publishDate = project.data.pubDate;
+        const isoDate = formatISO(project.data.pubDate);
+        const pubDate = format(project.data.pubDate, 'do MMM, yyyy');
 
-        return { styles, publishDate, slugify };
+        return { styles, pubDate, isoDate, slugify };
     }
 });
 </script>
