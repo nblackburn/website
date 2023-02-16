@@ -9,6 +9,6 @@ const imageConfig = {
 };
 
 export default defineConfig({
-    site: 'https://nblackburn.uk',
+    site: 'https://nblackburn.uk/',
     integrations: [vue(), vanillaExtract(), image(imageConfig), sitemap()]
 });
