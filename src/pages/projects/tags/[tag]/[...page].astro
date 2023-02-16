@@ -1,34 +1,48 @@
 ---
 import config from '@app/config';
 import Link from '@components/link.vue';
-import buildTags from '@utilities/buildTags';
 import PageLayout from '@layouts/page.astro';
 import { GetStaticPaths, Page } from 'astro';
+import { getCollection } from 'astro:content';
 import { Image } from '@astrojs/image/components';
 import Pagination from '@components/pagination.vue';
 import ProjectCard from '@components/projectCard.vue';
 import ProjectList from '@components/projectList.vue';
+import slugify from '@root/src/utilities/slugify';
 
 interface Props {
     page: Page;
 }
 
-export const getTags = async () => {
-    const pages = await Astro.glob('../../*.md');
-
-    return buildTags(pages);
-};
-
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-    const tags = await getTags();
+    const uniqueTags: string[] = [];
+    const projects = await getCollection('project');
 
-    return tags.map(({ slug, items }) => {
-        const mappedItems = items.map((item) => {
-            return {
-                props: item,
-                params: { tag: slug }
-            };
+    projects.forEach((project) => {
+        const data = project.data;
+
+        data.tags.forEach((tag) => {
+            if (!uniqueTags.includes(tag)) {
+                uniqueTags.push(tag);
+            }
         });
+    });
+
+    return uniqueTags.map((tag) => {
+        const slug = slugify(tag);
+        const mappedItems = projects
+            .filter((project) => {
+                const data = project.data;
+                const slugs = data.tags.map((tag) => slugify(tag));
+
+                return slugs.includes(slug);
+            })
+            .map((project) => {
+                return {
+                    props: project,
+                    params: { tag: slug }
+                };
+            });
 
         return paginate(mappedItems, {
             props: { tag: slug },
@@ -49,10 +63,10 @@ const subTitle = 'Some of the things i have worked on';
         {
             page.data.map(({ props }) => (
                 <ProjectCard project={props} activeTag={tag}>
-                    <Link href={props.url} slot="thumbnail">
+                    <Link href={props.data.url} slot="thumbnail">
                         <Image
-                            src={props.thumbnail}
-                            alt={props.title}
+                            src={props.data.thumbnail}
+                            alt={props.data.title}
                             width={768}
                             height={200}
                             fit="outside"

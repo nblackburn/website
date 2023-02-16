@@ -4,20 +4,14 @@ import Link from '@components/link.vue';
 import About from '@components/about.vue';
 import avatarUrl from '@assets/img/me.jpg';
 import BaseLayout from '@layouts/base.astro';
+import { getCollection } from 'astro:content';
 import { Image } from '@astrojs/image/components';
-import buildProjects from '@utilities/buildProjects';
 import ProjectCard from '@components/projectCard.vue';
 import LatestProject from '@components/latestProject.vue';
 
-export const getProjects = async () => {
-    const pages = await Astro.glob('./projects/*.md');
-
-    return buildProjects(pages);
-};
-
 const title = 'Home';
 const activePage = 'home';
-const projects = await getProjects();
+const projects = await getCollection('project');
 const latestProject = projects[0];
 const description =
     'Specialist in experiences which empower and bring people together.';
@@ -38,10 +32,10 @@ const description =
     </About>
     <LatestProject>
         <ProjectCard project={latestProject}>
-            <Link href={latestProject.url} slot="thumbnail">
+            <Link href={latestProject.data.url} slot="thumbnail">
                 <Image
-                    src={latestProject.thumbnail}
-                    alt={latestProject.title}
+                    src={latestProject.data.thumbnail}
+                    alt={latestProject.data.title}
                     width={768}
                     height={200}
                     fit="outside"
