@@ -21,7 +21,7 @@
                 </ol>
                 <time
                     :class="styles.publishedDate"
-                    :datetime="project.publishedDate"
+                    :datetime="project.pubDate"
                     >{{ publishDate }}</time
                 >
             </div>
@@ -62,10 +62,7 @@ export default defineComponent({
 
     setup(props) {
         const { project } = props;
-        const publishDate = format(
-            parseISO(project.publishedDate),
-            'do MMM, yyyy'
-        );
+        const publishDate = format(parseISO(project.pubDate), 'do MMM, yyyy');
 
         return { styles, publishDate };
     }

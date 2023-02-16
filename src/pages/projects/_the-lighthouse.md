@@ -1,6 +1,6 @@
 ---
 title: The Lighthouse
-publishedDate: 2022-11-20
+pubDate: 2022-11-20
 url: https://soundcloud.com/nblackburn/the-lighthouse
 thumbnail: ./src/assets/img/projects/thumbnails/the-lighthouse.png
 description:

@@ -7,7 +7,7 @@ export type ProjectPage = {
     title: string;
     tags: string[];
     description: string;
-    publishedDate: string;
+    pubDate: string;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,10 +24,10 @@ export default (pages: Record<string, any>[]): Project[] => {
             return { ...frontmatter, tags };
         })
         .sort((a, b) => {
-            if (a.publishedDate === b.publishedDate) {
+            if (a.pubDate === b.pubDate) {
                 return 0;
             }
 
-            return a.publishedDate < b.publishedDate ? 1 : -1;
+            return a.pubDate < b.pubDate ? 1 : -1;
         });
 };
