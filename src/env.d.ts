@@ -1,1 +1,2 @@
-/// <reference types="astro/client" />
+import 'astro/client';
+import '../.astro/types';

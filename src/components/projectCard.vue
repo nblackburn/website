@@ -7,40 +7,42 @@
             <div :class="styles.header">
                 <ol :class="styles.tags">
                     <li
-                        v-for="tag in project.tags"
+                        v-for="tag in project.data.tags"
                         :class="[
                             styles.tag,
-                            activeTag === tag.slug ? styles.activeTag : ''
+                            activeTag === slugify(tag) ? styles.activeTag : ''
                         ]"
-                        :key="tag.slug"
+                        :key="tag"
                     >
-                        <Link :href="tag.url" :class="styles.link">{{
-                            tag.name
-                        }}</Link>
+                        <Link
+                            :href="'/projects/tags/' + slugify(tag)"
+                            :class="styles.link"
+                            >{{ tag }}</Link
+                        >
                     </li>
                 </ol>
                 <time
                     :class="styles.publishedDate"
-                    :datetime="project.publishedDate"
+                    :datetime="project.data.pubDate"
                     >{{ publishDate }}</time
                 >
             </div>
             <h3 :class="styles.title">
-                <Link :class="styles.link" :href="project.url">{{
-                    project.title
+                <Link :class="styles.link" :href="project.data.url">{{
+                    project.data.title
                 }}</Link>
             </h3>
-            <p :class="styles.description">{{ project.description }}</p>
+            <p :class="styles.description">{{ project.data.description }}</p>
         </div>
     </article>
 </template>
 
 <script lang="ts">
 import Link from '@components/link.vue';
-import { Project } from '@config/project';
+import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
-import { format, parseISO } from 'date-fns';
 import { defineComponent, PropType } from 'vue';
+import type { CollectionEntry } from 'astro:content';
 
 export default defineComponent({
     components: {
@@ -49,7 +51,7 @@ export default defineComponent({
 
     props: {
         project: {
-            type: Object as PropType<Project>,
+            type: Object as PropType<CollectionEntry<'project'>>,
             default() {
                 return [];
             }
@@ -62,12 +64,9 @@ export default defineComponent({
 
     setup(props) {
         const { project } = props;
-        const publishDate = format(
-            parseISO(project.publishedDate),
-            'do MMM, yyyy'
-        );
+        const publishDate = project.data.pubDate;
 
-        return { styles, publishDate };
+        return { styles, publishDate, slugify };
     }
 });
 </script>

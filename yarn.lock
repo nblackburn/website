@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/image@npm:^0.14.0":
-  version: 0.14.0
-  resolution: "@astrojs/image@npm:0.14.0"
+"@astrojs/image@npm:^0.15.0":
+  version: 0.15.0
+  resolution: "@astrojs/image@npm:0.15.0"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
     http-cache-semantics: ^4.1.0
@@ -47,12 +47,12 @@ __metadata:
     magic-string: ^0.27.0
     mime: ^3.0.0
   peerDependencies:
-    astro: ^2.0.5
+    astro: ^2.0.12
     sharp: ">=0.31.0"
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: 451b24ed04e5ede2ea164d0e295ff36f1da1d4b6c7a93b9c48dc19b88ae322caa0179965f82982d96a552846dedfe457e3ee55e789ff006c941ac7c930b9c907
+  checksum: c613e9c7d4ce2a8f7763cc1e957fec646ed37641f02d38dc09924ade859b194f7bdd29a869fb304c67dc346b4acb52947ec928bdb8938c822d2fd8d0c65858d7
   languageName: node
   linkType: hard
 
@@ -1167,18 +1167,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/image": ^0.14.0
+    "@astrojs/image": ^0.15.0
     "@astrojs/rss": ^2.1.0
     "@astrojs/sitemap": ^1.0.1
     "@astrojs/vue": ^2.0.1
     "@commitlint/cli": ^17.4.3
     "@commitlint/config-conventional": ^17.4.3
     "@fontsource/nunito-sans": ^4.5.10
-    astro: ^2.0.11
+    astro: ^2.0.12
     astro-vanilla-extract: ^2.0.0
     date-fns: ^2.29.3
     husky: ^8.0.3
-    lint-staged: ^13.1.1
+    lint-staged: ^13.1.2
     prettier: ^2.8.4
     sharp: ^0.31.3
     vue: ^3.2.47
@@ -1984,9 +1984,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^2.0.11":
-  version: 2.0.11
-  resolution: "astro@npm:2.0.11"
+"astro@npm:^2.0.12":
+  version: 2.0.12
+  resolution: "astro@npm:2.0.12"
   dependencies:
     "@astrojs/compiler": ^1.1.0
     "@astrojs/language-server": ^0.28.3
@@ -2042,7 +2042,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: e145866eb270bafe8684d7f2f91013544c0d58e3b29c8910b6d3e0541d3a3c4d195772bd152c08afd07fbba59a4521f41f44b0a7cd24be539f1aa0918d172569
+  checksum: 36e9ec641c6e583a64ba6c3e2a615a9cd1ec5a53aa2fbd3261c6eaab2918e349fc3feb86a5543cc57a5de04da07bd65f8451c13f8fef16eb27b1b5d8b3923dbd
   languageName: node
   linkType: hard
 
@@ -4073,9 +4073,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^13.1.1":
-  version: 13.1.1
-  resolution: "lint-staged@npm:13.1.1"
+"lint-staged@npm:^13.1.2":
+  version: 13.1.2
+  resolution: "lint-staged@npm:13.1.2"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.19
@@ -4092,7 +4092,7 @@ __metadata:
     yaml: ^2.1.3
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 8e5093c7e982a2f6d6449927a40156a812644479df1d2760aee8bf05df3a314e022d8f7e275e57fd61769ee57e3cf7b062ed3c6e4934a63848300b877e269daa
+  checksum: f854ad5c88542b8f06e27f3b4046927a4f3d4a451a04e079526559d819a325762268f65bd2df7156bcc0cb5f531f621c42cdb824b403f537c78305adc9e56a54
   languageName: node
   linkType: hard
 

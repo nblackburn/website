@@ -11,5 +11,5 @@ export type Project = {
     tags: Tag[];
     thumbnail: string;
     description: string;
-    publishedDate: string;
+    pubDate: string;
 };
