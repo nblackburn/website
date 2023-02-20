@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "@astrojs/image": "^0.15.0",
-        "@astrojs/rss": "^2.1.0",
+        "@astrojs/rss": "^2.1.1",
         "@astrojs/sitemap": "^1.0.1",
         "@astrojs/vue": "^2.0.1",
         "@fontsource/nunito-sans": "^4.5.10",
