@@ -121,13 +121,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@astrojs/sitemap@npm:1.0.1"
+"@astrojs/sitemap@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@astrojs/sitemap@npm:1.2.1"
   dependencies:
     sitemap: ^7.1.1
     zod: ^3.17.3
-  checksum: 8a65ab8992914ca1543ec91efe7b18f6056a6d34fc9bc2cce5bcf5e7bb3b565f59a980baec011eba3e8759c9a68f165d6f98a268b40cb1b6f2417f5703948861
+  checksum: 814394cd74e730ddc7cf3fd9efe531f9ab2a4000815e9e257024605647f7c267d4dd6fcd19e4c4aab93d65b62291221b0e1e2fdd76039f2c54b247a0a05a6b4e
   languageName: node
   linkType: hard
 
@@ -1170,7 +1170,7 @@ __metadata:
   dependencies:
     "@astrojs/image": ^0.16.0
     "@astrojs/rss": ^2.3.0
-    "@astrojs/sitemap": ^1.0.1
+    "@astrojs/sitemap": ^1.2.1
     "@astrojs/vue": ^2.1.0
     "@commitlint/cli": ^17.4.4
     "@commitlint/config-conventional": ^17.4.4
