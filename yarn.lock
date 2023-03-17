@@ -147,18 +147,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vue@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@astrojs/vue@npm:2.0.1"
+"@astrojs/vue@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/vue@npm:2.1.0"
   dependencies:
     "@vitejs/plugin-vue": ^4.0.0
     "@vitejs/plugin-vue-jsx": ^3.0.0
     "@vue/babel-plugin-jsx": ^1.1.1
     "@vue/compiler-sfc": ^3.2.39
   peerDependencies:
-    astro: ^2.0.4
+    astro: ^2.1.0
     vue: ^3.2.30
-  checksum: 87b239b3485efaade88c32eee373474ca3148988f7599bc0c3ba3fff89adf273e133a3b7bb8089999ccfdb4c6e12a858a269641bb430ca70c793a44518d48173
+  checksum: 70edca26c7f76a505360f714c7dfa7b3a93d2845f83e5924fe75bd7b610519d74b3202f2a85d2fee2ac3b3a187a4ed9d3be2bd4025ea5a57a77d69aebe18043d
   languageName: node
   linkType: hard
 
@@ -1171,7 +1171,7 @@ __metadata:
     "@astrojs/image": ^0.16.0
     "@astrojs/rss": ^2.3.0
     "@astrojs/sitemap": ^1.0.1
-    "@astrojs/vue": ^2.0.1
+    "@astrojs/vue": ^2.1.0
     "@commitlint/cli": ^17.4.4
     "@commitlint/config-conventional": ^17.4.4
     "@fontsource/nunito-sans": ^4.5.10
