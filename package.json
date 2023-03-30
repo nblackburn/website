@@ -18,7 +18,7 @@
         "prettier": "^2.8.7"
     },
     "dependencies": {
-        "@astrojs/image": "^0.16.2",
+        "@astrojs/image": "^0.16.3",
         "@astrojs/rss": "^2.3.1",
         "@astrojs/sitemap": "^1.2.1",
         "@astrojs/vue": "^2.1.0",
