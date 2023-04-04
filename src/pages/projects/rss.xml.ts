@@ -1,13 +1,16 @@
-import config from '@app/config';
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
-export const get = async () => {
-    const projectsURL = `${config.url}/projects`;
+export async function get(context) {
+    const projects = await getCollection('project');
 
     return rss({
         title: 'Projects',
-        site: projectsURL,
         description: 'Some of the things i have worked on',
-        items: await pagesGlobToRssItems(import.meta.glob('./*.md'))
+        site: `${context.site}/projects`,
+        items: projects.map((project) => ({
+            ...project.data,
+            link: project.data.url
+        }))
     });
-};
+}
