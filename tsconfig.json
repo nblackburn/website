@@ -12,7 +12,6 @@
         "forceConsistentCasingInFileNames": true,
         "esModuleInterop": true,
         "strict": true,
-        "types": ["@astrojs/image/client"],
         "jsx": "preserve",
         "paths": {
             "@root/*": ["*"],
