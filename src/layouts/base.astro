@@ -17,7 +17,6 @@ export interface Props {
 
 const activePalette = getActivePalette();
 const { title, description, activePage } = Astro.props;
-const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
 ---
 
 <html lang="en">
@@ -33,19 +32,6 @@ const pirschCode = import.meta.env.PIRSCH_CODE ?? undefined;
 
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-        <!-- scripts -->
-        {
-            pirschCode && (
-                <script
-                    id="pirschjs"
-                    type="text/javascript"
-                    src="https://api.pirsch.io/pirsch.js"
-                    data-code={pirschCode}
-                    defer
-                />
-            )
-        }
     </head>
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
