@@ -12,7 +12,7 @@
     "packageManager": "yarn@3.2.4",
     "devDependencies": {
         "@commitlint/cli": "^17.6.1",
-        "@commitlint/config-conventional": "^17.6.0",
+        "@commitlint/config-conventional": "^17.6.1",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.1",
         "prettier": "^2.8.7"
