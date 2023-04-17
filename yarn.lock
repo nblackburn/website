@@ -119,9 +119,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@astrojs/vercel@npm:3.2.3"
+"@astrojs/vercel@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "@astrojs/vercel@npm:3.2.4"
   dependencies:
     "@astrojs/webapi": ^2.1.0
     "@vercel/analytics": ^0.1.8
@@ -130,8 +130,8 @@ __metadata:
     set-cookie-parser: ^2.5.1
     web-vitals: ^3.1.1
   peerDependencies:
-    astro: ^2.2.1
-  checksum: f55a8f8ef81d3237c05843f760808937b6638e9f7679b5ee5089c4c9bb001b7e3c0d4366a85d30b90cb5bd6c535395c81b8a4d73e46a3f14df28fa954b631c35
+    astro: ^2.3.0
+  checksum: b507081ae80074ec783a1e03d4b228100baff2fd59f606247707e595f41ebccc5f2bae578c0f43c455da03c27a50d4ea9e4f9cd0fd4192aad67be776149eac28
   languageName: node
   linkType: hard
 
@@ -1177,7 +1177,7 @@ __metadata:
   dependencies:
     "@astrojs/rss": ^2.3.2
     "@astrojs/sitemap": ^1.2.2
-    "@astrojs/vercel": ^3.2.3
+    "@astrojs/vercel": ^3.2.4
     "@astrojs/vue": ^2.1.1
     "@commitlint/cli": ^17.6.1
     "@commitlint/config-conventional": ^17.6.1
