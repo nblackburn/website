@@ -20,7 +20,7 @@
     "dependencies": {
         "@astrojs/rss": "^2.4.0",
         "@astrojs/sitemap": "^1.2.2",
-        "@astrojs/vercel": "^3.2.5",
+        "@astrojs/vercel": "^3.3.0",
         "@astrojs/vue": "^2.1.1",
         "@fontsource/nunito-sans": "^4.5.10",
         "astro": "^2.3.3",
