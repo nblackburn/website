@@ -78,13 +78,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "@astrojs/rss@npm:2.4.0"
+"@astrojs/rss@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@astrojs/rss@npm:2.4.1"
   dependencies:
     fast-xml-parser: ^4.0.8
     kleur: ^4.1.5
-  checksum: 752c59ced4663acab6f9d63b69da63c506dd7f7c4938cc2ea8dc9dc7286302f3ccaa295911d655dd108b6f3456f9a7b43c546d56781548b66d672075fffc2fd9
+  checksum: 86d771d3f6c4e12102fd069c3f479ee367daf0142b04171d7ca4e125261a29faf80ccbfb3209df5c2f25918152dd9111843b0b8e449406dfd9d125d8bce3119c
   languageName: node
   linkType: hard
 
@@ -1189,7 +1189,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/rss": ^2.4.0
+    "@astrojs/rss": ^2.4.1
     "@astrojs/sitemap": ^1.2.2
     "@astrojs/vercel": ^3.3.0
     "@astrojs/vue": ^2.1.1
