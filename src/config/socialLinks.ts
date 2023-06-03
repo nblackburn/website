@@ -20,10 +20,5 @@ export const socialLinks: SocialLink[] = [
         id: 'soundcloud',
         name: 'Soundcloud',
         href: 'https://soundcloud.com/nblackburn'
-    },
-    {
-        id: 'twitter',
-        name: 'Twitter',
-        href: 'https://twitter.com/imnblackburn'
     }
 ];

@@ -78,10 +78,5 @@ export const stack: StackItem[] = [
         title: 'Morgen',
         href: 'https://morgen.so',
         type: StackType.TOOLS
-    },
-    {
-        title: 'Todoist',
-        href: 'https://todoist.com',
-        type: StackType.TOOLS
     }
 ];
