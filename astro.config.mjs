@@ -6,6 +6,7 @@ import vanillaExtract from 'astro-vanilla-extract';
 
 export default defineConfig({
     output: 'static',
+    compressHTML: true,
     site: 'https://nblackburn.uk/',
     integrations: [vue(), vanillaExtract(), sitemap()],
 
