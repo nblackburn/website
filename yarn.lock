@@ -1578,7 +1578,7 @@ __metadata:
     "@commitlint/cli": ^17.6.5
     "@commitlint/config-conventional": ^17.6.5
     "@fontsource/nunito-sans": ^5.0.2
-    astro: ^2.6.1
+    astro: ^2.6.2
     astro-vanilla-extract: ^2.0.0
     date-fns: ^2.30.0
     husky: ^8.0.3
@@ -2462,9 +2462,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "astro@npm:2.6.1"
+"astro@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "astro@npm:2.6.2"
   dependencies:
     "@astrojs/compiler": ^1.4.0
     "@astrojs/internal-helpers": ^0.1.0
@@ -2530,7 +2530,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 33c5a52d4feb7ef7b31e78a52e21ca770d113d73f3d6baa52b8e5fcfe001a17eec957ab3728b0f074ce19ff4dd6b33b09fa0beac0f0ffb010fee241f4460da2c
+  checksum: 523a24f4c39a1833e712e68873430b32315cdc22a6eff9439e37ae1a155f458492fa17714aa0a45eb6ba54195005149a215bdda4378bcc7d7f894f35c8d8add6
   languageName: node
   linkType: hard
 
