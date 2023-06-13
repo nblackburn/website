@@ -1444,10 +1444,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/nunito-sans@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@fontsource/nunito-sans@npm:5.0.2"
-  checksum: d47cc3a29ed168c5e4c61f762f4910eb3c61f6b06b68991242ad85cf9c17d86bacdea6e2c6cb1cb4cfce46bf751e6bd32ef256a06aa771b8ce3c634880a4d316
+"@fontsource/nunito-sans@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@fontsource/nunito-sans@npm:5.0.3"
+  checksum: 4f60ced655a54218b941794d8a693ecb60ffc89e1713ad8c339e77ee67b1445e7057e6bd605e23fb209dcb7fc4ce0dd56eaf76a2f06959295eebb76fa2d9ba54
   languageName: node
   linkType: hard
 
@@ -1577,7 +1577,7 @@ __metadata:
     "@astrojs/vue": ^2.2.1
     "@commitlint/cli": ^17.6.5
     "@commitlint/config-conventional": ^17.6.5
-    "@fontsource/nunito-sans": ^5.0.2
+    "@fontsource/nunito-sans": ^5.0.3
     astro: ^2.6.1
     astro-vanilla-extract: ^2.0.0
     date-fns: ^2.30.0
