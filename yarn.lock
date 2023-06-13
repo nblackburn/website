@@ -1578,7 +1578,7 @@ __metadata:
     "@commitlint/cli": ^17.6.5
     "@commitlint/config-conventional": ^17.6.5
     "@fontsource/nunito-sans": ^5.0.3
-    astro: ^2.6.1
+    astro: ^2.6.3
     astro-vanilla-extract: ^2.0.0
     date-fns: ^2.30.0
     husky: ^8.0.3
@@ -2462,9 +2462,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "astro@npm:2.6.1"
+"astro@npm:^2.6.3":
+  version: 2.6.3
+  resolution: "astro@npm:2.6.3"
   dependencies:
     "@astrojs/compiler": ^1.4.0
     "@astrojs/internal-helpers": ^0.1.0
@@ -2488,7 +2488,7 @@ __metadata:
     cookie: ^0.5.0
     debug: ^4.3.4
     deepmerge-ts: ^4.2.2
-    devalue: ^4.2.0
+    devalue: ^4.3.2
     diff: ^5.1.0
     es-module-lexer: ^1.1.0
     esbuild: ^0.17.18
@@ -2530,7 +2530,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 33c5a52d4feb7ef7b31e78a52e21ca770d113d73f3d6baa52b8e5fcfe001a17eec957ab3728b0f074ce19ff4dd6b33b09fa0beac0f0ffb010fee241f4460da2c
+  checksum: 6030de19f08355803822720fe5fea6d047c386d91b76b422c1cbea4f0ae80b099d14d6130feeb132a770f60b8b91895a66e245a96856e92319908b4eeabb5873
   languageName: node
   linkType: hard
 
@@ -3303,10 +3303,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devalue@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "devalue@npm:4.2.0"
-  checksum: 29f29f72255b6330030773e02def96aa118dc410f5f2d2d389d674068bd2a698668421a0d2176d7c98e7941cbe5d535a251002d589ecc222f6e2b16783351b3d
+"devalue@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "devalue@npm:4.3.2"
+  checksum: 034530e3910a096e528ca6481cd80ab2a21f4a5b813fb896d421eadf52dc969dfbbd5677aa06d28a6448a0f2f7e7d91d9ed88cd9aaa497f4b34e427d80c2a8a5
   languageName: node
   linkType: hard
 
