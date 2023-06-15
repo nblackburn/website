@@ -1579,7 +1579,7 @@ __metadata:
     "@commitlint/config-conventional": ^17.6.5
     "@fontsource/nunito-sans": ^5.0.3
     astro: ^2.6.3
-    astro-vanilla-extract: ^2.0.0
+    astro-vanilla-extract: ^2.1.0
     date-fns: ^2.30.0
     husky: ^8.0.3
     lint-staged: ^13.2.2
@@ -2451,14 +2451,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-vanilla-extract@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "astro-vanilla-extract@npm:2.0.0"
+"astro-vanilla-extract@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "astro-vanilla-extract@npm:2.1.0"
   dependencies:
     "@vanilla-extract/vite-plugin": ^3.4.0
   peerDependencies:
     astro: ^2.0.0
-  checksum: ebf945bbee7fdeec581c007c9e4b6f10741001a34880373622051b815288ef094148e91c65c2415bdc6b3e228cb4a5350f8819f50250dc2503db9fb1022e27c8
+  checksum: a031b59d2d4820f7ef91e0144edd0996be0f2bfce599309618f8a9a77a45b061cbf37d750416076f7b8fbcfafe5d763c24c659ad7e299f72a8415a65583b845b
   languageName: node
   linkType: hard
 
