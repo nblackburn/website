@@ -32,10 +32,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.5.3":
-  version: 1.5.6
-  resolution: "@astrojs/compiler@npm:1.5.6"
-  checksum: a69dba8bd34ce0113baee214869a1183d83a4740a0ff39eddac4ef545f2bcd9071498684ad0f84d6b2368e0cd575d2a4f833d021a1909d2e778bf20fef60b118
+"@astrojs/compiler@npm:^1.6.0":
+  version: 1.6.1
+  resolution: "@astrojs/compiler@npm:1.6.1"
+  checksum: ba13b8cf89dee7b219bdb11ad011176ce174ff2b193f3402a6747137c0e23c1ef444ebf61a12b39ba5ec79b93fdca57147dc9ba05d4325354dcd43c4fee19cd3
   languageName: node
   linkType: hard
 
@@ -1650,7 +1650,7 @@ __metadata:
     "@commitlint/cli": ^17.6.6
     "@commitlint/config-conventional": ^17.6.6
     "@fontsource/nunito-sans": ^5.0.3
-    astro: ^2.8.1
+    astro: ^2.9.2
     astro-vanilla-extract: ^2.1.0
     date-fns: ^2.30.0
     husky: ^8.0.3
@@ -1823,6 +1823,13 @@ __metadata:
   dependencies:
     "@types/ms": "*"
   checksum: 0a7b89d8ed72526858f0b61c6fd81f477853e8c4415bb97f48b1b5545248d2ae389931680b94b393b993a7cfe893537a200647d93defe6d87159b96812305adc
+  languageName: node
+  linkType: hard
+
+"@types/dom-view-transitions@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@types/dom-view-transitions@npm:1.0.1"
+  checksum: 0246473f485cb415e1f14a08e6a0d3ff85f29abdb2b6f7ca7f0247b2a3a7356a8fe8567a4c73b1503dc02ad92c1d9d8a373eb7b8fca9c1dad545dca57423e866
   languageName: node
   linkType: hard
 
@@ -2552,11 +2559,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^2.8.1":
-  version: 2.8.1
-  resolution: "astro@npm:2.8.1"
+"astro@npm:^2.9.2":
+  version: 2.9.2
+  resolution: "astro@npm:2.9.2"
   dependencies:
-    "@astrojs/compiler": ^1.5.3
+    "@astrojs/compiler": ^1.6.0
     "@astrojs/internal-helpers": ^0.1.1
     "@astrojs/language-server": ^1.0.0
     "@astrojs/markdown-remark": ^2.2.1
@@ -2569,6 +2576,7 @@ __metadata:
     "@babel/traverse": ^7.22.5
     "@babel/types": ^7.22.5
     "@types/babel__core": ^7.20.1
+    "@types/dom-view-transitions": ^1.0.1
     "@types/yargs-parser": ^21.0.0
     acorn: ^8.9.0
     boxen: ^6.2.1
@@ -2592,6 +2600,7 @@ __metadata:
     kleur: ^4.1.4
     magic-string: ^0.27.0
     mime: ^3.0.0
+    network-information-types: ^0.1.1
     ora: ^6.3.1
     p-limit: ^4.0.0
     path-to-regexp: ^6.2.1
@@ -2607,7 +2616,7 @@ __metadata:
     typescript: "*"
     unist-util-visit: ^4.1.2
     vfile: ^5.3.7
-    vite: ^4.3.9
+    vite: ^4.4.6
     vitefu: ^0.2.4
     which-pm: ^2.0.0
     yargs-parser: ^21.1.1
@@ -2619,7 +2628,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: e825abdda4f26edbfb698da580c503476fe974e10fecd15e76026f6c28567add2d10ad1543f9042fbe2321266bd32adab3105066fe4ddbcc4995abc26b44ee12
+  checksum: 3d5320d1ab4674fdcbe16b46538cd562275669339cdddf296db901d3dddff36dee5ed979cd5e4d438e88483faf815db116b59105bd82b17014ad562ecf0ae0f0
   languageName: node
   linkType: hard
 
@@ -5916,6 +5925,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"network-information-types@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "network-information-types@npm:0.1.1"
+  peerDependencies:
+    typescript: ">= 3.0.0"
+  checksum: 14ecc1e24b53fb6895c2920d353299a965d0501952f1e507b9fa9c1cdab7341257957b4c6d5c95e569e855c49f4c6274f69fce4ceb65983235aa7531e70dc3b6
+  languageName: node
+  linkType: hard
+
 "nlcst-to-string@npm:^2.0.0":
   version: 2.0.4
   resolution: "nlcst-to-string@npm:2.0.4"
@@ -6397,14 +6415,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.25":
-  version: 8.4.25
-  resolution: "postcss@npm:8.4.25"
+"postcss@npm:^8.4.26":
+  version: 8.4.27
+  resolution: "postcss@npm:8.4.27"
   dependencies:
     nanoid: ^3.3.6
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 9ed3ab8af43ad5210c28f56f916fd9b8c9f94fbeaebbf645dcf579bc28bdd8056c2a7ecc934668d399b81fedb6128f0c4b299f931e50454964bc911c25a3a0a2
+  checksum: 1cdd0c298849df6cd65f7e646a3ba36870a37b65f55fd59d1a165539c263e9b4872a402bf4ed1ca1bc31f58b68b2835545e33ea1a23b161a1f8aa6d5ded81e78
   languageName: node
   linkType: hard
 
@@ -8019,13 +8037,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.3.9":
-  version: 4.4.3
-  resolution: "vite@npm:4.4.3"
+"vite@npm:^4.4.6":
+  version: 4.4.6
+  resolution: "vite@npm:4.4.6"
   dependencies:
     esbuild: ^0.18.10
     fsevents: ~2.3.2
-    postcss: ^8.4.25
+    postcss: ^8.4.26
     rollup: ^3.25.2
   peerDependencies:
     "@types/node": ">= 14"
@@ -8055,7 +8073,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 2f7c90de35c840ed7f33000d65006053885c0342aa7c19cee7369d7b3d92473a9bae790f910eb3e9900bdb7ca89559a772ee4782f35636ec4e6bd10717e7f5ff
+  checksum: 5a821897f1e03f9786f827acb89e3117a79b8901d184bbc3a2e48d6404b37975a5cdeb6b6969ec24ed1e81d96f1959ed6f9426cbb64501d1e4770bdb20f9c02f
   languageName: node
   linkType: hard
 
