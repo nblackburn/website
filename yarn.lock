@@ -39,13 +39,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@astrojs/internal-helpers@npm:0.1.0"
-  checksum: 86e3519688fa7f537eea5e496884aa376a265b34fd34dbc1acad6cef078e352c06267ba07f82041dc1663a242052d6d5646f65537a10283e4ef02138372db9e7
-  languageName: node
-  linkType: hard
-
 "@astrojs/internal-helpers@npm:^0.1.1":
   version: 0.1.1
   resolution: "@astrojs/internal-helpers@npm:0.1.1"
@@ -145,21 +138,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "@astrojs/vercel@npm:3.5.0"
+"@astrojs/vercel@npm:^3.7.4":
+  version: 3.7.4
+  resolution: "@astrojs/vercel@npm:3.7.4"
   dependencies:
-    "@astrojs/internal-helpers": ^0.1.0
+    "@astrojs/internal-helpers": ^0.1.1
     "@astrojs/webapi": ^2.2.0
-    "@vercel/analytics": ^0.1.8
-    "@vercel/nft": ^0.22.1
-    esbuild: ^0.17.12
-    fast-glob: ^3.2.11
-    set-cookie-parser: ^2.5.1
-    web-vitals: ^3.1.1
+    "@vercel/analytics": ^0.1.11
+    "@vercel/nft": ^0.22.6
+    esbuild: ^0.17.19
+    fast-glob: ^3.2.12
+    set-cookie-parser: ^2.6.0
+    web-vitals: ^3.3.2
   peerDependencies:
-    astro: ^2.6.0
-  checksum: 7d6f9694630f493922649726382c4221e39df2f29d3ac64aedec2fa596fea394f895b595d3ffd054094c8c029bf8ffa1ea5d4784ad45a096e615ca5dfd520f25
+    astro: ^2.9.1
+  checksum: fbc75d670508639c126492220dbc146c6daf3a72c747f73c0d45b12f239ed1e84e4dca28bf2302c9af28c07e93dd2552207d6892d02ffa991921913e8a5bb023
   languageName: node
   linkType: hard
 
@@ -1645,7 +1638,7 @@ __metadata:
   dependencies:
     "@astrojs/rss": ^2.4.3
     "@astrojs/sitemap": ^1.3.3
-    "@astrojs/vercel": ^3.5.0
+    "@astrojs/vercel": ^3.7.4
     "@astrojs/vue": ^2.2.1
     "@commitlint/cli": ^17.6.6
     "@commitlint/config-conventional": ^17.6.6
@@ -2006,7 +1999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:^0.1.8":
+"@vercel/analytics@npm:^0.1.11":
   version: 0.1.11
   resolution: "@vercel/analytics@npm:0.1.11"
   peerDependencies:
@@ -2015,7 +2008,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/nft@npm:^0.22.1":
+"@vercel/nft@npm:^0.22.6":
   version: 0.22.6
   resolution: "@vercel/nft@npm:0.22.6"
   dependencies:
@@ -3575,7 +3568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.17.12, esbuild@npm:^0.17.19":
+"esbuild@npm:^0.17.19":
   version: 0.17.19
   resolution: "esbuild@npm:0.17.19"
   dependencies:
@@ -3868,19 +3861,6 @@ __metadata:
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
   checksum: e21a9d8d84f53493b6aa15efc9cfd53dd5b714a1f23f67fb5dc8f574af80df889b3bce25dc081887c6d25457cce704e636395333abad896ccdec03abaf1f3f9d
-  languageName: node
-  linkType: hard
-
-"fast-glob@npm:^3.2.11":
-  version: 3.2.12
-  resolution: "fast-glob@npm:3.2.12"
-  dependencies:
-    "@nodelib/fs.stat": ^2.0.2
-    "@nodelib/fs.walk": ^1.2.3
-    glob-parent: ^5.1.2
-    merge2: ^1.3.0
-    micromatch: ^4.0.4
-  checksum: 0b1990f6ce831c7e28c4d505edcdaad8e27e88ab9fa65eedadb730438cfc7cde4910d6c975d6b7b8dc8a73da4773702ebcfcd6e3518e73938bb1383badfe01c2
   languageName: node
   linkType: hard
 
@@ -7053,7 +7033,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"set-cookie-parser@npm:^2.5.1":
+"set-cookie-parser@npm:^2.6.0":
   version: 2.6.0
   resolution: "set-cookie-parser@npm:2.6.0"
   checksum: bf11ebc594c53d84588f1b4c04f1b8ce14e0498b1c011b3d76b5c6d5aac481bbc3f7c5260ec4ce99bdc1d9aed19f9fc315e73166a36ca74d0f12349a73f6bdc9
@@ -8249,10 +8229,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^3.1.1":
-  version: 3.3.1
-  resolution: "web-vitals@npm:3.3.1"
-  checksum: ff417dec2d77f57bc5130767f47aad6f93173e5d0e24a179082c7dca423850106ba1d66c737f91400a6bed6585a7295531d9e54354d1cb31d1a3e68596bb2000
+"web-vitals@npm:^3.3.2":
+  version: 3.4.0
+  resolution: "web-vitals@npm:3.4.0"
+  checksum: 6baac515035a82f05623aa6592654af3b5fd8ca0359e368388e147c1376ca00e5f1b2256130f8e96249ee793a437b55615db21ae699d6d400bf2800f676e0114
   languageName: node
   linkType: hard
 
