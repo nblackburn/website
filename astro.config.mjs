@@ -11,7 +11,8 @@ export default defineConfig({
     integrations: [vue(), vanillaExtract(), sitemap()],
 
     adapter: vercel({
-        analytics: true
+        analytics: true,
+        imageService: true
     }),
 
     vite: {
