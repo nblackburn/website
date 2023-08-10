@@ -23,7 +23,7 @@
         "@astrojs/vercel": "^3.7.5",
         "@astrojs/vue": "^2.2.1",
         "@fontsource/nunito-sans": "^5.0.5",
-        "astro": "^2.9.7",
+        "astro": "^2.10.4",
         "astro-vanilla-extract": "^2.1.0",
         "date-fns": "^2.30.0",
         "sharp": "^0.32.4",
