@@ -2,9 +2,10 @@
 import config from '@app/config';
 import { Image } from 'astro:assets';
 import Link from '@components/link.vue';
+import { GetStaticPaths, Page } from 'astro';
 import PageLayout from '@layouts/page.astro';
 import { getCollection } from 'astro:content';
-import { GetStaticPaths, Page } from 'astro';
+import sortProjects from '@utilities/sortProjects';
 import Pagination from '@components/pagination.vue';
 import ProjectCard from '@components/projectCard.vue';
 import ProjectList from '@components/projectList.vue';
@@ -15,7 +16,8 @@ interface Props {
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
     const projects = await getCollection('project');
-    const mappedProjects = projects.map((project) => {
+    const sortedProjects = sortProjects(projects);
+    const mappedProjects = sortedProjects.map((project) => {
         return {
             props: project
         };
