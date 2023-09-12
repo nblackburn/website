@@ -102,13 +102,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^2.4.3":
-  version: 2.4.3
-  resolution: "@astrojs/rss@npm:2.4.3"
+"@astrojs/rss@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@astrojs/rss@npm:3.0.0"
   dependencies:
-    fast-xml-parser: ^4.0.8
+    fast-xml-parser: ^4.2.7
     kleur: ^4.1.5
-  checksum: b5a01373572859ebc25beb9db0be1da8b81198828b873d9ea218d0af632d07565b12d57c4cad013ca83afa9560ef365ae72dfff1cd839f55c3b809bc3d6d9866
+  checksum: b930bd63e87ae708f661d3eee9c800ee4d88f29a129e3fe674a6e09a0f47cb5c5d56b67d6084de6dce21971b31171f3fa2b0f80bae602c6ef7423535fe3cbbd6
   languageName: node
   linkType: hard
 
@@ -1636,7 +1636,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/rss": ^2.4.3
+    "@astrojs/rss": ^3.0.0
     "@astrojs/sitemap": ^2.0.1
     "@astrojs/vercel": ^3.7.5
     "@astrojs/vue": ^2.2.1
@@ -3879,14 +3879,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:^4.0.8":
-  version: 4.2.6
-  resolution: "fast-xml-parser@npm:4.2.6"
+"fast-xml-parser@npm:^4.2.7":
+  version: 4.2.7
+  resolution: "fast-xml-parser@npm:4.2.7"
   dependencies:
     strnum: ^1.0.5
   bin:
     fxparser: src/cli/cli.js
-  checksum: 1628e4b2c5ae01fe35eb920f09c6def7e29fd455f307fc44c3372c78114504643f34b28e87c13a4f1657c10498dbb6729a341507044dc7cba498e457e8fe2573
+  checksum: d8b0c9e04756f6c43fa0399428f30149acadae21350e42e26e8fe98e24e6afa6b9b00aa554453795036b00e9fee974a1b556fe2ba18be391d51a9bf1ab790e7c
   languageName: node
   linkType: hard
 
