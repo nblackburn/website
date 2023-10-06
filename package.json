@@ -21,7 +21,7 @@
         "@astrojs/rss": "^3.0.0",
         "@astrojs/sitemap": "^2.0.1",
         "@astrojs/vercel": "^3.7.5",
-        "@astrojs/vue": "^2.2.1",
+        "@astrojs/vue": "^3.0.1",
         "@fontsource/nunito-sans": "^5.0.5",
         "astro": "^2.9.7",
         "astro-vanilla-extract": "^2.1.0",
