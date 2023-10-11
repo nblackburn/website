@@ -21,9 +21,5 @@ export default defineConfig({
                 process.env.VERCEL_ANALYTICS_ID
             )
         }
-    },
-
-    experimental: {
-        assets: true
     }
 });
