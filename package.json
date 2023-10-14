@@ -2,6 +2,7 @@
     "name": "@nblackburn/website",
     "private": true,
     "version": "1.28.0",
+    "type": "module",
     "scripts": {
         "start": "astro dev",
         "build": "astro build",
