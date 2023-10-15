@@ -11,8 +11,13 @@ export default defineConfig({
     integrations: [vue(), vanillaExtract(), sitemap()],
 
     adapter: vercel({
-        analytics: true,
-        imageService: true
+        imageService: true,
+        webAnalytics: {
+            enabled: true
+        },
+        speedInsights: {
+            enabled: true
+        }
     }),
 
     vite: {
@@ -21,9 +26,5 @@ export default defineConfig({
                 process.env.VERCEL_ANALYTICS_ID
             )
         }
-    },
-
-    experimental: {
-        assets: true
     }
 });

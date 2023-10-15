@@ -1,11 +1,5 @@
 import { style, globalStyle } from '@vanilla-extract/css';
-import {
-    sizes,
-    vars,
-    breakpoints,
-    primaryAccent,
-    secondaryAccent
-} from '@styles/theme.css';
+import { sizes, vars, breakpoints, secondaryAccent } from '@styles/theme.css';
 
 export const projectCard = style({
     display: 'grid',

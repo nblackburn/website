@@ -10,9 +10,10 @@
 </template>
 
 <script lang="ts">
+import type { PropType } from 'vue';
+import { defineComponent } from 'vue';
 import * as styles from './pagination.css';
 import NavLink from '@components/navLink.vue';
-import { defineComponent, PropType } from 'vue';
 
 type URL = {
     current: string;

@@ -3,40 +3,32 @@ import config from '@app/config';
 import { Image } from 'astro:assets';
 import Link from '@components/link.vue';
 import PageLayout from '@layouts/page.astro';
-import { GetStaticPaths, Page } from 'astro';
 import { getCollection } from 'astro:content';
+import type { GetStaticPaths, Page } from 'astro';
+import slugify from '@root/src/utilities/slugify';
 import Pagination from '@components/pagination.vue';
 import ProjectCard from '@components/projectCard.vue';
 import ProjectList from '@components/projectList.vue';
-import slugify from '@root/src/utilities/slugify';
 
 interface Props {
     page: Page;
+    tag: string;
 }
 
-export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-    const uniqueTags: string[] = [];
+export const uniqueTags = (tags: string[]) => {
+    return tags.filter((tag, index, array) => index == array.indexOf(tag));
+};
+
+export const getStaticPaths = (async ({ paginate }) => {
     const projects = await getCollection('project');
+    const allTags: string[] = uniqueTags(
+        projects.flatMap(({ data }) => data.tags)
+    );
 
-    projects.forEach((project) => {
-        const data = project.data;
-
-        data.tags.forEach((tag) => {
-            if (!uniqueTags.includes(tag)) {
-                uniqueTags.push(tag);
-            }
-        });
-    });
-
-    return uniqueTags.map((tag) => {
+    return allTags.flatMap((tag) => {
         const slug = slugify(tag);
-        const mappedItems = projects
-            .filter((project) => {
-                const data = project.data;
-                const slugs = data.tags.map((tag) => slugify(tag));
-
-                return slugs.includes(slug);
-            })
+        const filtered = projects
+            .filter(({ data }) => data.tags.includes(tag))
             .map((project) => {
                 return {
                     props: project,
@@ -44,17 +36,17 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
                 };
             });
 
-        return paginate(mappedItems, {
-            props: { tag: slug },
+        return paginate(filtered, {
             params: { tag: slug },
             pageSize: config.pagination.limit
         });
     });
-};
+}) satisfies GetStaticPaths;
 
 const title = 'Projects';
 const activePage = 'projects';
-const { page, tag } = Astro.props;
+const { page } = Astro.props;
+const { tag } = Astro.params;
 const subTitle = 'Some of the things i have worked on';
 ---
 
@@ -69,7 +61,6 @@ const subTitle = 'Some of the things i have worked on';
                             alt={props.data.title}
                             width={768}
                             height={200}
-                            fit="outside"
                             loading="eager"
                             format="webp"
                         />

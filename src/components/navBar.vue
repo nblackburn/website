@@ -15,10 +15,11 @@
 </template>
 
 <script lang="ts">
+import type { PropType } from 'vue';
+import { defineComponent } from 'vue';
 import * as styles from './navBar.css';
-import { Link } from '@components/header.vue';
+import type { NavItem } from '@config/nav';
 import NavLink from '@components/navLink.vue';
-import { defineComponent, PropType } from 'vue';
 
 export default defineComponent({
     components: {
@@ -32,7 +33,7 @@ export default defineComponent({
         },
 
         links: {
-            type: Array as PropType<Link[]>,
+            type: Array as PropType<NavItem[]>,
             default() {
                 return [];
             }
@@ -44,7 +45,7 @@ export default defineComponent({
     },
 
     methods: {
-        isActive(link: Link) {
+        isActive(link: NavItem) {
             const activePage = this.activePage;
 
             return activePage === link.id;
