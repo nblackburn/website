@@ -26,9 +26,10 @@
 </template>
 
 <script lang="ts">
+import type { PropType } from 'vue';
+import { defineComponent } from 'vue';
 import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
-import { defineComponent, PropType } from 'vue';
 
 type Item = {
     id: string;

@@ -36,11 +36,12 @@
 </template>
 
 <script lang="ts">
+import type { PropType } from 'vue';
+import { defineComponent } from 'vue';
 import Link from '@components/link.vue';
 import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
 import { format, formatISO } from 'date-fns';
-import { defineComponent, PropType } from 'vue';
 import type { CollectionEntry } from 'astro:content';
 
 export default defineComponent({

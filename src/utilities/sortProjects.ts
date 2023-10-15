@@ -1,5 +1,5 @@
 import { isSameDay, isAfter } from 'date-fns';
-import { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 export default (projects: CollectionEntry<'project'>[]) => {
     return projects.sort((a, b) => {
