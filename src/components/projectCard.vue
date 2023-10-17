@@ -26,9 +26,7 @@
                 }}</time>
             </div>
             <h3 :class="styles.title">
-                <Link :class="styles.link" :href="project.data.url">{{
-                    project.data.title
-                }}</Link>
+                {{ project.data.title }}
             </h3>
             <p :class="styles.description">{{ project.data.description }}</p>
         </div>
