@@ -5,12 +5,12 @@ export const body = style({
     display: 'flex',
     flexDirection: 'column',
     fontFamily: 'Nunito Sans',
-    color: vars.colors.eerieBlack,
-    background: vars.colors.white,
+    color: `rgb(${vars.colors.eerieBlack})`,
+    background: `rgb(${vars.colors.white})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: '#ffffff',
-            background: vars.colors.richBlack
+            background: `rgb(${vars.colors.richBlack})`
         }
     }
 });

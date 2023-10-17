@@ -8,10 +8,10 @@ export const pageHeader = style({
     paddingTop: sizes.large,
     marginBottom: sizes.large,
     paddingBottom: sizes.large,
-    borderBottom: `1px ${vars.colors.silverChalice} solid`,
+    borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
@@ -48,10 +48,10 @@ export const subTitle = style({
     margin: 0,
     fontSize: '1.2rem',
     fontWeight: 'normal',
-    color: vars.colors.sonicSilver,
+    color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.davyGrey
+            color: `rgb(${vars.colors.davyGrey})`
         }
     }
 });

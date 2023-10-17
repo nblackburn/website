@@ -7,10 +7,10 @@ export const header = style({
     position: 'sticky',
     backdropFilter: 'blur(10px)',
     background: `rgba(255 255 255 / 0.9)`,
-    borderBottom: `1px ${vars.colors.silverChalice} solid`,
+    borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack,
+            borderColor: `rgb(${vars.colors.eerieBlack})`,
             background: `rgba(13 13 13 / 0.9)`
         }
     }

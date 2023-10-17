@@ -11,10 +11,10 @@ export const hero = style({
     marginBottom: sizes.small,
     paddingTop: sizes.xtraLarge,
     paddingBottom: sizes.xtraLarge,
-    borderBottom: `1px ${vars.colors.silverChalice} solid`,
+    borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });

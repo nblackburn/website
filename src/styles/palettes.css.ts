@@ -3,22 +3,22 @@ import { vars, primaryAccent, secondaryAccent } from './theme.css';
 
 export const defaultPalette = style({
     vars: {
-        [primaryAccent]: vars.colors.ceruleanBlue,
-        [secondaryAccent]: vars.colors.hanPurple
+        [primaryAccent]: `rgb(${vars.colors.ceruleanBlue})`,
+        [secondaryAccent]: `rgb(${vars.colors.hanPurple})`
     }
 });
 
 export const halloweenPalette = style({
     vars: {
-        [primaryAccent]: vars.colors.flame,
-        [secondaryAccent]: vars.colors.seaGreen
+        [primaryAccent]: `rgb(${vars.colors.flame})`,
+        [secondaryAccent]: `rgb(${vars.colors.seaGreen})`
     }
 });
 
 export const christmasPalette = style({
     vars: {
-        [primaryAccent]: vars.colors.venetianRed,
-        [secondaryAccent]: vars.colors.seaGreen
+        [primaryAccent]: `rgb(${vars.colors.venetianRed})`,
+        [secondaryAccent]: `rgb(${vars.colors.seaGreen})`
     }
 });
 
