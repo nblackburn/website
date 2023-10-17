@@ -3,7 +3,6 @@ import { vars, sizes, primaryAccent, secondaryAccent } from '@styles/theme.css';
 
 export const hero = style({
     display: 'flex',
-    fontWeight: 'bold',
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
@@ -21,15 +20,12 @@ export const hero = style({
 export const strapLine = style({
     margin: 0,
     fontSize: '3rem',
+    fontWeight: 'normal',
     textShadow: '1px 1px 5px rgb(0 0 0 / 50%)'
 });
 
 export const highlight = style({
-    position: 'relative',
-    textUnderlineOffset: '8px',
-    textDecoration: 'underline',
-    textDecorationStyle: 'wavy',
-    textDecorationThickness: 'from-font'
+    fontWeight: 'bold'
 });
 
 export const primary = style({
