@@ -23,7 +23,7 @@ export const projectCard = style({
             background: 'rgba(0 0 0 / 30%)',
             borderColor: `rgb(${vars.colors.eerieBlack})`
         },
-        [breakpoints.small]: {
+        [breakpoints.medium]: {
             gridTemplateColumns: '1fr'
         }
     }
@@ -50,17 +50,17 @@ globalStyle(`${thumbnail} img`, {
     transition: 'all 0.2s ease-in-out'
 });
 
-export const details = style({
+export const content = style({
     padding: sizes.medium
 });
 
-export const header = style({
+export const meta = style({
     display: 'flex',
     alignItems: 'center',
     marginBottom: sizes.medium,
     justifyContent: 'space-between',
     '@media': {
-        [breakpoints.small]: {
+        [breakpoints.medium]: {
             flexDirection: 'column'
         }
     }
@@ -101,7 +101,7 @@ export const tags = style({
     listStyle: 'none',
     listStylePosition: 'inside',
     '@media': {
-        [breakpoints.small]: {
+        [breakpoints.medium]: {
             marginBottom: sizes.small
         }
     }
@@ -141,3 +141,27 @@ export const activeTag = style({
         }
     }
 });
+
+export const details = style({
+    display: 'grid',
+    rowGap: sizes.medium,
+    alignItems: 'flex-end',
+    columnGap: sizes.medium,
+    gridTemplateColumns: '4fr 2fr',
+    '@media': {
+        [breakpoints.medium]: {
+            gridTemplateColumns: '1fr'
+        }
+    }
+});
+
+export const projectLink = style({
+    marginLeft: 'auto',
+    '@media': {
+        [breakpoints.medium]: {
+            marginLeft: 0
+        }
+    }
+});
+
+export const info = style({});

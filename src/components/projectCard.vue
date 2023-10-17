@@ -3,8 +3,8 @@
         <div :class="styles.thumbnail">
             <slot name="thumbnail" />
         </div>
-        <div :class="styles.details">
-            <div :class="styles.header">
+        <div :class="styles.content">
+            <div :class="styles.meta">
                 <ol :class="styles.tags">
                     <li
                         v-for="tag in project.data.tags"
@@ -25,10 +25,19 @@
                     pubDate
                 }}</time>
             </div>
-            <h3 :class="styles.title">
-                {{ project.data.title }}
-            </h3>
-            <p :class="styles.description">{{ project.data.description }}</p>
+            <div :class="styles.details">
+                <div :class="styles.info">
+                    <h3 :class="styles.title">
+                        {{ project.data.title }}
+                    </h3>
+                    <p :class="styles.description">
+                        {{ project.data.description }}
+                    </p>
+                </div>
+                <NavLink :href="project.data.url" :class="styles.projectLink"
+                    >View project</NavLink
+                >
+            </div>
         </div>
     </article>
 </template>
@@ -40,11 +49,13 @@ import Link from '@components/link.vue';
 import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
 import { format, formatISO } from 'date-fns';
+import NavLink from '@components/navLink.vue';
 import type { CollectionEntry } from 'astro:content';
 
 export default defineComponent({
     components: {
-        Link
+        Link,
+        NavLink
     },
 
     props: {
