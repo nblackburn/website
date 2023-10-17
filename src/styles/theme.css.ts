@@ -44,7 +44,7 @@ export const vars = createGlobalTheme(':root', {
         steelPink: '196 49 196',
         davyGrey: '122 122 122',
         richBlack: '13 13 13',
-        eerieBlack: '26 26 26',
+        eerieBlack: '33 33 33',
         venetianRed: '213 65 65',
         sonicSilver: '118 117 117',
         ceruleanBlue: '45 120 200',
