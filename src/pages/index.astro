@@ -33,16 +33,15 @@ const description =
     </About>
     <LatestProject>
         <ProjectCard project={latestProject}>
-            <Link href={latestProject.data.url} slot="thumbnail">
-                <Image
-                    src={latestProject.data.thumbnail}
-                    alt={latestProject.data.title}
-                    width={768}
-                    height={200}
-                    loading="eager"
-                    format="webp"
-                />
-            </Link>
+            <Image
+                src={latestProject.data.thumbnail}
+                alt={latestProject.data.title}
+                width={768}
+                height={200}
+                loading="eager"
+                format="webp"
+                slot="thumbnail"
+            />
         </ProjectCard>
     </LatestProject>
 </BaseLayout>
