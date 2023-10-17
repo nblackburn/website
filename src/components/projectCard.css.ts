@@ -164,4 +164,8 @@ export const projectLink = style({
     }
 });
 
+export const externalIcon = style({
+    marginRight: sizes.tiny
+});
+
 export const info = style({});

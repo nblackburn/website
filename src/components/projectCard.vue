@@ -34,9 +34,12 @@
                         {{ project.data.description }}
                     </p>
                 </div>
-                <NavLink :href="project.data.url" :class="styles.projectLink"
-                    >View project</NavLink
-                >
+                <NavLink :href="project.data.url" :class="styles.projectLink">
+                    <svg width="18" height="18" :class="styles.externalIcon">
+                        <use :href="'#external'" />
+                    </svg>
+                    <span>View project</span>
+                </NavLink>
             </div>
         </div>
     </article>
