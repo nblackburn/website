@@ -18,7 +18,7 @@ export const primary = style({
     borderColor: `rgb(${vars.colors.silverChalice})`,
     selectors: {
         '&:hover': {
-            borderColor: primaryAccent
+            borderColor: `rgb(${primaryAccent})`
         }
     },
     '@media': {
@@ -47,17 +47,17 @@ export const secondary = style({
 });
 
 export const active = style({
-    borderColor: primaryAccent,
+    borderColor: `rgb(${primaryAccent})`,
     selectors: {
         '&:hover': {
-            borderColor: primaryAccent
+            borderColor: `rgb(${primaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:hover': {
-                    borderColor: primaryAccent
+                    borderColor: `rgb(${primaryAccent})`
                 }
             }
         }

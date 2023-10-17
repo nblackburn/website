@@ -14,7 +14,7 @@ export const projectCard = style({
     border: `1px rgb(${vars.colors.silverChalice}) solid`,
     selectors: {
         '&:hover': {
-            borderColor: secondaryAccent,
+            borderColor: `rgb(${secondaryAccent})`,
             boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
         }
     },
@@ -118,7 +118,7 @@ export const tag = style({
             marginRight: '0.5rem'
         },
         '&:hover': {
-            background: secondaryAccent
+            background: `rgb(${secondaryAccent})`
         }
     },
     '@media': {
@@ -129,15 +129,15 @@ export const tag = style({
 });
 
 export const activeTag = style({
-    background: secondaryAccent,
+    background: `rgb(${secondaryAccent})`,
     selectors: {
         '&:hover': {
-            background: secondaryAccent
+            background: `rgb(${secondaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: secondaryAccent
+            background: `rgb(${secondaryAccent})`
         }
     }
 });

@@ -18,7 +18,7 @@ export const container = style({
 export const title = style({
     margin: 0,
     fontWeight: 'bold',
-    color: primaryAccent,
+    color: `rgb(${primaryAccent})`,
     fontSize: sizes.xtraLarge,
     marginBottom: sizes.small
 });

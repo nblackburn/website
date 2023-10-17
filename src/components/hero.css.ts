@@ -33,9 +33,9 @@ export const highlight = style({
 });
 
 export const primary = style({
-    color: primaryAccent
+    color: `rgb(${primaryAccent})`
 });
 
 export const secondary = style({
-    color: secondaryAccent
+    color: `rgb(${secondaryAccent})`
 });
