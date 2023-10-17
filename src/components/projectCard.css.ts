@@ -11,17 +11,17 @@ export const projectCard = style({
     gridTemplateColumns: '1fr 3fr',
     background: 'rgba(255 255 255 / 30%)',
     transition: 'border 0.2s ease-in-out',
-    border: `1px ${vars.colors.silverChalice} solid`,
+    border: `1px rgb(${vars.colors.silverChalice}) solid`,
     selectors: {
         '&:hover': {
-            borderColor: secondaryAccent,
+            borderColor: `rgb(${secondaryAccent})`,
             boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: 'rgba(0 0 0 / 30%)',
-            borderColor: vars.colors.eerieBlack
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         },
         [breakpoints.small]: {
             gridTemplateColumns: '1fr'
@@ -37,10 +37,10 @@ export const thumbnail = style({
     position: 'relative',
     objectPosition: 'top',
     justifySelf: 'flex-end',
-    background: vars.colors.silverChalice,
+    background: `rgb(${vars.colors.silverChalice})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack
+            background: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
@@ -67,10 +67,10 @@ export const header = style({
 });
 
 export const publishedDate = style({
-    color: vars.colors.davyGrey,
+    color: `rgb(${vars.colors.davyGrey})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.silverChalice
+            color: `rgb(${vars.colors.silverChalice})`
         }
     }
 });
@@ -87,10 +87,10 @@ export const link = style({
 
 export const description = style({
     margin: 0,
-    color: vars.colors.sonicSilver,
+    color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.davyGrey
+            color: `rgb(${vars.colors.davyGrey})`
         }
     }
 });
@@ -112,32 +112,32 @@ export const tag = style({
     display: 'inline-block',
     padding: `0.2rem 0.75rem`,
     transition: 'all 0.2s ease-in-out',
-    background: vars.colors.silverChalice,
+    background: `rgb(${vars.colors.silverChalice})`,
     selectors: {
         '&:not(:last-child)': {
             marginRight: '0.5rem'
         },
         '&:hover': {
-            background: secondaryAccent
+            background: `rgb(${secondaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack
+            background: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
 
 export const activeTag = style({
-    background: secondaryAccent,
+    background: `rgb(${secondaryAccent})`,
     selectors: {
         '&:hover': {
-            background: secondaryAccent
+            background: `rgb(${secondaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: secondaryAccent
+            background: `rgb(${secondaryAccent})`
         }
     }
 });

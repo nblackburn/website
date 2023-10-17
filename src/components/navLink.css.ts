@@ -15,15 +15,15 @@ export const navLink = style({
 });
 
 export const primary = style({
-    borderColor: vars.colors.silverChalice,
+    borderColor: `rgb(${vars.colors.silverChalice})`,
     selectors: {
         '&:hover': {
-            borderColor: primaryAccent
+            borderColor: `rgb(${primaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
@@ -32,14 +32,14 @@ export const secondary = style({
     border: `2px transparent solid`,
     selectors: {
         '&:hover': {
-            borderColor: vars.colors.silverChalice
+            borderColor: `rgb(${vars.colors.silverChalice})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:hover': {
-                    borderColor: vars.colors.eerieBlack
+                    borderColor: `rgb(${vars.colors.eerieBlack})`
                 }
             }
         }
@@ -47,17 +47,17 @@ export const secondary = style({
 });
 
 export const active = style({
-    borderColor: primaryAccent,
+    borderColor: `rgb(${primaryAccent})`,
     selectors: {
         '&:hover': {
-            borderColor: primaryAccent
+            borderColor: `rgb(${primaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:hover': {
-                    borderColor: primaryAccent
+                    borderColor: `rgb(${primaryAccent})`
                 }
             }
         }
@@ -71,7 +71,7 @@ export const icon = style({
 export const disabled = style({
     cursor: 'not-allowed',
     borderColor: 'transparent',
-    color: vars.colors.sonicSilver,
+    color: `rgb(${vars.colors.sonicSilver})`,
     selectors: {
         '&:hover': {
             borderColor: 'transparent'
@@ -80,7 +80,7 @@ export const disabled = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             borderColor: 'transparent',
-            color: vars.colors.davyGrey,
+            color: `rgb(${vars.colors.davyGrey})`,
             selectors: {
                 '&:hover': {
                     borderColor: 'transparent'

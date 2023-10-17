@@ -16,21 +16,21 @@ export const image = style({
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
     marginBottom: sizes.medium,
-    background: vars.colors.silverChalice,
-    border: `1px ${vars.colors.silverChalice} solid`,
+    background: `rgb(${vars.colors.silverChalice})`,
+    border: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack,
-            borderColor: vars.colors.eerieBlack
+            background: `rgb(${vars.colors.eerieBlack})`,
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
 
 export const paragraph = style({
-    color: vars.colors.sonicSilver,
+    color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.davyGrey
+            color: `rgb(${vars.colors.davyGrey})`
         }
     }
 });

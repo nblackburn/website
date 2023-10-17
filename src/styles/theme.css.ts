@@ -37,18 +37,18 @@ export const sizes = {
 
 export const vars = createGlobalTheme(':root', {
     colors: {
-        white: '#ffffff',
-        flame: '#d96226',
-        seaGreen: '#2e8a5b',
-        hanPurple: '#8758e2',
-        steelPink: '#c431c4',
-        davyGrey: '#7a7a7a',
-        richBlack: '#0d0d0d',
-        eerieBlack: '#1a1a1a',
-        venetianRed: '#d54141',
-        sonicSilver: '#767575',
-        ceruleanBlue: '#2d78c8',
-        naplesYellow: '#857528',
-        silverChalice: '#e5e5e5'
+        white: '255 255 255',
+        flame: '217 98 38',
+        seaGreen: '46 138 91',
+        hanPurple: '135 88 226',
+        steelPink: '196 49 196',
+        davyGrey: '122 122 122',
+        richBlack: '13 13 13',
+        eerieBlack: '33 33 33',
+        venetianRed: '213 65 65',
+        sonicSilver: '118 117 117',
+        ceruleanBlue: '45 120 200',
+        naplesYellow: '133 117 40',
+        silverChalice: '229 229 229'
     }
 });

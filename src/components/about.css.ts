@@ -12,7 +12,7 @@ export const about = style({
     paddingBottom: sizes.large,
     columnGap: sizes.xtraLarge,
     gridTemplateColumns: '1fr 1fr',
-    borderBottom: `1px ${vars.colors.silverChalice} solid`,
+    borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         [breakpoints.large]: {
             columnGap: sizes.large
@@ -23,7 +23,7 @@ export const about = style({
         },
 
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
@@ -64,12 +64,12 @@ export const image = style({
     objectPosition: 'top',
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
-    background: vars.colors.silverChalice,
-    border: `1px ${vars.colors.silverChalice} solid`,
+    background: `rgb(${vars.colors.silverChalice})`,
+    border: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack,
-            borderColor: vars.colors.eerieBlack
+            background: `rgb(${vars.colors.eerieBlack})`,
+            borderColor: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
@@ -80,10 +80,10 @@ export const title = style({
 });
 
 export const paragraph = style({
-    color: vars.colors.sonicSilver,
+    color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.davyGrey
+            color: `rgb(${vars.colors.davyGrey})`
         }
     }
 });
