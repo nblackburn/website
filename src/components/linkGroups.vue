@@ -1,12 +1,12 @@
 <template>
     <div :class="styles.linkGroups">
-        <div
+        <section
             v-for="group in groups"
             :key="group.id"
             :class="styles.linkGroup"
             :group="group"
         >
-            <div :class="styles.heading">{{ group.name }}</div>
+            <h3 :class="styles.heading">{{ group.name }}</h3>
             <ol :class="styles.items">
                 <li
                     v-for="item in group.items"
@@ -25,7 +25,7 @@
                     </Link>
                 </li>
             </ol>
-        </div>
+        </section>
     </div>
 </template>
 
