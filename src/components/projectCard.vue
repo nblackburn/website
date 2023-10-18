@@ -21,9 +21,12 @@
                         >
                     </li>
                 </ol>
-                <time :class="styles.publishedDate" :datetime="isoDate">{{
-                    pubDate
-                }}</time>
+                <div :class="styles.publishDate">
+                    Published
+                    <time :class="styles.publishedDate" :datetime="isoDate">{{
+                        pubDate
+                    }}</time>
+                </div>
             </div>
             <div :class="styles.details">
                 <div :class="styles.info">

@@ -143,6 +143,10 @@ export const activeTag = style({
     }
 });
 
+export const publishDate = style({
+    position: 'relative'
+});
+
 export const details = style({
     display: 'grid',
     rowGap: sizes.medium,
