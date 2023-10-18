@@ -46,6 +46,16 @@ const { title, description, activePage } = Astro.props;
         <meta property="og:description" content={description} />
         <meta property="og:url" content={Astro.url} />
 
+        <!-- twitter -->
+        <meta
+            property="twitter:title"
+            content={title
+                ? `Nathaniel Blackburn - ${title}`
+                : 'Nathaniel Blackburn'}
+        />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:card" content="summary" />
+
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
