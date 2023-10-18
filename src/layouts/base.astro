@@ -35,6 +35,17 @@ const { title, description, activePage } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
 
+        <!-- open graph -->
+        <meta
+            property="og:title"
+            content={title
+                ? `Nathaniel Blackburn - ${title}`
+                : 'Nathaniel Blackburn'}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={Astro.url} />
+
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
