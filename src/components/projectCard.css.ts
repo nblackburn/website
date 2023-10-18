@@ -31,8 +31,6 @@ export const projectCard = style({
 
 export const thumbnail = style({
     width: '100%',
-    height: '200px',
-    objectFit: 'fill',
     overflow: 'hidden',
     position: 'relative',
     objectPosition: 'top',
@@ -47,6 +45,8 @@ export const thumbnail = style({
 
 globalStyle(`${thumbnail} img`, {
     width: '100%',
+    display: 'block',
+    minHeight: '240px',
     transition: 'all 0.2s ease-in-out'
 });
 
