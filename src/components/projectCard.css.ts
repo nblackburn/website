@@ -145,7 +145,7 @@ export const activeTag = style({
 export const details = style({
     display: 'grid',
     rowGap: sizes.medium,
-    alignItems: 'flex-end',
+    alignItems: 'flex-start',
     columnGap: sizes.medium,
     gridTemplateColumns: '4fr 2fr',
     '@media': {
