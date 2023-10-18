@@ -26,6 +26,9 @@ const { title, description, activePage } = Astro.props;
             {title ? `Nathaniel Blackburn - ${title}` : 'Nathaniel Blackburn'}
         </title>
 
+        <!-- canonical -->
+        <link rel="canonical" href={Astro.url} />
+
         <!-- meta -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
