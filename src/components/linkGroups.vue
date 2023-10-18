@@ -13,7 +13,11 @@
                     :key="item.id"
                     :class="styles.item"
                 >
-                    <Link :href="item.href" :class="styles.link">
+                    <Link
+                        :href="item.href"
+                        :class="styles.link"
+                        :aria-label="item.title + ' (External link)'"
+                    >
                         <svg width="24" height="24" :class="styles.icon">
                             <use href="#url" />
                         </svg>
