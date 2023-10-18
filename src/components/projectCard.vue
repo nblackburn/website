@@ -34,7 +34,11 @@
                         {{ project.data.description }}
                     </p>
                 </div>
-                <NavLink :href="project.data.url" :class="styles.projectLink">
+                <NavLink
+                    :href="project.data.url"
+                    :class="styles.projectLink"
+                    aria-label="View project (External link)"
+                >
                     <svg width="18" height="18" :class="styles.externalIcon">
                         <use :href="'#external'" />
                     </svg>
