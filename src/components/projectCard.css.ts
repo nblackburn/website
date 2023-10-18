@@ -77,7 +77,7 @@ export const publishedDate = style({
 
 export const title = style({
     fontWeight: 'bold',
-    margin: `0 0 ${sizes.small}`
+    margin: `0 0 ${sizes.tiny}`
 });
 
 export const link = style({
