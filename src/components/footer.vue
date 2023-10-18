@@ -5,7 +5,7 @@
                 &copy; {{ currentYear }} Nathaniel Blackburn. All Rights
                 Reserved.
             </div>
-            <div :class="styles.version">{{ version }}</div>
+            <div :class="styles.version">Version {{ version }}</div>
         </div>
     </footer>
 </template>
