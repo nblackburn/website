@@ -87,6 +87,7 @@ export const link = style({
 
 export const description = style({
     margin: 0,
+    lineHeight: 1.3,
     color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
