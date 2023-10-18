@@ -22,7 +22,9 @@ const { title, description, activePage } = Astro.props;
 <html lang="en">
     <head>
         <!-- title -->
-        <title>Nathaniel Blackburn{title ? ` - ${title}` : ''}</title>
+        <title>
+            {title ? `Nathaniel Blackburn - ${title}` : 'Nathaniel Blackburn'}
+        </title>
 
         <!-- meta -->
         <meta charset="utf-8" />
