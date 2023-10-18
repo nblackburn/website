@@ -6,6 +6,7 @@
                     :class="styles.link"
                     :href="links.prev"
                     :disabled="!links.prev"
+                    :aria-disabled="!links.prev"
                     >Previous</NavLink
                 >
             </li>
@@ -14,6 +15,7 @@
                     :class="styles.link"
                     :href="links.next"
                     :disabled="!links.next"
+                    :aria-disabled="!links.next"
                     >Next</NavLink
                 >
             </li>
