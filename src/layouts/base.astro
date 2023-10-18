@@ -4,6 +4,7 @@ import '@fontsource/nunito-sans';
 import * as styles from './base.css';
 import Main from '@components/main.vue';
 import Icons from '@components/icons.vue';
+import type { ImageMetadata } from 'astro';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
 import DynamicPalette from '@components/dynamicPalette.vue';
@@ -13,10 +14,11 @@ export interface Props {
     title: string;
     activePage?: string;
     description?: string;
+    image?: ImageMetadata;
 }
 
 const activePalette = getActivePalette();
-const { title, description, activePage } = Astro.props;
+const { title, description, image, activePage } = Astro.props;
 ---
 
 <html lang="en">
