@@ -142,13 +142,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@astrojs/sitemap@npm:3.0.1"
+"@astrojs/sitemap@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@astrojs/sitemap@npm:3.0.2"
   dependencies:
     sitemap: ^7.1.1
     zod: 3.21.1
-  checksum: 6e5455d800c3498357827bf13ec6eec36cf370b4b285cc0d04ad7db708c502a302fb54554717ffd4178136a9dd0bf4c1bb90f7d3c4679dda2368b1ed79e4c4d7
+  checksum: dce5dbe39f1ceb69635c6542fbc598a54eec56fae93eba4018d1fffb7627f64747bffe89d1f4cafbb1bc1f2f13813cb7a8af52eb6407cd13ab18af5a45416264
   languageName: node
   linkType: hard
 
@@ -1542,7 +1542,7 @@ __metadata:
   dependencies:
     "@astrojs/check": ^0.2.1
     "@astrojs/rss": ^3.0.0
-    "@astrojs/sitemap": ^3.0.1
+    "@astrojs/sitemap": ^3.0.2
     "@astrojs/vercel": ^5.0.2
     "@astrojs/vue": ^3.0.1
     "@commitlint/cli": ^17.8.0
