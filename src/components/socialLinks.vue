@@ -5,6 +5,7 @@
                 <NavLink
                     :href="link.href"
                     :aria-label="link.name + ' (External link)'"
+                    :title="link.name + ' (External link)'"
                     icon
                 >
                     <svg width="24" height="24" role="img">
