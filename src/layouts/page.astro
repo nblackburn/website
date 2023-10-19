@@ -19,6 +19,6 @@ const { title, subTitle, image, activePage } = Astro.props;
     image={image}
     activePage={activePage}
 >
-    <PageHeader title={title} subTitle={subTitle} />
+    <PageHeader title={title} subTitle={subTitle} slot="hero" />
     <slot />
 </BaseLayout>

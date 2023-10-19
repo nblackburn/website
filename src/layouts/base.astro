@@ -74,6 +74,7 @@ const { title, description, image, activePage } = Astro.props;
         <DynamicPalette client:load />
         <Icons />
         <Header activePage={activePage} />
+        <slot name="hero" />
         <Main>
             <slot />
         </Main>
