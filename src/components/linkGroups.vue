@@ -18,7 +18,12 @@
                         :class="styles.link"
                         :aria-label="item.title + ' (External link)'"
                     >
-                        <svg width="24" height="24" :class="styles.icon">
+                        <svg
+                            width="24"
+                            height="24"
+                            role="img"
+                            :class="styles.icon"
+                        >
                             <use href="#external" />
                         </svg>
                         <span>{{ item.title }}</span>

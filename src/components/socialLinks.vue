@@ -7,7 +7,7 @@
                     :aria-label="link.name + ' (External link)'"
                     icon
                 >
-                    <svg width="24" height="24">
+                    <svg width="24" height="24" role="img">
                         <use :href="'#' + link.id" />
                     </svg>
                 </NavLink>

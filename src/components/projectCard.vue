@@ -43,7 +43,12 @@
                     :class="styles.projectLink"
                     aria-label="View project (External link)"
                 >
-                    <svg width="18" height="18" :class="styles.externalIcon">
+                    <svg
+                        width="18"
+                        height="18"
+                        role="img"
+                        :class="styles.externalIcon"
+                    >
                         <use :href="'#external'" />
                     </svg>
                     <span>View project</span>
