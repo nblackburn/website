@@ -2,8 +2,13 @@
     <div :class="styles.socialLinks">
         <ol :class="styles.items">
             <li v-for="link in socialLinks" :key="link.id" :class="styles.item">
-                <NavLink :href="link.href" icon :title="link.name">
-                    <svg width="24" height="24">
+                <NavLink
+                    :href="link.href"
+                    :aria-label="link.name + ' (External link)'"
+                    :title="link.name + ' (External link)'"
+                    icon
+                >
+                    <svg width="24" height="24" role="img">
                         <use :href="'#' + link.id" />
                     </svg>
                 </NavLink>

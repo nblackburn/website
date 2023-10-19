@@ -1,12 +1,26 @@
 <template>
-    <section :class="styles.pagination">
-        <NavLink :class="styles.link" :href="links.prev" :disabled="!links.prev"
-            >Previous</NavLink
-        >
-        <NavLink :class="styles.link" :href="links.next" :disabled="!links.next"
-            >Next</NavLink
-        >
-    </section>
+    <nav :class="styles.pagination">
+        <ol :class="styles.items">
+            <li :class="styles.item">
+                <NavLink
+                    :class="styles.link"
+                    :href="links.prev"
+                    :disabled="!links.prev"
+                    :aria-disabled="!links.prev"
+                    >Previous</NavLink
+                >
+            </li>
+            <li :class="styles.item">
+                <NavLink
+                    :class="styles.link"
+                    :href="links.next"
+                    :disabled="!links.next"
+                    :aria-disabled="!links.next"
+                    >Next</NavLink
+                >
+            </li>
+        </ol>
+    </nav>
 </template>
 
 <script lang="ts">

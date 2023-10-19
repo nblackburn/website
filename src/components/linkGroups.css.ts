@@ -11,7 +11,7 @@ export const linkGroup = style({
 
 export const heading = style({
     fontWeight: 'bold',
-    marginBottom: sizes.small
+    margin: `0 0 ${sizes.small} 0`
 });
 
 export const items = style({

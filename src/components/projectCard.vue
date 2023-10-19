@@ -3,8 +3,8 @@
         <div :class="styles.thumbnail">
             <slot name="thumbnail" />
         </div>
-        <div :class="styles.details">
-            <div :class="styles.header">
+        <div :class="styles.content">
+            <div :class="styles.meta">
                 <ol :class="styles.tags">
                     <li
                         v-for="tag in project.data.tags"
@@ -17,20 +17,43 @@
                         <Link
                             :href="'/projects/tags/' + slugify(tag)"
                             :class="styles.link"
+                            :aria-current="activeTag === slugify(tag)"
                             >{{ tag }}</Link
                         >
                     </li>
                 </ol>
-                <time :class="styles.publishedDate" :datetime="isoDate">{{
-                    pubDate
-                }}</time>
+                <div :class="styles.publishDate">
+                    Published
+                    <time :class="styles.publishedDate" :datetime="isoDate">{{
+                        pubDate
+                    }}</time>
+                </div>
             </div>
-            <h3 :class="styles.title">
-                <Link :class="styles.link" :href="project.data.url">{{
-                    project.data.title
-                }}</Link>
-            </h3>
-            <p :class="styles.description">{{ project.data.description }}</p>
+            <div :class="styles.details">
+                <div :class="styles.info">
+                    <h3 :class="styles.title">
+                        {{ project.data.title }}
+                    </h3>
+                    <p :class="styles.description">
+                        {{ project.data.description }}
+                    </p>
+                </div>
+                <NavLink
+                    :href="project.data.url"
+                    :class="styles.projectLink"
+                    aria-label="View project (External link)"
+                >
+                    <svg
+                        width="18"
+                        height="18"
+                        role="img"
+                        :class="styles.externalIcon"
+                    >
+                        <use :href="'#external'" />
+                    </svg>
+                    <span>View project</span>
+                </NavLink>
+            </div>
         </div>
     </article>
 </template>
@@ -42,11 +65,13 @@ import Link from '@components/link.vue';
 import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
 import { format, formatISO } from 'date-fns';
+import NavLink from '@components/navLink.vue';
 import type { CollectionEntry } from 'astro:content';
 
 export default defineComponent({
     components: {
-        Link
+        Link,
+        NavLink
     },
 
     props: {

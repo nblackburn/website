@@ -4,8 +4,10 @@ import '@fontsource/nunito-sans';
 import * as styles from './base.css';
 import Main from '@components/main.vue';
 import Icons from '@components/icons.vue';
+import type { ImageMetadata } from 'astro';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
+import fallbackImage from '@assets/img/me.jpg';
 import DynamicPalette from '@components/dynamicPalette.vue';
 import { getActivePalette } from '@utilities/paletteManager';
 
@@ -13,22 +15,57 @@ export interface Props {
     title: string;
     activePage?: string;
     description?: string;
+    image?: ImageMetadata;
 }
 
 const activePalette = getActivePalette();
-const { title, description, activePage } = Astro.props;
+const { title, description, image, activePage } = Astro.props;
 ---
 
 <html lang="en">
     <head>
         <!-- title -->
-        <title>Nathaniel Blackburn{title ? ` - ${title}` : ''}</title>
+        <title>
+            {title ? `Nathaniel Blackburn - ${title}` : 'Nathaniel Blackburn'}
+        </title>
+
+        <!-- canonical -->
+        <link rel="canonical" href={Astro.url} />
 
         <!-- meta -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
+
+        <!-- open graph -->
+        <meta
+            property="og:title"
+            content={title
+                ? `Nathaniel Blackburn - ${title}`
+                : 'Nathaniel Blackburn'}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={Astro.url} />
+        <meta
+            property="og:image"
+            content={image ? image.src : fallbackImage.src}
+        />
+
+        <!-- twitter -->
+        <meta
+            property="twitter:title"
+            content={title
+                ? `Nathaniel Blackburn - ${title}`
+                : 'Nathaniel Blackburn'}
+        />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:card" content="summary" />
+        <meta
+            property="twitter:image"
+            content={image ? image.src : fallbackImage.src}
+        />
 
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -37,6 +74,7 @@ const { title, description, activePage } = Astro.props;
         <DynamicPalette client:load />
         <Icons />
         <Header activePage={activePage} />
+        <slot name="hero" />
         <Main>
             <slot />
         </Main>

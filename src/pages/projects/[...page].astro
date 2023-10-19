@@ -37,16 +37,15 @@ const subTitle = 'Some of the things i have worked on';
         {
             page.data.map(({ props }) => (
                 <ProjectCard project={props}>
-                    <Link href={props.url} slot="thumbnail">
-                        <Image
-                            src={props.data.thumbnail}
-                            alt={props.data.title}
-                            width={768}
-                            height={200}
-                            loading="eager"
-                            format="webp"
-                        />
-                    </Link>
+                    <Image
+                        src={props.data.thumbnail}
+                        alt={props.data.title}
+                        width={768}
+                        height={200}
+                        loading="eager"
+                        format="webp"
+                        slot="thumbnail"
+                    />
                 </ProjectCard>
             ))
         }

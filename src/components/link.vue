@@ -20,7 +20,7 @@ export default defineComponent({
         const isExternal = isExternalLink(props.href);
         const href = buildRefLink(props.href, props.ref);
         const rel = isExternal ? 'noopener' : undefined;
-        const target = isExternal ? '_blank' : undefined;
+        const target = isExternal ? '_self' : undefined;
 
         return () =>
             h(

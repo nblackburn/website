@@ -1,27 +1,36 @@
 <template>
     <div :class="styles.linkGroups">
-        <div
+        <section
             v-for="group in groups"
             :key="group.id"
             :class="styles.linkGroup"
             :group="group"
         >
-            <div :class="styles.heading">{{ group.name }}</div>
+            <h3 :class="styles.heading">{{ group.name }}</h3>
             <ol :class="styles.items">
                 <li
                     v-for="item in group.items"
                     :key="item.id"
                     :class="styles.item"
                 >
-                    <Link :href="item.href" :class="styles.link">
-                        <svg width="24" height="24" :class="styles.icon">
-                            <use href="#url" />
+                    <Link
+                        :href="item.href"
+                        :class="styles.link"
+                        :aria-label="item.title + ' (External link)'"
+                    >
+                        <svg
+                            width="24"
+                            height="24"
+                            role="img"
+                            :class="styles.icon"
+                        >
+                            <use href="#external" />
                         </svg>
                         <span>{{ item.title }}</span>
                     </Link>
                 </li>
             </ol>
-        </div>
+        </section>
     </div>
 </template>
 

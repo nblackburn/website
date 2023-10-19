@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import rigUrl from '@assets/img/rig.jpg';
 import Story from '@components/story.vue';
+import rigImage from '@assets/img/rig.jpg';
 import groupItems from '@utilities/groupItems';
 import { stack, stackGroups } from '@config/stack';
 import LinkGroups from '@components/linkGroups.vue';
@@ -13,10 +13,15 @@ const subTitle = 'A little bit about myself';
 const groups = groupItems(stackGroups, stack);
 ---
 
-<SidePanelLayout title={title} subTitle={subTitle} activePage={activePage}>
+<SidePanelLayout
+    title={title}
+    subTitle={subTitle}
+    activePage={activePage}
+    image={rigImage}
+>
     <Story>
         <Image
-            src={rigUrl}
+            src={rigImage.src}
             alt="My desktop"
             width={828}
             height={400}

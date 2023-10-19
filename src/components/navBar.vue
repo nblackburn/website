@@ -6,6 +6,7 @@
                     :href="link.href"
                     :key="link.id"
                     :active="isActive(link)"
+                    :aria-current="isActive(link) ? 'page' : false"
                     secondary
                     >{{ link.title }}</NavLink
                 >

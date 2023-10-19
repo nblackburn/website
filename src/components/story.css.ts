@@ -27,6 +27,7 @@ export const image = style({
 });
 
 export const paragraph = style({
+    lineHeight: 1.3,
     color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
