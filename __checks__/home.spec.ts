@@ -81,3 +81,21 @@ test('click soundcloud link', async ({ page }) => {
     // Take a screenshot to verify
     await page.screenshot({ path: 'screenshot.jpg' });
 });
+
+test('click about link', async ({ page }) => {
+    await page.goto(envURL);
+
+    // Find the link
+    const aboutLink = await page.getByRole('link', {
+        name: 'More about me'
+    });
+
+    // Click the link
+    await aboutLink.click();
+
+    // Check the page redirects to the correct URL
+    await expect(page).toHaveURL(/.*\/about/);
+
+    // Take a screenshot to verify
+    await page.screenshot({ path: 'screenshot.jpg' });
+});
