@@ -114,23 +114,21 @@ export const tag = style({
             marginRight: '0.5rem'
         },
         '&:hover': {
+            color: `rgb(${vars.colors.white})`,
             background: `rgb(${secondaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
+            color: `rgb(${vars.colors.white})`,
             background: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
 
 export const activeTag = style({
+    color: `rgb(${vars.colors.white})`,
     background: `rgb(${secondaryAccent})`,
-    selectors: {
-        '&:hover': {
-            background: `rgb(${secondaryAccent})`
-        }
-    },
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: `rgb(${secondaryAccent})`
