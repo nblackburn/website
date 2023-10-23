@@ -5,7 +5,7 @@
         </div>
         <div :class="styles.content">
             <div :class="styles.meta">
-                <ol :class="styles.tags">
+                <ol :class="styles.tags" aria-label="Tags">
                     <li
                         v-for="tag in project.data.tags"
                         :class="[
