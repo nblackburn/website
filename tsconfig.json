@@ -9,6 +9,7 @@
         "noEmit": true,
         "baseUrl": ".",
         "strictNullChecks": true,
+        "verbatimModuleSyntax": false,
         "forceConsistentCasingInFileNames": true,
         "esModuleInterop": true,
         "strict": true,
