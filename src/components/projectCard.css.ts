@@ -67,12 +67,7 @@ export const meta = style({
 });
 
 export const publishedDate = style({
-    color: `rgb(${vars.colors.davyGrey})`,
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.silverChalice})`
-        }
-    }
+    position: 'relative'
 });
 
 export const title = style({
