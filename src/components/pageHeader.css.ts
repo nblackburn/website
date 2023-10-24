@@ -22,8 +22,7 @@ export const title = style({
 
 export const highlight = style({
     position: 'relative',
-    color: secondaryAccent,
-    textShadow: '1px 1px 5px rgb(0 0 0 / 50%)'
+    color: secondaryAccent
 });
 
 export const subTitle = style({

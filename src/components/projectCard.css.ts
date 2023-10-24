@@ -67,12 +67,7 @@ export const meta = style({
 });
 
 export const publishedDate = style({
-    color: `rgb(${vars.colors.davyGrey})`,
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.silverChalice})`
-        }
-    }
+    position: 'relative'
 });
 
 export const title = style({
@@ -119,23 +114,21 @@ export const tag = style({
             marginRight: '0.5rem'
         },
         '&:hover': {
+            color: `rgb(${vars.colors.white})`,
             background: `rgb(${secondaryAccent})`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
+            color: `rgb(${vars.colors.white})`,
             background: `rgb(${vars.colors.eerieBlack})`
         }
     }
 });
 
 export const activeTag = style({
+    color: `rgb(${vars.colors.white})`,
     background: `rgb(${secondaryAccent})`,
-    selectors: {
-        '&:hover': {
-            background: `rgb(${secondaryAccent})`
-        }
-    },
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: `rgb(${secondaryAccent})`

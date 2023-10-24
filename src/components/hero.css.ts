@@ -15,8 +15,7 @@ export const hero = style({
 export const strapLine = style({
     margin: 0,
     fontSize: '4rem',
-    fontWeight: 'normal',
-    textShadow: '1px 1px 5px rgb(0 0 0 / 50%)'
+    fontWeight: 'normal'
 });
 
 export const highlight = style({
