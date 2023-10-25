@@ -5,6 +5,7 @@
         :id="id"
         rows="5"
         :required="required"
+        :disabled="disabled"
         :class="styles.textArea"
     />
 </template>
@@ -28,6 +29,10 @@ export default defineComponent({
         },
 
         required: {
+            type: Boolean
+        },
+
+        disabled: {
             type: Boolean
         }
     },
