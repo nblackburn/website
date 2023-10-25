@@ -10,6 +10,6 @@ const subTitle = 'Get in touch';
 ---
 
 <SidePanelLayout title={title} subTitle={subTitle} activePage={activePage} layout={layout}>
-    <ContactForm method="post" action="/api/contact" />
-    <SocialLinks slot="sidepanel" />
+    <ContactForm method="post" action="/api/contact" slot="sidepanel"/>
+    <SocialLinks/>
 </SidePanelLayout>
