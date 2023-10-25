@@ -1,18 +1,8 @@
-import { sizes } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
+import { sizes, vars } from '@styles/theme.css';
 
 export const contactForm = style({
     position: 'relative'
-});
-
-export const label = style({
-    display: 'block',
-    marginBottom: sizes.tiny
-});
-
-export const field = style({
-    width: '100%',
-    marginBottom: sizes.small
 });
 
 export const fieldSet = style({
@@ -22,5 +12,20 @@ export const fieldSet = style({
     display: 'grid',
     rowGap: sizes.small,
     columnGap: sizes.small,
-    gridTemplateColumns: '1fr 1fr'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))'
+});
+
+export const label = style({
+    display: 'block',
+    marginBottom: sizes.tiny,
+    selectors: {
+        [`${fieldSet}:invalid &`]: {
+            color: `rgb(${vars.colors.venetianRed})`
+        }
+    }
+});
+
+export const field = style({
+    width: '100%',
+    marginBottom: sizes.small
 });

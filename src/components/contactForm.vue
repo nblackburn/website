@@ -2,14 +2,7 @@
     <form :method="method" :action="action">
         <fieldset name="contact" :class="styles.fieldSet">
             <div :class="styles.field">
-                <label
-                    for="name"
-                    :class="[
-                        styles.label,
-                        !isFieldValid('name') ? styles.invalidLabel : ''
-                    ]"
-                    >Name*</label
-                >
+                <label for="name" :class="styles.label">Name*</label>
                 <Input
                     type="text"
                     name="name"
@@ -21,14 +14,7 @@
             </div>
 
             <div :class="styles.field">
-                <label
-                    for="email"
-                    :class="[
-                        styles.label,
-                        !isFieldValid('email') ? styles.invalidLabel : ''
-                    ]"
-                    >Email*</label
-                >
+                <label for="email" :class="styles.label">Email*</label>
                 <Input
                     type="email"
                     name="email"
@@ -40,23 +26,18 @@
             </div>
         </fieldset>
 
-        <div :class="styles.field">
-            <label
-                for="message"
-                :class="[
-                    styles.label,
-                    !isFieldValid('message') ? styles.invalidLabel : ''
-                ]"
-                >Message*</label
-            >
-            <TextArea
-                name="message"
-                id="message"
-                :disabled="isSending"
-                :invalid="!isFieldValid('message')"
-                required
-            />
-        </div>
+        <fieldset :class="styles.fieldSet">
+            <div :class="styles.field">
+                <label for="message" :class="styles.label">Message*</label>
+                <TextArea
+                    name="message"
+                    id="message"
+                    :disabled="isSending"
+                    :invalid="!isFieldValid('message')"
+                    required
+                />
+            </div>
+        </fieldset>
 
         <Button type="submit">Send message</Button>
     </form>
