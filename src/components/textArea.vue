@@ -6,7 +6,7 @@
         rows="5"
         :required="required"
         :disabled="disabled"
-        :class="styles.textArea"
+        :class="[styles.textArea, invalid ? styles.invalid : '']"
     />
 </template>
 
@@ -33,6 +33,10 @@ export default defineComponent({
         },
 
         disabled: {
+            type: Boolean
+        },
+
+        invalid: {
             type: Boolean
         }
     },

@@ -28,3 +28,12 @@ export const textArea = style({
         }
     }
 });
+
+export const invalid = style({
+    borderColor: `1px rgb(${vars.colors.venetianRed}) solid`,
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            border: `1px rgb(${vars.colors.venetianRed}) solid`
+        }
+    }
+});
