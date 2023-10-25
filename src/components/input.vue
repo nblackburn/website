@@ -33,10 +33,6 @@ export default defineComponent({
 
         disabled: {
             type: Boolean
-        },
-
-        invalid: {
-            type: Boolean
         }
     },
 

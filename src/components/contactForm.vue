@@ -8,7 +8,6 @@
                     name="name"
                     id="name"
                     :disabled="isSending"
-                    :invalid="!isFieldValid('name')"
                     required
                 />
             </div>
@@ -20,7 +19,6 @@
                     name="email"
                     id="email"
                     :disabled="isSending"
-                    :invalid="!isFieldValid('email')"
                     required
                 />
             </div>
@@ -33,7 +31,6 @@
                     name="message"
                     id="message"
                     :disabled="isSending"
-                    :invalid="!isFieldValid('message')"
                     required
                 />
             </div>
@@ -66,15 +63,8 @@ export default defineComponent({
     setup() {
         const wasSent = ref(false);
         const isSending = ref(false);
-        const invalidFields = ref([]);
 
-        return { styles, wasSent, isSending, invalidFields };
-    },
-
-    methods: {
-        isFieldValid(field: string) {
-            return !this.invalidFields.includes(field);
-        }
+        return { styles, wasSent, isSending };
     }
 });
 </script>
