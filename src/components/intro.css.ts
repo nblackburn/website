@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { vars, sizes, breakpoints } from '@styles/theme.css';
 
-export const about = style({
+export const intro = style({
     display: 'grid',
     fontSize: '1.2rem',
     rowGap: sizes.small,

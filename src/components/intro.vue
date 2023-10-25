@@ -1,5 +1,5 @@
 <template>
-    <section :class="styles.about">
+    <section :class="styles.intro">
         <div :class="styles.detail">
             <div :class="styles.summary">
                 <h2 :class="styles.title">About me</h2>
@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import * as styles from './about.css';
+import * as styles from './intro.css';
 import NavLink from '@components/navLink.vue';
 import SocialLinks from '@components/socialLinks.vue';
 
