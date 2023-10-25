@@ -15,7 +15,7 @@ export const button = style({
     boxShadow: `0px 0px 0px 0px transparent`,
     border: `1px rgb(${vars.colors.silverChalice}) solid`,
     selectors: {
-        '&:hover': {
+        '&:hover:not(:disabled)': {
             cursor: 'pointer',
             borderColor: `rgb(${primaryAccent})`,
             boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
