@@ -13,6 +13,9 @@ export const input = style({
         '&:focus': {
             borderColor: `rgb(${primaryAccent})`,
             boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
+        },
+        '&:disabled': {
+            color: `rgb(${vars.colors.davyGrey})`
         }
     },
     '@media': {

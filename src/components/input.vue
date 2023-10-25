@@ -4,6 +4,7 @@
         :name="name"
         :id="id"
         :required="required"
+        :disabled="disabled"
         :class="styles.input"
     />
 </template>
@@ -27,6 +28,10 @@ export default defineComponent({
         },
 
         required: {
+            type: Boolean
+        },
+
+        disabled: {
             type: Boolean
         }
     },
