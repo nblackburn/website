@@ -5,7 +5,7 @@
         :id="id"
         :required="required"
         :disabled="disabled"
-        :class="[styles.input, invalid ? styles.invalid : '']"
+        :class="styles.input"
     />
 </template>
 

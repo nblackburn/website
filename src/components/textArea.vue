@@ -6,7 +6,7 @@
         rows="5"
         :required="required"
         :disabled="disabled"
-        :class="[styles.textArea, invalid ? styles.invalid : '']"
+        :class="styles.textArea"
     />
 </template>
 

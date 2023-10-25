@@ -18,6 +18,14 @@ export const textArea = style({
         },
         '&:disabled': {
             color: `rgb(${vars.colors.davyGrey})`
+        },
+        '&:invalid': {
+            borderColor: `1px rgb(${vars.colors.venetianRed}) solid`,
+            '@media': {
+                '(prefers-color-scheme: dark)': {
+                    border: `1px rgb(${vars.colors.venetianRed}) solid`
+                }
+            }
         }
     },
     '@media': {
@@ -25,15 +33,6 @@ export const textArea = style({
             background: `rgba(0 0 0 / 0.3)`,
             color: `rgb(${vars.colors.white})`,
             border: `1px rgb(${vars.colors.eerieBlack}) solid`
-        }
-    }
-});
-
-export const invalid = style({
-    borderColor: `1px rgb(${vars.colors.venetianRed}) solid`,
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            border: `1px rgb(${vars.colors.venetianRed}) solid`
         }
     }
 });
