@@ -14,13 +14,15 @@ export interface Props {
 const {title, subTitle, image, activePage, layout = '7fr 3fr'} = Astro.props;
 ---
 
+<style define:vars={{layout}}></style>
+
 <PageLayout
     title={title}
     subTitle={subTitle}
     image={image}
     activePage={activePage}
 >
-    <div class={styles.sidePanel} style={{gridTemplateColumns: layout}}>
+    <div class={styles.sidePanel}>
         <section class={styles.left}>
             <slot />
         </section>

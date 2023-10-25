@@ -5,7 +5,7 @@ export const sidePanel = style({
     display: 'grid',
     rowGap: sizes.small,
     columnGap: sizes.large,
-    gridTemplateColumns: '7fr 3fr',
+    gridTemplateColumns: 'var(--layout)',
     '@media': {
         [breakpoints.small]: {
             gridTemplateColumns: '1fr'
