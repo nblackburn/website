@@ -41,7 +41,15 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Make sure all required fields were sent
-    const missingFields = requiredFields.filter((field) => !data.has(field));
+    const missingFields = requiredFields.filter((field) => {
+        const value = data.get(field);
+
+        if (typeof value === 'string') {
+            return value.trim().length === 0;
+        }
+
+        return value !== null;
+    });
 
     if (missingFields.length > 0) {
         return buildResponse(400, {
