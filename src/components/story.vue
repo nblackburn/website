@@ -23,8 +23,9 @@
             worked on in the hope that they can reach others.
         </p>
         <p :class="styles.paragraph">
-            Have a look around, stay a while, or reach out. I would love to hear
-            from you.
+            Have a look around, stay a while, or
+            <a :class="styles.link" href="/contact">reach out</a>. I would love
+            to hear from you.
         </p>
     </div>
 </template>
