@@ -12,5 +12,5 @@ const subTitle = 'Get in touch';
 <SidePanelLayout title={title} subTitle={subTitle} activePage={activePage} layout={layout}>
     <Contact />
 
-    <ContactForm method="post" action="/api/contact" slot="sidepanel"/>
+    <ContactForm method="post" action="/api/contact" slot="sidepanel" client:load />
 </SidePanelLayout>
