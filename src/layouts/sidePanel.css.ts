@@ -1,9 +1,9 @@
 import { style } from '@vanilla-extract/css';
-import { sizes, breakpoints } from '../styles/theme.css';
+import { breakpoints, sizes } from '../styles/theme.css';
 
 export const sidePanel = style({
     display: 'grid',
-    rowGap: sizes.small,
+    rowGap: sizes.large,
     columnGap: sizes.large,
     gridTemplateColumns: 'var(--layout)',
     '@media': {
