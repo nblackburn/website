@@ -4,11 +4,12 @@ import ContactForm from '@components/contactForm.vue';
 import SidePanelLayout from '@layouts/sidePanel.astro';
 
 const title = 'Contact';
+const layout = '1fr 1fr';
 const activePage = 'contact';
 const subTitle = 'Get in touch';
 ---
 
-<SidePanelLayout title={title} subTitle={subTitle} activePage={activePage}>
+<SidePanelLayout title={title} subTitle={subTitle} activePage={activePage} layout={layout}>
     <ContactForm method="post" action="/api/contact" />
     <SocialLinks slot="sidepanel" />
 </SidePanelLayout>

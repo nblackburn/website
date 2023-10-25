@@ -5,12 +5,13 @@ import PageLayout from '@layouts/page.astro';
 
 export interface Props {
     title: string;
+    layout: string;
     subTitle?: string;
     activePage: string;
     image?: ImageMetadata;
 }
 
-const { title, subTitle, image, activePage } = Astro.props;
+const {title, subTitle, image, activePage, layout = '7fr 3fr'} = Astro.props;
 ---
 
 <PageLayout
@@ -19,7 +20,7 @@ const { title, subTitle, image, activePage } = Astro.props;
     image={image}
     activePage={activePage}
 >
-    <div class={styles.sidePanel}>
+    <div class={styles.sidePanel} style={{gridTemplateColumns: layout}}>
         <section class={styles.left}>
             <slot />
         </section>
