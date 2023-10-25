@@ -2,19 +2,60 @@
     <form :method="method" :action="action">
         <fieldset name="contact" :class="styles.fieldSet">
             <div :class="styles.field">
-                <label for="name" :class="styles.label">Name*</label>
-                <Input type="text" name="name" id="name" required />
+                <label
+                    for="name"
+                    :class="[
+                        styles.label,
+                        !isFieldValid('name') ? styles.invalidLabel : ''
+                    ]"
+                    >Name*</label
+                >
+                <Input
+                    type="text"
+                    name="name"
+                    id="name"
+                    :disabled="isSending"
+                    :invalid="!isFieldValid('name')"
+                    required
+                />
             </div>
 
             <div :class="styles.field">
-                <label for="email" :class="styles.label">Email*</label>
-                <Input type="email" name="email" id="email" required />
+                <label
+                    for="email"
+                    :class="[
+                        styles.label,
+                        !isFieldValid('email') ? styles.invalidLabel : ''
+                    ]"
+                    >Email*</label
+                >
+                <Input
+                    type="email"
+                    name="email"
+                    id="email"
+                    :disabled="isSending"
+                    :invalid="!isFieldValid('email')"
+                    required
+                />
             </div>
         </fieldset>
 
         <div :class="styles.field">
-            <label for="message" :class="styles.label">Message*</label>
-            <TextArea name="message" id="message" required />
+            <label
+                for="message"
+                :class="[
+                    styles.label,
+                    !isFieldValid('message') ? styles.invalidLabel : ''
+                ]"
+                >Message*</label
+            >
+            <TextArea
+                name="message"
+                id="message"
+                :disabled="isSending"
+                :invalid="!isFieldValid('message')"
+                required
+            />
         </div>
 
         <Button type="submit">Send message</Button>
@@ -42,7 +83,17 @@ export default defineComponent({
     },
 
     setup() {
-        return { styles };
+        const wasSent = ref(false);
+        const isSending = ref(false);
+        const invalidFields = ref([]);
+
+        return { styles, wasSent, isSending, invalidFields };
+    },
+
+    methods: {
+        isFieldValid(field: string) {
+            return !this.invalidFields.includes(field);
+        }
     }
 });
 </script>
