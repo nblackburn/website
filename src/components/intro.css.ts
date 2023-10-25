@@ -75,8 +75,8 @@ export const image = style({
 });
 
 export const title = style({
-    margin: '0 0 0.75rem 0',
-    fontSize: sizes.medium
+    fontSize: sizes.medium,
+    margin: `0 0 ${sizes.small} 0`
 });
 
 export const paragraph = style({
