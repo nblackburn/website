@@ -5,7 +5,7 @@
         :id="id"
         :required="required"
         :disabled="disabled"
-        :class="styles.input"
+        :class="[styles.input, invalid ? styles.invalid : '']"
     />
 </template>
 
@@ -32,6 +32,10 @@ export default defineComponent({
         },
 
         disabled: {
+            type: Boolean
+        },
+
+        invalid: {
             type: Boolean
         }
     },
