@@ -29,7 +29,7 @@ const buildResponse = (status = 200, data: JSONObject) => {
 
 export const POST: APIRoute = async ({ request }) => {
     const data = await request.formData();
-    const requiredFields = ['name', 'email', 'subject', 'message'];
+    const requiredFields = ['name', 'email', 'message'];
 
     // Make sure the api key was set
     if (!RESEND_API_KEY) {
@@ -55,7 +55,6 @@ export const POST: APIRoute = async ({ request }) => {
     // Build up the required fields
     const name = data.get('name');
     const email = data.get('email');
-    const subject = data.get('subject');
     const message = data.get('message');
 
     // Send email
@@ -79,7 +78,7 @@ export const POST: APIRoute = async ({ request }) => {
                 }
             ],
             reply_to: [`${name} <${email}>`],
-            subject: subject,
+            subject: `${name} has reached out to you via nblackburn.uk`,
             text: message
         })
     });

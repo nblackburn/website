@@ -13,11 +13,6 @@
         </fieldset>
 
         <div :class="styles.field">
-            <label for="subject" :class="styles.label">Subject*</label>
-            <Input type="text" name="subject" id="subject" required />
-        </div>
-
-        <div :class="styles.field">
             <label for="message" :class="styles.label">Message*</label>
             <TextArea name="message" id="message" required />
         </div>
