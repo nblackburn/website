@@ -5,7 +5,11 @@ export type SocialLink = {
 };
 
 export const socialLinks: SocialLink[] = [
-    { id: 'email', name: 'Email', href: 'mailto:support@nblackburn.uk' },
+    {
+        id: 'at-sign',
+        name: 'Email',
+        href: 'mailto:support@nblackburn.uk'
+    },
     {
         id: 'linkedin',
         name: 'LinkedIn',
