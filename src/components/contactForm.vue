@@ -97,7 +97,13 @@ export default defineComponent({
             wasSent.value = response.ok;
         };
 
-        return { styles, onSubmit, setValidity };
+        return {
+            styles,
+            wasSent,
+            onSubmit,
+            isSending,
+            setValidity
+        };
     }
 });
 </script>
