@@ -49,6 +49,7 @@ import { ref, defineComponent } from 'vue';
 import Input from '@components/input.vue';
 import * as styles from './contactForm.css';
 import Button from '@components/button.vue';
+import listenOnce from '@utilities/listenOnce';
 import TextArea from '@components/textArea.vue';
 
 export default defineComponent({
@@ -77,26 +78,6 @@ export default defineComponent({
             element.reportValidity();
         },
 
-        oneTimeEvent(
-            element: HTMLElement,
-            event: string,
-            handler: EventListenerOrEventListenerObject
-        ) {
-            const eventListener = (event: Event) => {
-                if (!event || !event.target) {
-                    return;
-                }
-
-                if (typeof handler === 'function') {
-                    handler(event);
-                }
-
-                event.target.removeEventListener(event.type, eventListener);
-            };
-
-            element.addEventListener(event, eventListener);
-        },
-
         async onSubmit(event: Event) {
             event.preventDefault();
 
@@ -116,7 +97,8 @@ export default defineComponent({
 
                     if (element) {
                         this.setValidity(element, 'Please fill in this field');
-                        this.oneTimeEvent(element, 'input', () =>
+
+                        listenOnce(element, 'input', () =>
                             this.setValidity(element, '')
                         );
                     }
