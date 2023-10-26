@@ -5,9 +5,10 @@
     "type": "module",
     "scripts": {
         "start": "astro dev",
+        "build": "astro build",
+        "check": "astro check",
         "preview": "astro preview",
         "postinstall": "husky install",
-        "build": "astro check && astro build",
         "format": "prettier . --write --ignore-unknown"
     },
     "packageManager": "yarn@3.2.4",
