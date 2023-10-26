@@ -54,35 +54,23 @@ import TextArea from '@components/textArea.vue';
 import FieldSet from '@components/fieldSet.vue';
 
 export default defineComponent({
-    components: { Input, TextArea, Button, FieldSet },
+    props: { method: String, action: String },
 
-    props: {
-        method: {
-            type: String
-        },
-
-        action: {
-            type: String
-        }
-    },
+    components: { Input, Button, TextArea, FieldSet },
 
     setup() {
         const wasSent = ref(false);
         const isSending = ref(false);
 
-        return { styles, wasSent, isSending };
-    },
-
-    methods: {
-        setValidity(element: HTMLElement, message: string) {
+        const setValidity = (element: HTMLElement, message: string) => {
             element.setCustomValidity(message);
             element.reportValidity();
-        },
+        };
 
-        async onSubmit(event: Event) {
+        const onSubmit = async (event: Event) => {
             event.preventDefault();
 
-            this.isSending = true;
+            isSending.value = true;
 
             const formData = new FormData(event.target as HTMLFormElement);
             const response = await fetch('/api/contact', {
@@ -97,18 +85,19 @@ export default defineComponent({
                     const element = document.getElementById(field);
 
                     if (element) {
-                        this.setValidity(element, 'Please fill in this field');
-
+                        setValidity(element, 'Please fill in this field');
                         listenOnce(element, 'input', () =>
-                            this.setValidity(element, '')
+                            setValidity(element, '')
                         );
                     }
                 });
             }
 
-            this.isSending = false;
-            this.wasSent = response.ok;
-        }
+            isSending.value = false;
+            wasSent.value = response.ok;
+        };
+
+        return { styles, onSubmit, setValidity };
     }
 });
 </script>

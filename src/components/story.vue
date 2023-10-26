@@ -30,13 +30,6 @@
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './story.css';
-
-export default defineComponent({
-    setup() {
-        return { styles };
-    }
-});
 </script>

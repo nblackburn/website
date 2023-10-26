@@ -10,32 +10,15 @@
     </header>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { nav } from '@config/nav';
-import { defineComponent } from 'vue';
 import * as styles from './header.css';
 import Logo from '@components/logo.vue';
 import Link from '@components/link.vue';
 import Navbar from '@components/navBar.vue';
 import AccentBar from '@components/accentBar.vue';
 
-export default defineComponent({
-    props: {
-        activePage: {
-            type: String,
-            default: undefined
-        }
-    },
-
-    components: {
-        Logo,
-        Link,
-        Navbar,
-        AccentBar
-    },
-
-    setup() {
-        return { styles, nav };
-    }
+defineProps({
+    activePage: String
 });
 </script>

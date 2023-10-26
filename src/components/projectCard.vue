@@ -58,9 +58,8 @@
     </article>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import type { PropType } from 'vue';
-import { defineComponent } from 'vue';
 import Link from '@components/link.vue';
 import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
@@ -68,31 +67,18 @@ import { format, formatISO } from 'date-fns';
 import NavLink from '@components/navLink.vue';
 import type { CollectionEntry } from 'astro:content';
 
-export default defineComponent({
-    components: {
-        Link,
-        NavLink
-    },
-
-    props: {
-        project: {
-            type: Object as PropType<CollectionEntry<'project'>>,
-            default() {
-                return [];
-            }
-        },
-
-        activeTag: {
-            type: String
+const { project } = defineProps({
+    project: {
+        type: Object as PropType<CollectionEntry<'project'>>,
+        default() {
+            return {};
         }
     },
-
-    setup(props) {
-        const { project } = props;
-        const isoDate = formatISO(project.data.pubDate);
-        const pubDate = format(project.data.pubDate, 'do MMM, yyyy');
-
-        return { styles, pubDate, isoDate, slugify };
+    activeTag: {
+        type: String
     }
 });
+
+const isoDate = formatISO(project.data.pubDate);
+const pubDate = format(project.data.pubDate, 'do MMM, yyyy');
 </script>

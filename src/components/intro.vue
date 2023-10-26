@@ -26,17 +26,8 @@
     </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './intro.css';
 import NavLink from '@components/navLink.vue';
 import SocialLinks from '@components/socialLinks.vue';
-
-export default defineComponent({
-    components: { SocialLinks, NavLink },
-
-    setup() {
-        return { styles };
-    }
-});
 </script>

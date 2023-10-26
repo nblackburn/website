@@ -4,7 +4,6 @@
             v-for="group in groups"
             :key="group.id"
             :class="styles.linkGroup"
-            :group="group"
         >
             <h3 :class="styles.heading">{{ group.name }}</h3>
             <ol :class="styles.items">
@@ -34,9 +33,8 @@
     </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import type { PropType } from 'vue';
-import { defineComponent } from 'vue';
 import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
 
@@ -52,22 +50,12 @@ type Group = {
     items: Item[];
 };
 
-export default defineComponent({
-    components: {
-        Link
-    },
-
-    props: {
-        groups: {
-            type: Array as PropType<Group[]>,
-            default() {
-                return [];
-            }
+defineProps({
+    groups: {
+        type: Array as PropType<Group[]>,
+        default() {
+            return [];
         }
-    },
-
-    setup() {
-        return { styles };
     }
 });
 </script>

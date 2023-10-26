@@ -4,13 +4,6 @@
     </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './projectList.css';
-
-export default defineComponent({
-    setup() {
-        return { styles };
-    }
-});
 </script>

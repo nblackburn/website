@@ -13,7 +13,7 @@ import { onMounted, ref } from 'vue';
 import listenOnce from '@utilities/listenOnce';
 import * as styles from '@components/fieldSet.css';
 
-defineProps(['name']);
+defineProps({ name: String });
 
 const fieldSet = ref();
 const validated = ref(false);

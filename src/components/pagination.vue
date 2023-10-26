@@ -23,9 +23,8 @@
     </nav>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import type { PropType } from 'vue';
-import { defineComponent } from 'vue';
 import * as styles from './pagination.css';
 import NavLink from '@components/navLink.vue';
 
@@ -35,22 +34,12 @@ type URL = {
     next: string | undefined;
 };
 
-export default defineComponent({
-    components: {
-        NavLink
-    },
-
-    props: {
-        links: {
-            type: Object as PropType<URL>,
-            default() {
-                return {};
-            }
+defineProps({
+    links: {
+        type: Object as PropType<URL>,
+        default() {
+            return {};
         }
-    },
-
-    setup() {
-        return { styles };
     }
 });
 </script>

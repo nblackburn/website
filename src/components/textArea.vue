@@ -13,51 +13,43 @@
     />
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import { ref } from 'vue';
 import * as styles from './textArea.css';
-import { defineComponent, ref } from 'vue';
 
-export default defineComponent({
-    props: {
-        name: {
-            type: String
-        },
-
-        id: {
-            type: String
-        },
-
-        rows: {
-            type: Number
-        },
-
-        required: {
-            type: Boolean
-        },
-
-        disabled: {
-            type: Boolean
-        },
-
-        minLength: {
-            type: Number
-        },
-
-        maxLength: {
-            type: Number
-        }
+defineProps({
+    name: {
+        type: String
     },
 
-    setup() {
-        const validated = ref(false);
-
-        return { styles, validated };
+    id: {
+        type: String
     },
 
-    methods: {
-        onValidated() {
-            this.validated = true;
-        }
+    rows: {
+        type: Number
+    },
+
+    required: {
+        type: Boolean
+    },
+
+    disabled: {
+        type: Boolean
+    },
+
+    minLength: {
+        type: Number
+    },
+
+    maxLength: {
+        type: Number
     }
 });
+
+const validated = ref(false);
+
+const onValidated = () => {
+    validated.value = true;
+};
 </script>

@@ -15,42 +15,27 @@
     </nav>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import type { PropType } from 'vue';
-import { defineComponent } from 'vue';
 import * as styles from './navBar.css';
 import type { NavItem } from '@config/nav';
 import NavLink from '@components/navLink.vue';
 
-export default defineComponent({
-    components: {
-        NavLink
+const props = defineProps({
+    activePage: {
+        type: String
     },
-
-    props: {
-        activePage: {
-            type: String,
-            default: undefined
-        },
-
-        links: {
-            type: Array as PropType<NavItem[]>,
-            default() {
-                return [];
-            }
-        }
-    },
-
-    setup() {
-        return { styles };
-    },
-
-    methods: {
-        isActive(link: NavItem) {
-            const activePage = this.activePage;
-
-            return activePage === link.id;
+    links: {
+        type: Array as PropType<NavItem[]>,
+        default() {
+            return [];
         }
     }
 });
+
+const isActive = (link: NavItem) => {
+    const activePage = props.activePage;
+
+    return activePage === link.id;
+};
 </script>

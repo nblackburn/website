@@ -7,23 +7,11 @@
     </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './pageHeader.css';
 
-export default defineComponent({
-    props: {
-        title: {
-            type: String
-        },
-
-        subTitle: {
-            type: String
-        }
-    },
-
-    setup() {
-        return { styles };
-    }
+defineProps({
+    title: String,
+    subTitle: String
 });
 </script>

@@ -32,20 +32,13 @@
     </svg>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import { primaryAccent, secondaryAccent } from '@styles/theme.css';
 
-export default defineComponent({
-    props: {
-        size: {
-            type: Number,
-            default: 48
-        }
-    },
-
-    setup() {
-        return { primaryAccent, secondaryAccent };
+defineProps({
+    size: {
+        type: Number,
+        default: 48
     }
 });
 </script>

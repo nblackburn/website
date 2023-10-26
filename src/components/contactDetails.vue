@@ -15,17 +15,7 @@
     </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import NavLink from '@components/navLink.vue';
+<script lang="ts" setup>
 import * as styles from './contactDetails.css';
 import SocialLinks from '@components/socialLinks.vue';
-
-export default defineComponent({
-    components: { SocialLinks, NavLink },
-
-    setup() {
-        return { styles };
-    }
-});
 </script>

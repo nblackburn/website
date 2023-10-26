@@ -11,43 +11,21 @@
     />
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import { ref } from 'vue';
 import * as styles from './input.css';
-import { defineComponent, ref, defineEmits } from 'vue';
 
-export default defineComponent({
-    props: {
-        type: {
-            type: String
-        },
-
-        name: {
-            type: String
-        },
-
-        id: {
-            type: String
-        },
-
-        required: {
-            type: Boolean
-        },
-
-        disabled: {
-            type: Boolean
-        }
-    },
-
-    setup() {
-        const validated = ref(false);
-
-        return { styles, validated };
-    },
-
-    methods: {
-        onValidated() {
-            this.validated = true;
-        }
-    }
+defineProps({
+    type: String,
+    name: String,
+    id: String,
+    required: Boolean,
+    disabled: Boolean
 });
+
+const validated = ref(false);
+
+const onValidated = () => {
+    validated.value = true;
+};
 </script>

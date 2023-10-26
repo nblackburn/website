@@ -4,23 +4,11 @@
     </button>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './button.css';
 
-export default defineComponent({
-    props: {
-        type: {
-            type: String
-        },
-
-        disabled: {
-            type: Boolean
-        }
-    },
-
-    setup() {
-        return { styles };
-    }
+defineProps({
+    name: String,
+    disabled: Boolean
 });
 </script>
