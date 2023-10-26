@@ -106,6 +106,8 @@ export default defineComponent({
 
             // Reset state after 5 seconds
             setTimeout(() => (wasSent.value = false), 3000);
+
+            message.value = '';
             isSending.value = false;
             wasSent.value = response.ok;
         };
