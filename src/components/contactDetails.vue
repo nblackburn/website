@@ -17,8 +17,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import * as styles from './contact.css';
 import NavLink from '@components/navLink.vue';
+import * as styles from './contactDetails.css';
 import SocialLinks from '@components/socialLinks.vue';
 
 export default defineComponent({

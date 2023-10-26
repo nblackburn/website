@@ -1,7 +1,7 @@
 ---
-import Contact from '@components/contact.vue';
 import ContactForm from '@components/contactForm.vue';
 import SidePanelLayout from '@layouts/sidePanel.astro';
+import ContactDetails from '../components/contactDetails.vue';
 
 const title = 'Contact';
 const layout = '1fr 1fr';
@@ -10,7 +10,7 @@ const subTitle = 'Get in touch';
 ---
 
 <SidePanelLayout title={title} subTitle={subTitle} activePage={activePage} layout={layout}>
-    <Contact />
+    <ContactDetails />
 
     <ContactForm method="post" action="/api/contact" slot="sidepanel" client:load />
 </SidePanelLayout>
