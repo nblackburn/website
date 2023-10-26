@@ -1,5 +1,5 @@
 <template>
-    <form :method="method" :action="action">
+    <form :method="method" :action="action" @submit.prevent="onSubmit">
         <fieldset name="contact" :class="styles.fieldSet">
             <div :class="styles.field">
                 <label for="name" :class="styles.label">Name*</label>
@@ -36,12 +36,14 @@
             </div>
         </fieldset>
 
-        <Button type="submit">Send message</Button>
+        <Button type="submit" :busy="isSending"
+            >{{ isSending ? 'Sending message...' : 'Send message' }}
+        </Button>
     </form>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { ref, defineComponent } from 'vue';
 import Input from '@components/input.vue';
 import * as styles from './contactForm.css';
 import Button from '@components/button.vue';
@@ -65,6 +67,63 @@ export default defineComponent({
         const isSending = ref(false);
 
         return { styles, wasSent, isSending };
+    },
+
+    methods: {
+        setValidity(element: HTMLElement, message: string) {
+            element.setCustomValidity(message);
+            element.reportValidity();
+        },
+
+        oneTimeEvent(
+            element: HTMLElement,
+            event: string,
+            handler: EventListenerOrEventListenerObject
+        ) {
+            const eventListener = (event: Event) => {
+                if (!event || !event.target) {
+                    return;
+                }
+
+                if (typeof handler === 'function') {
+                    handler(event);
+                }
+
+                event.target.removeEventListener(event.type, eventListener);
+            };
+
+            element.addEventListener(event, eventListener);
+        },
+
+        async onSubmit(event: Event) {
+            event.preventDefault();
+
+            this.isSending = true;
+
+            const formData = new FormData(event.target as HTMLFormElement);
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                const { error } = await response.json();
+
+                error.fields.forEach((field: string) => {
+                    const element = document.getElementById(field);
+
+                    if (element) {
+                        this.setValidity(element, 'Please fill in this field');
+                        this.oneTimeEvent(element, 'input', () =>
+                            this.setValidity(element, '')
+                        );
+                    }
+                });
+            }
+
+            this.isSending = false;
+            this.wasSent = response.ok;
+        }
     }
 });
 </script>
