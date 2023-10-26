@@ -2,7 +2,9 @@
     <textarea
         :name="name"
         :id="id"
-        rows="5"
+        :rows="rows"
+        :maxlength="maxLength"
+        :minlength="minLength"
         :required="required"
         :disabled="disabled"
         :class="styles.textArea"
@@ -23,12 +25,24 @@ export default defineComponent({
             type: String
         },
 
+        rows: {
+            type: Number
+        },
+
         required: {
             type: Boolean
         },
 
         disabled: {
             type: Boolean
+        },
+
+        minLength: {
+            type: Number
+        },
+
+        maxLength: {
+            type: Number
         }
     },
 

@@ -30,6 +30,8 @@
                 <TextArea
                     name="message"
                     id="message"
+                    :rows="5"
+                    :min-length="10"
                     :disabled="isSending"
                     required
                 />
