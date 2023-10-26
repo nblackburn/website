@@ -1,6 +1,6 @@
 <template>
     <form :method="method" :action="action" @submit.prevent="onSubmit">
-        <fieldset name="contact" :class="styles.fieldSet">
+        <FieldSet name="contact">
             <div :class="styles.field">
                 <label for="name" :class="styles.label">Name*</label>
                 <Input
@@ -22,9 +22,9 @@
                     required
                 />
             </div>
-        </fieldset>
+        </FieldSet>
 
-        <fieldset :class="styles.fieldSet">
+        <FieldSet name="message">
             <div :class="styles.field">
                 <label for="message" :class="styles.label">Message*</label>
                 <TextArea
@@ -36,7 +36,7 @@
                     required
                 />
             </div>
-        </fieldset>
+        </FieldSet>
 
         <Button type="submit" :busy="isSending"
             >{{ isSending ? 'Sending message...' : 'Send message' }}
@@ -51,9 +51,10 @@ import * as styles from './contactForm.css';
 import Button from '@components/button.vue';
 import listenOnce from '@utilities/listenOnce';
 import TextArea from '@components/textArea.vue';
+import FieldSet from '@components/fieldSet.vue';
 
 export default defineComponent({
-    components: { Input, TextArea, Button },
+    components: { Input, TextArea, Button, FieldSet },
 
     props: {
         method: {
