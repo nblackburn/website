@@ -16,14 +16,6 @@ export const input = style({
         },
         '&:disabled': {
             color: `rgb(${vars.colors.davyGrey})`
-        },
-        '&:invalid': {
-            borderColor: `1px rgb(${vars.colors.venetianRed}) solid`,
-            '@media': {
-                '(prefers-color-scheme: dark)': {
-                    border: `1px rgb(${vars.colors.venetianRed}) solid`
-                }
-            }
         }
     },
     '@media': {
@@ -34,3 +26,19 @@ export const input = style({
         }
     }
 });
+
+export const validated = style([
+    input,
+    {
+        selectors: {
+            '&:invalid': {
+                borderColor: `1px rgb(${vars.colors.venetianRed}) solid`,
+                '@media': {
+                    '(prefers-color-scheme: dark)': {
+                        border: `1px rgb(${vars.colors.venetianRed}) solid`
+                    }
+                }
+            }
+        }
+    }
+]);

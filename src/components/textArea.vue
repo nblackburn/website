@@ -7,13 +7,15 @@
         :minlength="minLength"
         :required="required"
         :disabled="disabled"
-        :class="styles.textArea"
+        :class="[styles.textArea, validated ? styles.validated : '']"
+        @invalid="onValidated"
+        @valid="onValidated"
     />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import * as styles from './textArea.css';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
     props: {
@@ -47,7 +49,15 @@ export default defineComponent({
     },
 
     setup() {
-        return { styles };
+        const validated = ref(false);
+
+        return { styles, validated };
+    },
+
+    methods: {
+        onValidated() {
+            this.validated = true;
+        }
     }
 });
 </script>

@@ -5,13 +5,15 @@
         :id="id"
         :required="required"
         :disabled="disabled"
-        :class="styles.input"
+        :class="[styles.input, validated ? styles.validated : '']"
+        @invalid="onValidated"
+        @valid="onValidated"
     />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import * as styles from './input.css';
+import { defineComponent, ref, defineEmits } from 'vue';
 
 export default defineComponent({
     props: {
@@ -37,7 +39,15 @@ export default defineComponent({
     },
 
     setup() {
-        return { styles };
+        const validated = ref(false);
+
+        return { styles, validated };
+    },
+
+    methods: {
+        onValidated() {
+            this.validated = true;
+        }
     }
 });
 </script>
