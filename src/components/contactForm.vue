@@ -7,6 +7,7 @@
                     type="text"
                     name="name"
                     id="name"
+                    v-model="name"
                     :disabled="isSending"
                     required
                 />
@@ -18,6 +19,7 @@
                     type="email"
                     name="email"
                     id="email"
+                    v-model="email"
                     :disabled="isSending"
                     required
                 />
@@ -30,6 +32,7 @@
                 <TextArea
                     name="message"
                     id="message"
+                    v-model="message"
                     :rows="5"
                     :min-length="10"
                     :disabled="isSending"
@@ -59,6 +62,9 @@ export default defineComponent({
     components: { Input, Button, TextArea, FieldSet },
 
     setup() {
+        const name = ref();
+        const email = ref();
+        const message = ref();
         const wasSent = ref(false);
         const isSending = ref(false);
 
@@ -98,7 +104,10 @@ export default defineComponent({
         };
 
         return {
+            name,
+            email,
             styles,
+            message,
             wasSent,
             onSubmit,
             isSending,

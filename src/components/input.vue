@@ -5,9 +5,11 @@
         :id="id"
         :required="required"
         :disabled="disabled"
+        :value="modelValue"
         :class="[styles.input, validated ? styles.validated : '']"
         @invalid="onValidated"
         @valid="onValidated"
+        @input="$emit('update:modelValue', $event?.target?.value)"
     />
 </template>
 
@@ -20,8 +22,11 @@ defineProps({
     name: String,
     id: String,
     required: Boolean,
-    disabled: Boolean
+    disabled: Boolean,
+    modelValue: String
 });
+
+defineEmits(['update:modelValue']);
 
 const validated = ref(false);
 

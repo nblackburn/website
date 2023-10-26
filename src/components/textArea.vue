@@ -7,9 +7,11 @@
         :minlength="minLength"
         :required="required"
         :disabled="disabled"
+        :value="modelValue"
         :class="[styles.textArea, validated ? styles.validated : '']"
         @invalid="onValidated"
         @valid="onValidated"
+        @input="$emit('update:modelValue', $event?.target?.value)"
     />
 </template>
 
@@ -18,34 +20,17 @@ import { ref } from 'vue';
 import * as styles from './textArea.css';
 
 defineProps({
-    name: {
-        type: String
-    },
-
-    id: {
-        type: String
-    },
-
-    rows: {
-        type: Number
-    },
-
-    required: {
-        type: Boolean
-    },
-
-    disabled: {
-        type: Boolean
-    },
-
-    minLength: {
-        type: Number
-    },
-
-    maxLength: {
-        type: Number
-    }
+    name: String,
+    id: String,
+    rows: Number,
+    required: Boolean,
+    disabled: Boolean,
+    minLength: Number,
+    maxLength: Number,
+    modelValue: String
 });
+
+defineEmits(['update:modelValue']);
 
 const validated = ref(false);
 
