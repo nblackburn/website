@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 
 const envURL = process.env.ENVIRONMENT_URL ?? 'https://nblackburn.uk';
 
