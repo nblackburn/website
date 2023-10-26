@@ -41,14 +41,12 @@
             </div>
         </FieldSet>
 
-        <Button type="submit" :busy="isSending"
-            >{{ isSending ? 'Sending message...' : 'Send message' }}
-        </Button>
+        <Button type="submit" :busy="isSending">{{ submitLabel }}</Button>
     </form>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref, defineComponent, computed } from 'vue';
 import Input from '@components/input.vue';
 import * as styles from './contactForm.css';
 import Button from '@components/button.vue';
@@ -67,6 +65,13 @@ export default defineComponent({
         const message = ref();
         const wasSent = ref(false);
         const isSending = ref(false);
+        const submitLabel = computed(() => {
+            if (wasSent.value) {
+                return 'Message sent';
+            }
+
+            return isSending.value ? 'Sending message...' : 'Send message';
+        });
 
         const setValidity = (element: HTMLElement, message: string) => {
             element.setCustomValidity(message);
@@ -99,6 +104,8 @@ export default defineComponent({
                 });
             }
 
+            // Reset state after 5 seconds
+            setTimeout(() => (wasSent.value = false), 3000);
             isSending.value = false;
             wasSent.value = response.ok;
         };
@@ -111,7 +118,8 @@ export default defineComponent({
             wasSent,
             onSubmit,
             isSending,
-            setValidity
+            setValidity,
+            submitLabel
         };
     }
 });
