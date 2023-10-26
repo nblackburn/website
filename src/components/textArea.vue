@@ -1,6 +1,5 @@
 <template>
     <textarea
-        :type="type"
         :name="name"
         :id="id"
         rows="5"
@@ -16,10 +15,6 @@ import * as styles from './textArea.css';
 
 export default defineComponent({
     props: {
-        type: {
-            type: String
-        },
-
         name: {
             type: String
         },
