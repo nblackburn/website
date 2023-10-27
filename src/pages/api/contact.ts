@@ -27,6 +27,38 @@ const buildResponse = (status = 200, data: JSONObject) => {
     });
 };
 
+const sendEmail = (data: FormData) => {
+    const name = data.get('name');
+    const email = data.get('email');
+    const message = data.get('message');
+
+    // Send email
+    return fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${RESEND_API_KEY}`
+        },
+        body: JSON.stringify({
+            from: 'Nathaniel Blackburn <noreply@nblackburn.uk>',
+            to: ['Nathaniel Blackburn <support@nblackburn.uk>'],
+            tags: [
+                {
+                    name: 'type',
+                    value: 'contact'
+                },
+                {
+                    name: 'project',
+                    value: 'website'
+                }
+            ],
+            reply_to: [`${name} <${email}>`],
+            subject: `${name} has reached out to you via nblackburn.uk`,
+            text: message
+        })
+    });
+};
+
 export const POST: APIRoute = async ({ request }) => {
     const data = await request.formData();
     const requiredFields = ['name', 'email', 'message'];
@@ -60,36 +92,8 @@ export const POST: APIRoute = async ({ request }) => {
         });
     }
 
-    // Build up the required fields
-    const name = data.get('name');
-    const email = data.get('email');
-    const message = data.get('message');
-
     // Send email
-    const res = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${RESEND_API_KEY}`
-        },
-        body: JSON.stringify({
-            from: 'Nathaniel Blackburn <noreply@nblackburn.uk>',
-            to: ['Nathaniel Blackburn <support@nblackburn.uk>'],
-            tags: [
-                {
-                    name: 'type',
-                    value: 'contact'
-                },
-                {
-                    name: 'project',
-                    value: 'website'
-                }
-            ],
-            reply_to: [`${name} <${email}>`],
-            subject: `${name} has reached out to you via nblackburn.uk`,
-            text: message
-        })
-    });
+    const res = await sendEmail(data);
 
     // Verify if email was send
     if (!res.ok) {
