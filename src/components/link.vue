@@ -1,37 +1,37 @@
-<script lang="ts">
+<template>
+    <component :is="tag" v-bind="componentAttrs">
+        <slot />
+    </component>
+</template>
+
+<script lang="ts" setup>
+import { computed } from 'vue';
 import config from '@app/config';
-import { h, defineComponent } from 'vue';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
-export default defineComponent({
-    props: {
-        href: {
-            type: String
-        },
-
-        ref: {
-            type: String,
-            default: config.seo.ref
-        }
+const props = defineProps({
+    href: {
+        type: String
     },
-
-    setup(props, { slots }) {
-        const tag = props.href ? 'a' : 'span';
-        const isExternal = isExternalLink(props.href);
-        const href = buildRefLink(props.href, props.ref);
-        const rel = isExternal ? 'noopener' : undefined;
-        const target = isExternal ? '_self' : undefined;
-
-        return () =>
-            h(
-                tag,
-                {
-                    rel,
-                    href,
-                    target
-                },
-                slots.default()
-            );
+    ref: {
+        type: String,
+        default() {
+            return config.seo.ref;
+        }
     }
+});
+
+const isExternal = isExternalLink(props.href);
+const tag = computed(() => (props.href ? 'a' : 'span'));
+const componentAttrs = computed(() => {
+    if (tag.value !== 'a') {
+        return {};
+    }
+
+    return {
+        href: buildRefLink(props.href, props.ref),
+        rel: isExternal ? 'noopener' : undefined,
+        target: isExternal ? '_self' : undefined
+    };
 });
 </script>

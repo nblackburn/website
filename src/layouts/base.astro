@@ -69,6 +69,9 @@ const { title, description, image, activePage } = Astro.props;
 
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        
+        <!-- scripts -->
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoaded" async defer></script>
     </head>
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />

@@ -10,16 +10,9 @@
     </footer>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './footer.css';
 import { version } from '@root/package.json';
 
-export default defineComponent({
-    setup() {
-        const currentYear = new Date().getFullYear();
-
-        return { styles, version, currentYear };
-    }
-});
+const currentYear = new Date().getFullYear();
 </script>

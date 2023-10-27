@@ -11,13 +11,6 @@
     </section>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import * as styles from './hero.css';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-    setup() {
-        return { styles };
-    }
-});
 </script>

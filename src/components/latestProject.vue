@@ -5,16 +5,6 @@
     </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import * as styles from './latestProject.css';
-import ProjectCard from '@components/projectCard.vue';
-
-export default defineComponent({
-    components: { ProjectCard },
-
-    setup() {
-        return { styles };
-    }
-});
 </script>
