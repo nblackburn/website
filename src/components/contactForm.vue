@@ -41,23 +41,38 @@
             </div>
         </FieldSet>
 
-        <Button type="submit" :busy="isSending">{{ submitLabel }}</Button>
+        <FieldSet name="message">
+            <div :class="styles.field">
+                <label for="message" :class="styles.label"
+                    >Are you human?</label
+                >
+                <TurnStile
+                    @expired="onCaptchaExpired"
+                    @callback="onCaptureVerified"
+                    @unsupported="onCaptchaUnsupported"
+                />
+            </div>
+        </FieldSet>
+
+        <Button type="submit" :busy="isSending" :disabled="!verifiedCapture">{{
+            submitLabel
+        }}</Button>
     </form>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, computed } from 'vue';
 import Input from '@components/input.vue';
 import * as styles from './contactForm.css';
 import Button from '@components/button.vue';
 import listenOnce from '@utilities/listenOnce';
 import TextArea from '@components/textArea.vue';
 import FieldSet from '@components/fieldSet.vue';
+import TurnStile from '@components/turnStile.vue';
+import { ref, defineComponent, computed } from 'vue';
 
 export default defineComponent({
     props: { method: String, action: String },
-
-    components: { Input, Button, TextArea, FieldSet },
+    components: { Input, Button, TextArea, FieldSet, TurnStile },
 
     setup() {
         const name = ref();
@@ -65,6 +80,7 @@ export default defineComponent({
         const message = ref();
         const wasSent = ref(false);
         const isSending = ref(false);
+        const verifiedCapture = ref(false);
         const submitLabel = computed(() => {
             if (wasSent.value) {
                 return 'Message sent';
@@ -112,6 +128,18 @@ export default defineComponent({
             wasSent.value = response.ok;
         };
 
+        const onCaptureVerified = () => {
+            verifiedCapture.value = true;
+        };
+
+        const onCaptchaUnsupported = () => {
+            verifiedCapture.value = true;
+        };
+
+        const onCaptchaExpired = () => {
+            verifiedCapture.value = false;
+        };
+
         return {
             name,
             email,
@@ -121,7 +149,11 @@ export default defineComponent({
             onSubmit,
             isSending,
             setValidity,
-            submitLabel
+            submitLabel,
+            verifiedCapture,
+            onCaptchaExpired,
+            onCaptureVerified,
+            onCaptchaUnsupported
         };
     }
 });
