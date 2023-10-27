@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 
 const resendApikey = import.meta.env.RESEND_API_KEY;
+const turnstyleSecretKey = import.meta.env.TURNSTILE_SECRET_KEY;
 
 export const runtime = 'edge';
 export const prerender = false;
@@ -25,6 +26,29 @@ const buildResponse = (status = 200, data: JSONObject) => {
             'Content-Type': 'application/json'
         }
     });
+};
+
+const verifyCaptcha = async (form: FormData) => {
+    const data = new FormData();
+    const challengeResponse = form.get('cf-turnstile-response');
+
+    // Build the request body
+    data.append('secret', turnstyleSecretKey);
+
+    if (challengeResponse) {
+        data.append('response', challengeResponse);
+    }
+
+    // Send email
+    const response = await fetch(
+        'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+        {
+            method: 'POST',
+            body: data
+        }
+    );
+
+    return response.json();
 };
 
 const sendEmail = (data: FormData) => {
@@ -64,7 +88,7 @@ export const POST: APIRoute = async ({ request }) => {
     const requiredFields = ['name', 'email', 'message'];
 
     // Make sure the api key was set
-    if (!resendApikey) {
+    if (!resendApikey || !turnstyleSecretKey) {
         return buildResponse(500, {
             message: {
                 code: 'missing_api_key'
@@ -88,6 +112,17 @@ export const POST: APIRoute = async ({ request }) => {
             error: {
                 code: 'missing_fields',
                 fields: missingFields
+            }
+        });
+    }
+
+    // Verify the captcha
+    const captcha = await verifyCaptcha(data);
+
+    if (!captcha.success) {
+        return buildResponse(400, {
+            error: {
+                code: 'invalid_captcha'
             }
         });
     }
