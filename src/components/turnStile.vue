@@ -25,9 +25,7 @@ export default defineComponent({
             });
         };
 
-        onMounted(() => {
-            window.onTurnstileLoaded = setupScript;
-        });
+        onMounted(setupScript);
 
         return {
             styles,
