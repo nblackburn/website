@@ -13,13 +13,14 @@ export default defineComponent({
         const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 
         const setupScript = () => {
-            const turnstile = window.turnstile;
+            const turnStile = window.turnstile;
 
-            turnstile.render(element.value, {
+            turnStile.render(element.value, {
                 sitekey: siteKey,
                 callback: (token: string) => ctx.emit('callback', token),
                 'error-callback': (error: number) => ctx.emit('error', error),
-                'expired-callback': () => ctx.emit('expired'),
+                'expired-callback': () =>
+                    ctx.emit('expired', { reset: turnStile.reset }),
                 'unsupported-callback': () => ctx.emit('unsupported')
             });
         };
