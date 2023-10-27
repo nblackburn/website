@@ -23,29 +23,15 @@ export const button = style({
         '&:focus': {
             borderColor: `rgb(${primaryAccent})`,
             boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
+        },
+        '&:disabled': {
+            opacity: 0.5
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: `rgb(${vars.colors.white})`,
             borderColor: `rgb(${vars.colors.eerieBlack})`
-        }
-    }
-});
-
-export const disabled = style({
-    border: 'none',
-    color: `rgb(${vars.colors.sonicSilver})`,
-    selectors: {
-        '&:hover': {
-            border: 'none',
-            cursor: 'not-allowed'
-        }
-    },
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            border: 'none',
-            color: `rgb(${vars.colors.davyGrey})`
         }
     }
 });
