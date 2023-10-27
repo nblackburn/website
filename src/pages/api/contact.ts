@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
+const resendApikey = import.meta.env.RESEND_API_KEY;
 
 export const runtime = 'edge';
 export const prerender = false;
@@ -37,7 +37,7 @@ const sendEmail = (data: FormData) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${RESEND_API_KEY}`
+            Authorization: `Bearer ${resendApikey}`
         },
         body: JSON.stringify({
             from: 'Nathaniel Blackburn <noreply@nblackburn.uk>',
@@ -64,7 +64,7 @@ export const POST: APIRoute = async ({ request }) => {
     const requiredFields = ['name', 'email', 'message'];
 
     // Make sure the api key was set
-    if (!RESEND_API_KEY) {
+    if (!resendApikey) {
         return buildResponse(500, {
             message: {
                 code: 'missing_api_key'
