@@ -15,11 +15,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/check@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "@astrojs/check@npm:0.2.1"
+"@astrojs/check@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@astrojs/check@npm:0.3.0"
   dependencies:
-    "@astrojs/language-server": ^2.4.0
+    "@astrojs/language-server": ^2.5.0
     chokidar: ^3.5.3
     fast-glob: ^3.3.1
     kleur: ^4.1.5
@@ -28,18 +28,11 @@ __metadata:
     typescript: ^5.0.0
   bin:
     astro-check: dist/bin.js
-  checksum: 283a77e0bfdb612addd710bb6e806a331b6233720e1ebea540594fc00b5272d418920a174ea6e6c839ac52463a144eecbf5c07e2c46c07875edba9c09c175fb9
+  checksum: 864f7cfddfb10ff4623ad8d21ffb02bae43b7984d1b5ecfc7874edc3921846e80b112a95c0e036d0eb9f876367b7f08a88e25ba18c47a73ededfeb36c1a6e820
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:1.5.7":
-  version: 1.5.7
-  resolution: "@astrojs/compiler@npm:1.5.7"
-  checksum: d16437c33b9e9dd33fda7cfd9ac60ab3075dbd607a31dd6e7a8aaeb123851f47efe046240300d134172a8a541d64f1df3bdce7476207fd1325eb9ba1f000d298
-  languageName: node
-  linkType: hard
-
-"@astrojs/compiler@npm:^2.1.0":
+"@astrojs/compiler@npm:^2.1.0, @astrojs/compiler@npm:^2.2.1":
   version: 2.2.1
   resolution: "@astrojs/compiler@npm:2.2.1"
   checksum: 37ce9c9bcd1034d10f53a61c792d99da200b174a51bf4a94d8f6a55460d604c156b2d9b916d92c99b318d428ab5d5fde26ed1e7c5a06d9a4b897ca7305a7b3ef
@@ -53,11 +46,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/language-server@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "@astrojs/language-server@npm:2.4.0"
+"@astrojs/language-server@npm:^2.5.0":
+  version: 2.5.1
+  resolution: "@astrojs/language-server@npm:2.5.1"
   dependencies:
-    "@astrojs/compiler": 1.5.7
+    "@astrojs/compiler": ^2.2.1
     "@jridgewell/sourcemap-codec": ^1.4.15
     "@volar/kit": ~1.10.3
     "@volar/language-core": ~1.10.3
@@ -85,7 +78,7 @@ __metadata:
       optional: true
   bin:
     astro-ls: bin/nodeServer.js
-  checksum: 57f06ab3670c32295a416caf2219600ee0dc33edb22ba97c63d68fbef895e5bca21c13153b98a3cce2ea25e90fff2964fcda5a409053614d788217f29512b185
+  checksum: 6154f3c5bc5dc34b3cfa85b8683eb85296d84896e219405dd65c7910e558951885c0c56afed318f26c93e39f464dda68b661969805d97bd78e248857f1a0b0cb
   languageName: node
   linkType: hard
 
@@ -1343,7 +1336,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nblackburn/website@workspace:."
   dependencies:
-    "@astrojs/check": ^0.2.1
+    "@astrojs/check": ^0.3.0
     "@astrojs/rss": ^3.0.0
     "@astrojs/sitemap": ^3.0.2
     "@astrojs/vercel": ^5.1.0
