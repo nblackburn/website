@@ -39,10 +39,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.1.0":
-  version: 2.2.1
-  resolution: "@astrojs/compiler@npm:2.2.1"
-  checksum: 37ce9c9bcd1034d10f53a61c792d99da200b174a51bf4a94d8f6a55460d604c156b2d9b916d92c99b318d428ab5d5fde26ed1e7c5a06d9a4b897ca7305a7b3ef
+"@astrojs/compiler@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@astrojs/compiler@npm:2.3.0"
+  checksum: 897ac8d682d99587a1fc2cb48d146cebc0e51e0a2b19b9b13c38fb73c98a51e3af59fe5c6f02583a88f43a31b74cab14ce8887fd12a75492cbf5c5072b627fcb
   languageName: node
   linkType: hard
 
@@ -89,9 +89,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@astrojs/markdown-remark@npm:3.3.0"
+"@astrojs/markdown-remark@npm:3.4.0":
+  version: 3.4.0
+  resolution: "@astrojs/markdown-remark@npm:3.4.0"
   dependencies:
     "@astrojs/prism": ^3.0.0
     github-slugger: ^2.0.0
@@ -108,8 +108,8 @@ __metadata:
     unist-util-visit: ^4.1.2
     vfile: ^5.3.7
   peerDependencies:
-    astro: ^3.3.0
-  checksum: 37b3a8a8313f66e14f26f13bb76fa1f03eb4e2c87610dfeed230c5568700bc2be159ef8f47154b856ac0345d81a11951b76bc7b85de1889c334b02659ff5a126
+    astro: ^3.0.0
+  checksum: 5be66448d8929132c5bf2545767200404258d7ffe754488e0913acd3a1ce3865fe41e8a51172c7a07847f4e0cceabce3e59fa6bfe51b26dd6e4a55027a6a919f
   languageName: node
   linkType: hard
 
@@ -1352,7 +1352,7 @@ __metadata:
     "@commitlint/config-conventional": ^18.1.0
     "@fontsource/nunito-sans": ^5.0.8
     "@playwright/test": ^1.39.0
-    astro: ^3.4.0
+    astro: ^3.5.0
     astro-vanilla-extract: ^3.2.1
     checkly: ^4.2.0
     date-fns: ^2.30.0
@@ -2557,13 +2557,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "astro@npm:3.4.0"
+"astro@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "astro@npm:3.5.0"
   dependencies:
-    "@astrojs/compiler": ^2.1.0
+    "@astrojs/compiler": ^2.3.0
     "@astrojs/internal-helpers": 0.2.1
-    "@astrojs/markdown-remark": 3.3.0
+    "@astrojs/markdown-remark": 3.4.0
     "@astrojs/telemetry": 3.0.4
     "@babel/core": ^7.22.10
     "@babel/generator": ^7.22.10
@@ -2595,6 +2595,7 @@ __metadata:
     js-yaml: ^4.1.0
     kleur: ^4.1.4
     magic-string: ^0.30.3
+    mdast-util-to-hast: 12.3.0
     mime: ^3.0.0
     ora: ^7.0.1
     p-limit: ^4.0.0
@@ -2618,13 +2619,13 @@ __metadata:
     vitefu: ^0.2.4
     which-pm: ^2.1.1
     yargs-parser: ^21.1.1
-    zod: 3.21.1
+    zod: ^3.22.4
   dependenciesMeta:
     sharp:
       optional: true
   bin:
     astro: astro.js
-  checksum: c540f902b53a2ebdeffeb2143f165ee1506a7c438f8945001e30a66d00f2b881be0da91d492ef771131f17b962c7ae78866c292639cf5d906889297bda1304fa
+  checksum: dd2c5f518da0ea3a635870c25bf1900546e9b5da0c28933895bec944ee69072b49e89ab5667f7931e01a3bdebef36556441817f6d68aa37fff0842a64f45db73
   languageName: node
   linkType: hard
 
@@ -5954,7 +5955,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-to-hast@npm:^12.1.0":
+"mdast-util-to-hast@npm:12.3.0, mdast-util-to-hast@npm:^12.1.0":
   version: 12.3.0
   resolution: "mdast-util-to-hast@npm:12.3.0"
   dependencies:
@@ -9624,6 +9625,13 @@ __metadata:
   version: 3.21.1
   resolution: "zod@npm:3.21.1"
   checksum: e02ed16b26e171f244fb7592177bef21b67956683aaed57bc8f02dfa5ad307d5cf347e9557c84c0849d96305efaf7c90c909620eaade08cfdf35f62935d741d2
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 80bfd7f8039b24fddeb0718a2ec7c02aa9856e4838d6aa4864335a047b6b37a3273b191ef335bf0b2002e5c514ef261ffcda5a589fb084a48c336ffc4cdbab7f
   languageName: node
   linkType: hard
 
