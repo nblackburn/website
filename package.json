@@ -30,7 +30,7 @@
         "@astrojs/vercel": "^5.1.0",
         "@astrojs/vue": "^3.0.2",
         "@fontsource/nunito-sans": "^5.0.8",
-        "astro": "^3.4.0",
+        "astro": "^3.5.3",
         "astro-vanilla-extract": "^3.2.1",
         "date-fns": "^2.30.0",
         "sharp": "^0.32.6",
