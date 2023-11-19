@@ -1354,7 +1354,7 @@ __metadata:
     "@playwright/test": ^1.39.0
     astro: ^3.5.5
     astro-vanilla-extract: ^3.2.1
-    checkly: ^4.2.0
+    checkly: ^4.4.0
     date-fns: ^2.30.0
     husky: ^8.0.3
     lint-staged: ^15.0.2
@@ -2976,9 +2976,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"checkly@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "checkly@npm:4.2.0"
+"checkly@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "checkly@npm:4.4.0"
   dependencies:
     "@oclif/core": 2.8.11
     "@oclif/plugin-help": 5.1.20
@@ -3008,7 +3008,7 @@ __metadata:
     uuid: 9.0.0
   bin:
     checkly: bin/run
-  checksum: 02d8635481b516f9ace61dde68a9db74e4407119bab7c154308310b4e1e91574d72e2ae4384e598a0a2b8318a60e14ca8c4a9be4676e1a8c02c73cf047e904bf
+  checksum: b16c13b92cb1f9ac0d1e7d1694189fc1c8b2b9e0ed841846497185333c1bfa63c1335492c8ca88639e6058b9b9c13098323b899af9b0adac66981ae1cefbb067
   languageName: node
   linkType: hard
 
