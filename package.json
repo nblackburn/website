@@ -34,7 +34,7 @@
         "astro-vanilla-extract": "^3.2.1",
         "date-fns": "^2.30.0",
         "sharp": "^0.32.6",
-        "vue": "^3.3.8"
+        "vue": "^3.3.9"
     },
     "resolutions": {
         "deep-object-diff": "^1.1.9"
