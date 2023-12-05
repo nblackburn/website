@@ -41,11 +41,9 @@
             </div>
         </FieldSet>
 
-        <FieldSet name="message">
+        <FieldSet name="captcha">
             <div :class="styles.field">
-                <label for="message" :class="styles.label"
-                    >Are you human?</label
-                >
+                <label :class="styles.label">Are you human?</label>
                 <TurnStile
                     @expired="onCaptchaExpired"
                     @callback="onCaptureVerified"
