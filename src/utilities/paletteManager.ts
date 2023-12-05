@@ -11,11 +11,13 @@ export const getActivePalette = (): string => {
     const currentDate = getDate(now);
     const currentMonth = getMonth(now);
 
-    if (currentDate === 31 && currentMonth === 9) {
+    // Show in October
+    if (currentMonth === 9) {
         return halloweenPalette;
     }
 
-    if (currentDate === 25 && currentMonth === 11) {
+    // Show in December
+    if (currentMonth === 11) {
         return christmasPalette;
     }
 
