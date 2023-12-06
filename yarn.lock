@@ -1668,7 +1668,7 @@ __metadata:
     "@fontsource/nunito-sans": ^5.0.8
     "@playwright/test": ^1.40.1
     astro: ^4.0.1
-    astro-vanilla-extract: ^3.2.1
+    astro-vanilla-extract: ^4.0.0
     checkly: ^4.4.0
     date-fns: ^2.30.0
     husky: ^8.0.3
@@ -2860,14 +2860,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-vanilla-extract@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "astro-vanilla-extract@npm:3.2.1"
+"astro-vanilla-extract@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "astro-vanilla-extract@npm:4.0.0"
   dependencies:
     "@vanilla-extract/vite-plugin": ^3.4.0
   peerDependencies:
-    astro: ^3.0.0
-  checksum: ab8d9a28e98810445bb714eb49adc646fc12323d8c123956f362ff09000f37054aacb75e827af6650d1526b6c3b47189e4f8f03966cd8be74939dabb64e088a7
+    astro: ^4.0.0
+  checksum: a5930c64f9512024f76445e90120c29ad6428f349771bc6691a8cfa70b842497304f5d5f8dd456c589f6a3d55ad37ed69861d1e0c10666b7e341023ebc664486
   languageName: node
   linkType: hard
 
