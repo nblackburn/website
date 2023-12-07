@@ -1667,7 +1667,7 @@ __metadata:
     "@commitlint/config-conventional": ^18.4.3
     "@fontsource/nunito-sans": ^5.0.8
     "@playwright/test": ^1.40.1
-    astro: ^4.0.1
+    astro: ^4.0.3
     astro-vanilla-extract: ^3.2.1
     checkly: ^4.4.0
     date-fns: ^2.30.0
@@ -2871,9 +2871,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "astro@npm:4.0.1"
+"astro@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "astro@npm:4.0.3"
   dependencies:
     "@astrojs/compiler": ^2.3.2
     "@astrojs/internal-helpers": 0.2.1
@@ -2933,7 +2933,7 @@ __metadata:
     unist-util-visit: ^5.0.0
     vfile: ^6.0.1
     vite: ^5.0.0
-    vitefu: ^0.2.4
+    vitefu: ^0.2.5
     which-pm: ^2.1.1
     yargs-parser: ^21.1.1
     zod: ^3.22.4
@@ -2942,7 +2942,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 14c1faf004f640ee12b321382383e82a0bea327af2889c4908d46201e8c7afc047c39a4133160480b93529173e80372cae9bad90f08b6bd476f3ef800cd80d0d
+  checksum: e813b6a9ee3c3561e66fb8ee455768ee0ba00e348e97a39cfd95031ce8c343be257655ce0dc21fe02d5c67a2f52cbca4c817411cd368193b0c2d8b45d74875ab
   languageName: node
   linkType: hard
 
@@ -9569,7 +9569,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitefu@npm:^0.2.4":
+"vitefu@npm:^0.2.5":
   version: 0.2.5
   resolution: "vitefu@npm:0.2.5"
   peerDependencies:
