@@ -82,9 +82,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@astrojs/markdown-remark@npm:4.0.0"
+"@astrojs/markdown-remark@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@astrojs/markdown-remark@npm:4.0.1"
   dependencies:
     "@astrojs/prism": ^3.0.0
     github-slugger: ^2.0.0
@@ -100,9 +100,7 @@ __metadata:
     unified: ^11.0.4
     unist-util-visit: ^5.0.0
     vfile: ^6.0.1
-  peerDependencies:
-    astro: ^4.0.0-beta.0
-  checksum: 513530e69874e6c97a9455a88300db60530b60d552ad61a4d9ed57102f2b9ec137f2b5a15c34904b1b290c8272a1d7d7686a3017b2fc29fc44334632f2a2a379
+  checksum: 309fa2c9c939245a01a0b4b03a94cb6e9658685874d947731b106f2daadbab5f1391578bb1fa8a5642edd28ed9fb7433e00c063d4ff34078ce75dfb3bd17af00
   languageName: node
   linkType: hard
 
@@ -1667,7 +1665,7 @@ __metadata:
     "@commitlint/config-conventional": ^18.4.3
     "@fontsource/nunito-sans": ^5.0.8
     "@playwright/test": ^1.40.1
-    astro: ^4.0.1
+    astro: ^4.0.5
     astro-vanilla-extract: ^3.2.1
     checkly: ^4.4.0
     date-fns: ^2.30.0
@@ -2871,13 +2869,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "astro@npm:4.0.1"
+"astro@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "astro@npm:4.0.5"
   dependencies:
     "@astrojs/compiler": ^2.3.2
     "@astrojs/internal-helpers": 0.2.1
-    "@astrojs/markdown-remark": 4.0.0
+    "@astrojs/markdown-remark": 4.0.1
     "@astrojs/telemetry": 3.0.4
     "@babel/core": ^7.23.3
     "@babel/generator": ^7.23.3
@@ -2933,7 +2931,7 @@ __metadata:
     unist-util-visit: ^5.0.0
     vfile: ^6.0.1
     vite: ^5.0.0
-    vitefu: ^0.2.4
+    vitefu: ^0.2.5
     which-pm: ^2.1.1
     yargs-parser: ^21.1.1
     zod: ^3.22.4
@@ -2942,7 +2940,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 14c1faf004f640ee12b321382383e82a0bea327af2889c4908d46201e8c7afc047c39a4133160480b93529173e80372cae9bad90f08b6bd476f3ef800cd80d0d
+  checksum: aa81e5e26f4cf93b9ee2b871c0a5971e9ad9a425b1ea28fcd9c34f72ca14a1ba21b0805dcc502342823281ed7e37600ae45805a79838dd04290b3d095a01f7b8
   languageName: node
   linkType: hard
 
@@ -9569,7 +9567,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitefu@npm:^0.2.4":
+"vitefu@npm:^0.2.5":
   version: 0.2.5
   resolution: "vitefu@npm:0.2.5"
   peerDependencies:
