@@ -8,6 +8,10 @@ export default (
             handler(event);
         }
 
+        if (!event.target) {
+            return;
+        }
+
         event.target.removeEventListener(event.type, onEvent);
     };
 

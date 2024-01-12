@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.36.0",
+    "version": "1.36.1",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -13,28 +13,28 @@
     },
     "packageManager": "yarn@3.2.4",
     "devDependencies": {
-        "@astrojs/check": "^0.3.1",
-        "@commitlint/cli": "^18.4.3",
-        "@commitlint/config-conventional": "^18.4.3",
+        "@astrojs/check": "^0.4.1",
+        "@commitlint/cli": "^18.4.4",
+        "@commitlint/config-conventional": "^18.4.4",
         "@playwright/test": "^1.40.1",
-        "checkly": "^4.4.0",
+        "checkly": "^4.5.2",
         "husky": "^8.0.3",
         "lint-staged": "^15.2.0",
-        "prettier": "^3.1.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.3.2"
+        "prettier": "^3.2.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
     },
     "dependencies": {
-        "@astrojs/rss": "^4.0.0",
-        "@astrojs/sitemap": "^3.0.3",
-        "@astrojs/vercel": "^6.0.0",
-        "@astrojs/vue": "^4.0.1",
+        "@astrojs/rss": "^4.0.2",
+        "@astrojs/sitemap": "^3.0.4",
+        "@astrojs/vercel": "^6.1.4",
+        "@astrojs/vue": "^4.0.8",
         "@fontsource/nunito-sans": "^5.0.8",
-        "astro": "^4.0.1",
-        "astro-vanilla-extract": "^3.2.1",
-        "date-fns": "^2.30.0",
-        "sharp": "^0.33.0",
-        "vue": "^3.3.10"
+        "astro": "^4.1.2",
+        "astro-vanilla-extract": "^4.0.0",
+        "date-fns": "^3.2.0",
+        "sharp": "^0.33.2",
+        "vue": "^3.4.11"
     },
     "resolutions": {
         "deep-object-diff": "^1.1.9"

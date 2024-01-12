@@ -1,14 +1,13 @@
 import config from '@app/config';
-import { getDate, getMonth } from 'date-fns';
+import { getMonth } from 'date-fns';
 import {
-    paletteClasses,
     christmasPalette,
-    halloweenPalette
+    halloweenPalette,
+    paletteClasses
 } from '@styles/palettes.css';
 
 export const getActivePalette = (): string => {
     const now = new Date();
-    const currentDate = getDate(now);
     const currentMonth = getMonth(now);
 
     // Show in October
