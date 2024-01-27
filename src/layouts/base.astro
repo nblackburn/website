@@ -8,6 +8,7 @@ import type { ImageMetadata } from 'astro';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
 import fallbackImage from '@assets/img/me.jpg';
+import  SpeedInsights  from '@vercel/speed-insights/astro';
 import DynamicPalette from '@components/dynamicPalette.vue';
 import { getActivePalette } from '@utilities/paletteManager';
 
@@ -82,5 +83,6 @@ const { title, description, image, activePage } = Astro.props;
             <slot />
         </Main>
         <Footer />
+        <SpeedInsights />
     </body>
 </html>
