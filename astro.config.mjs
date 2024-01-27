@@ -14,9 +14,6 @@ export default defineConfig({
         imageService: true,
         webAnalytics: {
             enabled: true
-        },
-        speedInsights: {
-            enabled: true
         }
     }),
 
