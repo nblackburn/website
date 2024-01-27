@@ -120,7 +120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:^4.0.2":
+"@astrojs/rss@npm:^4.0.4":
   version: 4.0.4
   resolution: "@astrojs/rss@npm:4.0.4"
   dependencies:
@@ -130,7 +130,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:^3.0.4":
+"@astrojs/sitemap@npm:^3.0.5":
   version: 3.0.5
   resolution: "@astrojs/sitemap@npm:3.0.5"
   dependencies:
@@ -155,9 +155,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:^6.1.4":
-  version: 6.1.4
-  resolution: "@astrojs/vercel@npm:6.1.4"
+"@astrojs/vercel@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "@astrojs/vercel@npm:7.0.2"
   dependencies:
     "@astrojs/internal-helpers": "npm:0.2.1"
     "@vercel/analytics": "npm:^1.0.2"
@@ -167,8 +167,8 @@ __metadata:
     set-cookie-parser: "npm:^2.6.0"
     web-vitals: "npm:^3.4.0"
   peerDependencies:
-    astro: ^4.0.2
-  checksum: 2d6a312e770fc423a17e64e521773481b2cbbe1c97bead8d73040433c7a63efa5437d94758222ec8493971221df4c82dfca02116c29d7cb404a047c86a8bb23e
+    astro: ^4.2.0
+  checksum: 19afbebd30f1f5d09ceb6515b4252a7f1b633fcd20927d8e047a1f38216ecf0c68951bbfe4333f13ddb685e7969101732183c66ddfc2e63138cf8d4749c8057e
   languageName: node
   linkType: hard
 
@@ -701,7 +701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^18.4.4":
+"@commitlint/cli@npm:^18.6.0":
   version: 18.6.0
   resolution: "@commitlint/cli@npm:18.6.0"
   dependencies:
@@ -721,7 +721,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^18.4.4":
+"@commitlint/config-conventional@npm:^18.6.0":
   version: 18.6.0
   resolution: "@commitlint/config-conventional@npm:18.6.0"
   dependencies:
@@ -1685,25 +1685,25 @@ __metadata:
   resolution: "@nblackburn/website@workspace:."
   dependencies:
     "@astrojs/check": "npm:^0.4.1"
-    "@astrojs/rss": "npm:^4.0.2"
-    "@astrojs/sitemap": "npm:^3.0.4"
-    "@astrojs/vercel": "npm:^6.1.4"
+    "@astrojs/rss": "npm:^4.0.4"
+    "@astrojs/sitemap": "npm:^3.0.5"
+    "@astrojs/vercel": "npm:^7.0.2"
     "@astrojs/vue": "npm:^4.0.8"
-    "@commitlint/cli": "npm:^18.4.4"
-    "@commitlint/config-conventional": "npm:^18.4.4"
+    "@commitlint/cli": "npm:^18.6.0"
+    "@commitlint/config-conventional": "npm:^18.6.0"
     "@fontsource/nunito-sans": "npm:^5.0.8"
-    "@playwright/test": "npm:^1.40.1"
-    astro: "npm:^4.1.2"
+    "@playwright/test": "npm:^1.41.1"
+    astro: "npm:^4.2.6"
     astro-vanilla-extract: "npm:^4.0.0"
-    checkly: "npm:^4.5.2"
-    date-fns: "npm:^3.2.0"
-    husky: "npm:^8.0.3"
+    checkly: "npm:^4.6.0"
+    date-fns: "npm:^3.3.1"
+    husky: "npm:^9.0.6"
     lint-staged: "npm:^15.2.0"
-    prettier: "npm:^3.2.1"
+    prettier: "npm:^3.2.4"
     sharp: "npm:^0.33.2"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
-    vue: "npm:^3.4.11"
+    vue: "npm:^3.4.15"
   languageName: unknown
   linkType: soft
 
@@ -2131,7 +2131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:^1.40.1":
+"@playwright/test@npm:^1.41.1":
   version: 1.41.1
   resolution: "@playwright/test@npm:1.41.1"
   dependencies:
@@ -3322,7 +3322,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.1.2":
+"astro@npm:^4.2.6":
   version: 4.2.6
   resolution: "astro@npm:4.2.6"
   dependencies:
@@ -3822,7 +3822,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"checkly@npm:^4.5.2":
+"checkly@npm:^4.6.0":
   version: 4.6.0
   resolution: "checkly@npm:4.6.0"
   dependencies:
@@ -4346,7 +4346,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^3.2.0":
+"date-fns@npm:^3.3.1":
   version: 3.3.1
   resolution: "date-fns@npm:3.3.1"
   checksum: 98231936765dfb6fc6897676319b500a06a39f051b2c3ecbdd541a07ce9b1344b770277b8bfb1049fb7a2f70bf365ac8e6f1e2bb452b10e1a8101d518ca7f95d
@@ -5964,12 +5964,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^8.0.3":
-  version: 8.0.3
-  resolution: "husky@npm:8.0.3"
+"husky@npm:^9.0.6":
+  version: 9.0.6
+  resolution: "husky@npm:9.0.6"
   bin:
-    husky: lib/bin.js
-  checksum: b754cf70fdc97c3b60fec5b80056b9c11436464953b1691bf2b5dcf0081fb6685d2c5f47abb8b2b1c49f504aabea5321fdd6496f8b755d9f6e7525a493406abb
+    husky: bin.js
+  checksum: e198c90a59d460cf860c33e0a4c3927ecfb645d4fd4c2de3fbcd5fb56b858a923af452508d549f6ed020bb48de08290912cd77c006dd2a83e551c24c17340d5b
   languageName: node
   linkType: hard
 
@@ -9033,7 +9033,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.1":
+"prettier@npm:^3.2.4":
   version: 3.2.4
   resolution: "prettier@npm:3.2.4"
   bin:
@@ -11363,7 +11363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.4.11":
+"vue@npm:^3.4.15":
   version: 3.4.15
   resolution: "vue@npm:3.4.15"
   dependencies:
