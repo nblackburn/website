@@ -27,7 +27,7 @@
     "dependencies": {
         "@astrojs/rss": "^4.0.4",
         "@astrojs/sitemap": "^3.0.5",
-        "@astrojs/vercel": "^7.0.2",
+        "@astrojs/vercel": "^7.1.1",
         "@astrojs/vue": "^4.0.8",
         "@fontsource/nunito-sans": "^5.0.8",
         "astro": "^4.2.6",
