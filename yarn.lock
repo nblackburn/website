@@ -155,9 +155,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "@astrojs/vercel@npm:7.0.2"
+"@astrojs/vercel@npm:^7.3.3":
+  version: 7.3.3
+  resolution: "@astrojs/vercel@npm:7.3.3"
   dependencies:
     "@astrojs/internal-helpers": "npm:0.2.1"
     "@vercel/analytics": "npm:^1.0.2"
@@ -168,7 +168,7 @@ __metadata:
     web-vitals: "npm:^3.4.0"
   peerDependencies:
     astro: ^4.2.0
-  checksum: 19afbebd30f1f5d09ceb6515b4252a7f1b633fcd20927d8e047a1f38216ecf0c68951bbfe4333f13ddb685e7969101732183c66ddfc2e63138cf8d4749c8057e
+  checksum: 647b8fa9d843595ff2be8da2f819abd21d40dd2562620b3d6eeb66328404c49ba00c39490b083c38c7b399960dcd419a4297332848b70ad5a96fa29986c1dcad
   languageName: node
   linkType: hard
 
@@ -1687,7 +1687,7 @@ __metadata:
     "@astrojs/check": "npm:^0.4.1"
     "@astrojs/rss": "npm:^4.0.4"
     "@astrojs/sitemap": "npm:^3.0.5"
-    "@astrojs/vercel": "npm:^7.0.2"
+    "@astrojs/vercel": "npm:^7.3.3"
     "@astrojs/vue": "npm:^4.0.8"
     "@commitlint/cli": "npm:^18.6.0"
     "@commitlint/config-conventional": "npm:^18.6.0"
