@@ -53,6 +53,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/internal-helpers@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@astrojs/internal-helpers@npm:0.3.0"
+  checksum: 485efaa0a38e489a683162637e720c9f3dae1b4afc17d11f61b86324970b9388a7cfee4fceb96d0bf0677b6f40912cf4d99e08dcdf67021d09270e712c8610dd
+  languageName: node
+  linkType: hard
+
 "@astrojs/language-server@npm:^2.7.6":
   version: 2.7.6
   resolution: "@astrojs/language-server@npm:2.7.6"
@@ -153,20 +160,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:^7.3.4":
-  version: 7.3.4
-  resolution: "@astrojs/vercel@npm:7.3.4"
+"@astrojs/vercel@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@astrojs/vercel@npm:7.3.6"
   dependencies:
-    "@astrojs/internal-helpers": "npm:0.2.1"
+    "@astrojs/internal-helpers": "npm:0.3.0"
     "@vercel/analytics": "npm:^1.0.2"
-    "@vercel/nft": "npm:^0.24.3"
+    "@vercel/nft": "npm:^0.26.4"
     esbuild: "npm:^0.19.6"
     fast-glob: "npm:^3.3.2"
     set-cookie-parser: "npm:^2.6.0"
     web-vitals: "npm:^3.4.0"
   peerDependencies:
     astro: ^4.2.0
-  checksum: ff3e3b915dc68d23d6e6a857e70ec23276d2553bf96acf4c0c980f0801cc27cd97c18d94b1ab5854679dbfebf4a73f05bb853a50976b4ad0b6bb6220a1743be7
+  checksum: e3311a48b9ec7eddebfc63def58bb96c20d6c712cefc784d1742d68136eea0f3ba1670f73c11e872ecf64c6d74580110f0fe993425651d47833cea639c892adf
   languageName: node
   linkType: hard
 
@@ -1690,7 +1697,7 @@ __metadata:
     "@astrojs/check": "npm:^0.5.6"
     "@astrojs/rss": "npm:^4.0.5"
     "@astrojs/sitemap": "npm:^3.1.1"
-    "@astrojs/vercel": "npm:^7.3.4"
+    "@astrojs/vercel": "npm:^7.3.6"
     "@astrojs/vue": "npm:^4.0.8"
     "@commitlint/cli": "npm:^19.0.3"
     "@commitlint/config-conventional": "npm:^19.0.3"
@@ -2626,13 +2633,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/nft@npm:^0.24.3":
-  version: 0.24.4
-  resolution: "@vercel/nft@npm:0.24.4"
+"@vercel/nft@npm:^0.26.4":
+  version: 0.26.4
+  resolution: "@vercel/nft@npm:0.26.4"
   dependencies:
     "@mapbox/node-pre-gyp": "npm:^1.0.5"
     "@rollup/pluginutils": "npm:^4.0.0"
     acorn: "npm:^8.6.0"
+    acorn-import-attributes: "npm:^1.9.2"
     async-sema: "npm:^3.1.1"
     bindings: "npm:^1.4.0"
     estree-walker: "npm:2.0.2"
@@ -2643,7 +2651,7 @@ __metadata:
     resolve-from: "npm:^5.0.0"
   bin:
     nft: out/cli.js
-  checksum: e6614ff91854fd3989e1116dbedca46c9937f1f2086fc4acf8d52d42e1cc13c192fb81d9f6efbdbe19f706565c3a09952e47de96df999be96d6b8a9ff088c41c
+  checksum: 2d1c55ab84801206a94532edd1a24627bd3309d26837b8c6a301b0b8228ff8a166e63dbd479b1e349313776ae87abd267f27b5e7b4be2691cae843ce045f7e31
   languageName: node
   linkType: hard
 
@@ -3000,6 +3008,15 @@ __metadata:
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
   checksum: ca0a54e35bea4ece0ecb68a47b312e1a9a6f772408d5bcb9051230aaa94b0460671c5b5c9cb3240eb5b7bc94c52476550eb221f65a0bbd0145bdc9f3113a6707
+  languageName: node
+  linkType: hard
+
+"acorn-import-attributes@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "acorn-import-attributes@npm:1.9.2"
+  peerDependencies:
+    acorn: ^8
+  checksum: fdaef65435e1f05ad18de6d9c328de562a1a4afaadaf9b40df37bdd6b6975409acc14d2fbda249ac092112f11d13bea35e56ba2322c5febb7808b28c45ded1fd
   languageName: node
   linkType: hard
 
