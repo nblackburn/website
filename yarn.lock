@@ -1238,6 +1238,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.0.3"
     "@fontsource/nunito-sans": "npm:^5.0.12"
     "@playwright/test": "npm:^1.42.1"
+    "@vercel/speed-insights": "npm:^1.0.10"
     astro: "npm:^4.5.2"
     astro-vanilla-extract: "npm:^4.0.0"
     checkly: "npm:^4.6.1"
@@ -2229,6 +2230,33 @@ __metadata:
   bin:
     nft: out/cli.js
   checksum: 2d1c55ab84801206a94532edd1a24627bd3309d26837b8c6a301b0b8228ff8a166e63dbd479b1e349313776ae87abd267f27b5e7b4be2691cae843ce045f7e31
+  languageName: node
+  linkType: hard
+
+"@vercel/speed-insights@npm:^1.0.10":
+  version: 1.0.10
+  resolution: "@vercel/speed-insights@npm:1.0.10"
+  peerDependencies:
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19
+    svelte: ^4
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: 5ceaad884a37c539e19f70da383f46d4e937dbd6fbad3c0d27b2c5748ca60649ce2259d24788d8564fba051926c444bbbe6e8549e303d75eb9cfb6edc2dedbde
   languageName: node
   linkType: hard
 
