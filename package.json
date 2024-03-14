@@ -37,7 +37,7 @@
         "@astrojs/vue": "^4.0.8",
         "@fontsource/nunito-sans": "^5.0.12",
         "astro": "^4.5.2",
-        "astro-vanilla-extract": "^4.0.0",
+        "astro-vanilla-extract": "^5.0.0",
         "date-fns": "^3.3.1",
         "sharp": "^0.33.2",
         "vue": "^3.4.21"
