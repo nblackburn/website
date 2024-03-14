@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.39.0",
+    "version": "1.39.1",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -19,6 +19,7 @@
         "@commitlint/config-conventional": "^19.0.3",
         "@playwright/test": "^1.42.1",
         "@types/eslint": "^8",
+        "@types/node": "^20.11.27",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
         "checkly": "^4.6.1",
