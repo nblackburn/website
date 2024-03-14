@@ -1238,7 +1238,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.0.3"
     "@fontsource/nunito-sans": "npm:^5.0.12"
     "@playwright/test": "npm:^1.42.1"
-    astro: "npm:^4.5.2"
+    astro: "npm:^4.5.3"
     astro-vanilla-extract: "npm:^4.0.0"
     checkly: "npm:^4.6.1"
     date-fns: "npm:^3.3.1"
@@ -1824,7 +1824,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:1.1.7, @shikijs/core@npm:^1.1.2":
+"@shikijs/core@npm:1.1.7":
   version: 1.1.7
   resolution: "@shikijs/core@npm:1.1.7"
   checksum: 5bb9bef8341064a92aca556fcd1757f4b71a44830862ee63d0359712a4cae5b5bf33a9048a39828d6e9275b5317ff262f32469e9872a23455063752a67d09786
@@ -2847,9 +2847,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.5.2":
-  version: 4.5.2
-  resolution: "astro@npm:4.5.2"
+"astro@npm:^4.5.3":
+  version: 4.5.3
+  resolution: "astro@npm:4.5.3"
   dependencies:
     "@astrojs/compiler": "npm:^2.7.0"
     "@astrojs/internal-helpers": "npm:0.3.0"
@@ -2861,7 +2861,6 @@ __metadata:
     "@babel/plugin-transform-react-jsx": "npm:^7.22.5"
     "@babel/traverse": "npm:^7.23.3"
     "@babel/types": "npm:^7.23.3"
-    "@shikijs/core": "npm:^1.1.2"
     "@types/babel__core": "npm:^7.20.4"
     acorn: "npm:^8.11.2"
     aria-query: "npm:^5.3.0"
@@ -2892,7 +2891,6 @@ __metadata:
     js-yaml: "npm:^4.1.0"
     kleur: "npm:^4.1.4"
     magic-string: "npm:^0.30.3"
-    mdast-util-to-hast: "npm:13.0.2"
     mime: "npm:^3.0.0"
     ora: "npm:^7.0.1"
     p-limit: "npm:^5.0.0"
@@ -2921,7 +2919,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: f5e7727cb9347a75b661e6eaee2f0d2eefd9ccf72dd73729c75553c7bd6f838c8361015f1fcb2854c8c0b0bcfcfdba726bd742461304eb699030616e5461e550
+  checksum: f29d3826ae2fba35b801ba949497dd963828cc6df42877b5f558089cca0de87cef93a0933dcadcc1d891c283aa38c11df8eddfbc25f2532695e7e93979f26609
   languageName: node
   linkType: hard
 
@@ -6458,22 +6456,6 @@ __metadata:
     "@types/mdast": "npm:^4.0.0"
     unist-util-is: "npm:^6.0.0"
   checksum: 3a97533e8ad104a422f8bebb34b3dde4f17167b8ed3a721cf9263c7416bd3447d2364e6d012a594aada40cac9e949db28a060bb71a982231693609034ed5324e
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-hast@npm:13.0.2":
-  version: 13.0.2
-  resolution: "mdast-util-to-hast@npm:13.0.2"
-  dependencies:
-    "@types/hast": "npm:^3.0.0"
-    "@types/mdast": "npm:^4.0.0"
-    "@ungap/structured-clone": "npm:^1.0.0"
-    devlop: "npm:^1.0.0"
-    micromark-util-sanitize-uri: "npm:^2.0.0"
-    trim-lines: "npm:^3.0.0"
-    unist-util-position: "npm:^5.0.0"
-    unist-util-visit: "npm:^5.0.0"
-  checksum: 6f91926ca59bc1b048a0f82c21ba6355f7352c3793442c43e3f93ac895af0b9f85881b7a461d23aeed0fbe16d695b419106a48075c79e3b6008fef75ca43a571
   languageName: node
   linkType: hard
 
