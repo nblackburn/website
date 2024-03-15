@@ -6,12 +6,12 @@ export const header = style({
     zIndex: 10,
     position: 'sticky',
     backdropFilter: 'blur(10px)',
-    background: `rgba(255 255 255 / 0.5)`,
+    background: 'rgba(255 255 255 / 0.5)',
     borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
             borderColor: `rgb(${vars.colors.eerieBlack})`,
-            background: `rgba(13 13 13 / 0.5)`
+            background: 'rgba(13 13 13 / 0.5)'
         }
     }
 });

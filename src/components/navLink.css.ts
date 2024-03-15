@@ -9,7 +9,7 @@ export const navLink = style({
     textDecoration: 'none',
     borderRadius: '9999px',
     justifyContent: 'center',
-    border: `1px transparent solid`,
+    border: '1px transparent solid',
     padding: `0.75rem ${sizes.small}`,
     transition: 'border 0.2s ease-in-out'
 });
@@ -29,7 +29,7 @@ export const primary = style({
 });
 
 export const secondary = style({
-    border: `1px transparent solid`,
+    border: '1px transparent solid',
     selectors: {
         '&:hover': {
             borderColor: `rgb(${vars.colors.silverChalice})`

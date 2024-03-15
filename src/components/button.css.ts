@@ -12,7 +12,7 @@ export const button = style({
     justifyContent: 'center',
     transition: 'all 0.2s ease-in-out',
     background: `rgb(${primaryAccent})`,
-    boxShadow: `0px 0px 0px 0px transparent`,
+    boxShadow: '0px 0px 0px 0px transparent',
     border: `1px rgb(${vars.colors.silverChalice}) solid`,
     selectors: {
         '&:hover:not(:disabled)': {

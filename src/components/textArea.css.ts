@@ -9,7 +9,7 @@ export const textArea = style({
     borderRadius: sizes.tiny,
     backdropFilter: 'blur(10px)',
     transition: 'all 0.2s ease-in-out',
-    boxShadow: `0px 0px 0px 0px transparent`,
+    boxShadow: '0px 0px 0px 0px transparent',
     border: `1px rgb(${vars.colors.silverChalice}) solid`,
     selectors: {
         '&:focus': {
@@ -22,7 +22,7 @@ export const textArea = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `rgba(0 0 0 / 0.3)`,
+            background: 'rgba(0 0 0 / 0.3)',
             color: `rgb(${vars.colors.white})`,
             border: `1px rgb(${vars.colors.eerieBlack}) solid`
         }

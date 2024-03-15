@@ -106,7 +106,7 @@ export const tags = style({
 export const tag = style({
     borderRadius: '9999px',
     display: 'inline-block',
-    padding: `0.2rem 0.75rem`,
+    padding: '0.2rem 0.75rem',
     transition: 'all 0.2s ease-in-out',
     background: `rgb(${vars.colors.silverChalice})`,
     selectors: {
