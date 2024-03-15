@@ -21,7 +21,7 @@
         "@types/eslint": "^8",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
-        "@vanilla-extract/vite-plugin": "^4.0.6",
+        "@vanilla-extract/vite-plugin": "^3.9.5",
         "checkly": "^4.6.1",
         "eslint": "^8.57.0",
         "husky": "^9.0.11",
