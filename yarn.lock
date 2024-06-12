@@ -1318,6 +1318,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.2.0"
     "@vanilla-extract/css": "npm:^1.14.1"
     "@vanilla-extract/vite-plugin": "npm:^3.9.5"
+    "@vercel/speed-insights": "npm:^1.0.12"
     astro: "npm:^4.5.2"
     checkly: "npm:^4.6.1"
     date-fns: "npm:^3.3.1"
@@ -2465,6 +2466,33 @@ __metadata:
   bin:
     nft: out/cli.js
   checksum: 2d1c55ab84801206a94532edd1a24627bd3309d26837b8c6a301b0b8228ff8a166e63dbd479b1e349313776ae87abd267f27b5e7b4be2691cae843ce045f7e31
+  languageName: node
+  linkType: hard
+
+"@vercel/speed-insights@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "@vercel/speed-insights@npm:1.0.12"
+  peerDependencies:
+    "@sveltejs/kit": ^1 || ^2
+    next: ">= 13"
+    react: ^18 || ^19
+    svelte: ^4
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    "@sveltejs/kit":
+      optional: true
+    next:
+      optional: true
+    react:
+      optional: true
+    svelte:
+      optional: true
+    vue:
+      optional: true
+    vue-router:
+      optional: true
+  checksum: eb8ab819afa32fd0a9f32fc292e24f2f70742e874e606fcbd8f21008ffa349841c90a2146fe1251d5c812872c557b12958b4a9fb88eb874b4ad446f3af8b9cc1
   languageName: node
   linkType: hard
 
