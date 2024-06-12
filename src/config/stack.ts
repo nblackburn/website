@@ -68,5 +68,15 @@ export const stack: StackItem[] = [
         title: 'Todoist',
         href: 'https://todoist.com',
         type: StackType.TOOLS
+    },
+    {
+        title: 'Blender',
+        href: 'https://blender.org',
+        type: StackType.DESIGN
+    },
+    {
+        title: 'Godot',
+        href: 'https://godotengine.org',
+        type: StackType.DEVELOPMENT
     }
 ];
