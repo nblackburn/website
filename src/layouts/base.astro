@@ -10,6 +10,7 @@ import Footer from '@components/footer.vue';
 import fallbackImage from '@assets/img/me.jpg';
 import DynamicPalette from '@components/dynamicPalette.vue';
 import { getActivePalette } from '@utilities/paletteManager';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 export interface Props {
     title: string;
@@ -69,9 +70,12 @@ const { title, description, image, activePage } = Astro.props;
 
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        
+
         <!-- scripts -->
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        <script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            async
+            defer></script>
     </head>
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
@@ -82,5 +86,6 @@ const { title, description, image, activePage } = Astro.props;
             <slot />
         </Main>
         <Footer />
+        <SpeedInsights />
     </body>
 </html>
