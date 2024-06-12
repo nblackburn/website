@@ -30,11 +30,6 @@ export const stack: StackItem[] = [
         type: StackType.MUSIC
     },
     {
-        title: 'Splice',
-        href: 'https://splice.com',
-        type: StackType.MUSIC
-    },
-    {
         title: 'Visual Studio Code',
         href: 'https://code.visualstudio.com',
         type: StackType.DEVELOPMENT
@@ -60,16 +55,6 @@ export const stack: StackItem[] = [
         type: StackType.DESIGN
     },
     {
-        title: 'Stark',
-        href: 'https://www.getstark.co',
-        type: StackType.DESIGN
-    },
-    {
-        title: 'Notion',
-        href: 'https://notion.so',
-        type: StackType.TOOLS
-    },
-    {
         title: '1Password',
         href: 'https://1password.com',
         type: StackType.TOOLS
@@ -78,5 +63,20 @@ export const stack: StackItem[] = [
         title: 'Morgen',
         href: 'https://morgen.so',
         type: StackType.TOOLS
+    },
+    {
+        title: 'Todoist',
+        href: 'https://todoist.com',
+        type: StackType.TOOLS
+    },
+    {
+        title: 'Blender',
+        href: 'https://blender.org',
+        type: StackType.DESIGN
+    },
+    {
+        title: 'Godot',
+        href: 'https://godotengine.org',
+        type: StackType.DEVELOPMENT
     }
 ];
