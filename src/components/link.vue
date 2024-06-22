@@ -13,7 +13,7 @@ const props = defineProps({
     href: {
         type: String
     },
-    ref: {
+    referrer: {
         type: String,
         default() {
             return config.seo.ref;
@@ -29,7 +29,7 @@ const componentAttrs = computed(() => {
     }
 
     return {
-        href: buildRefLink(props.href, props.ref),
+        href: buildRefLink(props.href, props.referrer),
         rel: isExternal ? 'noopener' : undefined,
         target: isExternal ? '_self' : undefined
     };
