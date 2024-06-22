@@ -40,7 +40,7 @@
         "@vanilla-extract/css": "^1.14.1",
         "astro": "^4.5.2",
         "date-fns": "^3.3.1",
-        "sharp": "^0.33.2",
+        "sharp": "^0.33.4",
         "vue": "^3.4.21"
     },
     "resolutions": {
