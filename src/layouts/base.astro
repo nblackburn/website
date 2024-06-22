@@ -48,6 +48,7 @@ const { title, description, image, activePage } = Astro.props;
         <meta property="og:type" content="website" />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={Astro.url} />
+        <meta property="og:site_name" content="Nathaniel Blackburn" />
         <meta
             property="og:image"
             content={image ? image.src : fallbackImage.src}
