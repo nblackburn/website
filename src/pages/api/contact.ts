@@ -1,3 +1,4 @@
+import config from '@root/src/config';
 import type { APIRoute } from 'astro';
 
 const resendApikey = import.meta.env.RESEND_API_KEY;
@@ -64,8 +65,8 @@ const sendEmail = (data: FormData) => {
             Authorization: `Bearer ${resendApikey}`
         },
         body: JSON.stringify({
-            from: 'Nathaniel Blackburn <noreply@nblackburn.uk>',
-            to: ['Nathaniel Blackburn <support@nblackburn.uk>'],
+            from: config.mail.from,
+            to: [config.mail.to],
             tags: [
                 {
                     name: 'type',
@@ -77,7 +78,7 @@ const sendEmail = (data: FormData) => {
                 }
             ],
             reply_to: [`${name} <${email}>`],
-            subject: `${name} has reached out to you via nblackburn.uk`,
+            subject: `${name} has reached out to you via ${config.seo.ref}`,
             text: message
         })
     });

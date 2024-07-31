@@ -12,9 +12,15 @@ type PaginationConfig = {
     limit: number;
 };
 
+type MailConfig = {
+    from: string;
+    to: string;
+};
+
 interface Config {
     url: string;
     seo: SEOConfig;
+    mail: MailConfig;
     palette: PaletteConfig;
     pagination: PaginationConfig;
 }
@@ -32,6 +38,11 @@ const config: Config = {
 
     palette: {
         default: defaultPalette
+    },
+
+    mail: {
+        from: 'Nathaniel Blackburn <noreply@nblackburn.uk>',
+        to: 'Nathaniel Blackburn <support@nblackburn.uk>'
     }
 };
 
