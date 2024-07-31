@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.42.1",
+    "version": "1.43.0",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -25,6 +25,7 @@
         "@vanilla-extract/vite-plugin": "^3.9.5",
         "checkly": "^4.6.1",
         "eslint": "^8.57.0",
+        "eslint-plugin-astro": "^1.2.3",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.2",
         "prettier": "^3.2.5",

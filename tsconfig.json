@@ -25,5 +25,6 @@
             "@components/*": ["src/components/*"]
         }
     },
+    "exclude": ["__checks__"],
     "extends": "astro/tsconfigs/base"
 }
