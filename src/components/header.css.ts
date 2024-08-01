@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { vars, sizes, containers } from '@styles/theme.css';
+import { vars, sizes, containers, breakpoints } from '@styles/theme.css';
 
 export const header = style({
     top: 0,
@@ -19,8 +19,15 @@ export const header = style({
 export const container = style({
     margin: 'auto',
     display: 'flex',
+    rowGap: sizes.nano,
+    columnGap: sizes.nano,
     padding: sizes.small,
     alignItems: 'center',
     justifyContent: 'space-between',
-    maxWidth: containers.xtraLarge
+    maxWidth: containers.xtraLarge,
+    '@media': {
+        [breakpoints.medium]: {
+            flexDirection: 'column'
+        }
+    }
 });
