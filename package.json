@@ -15,7 +15,7 @@
     "packageManager": "yarn@4.0.2",
     "devDependencies": {
         "@astrojs/check": "^0.5.8",
-        "@commitlint/cli": "^19.0.3",
+        "@commitlint/cli": "^19.4.0",
         "@commitlint/config-conventional": "^19.0.3",
         "@playwright/test": "^1.42.1",
         "@types/eslint": "^8",
