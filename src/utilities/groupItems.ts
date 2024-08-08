@@ -1,12 +1,15 @@
 type Type = {
     id: string;
+    name: string;
 };
 
 type Item = {
     type: string;
 };
 
-type Group = Type & {
+export type Group = {
+    id: string;
+    name: string;
     items: Item[];
 };
 

@@ -7,8 +7,9 @@
 <script lang="ts" setup>
 import * as styles from './button.css';
 
-defineProps({
-    name: String,
-    disabled: Boolean
-});
+interface Props {
+    disabled?: boolean
+}
+
+defineProps<Props>()
 </script>

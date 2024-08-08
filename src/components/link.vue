@@ -9,16 +9,13 @@ import { computed } from 'vue';
 import config from '@app/config';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
-const props = defineProps({
-    href: {
-        type: String
-    },
-    referrer: {
-        type: String,
-        default() {
-            return config.seo.ref;
-        }
-    }
+interface Props {
+    href?: string,
+    referrer?: string
+};
+
+const props = withDefaults(defineProps<Props>(), {
+    referrer: config.seo.ref
 });
 
 const isExternal = isExternalLink(props.href);

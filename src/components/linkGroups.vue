@@ -1,31 +1,14 @@
 <template>
     <div :class="styles.linkGroups">
-        <section
-            v-for="group in groups"
-            :key="group.id"
-            :class="styles.linkGroup"
-        >
+        <section v-for="group in groups" :key="group.id" :class="styles.linkGroup">
             <h3 :class="styles.heading">{{ group.name }}</h3>
             <ol :class="styles.items">
-                <li
-                    v-for="item in group.items"
-                    :key="item.id"
-                    :class="styles.item"
-                >
-                    <Link
-                        :href="item.href"
-                        :class="styles.link"
-                        :aria-label="item.title + ' (External link)'"
-                    >
-                        <svg
-                            width="24"
-                            height="24"
-                            role="img"
-                            :class="styles.icon"
-                        >
-                            <use href="#external" />
-                        </svg>
-                        <span>{{ item.title }}</span>
+                <li v-for="item in group.items" :key="item.id" :class="styles.item">
+                    <Link :href="item.href" :class="styles.link" :aria-label="item.title + ' (External link)'">
+                    <svg width="24" height="24" role="img" :class="styles.icon">
+                        <use href="#external" />
+                    </svg>
+                    <span>{{ item.title }}</span>
                     </Link>
                 </li>
             </ol>
@@ -34,9 +17,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { PropType } from 'vue';
 import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
+import { Group } from '@utilities/groupItems';
 
 type Item = {
     id: string;
@@ -44,18 +27,9 @@ type Item = {
     title: string;
 };
 
-type Group = {
-    id: string;
-    name: string;
-    items: Item[];
+interface Props {
+    groups?: Group[]
 };
 
-defineProps({
-    groups: {
-        type: Array as PropType<Group[]>,
-        default() {
-            return [];
-        }
-    }
-});
+defineProps<Props>();
 </script>
