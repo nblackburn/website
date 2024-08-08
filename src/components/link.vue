@@ -11,7 +11,7 @@ import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
 interface Props {
     href?: string,
-    referrer: string
+    referrer?: string
 };
 
 const props = withDefaults(defineProps<Props>(), {

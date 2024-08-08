@@ -9,12 +9,12 @@ import { ref } from 'vue';
 import * as styles from './input.css';
 
 interface Props {
-    type: string,
-    name: string,
-    id: string,
-    required: boolean,
-    disabled: boolean,
-    modelValue: string
+    type?: string,
+    name?: string,
+    id?: string,
+    required?: boolean,
+    disabled?: boolean,
+    modelValue?: string
 };
 
 defineProps<Props>();

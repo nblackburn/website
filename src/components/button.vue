@@ -8,8 +8,7 @@
 import * as styles from './button.css';
 
 interface Props {
-    name: string,
-    disabled: boolean
+    disabled?: boolean
 }
 
 defineProps<Props>()

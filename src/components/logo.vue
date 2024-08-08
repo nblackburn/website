@@ -16,7 +16,7 @@
 import { primaryAccent, secondaryAccent } from '@styles/theme.css';
 
 interface Props {
-    size: number
+    size?: number
 };
 
 withDefaults(defineProps<Props>(), {

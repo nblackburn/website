@@ -16,11 +16,16 @@ import Link from '@components/link.vue';
 
 interface Props {
     href?: string,
-    icon: boolean,
-    active: boolean,
-    disabled: boolean,
-    secondary: boolean
+    icon?: boolean,
+    active?: boolean,
+    disabled?: boolean,
+    secondary?: boolean
 };
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+    icon: false,
+    active: false,
+    disabled: false,
+    secondary: false
+});
 </script>

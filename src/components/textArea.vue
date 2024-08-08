@@ -9,14 +9,14 @@ import { ref } from 'vue';
 import * as styles from './textArea.css';
 
 interface Props {
-    name: string,
-    id: string,
-    rows: number,
-    required: boolean,
-    disabled: boolean,
-    minLength: number,
-    maxLength: number,
-    modelValue: string
+    name?: string,
+    id?: string,
+    rows?: number,
+    required?: boolean,
+    disabled?: boolean,
+    minLength?: number,
+    maxLength?: number,
+    modelValue?: string
 };
 
 defineProps<Props>();
