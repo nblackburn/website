@@ -1,7 +1,7 @@
 export type NavItem = {
     id: string;
     title: string;
-    href: string;
+    href?: string;
 };
 
 export const nav: NavItem[] = [

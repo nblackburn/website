@@ -3,7 +3,7 @@
         <AccentBar />
         <div :class="styles.container">
             <Link href="/">
-                <Logo />
+            <Logo />
             </Link>
             <Navbar :links="nav" :active-page="activePage" />
         </div>
@@ -18,7 +18,9 @@ import Link from '@components/link.vue';
 import Navbar from '@components/navBar.vue';
 import AccentBar from '@components/accentBar.vue';
 
-defineProps({
-    activePage: String
-});
+interface Props {
+    activePage?: string
+};
+
+defineProps<Props>();
 </script>

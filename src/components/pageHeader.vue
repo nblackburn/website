@@ -10,8 +10,10 @@
 <script lang="ts" setup>
 import * as styles from './pageHeader.css';
 
-defineProps({
-    title: String,
-    subTitle: String
-});
+interface Props {
+    title: string,
+    subTitle: string
+};
+
+defineProps<Props>();
 </script>

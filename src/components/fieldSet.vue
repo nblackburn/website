@@ -1,9 +1,5 @@
 <template>
-    <fieldset
-        :class="[styles.fieldSet, validated ? styles.validated : '']"
-        :name="name"
-        ref="fieldSet"
-    >
+    <fieldset :class="[styles.fieldSet, validated ? styles.validated : '']" :name="name" ref="fieldSet">
         <slot />
     </fieldset>
 </template>
@@ -13,7 +9,11 @@ import { onMounted, ref } from 'vue';
 import listenOnce from '@utilities/listenOnce';
 import * as styles from '@components/fieldSet.css';
 
-defineProps({ name: String });
+interface Props {
+    name: string
+}
+
+defineProps<Props>();
 
 const fieldSet = ref();
 const validated = ref(false);
