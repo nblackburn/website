@@ -1,9 +1,9 @@
 <template>
     <nav :class="styles.navBar">
         <ol :class="styles.items">
-            <li v-for="link in links" :class="styles.item">
-                <NavLink :href="link.href" :key="link.id" :active="isActive(link)"
-                    :aria-current="isActive(link) ? 'page' : false" secondary>{{ link.title }}</NavLink>
+            <li v-for="link in links" :key="link.id" :class="styles.item">
+                <NavLink :href="link.href" :active="isActive(link)" :aria-current="isActive(link) ? 'page' : false"
+                    secondary>{{ link.title }}</NavLink>
             </li>
         </ol>
     </nav>
