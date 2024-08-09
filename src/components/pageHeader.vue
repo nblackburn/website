@@ -11,9 +11,9 @@
 import * as styles from './pageHeader.css';
 
 interface Props {
-    title: string,
-    subTitle: string
-};
+    title: string;
+    subTitle: string;
+}
 
 defineProps<Props>();
 </script>

@@ -10,9 +10,9 @@ import config from '@app/config';
 import { isExternalLink, buildRefLink } from '@utilities/refLink';
 
 interface Props {
-    href?: string,
-    referrer?: string
-};
+    href?: string;
+    referrer?: string;
+}
 
 const props = withDefaults(defineProps<Props>(), {
     referrer: config.seo.ref

@@ -1,14 +1,31 @@
 <template>
     <div :class="styles.linkGroups">
-        <section v-for="group in groups" :key="group.id" :class="styles.linkGroup">
+        <section
+            v-for="group in groups"
+            :key="group.id"
+            :class="styles.linkGroup"
+        >
             <h3 :class="styles.heading">{{ group.name }}</h3>
             <ol :class="styles.items">
-                <li v-for="item in group.items" :key="item.id" :class="styles.item">
-                    <Link :href="item.href" :class="styles.link" :aria-label="item.title + ' (External link)'">
-                    <svg width="24" height="24" role="img" :class="styles.icon">
-                        <use href="#external" />
-                    </svg>
-                    <span>{{ item.title }}</span>
+                <li
+                    v-for="item in group.items"
+                    :key="item.id"
+                    :class="styles.item"
+                >
+                    <Link
+                        :href="item.href"
+                        :class="styles.link"
+                        :aria-label="item.title + ' (External link)'"
+                    >
+                        <svg
+                            width="24"
+                            height="24"
+                            role="img"
+                            :class="styles.icon"
+                        >
+                            <use href="#external" />
+                        </svg>
+                        <span>{{ item.title }}</span>
                     </Link>
                 </li>
             </ol>
@@ -28,8 +45,8 @@ type Item = {
 };
 
 interface Props {
-    groups?: Group[]
-};
+    groups?: Group[];
+}
 
 defineProps<Props>();
 </script>
