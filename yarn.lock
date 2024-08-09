@@ -1987,7 +1987,7 @@ __metadata:
     "@vanilla-extract/css": "npm:^1.14.1"
     "@vanilla-extract/vite-plugin": "npm:^3.9.5"
     astro: "npm:^4.13.2"
-    checkly: "npm:^4.6.1"
+    checkly: "npm:^4.8.0"
     date-fns: "npm:^3.3.1"
     eslint: "npm:^8.57.0"
     eslint-plugin-astro: "npm:^1.2.3"
@@ -4604,9 +4604,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"checkly@npm:^4.6.1":
-  version: 4.6.2
-  resolution: "checkly@npm:4.6.2"
+"checkly@npm:^4.8.0":
+  version: 4.8.0
+  resolution: "checkly@npm:4.8.0"
   dependencies:
     "@oclif/core": "npm:2.8.11"
     "@oclif/plugin-help": "npm:5.1.20"
@@ -4638,7 +4638,7 @@ __metadata:
     uuid: "npm:9.0.0"
   bin:
     checkly: bin/run
-  checksum: 0e5096ee81e41a7d42132cad58a7b5166b014fc225f8ec9de93d936cb558c84f8d1e45613867b8ebc8a7a0425f522fabb887aaf720360661a786b12867042a10
+  checksum: 05caf6c1d95c955a08fc464a25b468f17b469610be581b9f82c72110bea4b2c14c4938e93a1843697f31c1a23953c4a7f4c54590bef1aa3788c31faa551cb599
   languageName: node
   linkType: hard
 
