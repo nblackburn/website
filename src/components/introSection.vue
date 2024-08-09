@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './intro.css';
+import * as styles from './introSection.css';
 import NavLink from '@components/navLink.vue';
 import SocialLinks from '@components/socialLinks.vue';
 </script>
