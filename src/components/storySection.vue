@@ -31,5 +31,5 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './story.css';
+import * as styles from './storySection.css';
 </script>

@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import Story from '@components/story.vue';
 import rigImage from '@assets/img/rig.jpg';
 import groupItems from '@utilities/groupItems';
 import { stack, stackGroups } from '@config/stack';
 import LinkGroups from '@components/linkGroups.vue';
 import SidePanelLayout from '@layouts/sidePanel.astro';
+import StorySection from '@components/storySection.vue';
 
 const title = 'About';
 const layout = '7fr 3fr';
@@ -21,7 +21,7 @@ const groups = groupItems(stackGroups, stack);
     image={rigImage}
     layout={layout}
 >
-    <Story>
+    <StorySection>
         <Image
             src={rigImage.src}
             alt="My desktop"
@@ -31,6 +31,6 @@ const groups = groupItems(stackGroups, stack);
             slot="image"
             loading="eager"
         />
-    </Story>
+    </StorySection>
     <LinkGroups groups={groups} slot="sidepanel" />
 </SidePanelLayout>
