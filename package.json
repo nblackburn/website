@@ -16,7 +16,7 @@
     "devDependencies": {
         "@astrojs/check": "^0.9.2",
         "@commitlint/cli": "^19.0.3",
-        "@commitlint/config-conventional": "^19.0.3",
+        "@commitlint/config-conventional": "^19.2.2",
         "@playwright/test": "^1.42.1",
         "@types/eslint": "^8",
         "@types/node": "^20.11.27",
