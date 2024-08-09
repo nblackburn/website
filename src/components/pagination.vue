@@ -2,12 +2,24 @@
     <nav :class="styles.pagination">
         <ol :class="styles.items">
             <li :class="styles.item">
-                <NavLink :class="styles.link" :href="links.prev" :disabled="!links.prev" :aria-disabled="!links.prev">
-                    Previous</NavLink>
+                <NavLink
+                    :class="styles.link"
+                    :href="links.prev"
+                    :disabled="!links.prev"
+                    :aria-disabled="!links.prev"
+                >
+                    Previous</NavLink
+                >
             </li>
             <li :class="styles.item">
-                <NavLink :class="styles.link" :href="links.next" :disabled="!links.next" :aria-disabled="!links.next">
-                    Next</NavLink>
+                <NavLink
+                    :class="styles.link"
+                    :href="links.next"
+                    :disabled="!links.next"
+                    :aria-disabled="!links.next"
+                >
+                    Next</NavLink
+                >
             </li>
         </ol>
     </nav>
@@ -23,8 +35,8 @@ type URL = {
 };
 
 interface Props {
-    links: URL
-};
+    links: URL;
+}
 
 withDefaults(defineProps<Props>(), {
     links: () => {
