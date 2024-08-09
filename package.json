@@ -22,7 +22,7 @@
         "@types/node": "^20.11.27",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
-        "@vanilla-extract/vite-plugin": "^3.9.5",
+        "@vanilla-extract/vite-plugin": "^4.0.13",
         "checkly": "^4.6.1",
         "eslint": "^8.57.0",
         "eslint-plugin-astro": "^1.2.3",
