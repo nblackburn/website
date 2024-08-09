@@ -3,52 +3,28 @@
         <FieldSet name="contact">
             <div :class="styles.field">
                 <label for="name" :class="styles.label">Name*</label>
-                <Input
-                    type="text"
-                    name="name"
-                    id="name"
-                    v-model="name"
-                    :disabled="isSending"
-                    required
-                />
+                <InputField type="text" name="name" id="name" v-model="name" :disabled="isSending" required />
             </div>
 
             <div :class="styles.field">
                 <label for="email" :class="styles.label">Email*</label>
-                <Input
-                    type="email"
-                    name="email"
-                    id="email"
-                    v-model="email"
-                    :disabled="isSending"
-                    required
-                />
+                <InputField type="email" name="email" id="email" v-model="email" :disabled="isSending" required />
             </div>
         </FieldSet>
 
         <FieldSet name="message">
             <div :class="styles.field">
                 <label for="message" :class="styles.label">Message*</label>
-                <TextArea
-                    name="message"
-                    id="message"
-                    v-model="message"
-                    :rows="5"
-                    :min-length="10"
-                    :disabled="isSending"
-                    required
-                />
+                <TextArea name="message" id="message" v-model="message" :rows="5" :min-length="10" :disabled="isSending"
+                    required />
             </div>
         </FieldSet>
 
         <FieldSet name="captcha">
             <div :class="styles.field">
                 <label :class="styles.label">Are you human?</label>
-                <TurnStile
-                    @expired="onCaptchaExpired"
-                    @callback="onCaptureVerified"
-                    @unsupported="onCaptchaUnsupported"
-                />
+                <TurnStile @expired="onCaptchaExpired" @callback="onCaptureVerified"
+                    @unsupported="onCaptchaUnsupported" />
             </div>
         </FieldSet>
 
@@ -59,18 +35,18 @@
 </template>
 
 <script lang="ts">
-import Input from '@components/input.vue';
 import * as styles from './contactForm.css';
 import Button from '@components/button.vue';
 import listenOnce from '@utilities/listenOnce';
-import TextArea from '@components/textArea.vue';
+import TextArea from '@root/src/components/textArea.vue';
 import FieldSet from '@components/fieldSet.vue';
 import TurnStile from '@components/turnStile.vue';
+import InputField from '@components/inputField.vue';
 import { ref, defineComponent, computed } from 'vue';
 
 export default defineComponent({
     props: { method: String, action: String },
-    components: { Input, Button, TextArea, FieldSet, TurnStile },
+    components: { InputField, Button, TextArea, FieldSet, TurnStile },
 
     setup() {
         const name = ref();
