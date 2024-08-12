@@ -1792,7 +1792,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.2.0"
     "@vanilla-extract/css": "npm:^1.15.3"
     "@vanilla-extract/vite-plugin": "npm:^4.0.13"
-    astro: "npm:^4.13.2"
+    astro: "npm:^4.13.3"
     checkly: "npm:^4.8.0"
     date-fns: "npm:^3.6.0"
     eslint: "npm:^8.57.0"
@@ -3926,9 +3926,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.13.2":
-  version: 4.13.2
-  resolution: "astro@npm:4.13.2"
+"astro@npm:^4.13.3":
+  version: 4.13.3
+  resolution: "astro@npm:4.13.3"
   dependencies:
     "@astrojs/compiler": "npm:^2.10.1"
     "@astrojs/internal-helpers": "npm:0.4.1"
@@ -3997,7 +3997,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 359e83a978818340bce7df72b9a19aedb45944335be3462568be64ff70a1da32da842eb1e6bbfd99ae55d7cac6914bc6ccfa469277bdad170fe62e5c88f5ae49
+  checksum: c551847f231f0b344e510ea89a902364b3375631cfcf56414c2829f3ac016484d25d2381b711e76ab71b2e8788c5b887c1891be1198b31cc27871def9e3e9913
   languageName: node
   linkType: hard
 
