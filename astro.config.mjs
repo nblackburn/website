@@ -5,6 +5,7 @@ import vercel from '@astrojs/vercel/serverless';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
+    prefetch: true,
     output: 'hybrid',
     compressHTML: true,
     site: 'https://nblackburn.uk/',
