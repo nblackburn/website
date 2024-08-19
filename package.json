@@ -33,9 +33,9 @@
         "typescript": "^5.3.3"
     },
     "dependencies": {
+        "@astrojs/node": "^8.3.3",
         "@astrojs/rss": "^4.0.7",
         "@astrojs/sitemap": "^3.1.6",
-        "@astrojs/vercel": "^7.7.2",
         "@astrojs/vue": "^4.5.0",
         "@fontsource/nunito-sans": "^5.0.13",
         "@vanilla-extract/css": "^1.15.3",
