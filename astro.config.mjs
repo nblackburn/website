@@ -1,7 +1,7 @@
 import vue from '@astrojs/vue';
+import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
@@ -10,23 +10,11 @@ export default defineConfig({
     site: 'https://nblackburn.uk/',
     integrations: [vue(), sitemap()],
 
-    adapter: vercel({
-        imageService: true,
-        webAnalytics: {
-            enabled: true
-        },
-        speedInsights: {
-            enabled: true
-        }
+    adapter: node({
+        mode: 'standalone'
     }),
 
     vite: {
-        plugins: [vanillaExtractPlugin()],
-
-        define: {
-            'import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID': JSON.stringify(
-                process.env.VERCEL_ANALYTICS_ID
-            )
-        }
+        plugins: [vanillaExtractPlugin()]
     }
 });
