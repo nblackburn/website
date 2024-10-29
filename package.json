@@ -20,7 +20,7 @@
         "@playwright/test": "^1.46.0",
         "@types/eslint": "^8",
         "@types/node": "^20.14.15",
-        "@typescript-eslint/eslint-plugin": "^7.2.0",
+        "@typescript-eslint/eslint-plugin": "^8.12.1",
         "@typescript-eslint/parser": "^7.2.0",
         "@vanilla-extract/vite-plugin": "^4.0.13",
         "checkly": "^4.8.0",
