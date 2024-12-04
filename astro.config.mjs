@@ -1,11 +1,10 @@
 import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
-    output: 'hybrid',
     compressHTML: true,
     site: 'https://nblackburn.uk/',
     integrations: [vue(), sitemap()],
