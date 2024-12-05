@@ -4,13 +4,14 @@
 
 <script lang="ts">
 import * as styles from './turnStile.css';
+import { TURNSTILE_SITE_KEY } from 'astro:env/server';
 import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({
     emits: ['callback', 'error', 'expired', 'unsupported'],
     setup(_props, ctx) {
         const element = ref();
-        const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+        const siteKey = TURNSTILE_SITE_KEY;
 
         const setupScript = () => {
             const turnStile = window.turnstile;

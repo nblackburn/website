@@ -1,8 +1,9 @@
 import config from '@root/src/config';
 import type { APIRoute } from 'astro';
+import { RESEND_API_KEY, TURNSTILE_SECRET_KEY } from 'astro:env/server';
 
-const resendApikey = import.meta.env.RESEND_API_KEY;
-const turnstyleSecretKey = import.meta.env.TURNSTILE_SECRET_KEY;
+const resendApikey = RESEND_API_KEY;
+const turnstyleSecretKey = TURNSTILE_SECRET_KEY;
 
 export const runtime = 'edge';
 export const prerender = false;

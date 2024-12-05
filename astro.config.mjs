@@ -1,7 +1,7 @@
 import vue from '@astrojs/vue';
-import sitemap from '@astrojs/sitemap';
-import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel';
+import sitemap from '@astrojs/sitemap';
+import { defineConfig, envField } from 'astro/config';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
@@ -19,13 +19,15 @@ export default defineConfig({
         }
     }),
 
-    vite: {
-        plugins: [vanillaExtractPlugin()],
-
-        define: {
-            'import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID': JSON.stringify(
-                process.env.VERCEL_ANALYTICS_ID
-            )
+    env: {
+        schema: {
+            RESEND_API_KEY: envField({ context: 'server', access: 'secret' }),
+            TURNSTILE_SITE_KEY: envField({ context: 'client', access: 'public' }),
+            TURNSTILE_SECRET_KEY: envField({ context: 'server', access: 'secret' })
         }
+    },
+
+    vite: {
+        plugins: [vanillaExtractPlugin()]
     }
 });
