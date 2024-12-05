@@ -12,7 +12,7 @@
         "postinstall": "husky install",
         "format": "prettier . --write --ignore-unknown"
     },
-    "packageManager": "yarn@4.0.2",
+    "packageManager": "yarn@4.5.3",
     "devDependencies": {
         "@astrojs/check": "0.9.4",
         "@commitlint/cli": "^19.6.0",
