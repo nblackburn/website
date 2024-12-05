@@ -38,12 +38,6 @@ import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
 import { Group } from '@utilities/groupItems';
 
-type Item = {
-    id: string;
-    href: string;
-    title: string;
-};
-
 interface Props {
     groups?: Group[];
 }
