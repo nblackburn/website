@@ -5,6 +5,7 @@ export const projectCard = style({
     display: 'grid',
     overflow: 'hidden',
     rowGap: sizes.small,
+    padding: sizes.nano,
     columnGap: sizes.small,
     borderRadius: sizes.small,
     backdropFilter: 'blur(10px)',
@@ -35,6 +36,7 @@ export const thumbnail = style({
     position: 'relative',
     objectPosition: 'top',
     justifySelf: 'flex-end',
+    borderRadius: sizes.mini,
     background: `rgb(${vars.colors.silverChalice})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
