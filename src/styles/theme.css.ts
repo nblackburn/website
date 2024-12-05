@@ -29,6 +29,7 @@ export const breakpoints = {
 export const sizes = {
     nano: calcUnitStyle(1),
     tiny: calcUnitStyle(2),
+    mini: calcUnitStyle(3),
     small: calcUnitStyle(4),
     medium: calcUnitStyle(8),
     large: calcUnitStyle(16),
