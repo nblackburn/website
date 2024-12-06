@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import Story from '@components/story.vue';
+import * as styles from './about.css';
 import rigImage from '@assets/img/rig.jpg';
 import groupItems from '@utilities/groupItems';
 import { stack, stackGroups } from '@config/stack';
@@ -21,16 +21,18 @@ const groups = groupItems(stackGroups, stack);
     image={rigImage}
     layout={layout}
 >
-    <Story>
+    <div class={styles.image}>
         <Image
             src={rigImage}
             alt="My desktop"
             width={828}
             height={400}
             format="webp"
-            slot="image"
             loading="eager"
         />
-    </Story>
+    </div>
+    <div class={styles.story}>
+        <slot />
+    </div>
     <LinkGroups groups={groups} slot="sidepanel" />
 </SidePanelLayout>
