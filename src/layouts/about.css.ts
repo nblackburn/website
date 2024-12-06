@@ -1,10 +1,5 @@
-import { style } from '@vanilla-extract/css';
 import { sizes, vars } from '@styles/theme.css';
-
-export const story = style({
-    fontSize: '1.2rem',
-    textAlign: 'justify'
-});
+import { style, globalStyle } from '@vanilla-extract/css';
 
 export const image = style({
     width: '100%',
@@ -26,7 +21,9 @@ export const image = style({
     }
 });
 
-export const paragraph = style({
+export const story = style({});
+
+globalStyle(`${story} p`, {
     lineHeight: 1.3,
     color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
@@ -36,7 +33,7 @@ export const paragraph = style({
     }
 });
 
-export const link = style({
+globalStyle(`${story} a`, {
     color: `rgb(${vars.colors.eerieBlack})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
