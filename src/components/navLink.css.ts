@@ -65,7 +65,7 @@ export const active = style({
 });
 
 export const icon = style({
-    padding: '0.75rem'
+    padding: sizes.tiny
 });
 
 export const disabled = style({
