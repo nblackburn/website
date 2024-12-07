@@ -5,12 +5,12 @@ export const navLink = style({
     display: 'flex',
     color: 'inherit',
     fontWeight: 'bold',
+    padding: sizes.mini,
     alignItems: 'center',
     textDecoration: 'none',
     borderRadius: '9999px',
     justifyContent: 'center',
     border: '1px transparent solid',
-    padding: `0.75rem ${sizes.small}`,
     transition: 'border 0.2s ease-in-out'
 });
 
