@@ -38,6 +38,7 @@ export const summary = style({
 
 export const readMore = style({
     display: 'flex',
+    alignItems: 'center',
     justifyContent: 'space-between',
     '@media': {
         [breakpoints.large]: {
