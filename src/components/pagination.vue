@@ -7,9 +7,12 @@
                     :href="links.prev"
                     :disabled="!links.prev"
                     :aria-disabled="!links.prev"
+                    title="Previous Page"
                 >
-                    Previous</NavLink
-                >
+                    <svg width="24" height="24" role="img">
+                        <use href="#arrow-left" />
+                    </svg>
+                </NavLink>
             </li>
             <li :class="styles.item">
                 <span>{{ current }}</span>
@@ -22,9 +25,12 @@
                     :href="links.next"
                     :disabled="!links.next"
                     :aria-disabled="!links.next"
+                    title="Next Page"
                 >
-                    Next</NavLink
-                >
+                    <svg width="24" height="24" role="img">
+                        <use href="#arrow-right" />
+                    </svg>
+                </NavLink>
             </li>
         </ol>
     </nav>

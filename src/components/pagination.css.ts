@@ -8,15 +8,17 @@ export const pagination = style({
 export const items = style({
     margin: 0,
     padding: 0,
+    display: 'flex',
+    gap: sizes.small,
     listStyle: 'none',
+    alignItems: 'center',
     listStylePosition: 'inside'
 });
 
 export const item = style({
-    display: 'inline-block',
-    selectors: {
-        '&:not(&:last-child)': {
-            marginRight: sizes.tiny
-        }
-    }
+    display: 'inline-block'
+});
+
+export const link = style({
+    padding: sizes.tiny
 });
