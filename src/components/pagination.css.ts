@@ -18,7 +18,3 @@ export const items = style({
 export const item = style({
     display: 'inline-block'
 });
-
-export const link = style({
-    padding: sizes.tiny
-});

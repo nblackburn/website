@@ -3,11 +3,11 @@
         <ol :class="styles.items">
             <li :class="styles.item">
                 <NavLink
-                    :class="styles.link"
                     :href="links.prev"
                     :disabled="!links.prev"
                     :aria-disabled="!links.prev"
                     title="Previous Page"
+                    icon
                 >
                     <svg width="24" height="24" role="img">
                         <use href="#arrow-left" />
@@ -21,11 +21,11 @@
             </li>
             <li :class="styles.item">
                 <NavLink
-                    :class="styles.link"
                     :href="links.next"
                     :disabled="!links.next"
                     :aria-disabled="!links.next"
                     title="Next Page"
+                    icon
                 >
                     <svg width="24" height="24" role="img">
                         <use href="#arrow-right" />
