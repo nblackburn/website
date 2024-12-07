@@ -5,7 +5,7 @@ export const button = style({
     display: 'flex',
     color: 'inherit',
     fontWeight: 'bold',
-    padding: sizes.small,
+    padding: sizes.mini,
     alignItems: 'center',
     textDecoration: 'none',
     borderRadius: sizes.tiny,

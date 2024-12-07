@@ -87,5 +87,23 @@
                 ></path>
             </g>
         </symbol>
+        <symbol id="arrow-left" viewBox="0 0 48 48">
+            <g fill="currentColor">
+                <path
+                    d="M23.414,24l7.293-7.293a1,1,0,0,0,0-1.414l-2-2a1,1,0,0,0-1.414,0l-10,10a1,1,0,0,0,0,1.414l10,10a1,1,0,0,0,1.414,0l2-2a1,1,0,0,0,0-1.414Z"
+                    fill="currentColor"
+                    stroke="none"
+                ></path>
+            </g>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 48 48">
+            <g fill="currentColor">
+                <path
+                    d="M20.707,13.293a1,1,0,0,0-1.414,0l-2,2a1,1,0,0,0,0,1.414L24.586,24l-7.293,7.293a1,1,0,0,0,0,1.414l2,2a1,1,0,0,0,1.414,0l10-10a1,1,0,0,0,0-1.414Z"
+                    fill="currentColor"
+                    stroke="none"
+                ></path>
+            </g>
+        </symbol>
     </svg>
 </template>
