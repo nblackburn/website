@@ -12,6 +12,11 @@
                 >
             </li>
             <li :class="styles.item">
+                <span>{{ current }}</span>
+                <span> of </span>
+                <span>{{ total }}</span>
+            </li>
+            <li :class="styles.item">
                 <NavLink
                     :class="styles.link"
                     :href="links.next"
@@ -36,9 +41,13 @@ type URL = {
 
 interface Props {
     links: URL;
+    total?: number;
+    current?: number;
 }
 
 withDefaults(defineProps<Props>(), {
+    total: 1,
+    current: 1,
     links: () => {
         return {
             prev: undefined,
