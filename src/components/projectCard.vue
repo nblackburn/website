@@ -18,7 +18,7 @@
                             :href="'/projects/tags/' + slugify(tag)"
                             :class="styles.link"
                             :aria-current="activeTag === slugify(tag)"
-                            >{{ tag }}</Link
+                            >#{{ tag }}</Link
                         >
                     </li>
                 </ol>
