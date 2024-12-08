@@ -18,8 +18,10 @@
                             :href="'/projects/tags/' + slugify(tag)"
                             :class="styles.link"
                             :aria-current="activeTag === slugify(tag)"
-                            >{{ tag }}</Link
                         >
+                            <span :class="styles.hash">#</span>
+                            <span>{{ tag }}</span>
+                        </Link>
                     </li>
                 </ol>
                 <div :class="styles.publishDate">
