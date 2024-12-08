@@ -58,3 +58,7 @@ export const link = style({
     textDecoration: 'none',
     padding: `${sizes.tiny} ${sizes.mini}`
 });
+
+export const hash = style({
+    opacity: 0.5
+});

@@ -9,9 +9,10 @@
                 v-for="tag in tags"
                 v-bind:key="tag"
             >
-                <a :class="[styles.link]" :href="'/projects/tags/' + tag"
-                    >#{{ tag }}</a
-                >
+                <a :class="[styles.link]" :href="'/projects/tags/' + tag">
+                    <span :class="styles.hash">#</span>
+                    <span>{{ tag }}</span>
+                </a>
             </li>
         </ol>
     </div>

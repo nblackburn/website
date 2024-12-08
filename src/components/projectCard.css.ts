@@ -169,3 +169,7 @@ export const externalIcon = style({
 });
 
 export const info = style({});
+
+export const hash = style({
+    opacity: 0.5
+});
