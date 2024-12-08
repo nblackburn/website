@@ -52,7 +52,7 @@ const subTitle = 'Some of the things i have worked on';
 ---
 
 <PageLayout title={title} subTitle={subTitle} activePage={activePage}>
-    <ProjectList>
+    <ProjectList activeTag={tag}>
         {
             page.data.map(({ props }) => (
                 <ProjectCard project={props} activeTag={tag}>

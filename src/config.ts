@@ -21,12 +21,14 @@ interface Config {
     url: string;
     seo: SEOConfig;
     mail: MailConfig;
+    featuredTags: string[];
     palette: PaletteConfig;
     pagination: PaginationConfig;
 }
 
 const config: Config = {
     url: 'https://nblackburn.uk',
+    featuredTags: ['design', 'music', 'game'],
 
     seo: {
         ref: 'nblackburn.uk'
