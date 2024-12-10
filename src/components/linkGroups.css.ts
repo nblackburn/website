@@ -25,14 +25,14 @@ export const item = style({
     borderRadius: '0.25rem',
     selectors: {
         '&:nth-child(even)': {
-            background: `rgb(${vars.colors.silverChalice})`
+            background: `rgba(${vars.colors.silverChalice} / 80%)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:nth-child(even)': {
-                    background: `rgb(${vars.colors.eerieBlack})`
+                    background: `rgba(${vars.colors.eerieBlack} / 80%)`
                 }
             }
         }
