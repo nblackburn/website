@@ -11,7 +11,9 @@ export const linkGroup = style({
 
 export const heading = style({
     fontWeight: 'bold',
-    margin: `0 0 ${sizes.small} 0`
+    marginBottom: sizes.nano,
+    paddingBottom: sizes.nano,
+    borderBottom: '1px rgba(255 255 255 / 10%) solid'
 });
 
 export const items = style({
