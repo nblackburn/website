@@ -11,7 +11,8 @@ export async function GET(context: RSSOptions) {
         site: `${context.site}/projects`,
         items: projects.map(({ data }) => ({
             ...data,
-            link: data.url
+            link: data.url,
+            categories: data.tags
         }))
     });
 }
