@@ -6,6 +6,7 @@ export const filterBar = style({
     overflow: 'hidden',
     padding: sizes.nano,
     borderRadius: '9999px',
+    WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     background: 'rgba(255 255 255 / 30%)',
     border: `1px rgb(${vars.colors.silverChalice}) solid`,

@@ -7,6 +7,7 @@ export const textArea = style({
     fontSize: 'inherit',
     padding: sizes.small,
     borderRadius: sizes.tiny,
+    WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     transition: 'all 0.2s ease-in-out',
     boxShadow: '0px 0px 0px 0px transparent',

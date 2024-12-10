@@ -27,8 +27,8 @@ const animatedAccent = keyframes({
 
 export const accent = style({
     backgroundSize: '200%',
-    backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
+    backgroundClip: 'text',
     color: 'rgba(255 255 255 / 5%)',
     animation: `${animatedAccent} 5s ease-in-out infinite`,
     backgroundImage: `radial-gradient(circle, rgba(${primaryAccent} / 95%) 0%, rgba(${secondaryAccent} / 95%) 100%)`,

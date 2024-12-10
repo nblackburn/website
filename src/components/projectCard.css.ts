@@ -8,6 +8,7 @@ export const projectCard = style({
     padding: sizes.nano,
     columnGap: sizes.small,
     borderRadius: sizes.small,
+    WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
     background: 'rgba(255 255 255 / 30%)',
