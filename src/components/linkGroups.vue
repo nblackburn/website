@@ -18,8 +18,8 @@
                         :aria-label="item.title + ' (External link)'"
                     >
                         <svg
-                            width="24"
-                            height="24"
+                            width="18"
+                            height="18"
                             role="img"
                             :class="styles.icon"
                         >
