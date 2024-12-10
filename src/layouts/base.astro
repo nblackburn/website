@@ -71,6 +71,14 @@ const { title, description, image, activePage } = Astro.props;
         <!-- styles -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+        <!-- feeds ---->
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Nathaniel Blackburn"
+            href={new URL('/projects/rss.xml', Astro.site)}
+        />
+
         <!-- scripts -->
         <script
             src="https://challenges.cloudflare.com/turnstile/v0/api.js"

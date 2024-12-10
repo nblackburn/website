@@ -11,7 +11,13 @@ export async function GET(context: RSSOptions) {
         site: `${context.site}/projects`,
         items: projects.map(({ data }) => ({
             ...data,
-            link: data.url
+            link: data.url,
+            categories: data.tags,
+            enclosure: {
+                length: 0,
+                url: data.thumbnail.src,
+                type: `image/${data.thumbnail.format}`
+            }
         }))
     });
 }
