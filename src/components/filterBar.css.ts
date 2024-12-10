@@ -5,7 +5,7 @@ export const filterBar = style({
     margin: 'auto',
     overflow: 'hidden',
     padding: sizes.nano,
-    borderRadius: '10000px',
+    borderRadius: '9999px',
     backdropFilter: 'blur(10px)',
     background: 'rgba(255 255 255 / 30%)',
     border: `1px rgb(${vars.colors.silverChalice}) solid`,
@@ -45,10 +45,10 @@ export const item = style({
             }
         },
         [`&:first-child`]: {
-            borderRadius: '1000px 0 0 1000px'
+            borderRadius: '9999px 0 0 9999px'
         },
         [`&:last-child`]: {
-            borderRadius: '0 1000px 1000px 0'
+            borderRadius: '0 9999px 9999px 0'
         }
     }
 });
