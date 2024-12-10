@@ -5,7 +5,9 @@ export const filterBar = style({
     margin: 'auto',
     overflow: 'hidden',
     padding: sizes.nano,
-    borderRadius: '10000px',
+    borderRadius: '9999px',
+    WebkitBackdropFilter: 'blur(10px)',
+    backdropFilter: 'blur(10px)',
     background: 'rgba(255 255 255 / 30%)',
     border: `1px rgb(${vars.colors.silverChalice}) solid`,
     '@media': {
@@ -27,7 +29,7 @@ export const items = style({
 
 export const activeItem = style({
     color: `rgb(${vars.colors.white})`,
-    background: `rgb(${secondaryAccent})`
+    background: `rgba(${secondaryAccent} / 80%)`
 });
 
 export const item = style({
@@ -36,18 +38,18 @@ export const item = style({
     transition: 'background 0.2s ease-in-out',
     selectors: {
         [`&:not(${activeItem}):hover`]: {
-            background: `rgb(${vars.colors.silverChalice})`,
+            background: `rgba(${vars.colors.silverChalice} / 80%)`,
             '@media': {
                 '(prefers-color-scheme: dark)': {
-                    background: `rgb(${vars.colors.eerieBlack})`
+                    background: `rgba(${vars.colors.eerieBlack} / 80%)`
                 }
             }
         },
         [`&:first-child`]: {
-            borderRadius: '1000px 0 0 1000px'
+            borderRadius: '9999px 0 0 9999px'
         },
         [`&:last-child`]: {
-            borderRadius: '0 1000px 1000px 0'
+            borderRadius: '0 9999px 9999px 0'
         }
     }
 });

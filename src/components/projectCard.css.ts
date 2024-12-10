@@ -8,6 +8,7 @@ export const projectCard = style({
     padding: sizes.nano,
     columnGap: sizes.small,
     borderRadius: sizes.small,
+    WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
     background: 'rgba(255 255 255 / 30%)',
@@ -110,30 +111,30 @@ export const tag = style({
     display: 'inline-block',
     padding: '0.2rem 0.75rem',
     transition: 'all 0.2s ease-in-out',
-    background: `rgb(${vars.colors.silverChalice})`,
+    background: `rgba(${vars.colors.silverChalice} / 80%)`,
     selectors: {
         '&:not(:last-child)': {
             marginRight: '0.5rem'
         },
         '&:hover': {
             color: `rgb(${vars.colors.white})`,
-            background: `rgb(${secondaryAccent})`
+            background: `rgba(${secondaryAccent} / 80%)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: `rgb(${vars.colors.white})`,
-            background: `rgb(${vars.colors.eerieBlack})`
+            background: `rgba(${vars.colors.eerieBlack} / 80%)`
         }
     }
 });
 
 export const activeTag = style({
     color: `rgb(${vars.colors.white})`,
-    background: `rgb(${secondaryAccent})`,
+    background: `rgba(${secondaryAccent} / 80%)`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `rgb(${secondaryAccent})`
+            background: `rgba(${secondaryAccent} / 80%)`
         }
     }
 });

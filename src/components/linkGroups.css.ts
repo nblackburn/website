@@ -11,7 +11,9 @@ export const linkGroup = style({
 
 export const heading = style({
     fontWeight: 'bold',
-    margin: `0 0 ${sizes.small} 0`
+    marginBottom: sizes.nano,
+    paddingBottom: sizes.nano,
+    borderBottom: '1px rgba(255 255 255 / 10%) solid'
 });
 
 export const items = style({
@@ -25,14 +27,14 @@ export const item = style({
     borderRadius: '0.25rem',
     selectors: {
         '&:nth-child(even)': {
-            background: `rgb(${vars.colors.silverChalice})`
+            background: `rgba(${vars.colors.silverChalice} / 80%)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:nth-child(even)': {
-                    background: `rgb(${vars.colors.eerieBlack})`
+                    background: `rgba(${vars.colors.eerieBlack} / 80%)`
                 }
             }
         }

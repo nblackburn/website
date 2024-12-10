@@ -5,6 +5,7 @@ export const header = style({
     top: 0,
     zIndex: 10,
     position: 'sticky',
+    WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     background: 'rgba(255 255 255 / 0.5)',
     borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
