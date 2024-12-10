@@ -12,7 +12,12 @@ export async function GET(context: RSSOptions) {
         items: projects.map(({ data }) => ({
             ...data,
             link: data.url,
-            categories: data.tags
+            categories: data.tags,
+            enclosure: {
+                length: 0,
+                url: data.thumbnail.src,
+                type: `image/${data.thumbnail.format}`
+            }
         }))
     });
 }
