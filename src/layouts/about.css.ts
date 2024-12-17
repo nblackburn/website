@@ -25,6 +25,7 @@ export const story = style({});
 
 globalStyle(`${story} p`, {
     lineHeight: 1.3,
+    fontSize: '1.1rem',
     color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
