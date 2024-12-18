@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Auturia Keylab 61 Essential",
+        "href": "https://www.arturia.com/products/hybrid-synths/keylab-essential/overview",
+        "type": "music"
+    },
+    {
+        "title": "Bitwig Studio",
+        "href": "https://bitwig.com",
+        "type": "music"
+    },
+    {
+        "title": "Visual Studio Code",
+        "href": "https://code.visualstudio.com",
+        "type": "development"
+    },
+    {
+        "title": "Fork",
+        "href": "https://git-fork.com",
+        "type": "development"
+    },
+    {
+        "title": "Affinity Designer",
+        "href": "https://affinity.serif.com/en-gb/designer",
+        "type": "design"
+    },
+    {
+        "title": "Affinity Photo",
+        "href": "https://affinity.serif.com/en-gb/photo",
+        "type": "design"
+    },
+    {
+        "title": "Affinity Publisher",
+        "href": "https://affinity.serif.com/en-gb/publisher",
+        "type": "design"
+    },
+    {
+        "title": "1Password",
+        "href": "https://1password.com",
+        "type": "tools"
+    },
+    {
+        "title": "Morgen",
+        "href": "https://morgen.so",
+        "type": "tools"
+    },
+    {
+        "title": "Todoist",
+        "href": "https://todoist.com",
+        "type": "tools"
+    },
+    {
+        "title": "Blender",
+        "href": "https://blender.org",
+        "type": "design"
+    },
+    {
+        "title": "Godot",
+        "href": "https://godotengine.org",
+        "type": "development"
+    }
+]
