@@ -3,7 +3,7 @@ import { vars, sizes, breakpoints } from '@styles/theme.css';
 
 export const intro = style({
     display: 'grid',
-    fontSize: '1.2rem',
+    fontSize: '1.1rem',
     rowGap: sizes.small,
     textAlign: 'justify',
     alignItems: 'center',
