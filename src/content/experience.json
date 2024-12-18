@@ -1,0 +1,56 @@
+[
+    {
+        "startDate": "2024-11",
+        "endDate": null,
+        "jobTitle": "Full Stack Engineer",
+        "company": {
+            "name": "UniHomes",
+            "url": "https://unihomes.co.uk"
+        }
+    },
+    {
+        "startDate": "2023-11",
+        "endDate": "2024-11",
+        "jobTitle": "Full Stack Engineer",
+        "company": {
+            "name": "Tritone Health",
+            "url": "https://tritonehealth.com"
+        }
+    },
+    {
+        "startDate": "2022-08",
+        "endDate": "2023-10",
+        "jobTitle": "Lead UI Engineer",
+        "company": {
+            "name": "Relative Insight",
+            "url": "https://relativeinsight.com"
+        }
+    },
+    {
+        "startDate": "2016-01",
+        "endDate": "2022-10",
+        "jobTitle": "UI Engineer",
+        "company": {
+            "name": "Relative Insight",
+            "url": "https://relativeinsight.com"
+        }
+    },
+    {
+        "startDate": "2015-08",
+        "endDate": "2015-11",
+        "jobTitle": "Web Developer",
+        "company": {
+            "name": "Soap Media",
+            "url": "https://soapmedia.co.uk"
+        }
+    },
+    {
+        "startDate": "2014-04",
+        "endDate": "2015-05",
+        "jobTitle": "Software Developer",
+        "company": {
+            "name": "Veraz",
+            "url": null
+        }
+    }
+]
