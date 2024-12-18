@@ -1,5 +1,6 @@
 *.log
 dist/
+test-results/
 node_modules
 .yarn/*
 !.yarn/patches
@@ -10,3 +11,6 @@ node_modules
 *.env
 .astro/
 .vercel
+/playwright-report/
+/blob-report/
+/playwright/.cache/
