@@ -1,3 +1,4 @@
+import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 const project = defineCollection({
@@ -12,6 +13,18 @@ const project = defineCollection({
         })
 });
 
+const stack = defineCollection({
+    loader: glob({ pattern: 'stack.json', base: './src/content' }),
+    schema: z.array(
+        z.object({
+            title: z.string(),
+            href: z.string().url(),
+            type: z.enum(['music', 'tools', 'development', 'design'])
+        })
+    )
+});
+
 export const collections = {
+    stack,
     project
 };
