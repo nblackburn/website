@@ -10,13 +10,7 @@ export default defineConfig({
     integrations: [vue(), sitemap()],
 
     adapter: vercel({
-        imageService: true,
-        webAnalytics: {
-            enabled: true
-        },
-        speedInsights: {
-            enabled: true
-        }
+        imageService: true
     }),
 
     vite: {
