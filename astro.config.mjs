@@ -9,6 +9,15 @@ export default defineConfig({
     site: 'https://nblackburn.uk/',
     integrations: [vue(), sitemap()],
 
+    markdown: {
+        shikiConfig: {
+            themes: {
+                light: 'github-light',
+                dark: 'github-dark'
+            }
+        }
+    },
+
     adapter: vercel({
         imageService: true
     }),
