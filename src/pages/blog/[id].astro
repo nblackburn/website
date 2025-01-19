@@ -1,0 +1,23 @@
+---
+import * as styles from '@styles/article.css';
+import PageLayout from '@layouts/page.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+
+    return posts.map((post) => ({
+        params: { id: post.id },
+        props: { post }
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<PageLayout title={post.data.title} subTitle={post.data.description}>
+    <article class={styles.article}>
+        <Content />
+    </article>
+</PageLayout>
