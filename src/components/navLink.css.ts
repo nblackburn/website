@@ -80,7 +80,7 @@ export const disabled = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             borderColor: 'transparent',
-            color: `rgb(${vars.colors.davyGrey})`,
+            color: `rgb(${vars.colors.battleshipGray})`,
             selectors: {
                 '&:hover': {
                     borderColor: 'transparent'

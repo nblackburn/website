@@ -29,7 +29,7 @@ globalStyle(`${story} p`, {
     color: `rgb(${vars.colors.sonicSilver})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.davyGrey})`
+            color: `rgb(${vars.colors.battleshipGray})`
         }
     }
 });
