@@ -1,6 +1,10 @@
 <template>
     <section :class="styles.projectList">
-        <FilterBar :tags="config.featuredTags" :active="activeTag" />
+        <FilterBar
+            :tags="config.featuredTags"
+            :active="activeTag"
+            baseURL="/projects/tags"
+        />
         <slot />
     </section>
 </template>
