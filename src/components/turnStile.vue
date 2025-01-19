@@ -15,6 +15,10 @@ export default defineComponent({
         const setupScript = () => {
             const turnStile = window.turnstile;
 
+            if (!turnStile) {
+                return;
+            }
+
             turnStile.render(element.value, {
                 sitekey: siteKey,
                 callback: (token: string) => ctx.emit('callback', token),
