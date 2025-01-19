@@ -9,7 +9,7 @@
                 v-for="tag in tags"
                 v-bind:key="tag"
             >
-                <a :class="[styles.link]" :href="'/projects/tags/' + tag">
+                <a :class="[styles.link]" :href="tagURL(tag)">
                     <span :class="styles.hash">#</span>
                     <span>{{ tag }}</span>
                 </a>
@@ -24,10 +24,24 @@ import * as styles from './filterBar.css';
 interface Props {
     tags?: string[];
     active?: string;
+    baseURL?: string;
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
     tags: () => [],
-    active: undefined
+    active: undefined,
+    baseURL: undefined
 });
+
+const tagURL = (tag: string) => {
+    if (props.baseURL) {
+        const baseURL = props.baseURL.endsWith('/')
+            ? props.baseURL
+            : props.baseURL + '/';
+
+        return `${baseURL}${tag}`;
+    }
+
+    return tag;
+};
 </script>
