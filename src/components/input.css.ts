@@ -15,7 +15,7 @@ export const input = style({
             boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
         },
         '&:disabled': {
-            color: `rgb(${vars.colors.davyGrey})`
+            color: `rgb(${vars.colors.battleshipGray})`
         }
     },
     '@media': {

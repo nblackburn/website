@@ -26,7 +26,7 @@ export const title = style({
 export const subTitle = style({
     margin: 0,
     fontSize: sizes.medium,
-    color: `rgb(${vars.colors.davyGrey})`,
+    color: `rgb(${vars.colors.battleshipGray})`,
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: `rgb(${vars.colors.silverChalice})`
