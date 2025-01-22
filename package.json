@@ -21,7 +21,7 @@
         "@playwright/test": "^1.49.1",
         "@types/eslint": "^9.6.1",
         "@types/node": "^22.10.7",
-        "@typescript-eslint/eslint-plugin": "^8.20.0",
+        "@typescript-eslint/eslint-plugin": "^8.21.0",
         "@typescript-eslint/parser": "^8.20.0",
         "@vanilla-extract/vite-plugin": "^4.0.19",
         "eslint": "^9.18.0",
