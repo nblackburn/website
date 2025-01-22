@@ -78,11 +78,6 @@ export const title = style({
     margin: `0 0 ${sizes.tiny}`
 });
 
-export const link = style({
-    color: 'inherit',
-    textDecoration: 'none'
-});
-
 export const description = style({
     margin: 0,
     lineHeight: 1.3,
@@ -90,51 +85,6 @@ export const description = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: `rgb(${vars.colors.battleshipGray})`
-        }
-    }
-});
-
-export const tags = style({
-    margin: 0,
-    padding: 0,
-    listStyle: 'none',
-    listStylePosition: 'inside',
-    '@media': {
-        [breakpoints.medium]: {
-            marginBottom: sizes.small
-        }
-    }
-});
-
-export const tag = style({
-    borderRadius: '9999px',
-    display: 'inline-block',
-    padding: '0.2rem 0.75rem',
-    transition: 'all 0.2s ease-in-out',
-    background: `rgba(${vars.colors.silverChalice} / 80%)`,
-    selectors: {
-        '&:not(:last-child)': {
-            marginRight: '0.5rem'
-        },
-        '&:hover': {
-            color: `rgb(${vars.colors.white})`,
-            background: `rgba(${secondaryAccent} / 80%)`
-        }
-    },
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.white})`,
-            background: `rgba(${vars.colors.eerieBlack} / 80%)`
-        }
-    }
-});
-
-export const activeTag = style({
-    color: `rgb(${vars.colors.white})`,
-    background: `rgba(${secondaryAccent} / 80%)`,
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            background: `rgba(${secondaryAccent} / 80%)`
         }
     }
 });
@@ -170,7 +120,3 @@ export const externalIcon = style({
 });
 
 export const info = style({});
-
-export const hash = style({
-    opacity: 0.5
-});

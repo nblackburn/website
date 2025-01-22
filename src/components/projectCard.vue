@@ -5,25 +5,11 @@
         </div>
         <div :class="styles.content">
             <div :class="styles.meta">
-                <ol :class="styles.tags" aria-label="Tags">
-                    <li
-                        v-for="tag in project.data.tags"
-                        :class="[
-                            styles.tag,
-                            activeTag === slugify(tag) ? styles.activeTag : ''
-                        ]"
-                        :key="tag"
-                    >
-                        <Link
-                            :href="'/projects/tags/' + slugify(tag)"
-                            :class="styles.link"
-                            :aria-current="activeTag === slugify(tag)"
-                        >
-                            <span :class="styles.hash">#</span>
-                            <span>{{ tag }}</span>
-                        </Link>
-                    </li>
-                </ol>
+                <TagList
+                    :tags="project.data.tags"
+                    :active="activeTag"
+                    baseURL="/projects/tags"
+                />
                 <div :class="styles.publishDate">
                     Published
                     <time :class="styles.publishedDate" :datetime="isoDate">{{
@@ -61,12 +47,11 @@
 </template>
 
 <script lang="ts" setup>
-import Link from '@components/link.vue';
-import slugify from '@utilities/slugify';
 import * as styles from './projectCard.css';
 import { format, formatISO } from 'date-fns';
 import NavLink from '@components/navLink.vue';
 import type { CollectionEntry } from 'astro:content';
+import TagList from './tagList.vue';
 
 interface Props {
     project: CollectionEntry<'project'>;
