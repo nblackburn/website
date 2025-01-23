@@ -21,6 +21,7 @@ const { Content, remarkPluginFrontmatter: frontmatter } = await render(post);
     subTitle={post.data.description}
     tags={post.data.tags}
     pubDate={post.data.pubDate}
+    featuredImage={post.data.featuredImage}
     readTime={frontmatter.readTime}
 >
     <article class={styles.article}>

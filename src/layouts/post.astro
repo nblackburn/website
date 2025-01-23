@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import * as styles from './post.css';
 import type { ImageMetadata } from 'astro';
 import BaseLayout from '@layouts/base.astro';
@@ -10,20 +11,20 @@ export interface Props {
     title: string;
     subTitle: string;
     activePage?: string;
-    image?: ImageMetadata;
     readTime: string;
     tags: string[];
     pubDate?: Date;
+    featuredImage?: ImageMetadata;
 }
 
-const { title, subTitle, image, activePage, tags, pubDate, readTime } =
+const { title, subTitle, featuredImage, activePage, tags, pubDate, readTime } =
     Astro.props;
 ---
 
 <BaseLayout
     title={title}
     description={subTitle}
-    image={image}
+    image={featuredImage}
     activePage={activePage}
 >
     <PageHeader title={title} subTitle={subTitle} slot="hero">
@@ -40,5 +41,21 @@ const { title, subTitle, image, activePage, tags, pubDate, readTime } =
 
         <TagList tags={tags} baseURL="/blog/tags" />
     </PageHeader>
-    <slot />
+    <article class={styles.post}>
+        {
+            featuredImage && (
+                <div class={styles.image}>
+                    <Image
+                        src={featuredImage.src}
+                        alt={title}
+                        width={1200}
+                        height={400}
+                        format="webp"
+                        loading="eager"
+                    />
+                </div>
+            )
+        }
+        <slot />
+    </article>
 </BaseLayout>
