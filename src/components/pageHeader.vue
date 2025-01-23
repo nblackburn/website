@@ -4,6 +4,9 @@
             <span :class="styles.highlight">{{ title }}</span>
         </h1>
         <h2 :class="styles.subTitle">{{ subTitle }}</h2>
+        <div :class="styles.meta">
+            <slot />
+        </div>
     </section>
 </template>
 
