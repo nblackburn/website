@@ -1,0 +1,44 @@
+---
+import * as styles from './post.css';
+import type { ImageMetadata } from 'astro';
+import BaseLayout from '@layouts/base.astro';
+import TagList from '../components/tagList.vue';
+import PageHeader from '@components/pageHeader.vue';
+import FormattedDate from '@components/formattedDate.vue';
+
+export interface Props {
+    title: string;
+    subTitle: string;
+    activePage?: string;
+    image?: ImageMetadata;
+    readTime: string;
+    tags: string[];
+    pubDate?: Date;
+}
+
+const { title, subTitle, image, activePage, tags, pubDate, readTime } =
+    Astro.props;
+---
+
+<BaseLayout
+    title={title}
+    description={subTitle}
+    image={image}
+    activePage={activePage}
+>
+    <PageHeader title={title} subTitle={subTitle} slot="hero">
+        <div class={styles.meta}>
+            {
+                pubDate && (
+                    <span class={styles.metaProperty}>
+                        <FormattedDate date={pubDate} />
+                    </span>
+                )
+            }
+            {readTime && <span class={styles.metaProperty}>{readTime}</span>}
+        </div>
+
+        <TagList tags={tags} baseURL="/blog/tags" />
+    </PageHeader>
+    <slot />
+</BaseLayout>
