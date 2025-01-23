@@ -11,10 +11,7 @@
                     baseURL="/projects/tags"
                 />
                 <div :class="styles.publishDate">
-                    Published
-                    <time :class="styles.publishedDate" :datetime="isoDate">{{
-                        pubDate
-                    }}</time>
+                    <FormattedDate :date="project.data.pubDate" />
                 </div>
             </div>
             <div :class="styles.details">
@@ -48,10 +45,10 @@
 
 <script lang="ts" setup>
 import * as styles from './projectCard.css';
-import { format, formatISO } from 'date-fns';
 import NavLink from '@components/navLink.vue';
 import type { CollectionEntry } from 'astro:content';
 import TagList from './tagList.vue';
+import FormattedDate from './formattedDate.vue';
 
 interface Props {
     project: CollectionEntry<'project'>;
@@ -59,7 +56,4 @@ interface Props {
 }
 
 const { project } = defineProps<Props>();
-
-const isoDate = formatISO(project.data.pubDate);
-const pubDate = format(project.data.pubDate, 'do MMM, yyyy');
 </script>
