@@ -1,0 +1,34 @@
+---
+import type { Page } from 'astro';
+import PageLayout from '@layouts/page.astro';
+import FilterBar from '@components/filterBar.vue';
+import Pagination from '@components/pagination.vue';
+import * as styles from '@layouts/filterableList.css';
+
+interface Props {
+    page: Page;
+    title: string;
+    baseURL: string;
+    subTitle: string;
+    activeTag?: string;
+    activePage: string;
+    featuredTags: string[];
+}
+
+const { title, subTitle, page, featuredTags, activePage, activeTag, baseURL } =
+    Astro.props;
+---
+
+<PageLayout title={title} subTitle={subTitle} activePage={activePage}>
+    <section class={styles.filterableList}>
+        <FilterBar tags={featuredTags} active={activeTag} baseURL={baseURL} />
+
+        <slot />
+
+        <Pagination
+            links={page.url}
+            current={page.currentPage}
+            total={page.lastPage}
+        />
+    </section>
+</PageLayout>
