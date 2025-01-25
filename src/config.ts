@@ -17,18 +17,25 @@ type MailConfig = {
     to: string;
 };
 
+type ProjectsConfig = {
+    featuredTags: string[];
+};
+
 interface Config {
     url: string;
     seo: SEOConfig;
     mail: MailConfig;
-    featuredTags: string[];
     palette: PaletteConfig;
+    projects: ProjectsConfig;
     pagination: PaginationConfig;
 }
 
 const config: Config = {
     url: 'https://nblackburn.uk',
-    featuredTags: ['design', 'music', 'game'],
+
+    projects: {
+        featuredTags: ['design', 'music', 'game']
+    },
 
     seo: {
         ref: 'nblackburn.uk'

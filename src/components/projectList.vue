@@ -1,7 +1,7 @@
 <template>
     <section :class="styles.projectList">
         <FilterBar
-            :tags="config.featuredTags"
+            :tags="config.projects.featuredTags"
             :active="activeTag"
             baseURL="/projects/tags"
         />
