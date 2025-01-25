@@ -2,13 +2,11 @@
 import config from '@app/config';
 import { Image } from 'astro:assets';
 import slugify from '@utilities/slugify';
-import PageLayout from '@layouts/page.astro';
 import { getCollection } from 'astro:content';
 import type { GetStaticPaths, Page } from 'astro';
 import sortProjects from '@utilities/sortProjects';
-import Pagination from '@components/pagination.vue';
 import ProjectCard from '@components/projectCard.vue';
-import ProjectList from '@components/projectList.vue';
+import FilterableListLayout from '@layouts/filterableList.astro';
 
 interface Props {
     page: Page;
@@ -45,33 +43,36 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 const title = 'Projects';
-const activePage = 'projects';
 const { page } = Astro.props;
 const { tag } = Astro.params;
+const activePage = 'projects';
+const baseURL = '/projects/tags';
+const featuredTags = config.projects.featuredTags;
 const subTitle = 'Some of the things i have worked on';
 ---
 
-<PageLayout title={title} subTitle={subTitle} activePage={activePage}>
-    <ProjectList activeTag={tag}>
-        {
-            page.data.map(({ props }) => (
-                <ProjectCard project={props} activeTag={tag}>
-                    <Image
-                        src={props.data.thumbnail}
-                        alt={props.data.title}
-                        width={768}
-                        height={200}
-                        loading="eager"
-                        format="webp"
-                        slot="thumbnail"
-                    />
-                </ProjectCard>
-            ))
-        }
-    </ProjectList>
-    <Pagination
-        links={page.url}
-        current={page.currentPage}
-        total={page.lastPage}
-    />
-</PageLayout>
+<FilterableListLayout
+    title={title}
+    subTitle={subTitle}
+    activeTag={tag}
+    baseURL={baseURL}
+    activePage={activePage}
+    featuredTags={featuredTags}
+    page={page}
+>
+    {
+        page.data.map(({ props }) => (
+            <ProjectCard project={props} activeTag={tag}>
+                <Image
+                    src={props.data.thumbnail}
+                    alt={props.data.title}
+                    width={768}
+                    height={200}
+                    loading="eager"
+                    format="webp"
+                    slot="thumbnail"
+                />
+            </ProjectCard>
+        ))
+    }
+</FilterableListLayout>
