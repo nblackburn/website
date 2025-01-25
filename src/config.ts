@@ -21,10 +21,15 @@ type ProjectsConfig = {
     featuredTags: string[];
 };
 
+type BlogConfig = {
+    featuredTags: string[];
+};
+
 interface Config {
     url: string;
     seo: SEOConfig;
     mail: MailConfig;
+    blog: BlogConfig;
     palette: PaletteConfig;
     projects: ProjectsConfig;
     pagination: PaginationConfig;
@@ -35,6 +40,10 @@ const config: Config = {
 
     projects: {
         featuredTags: ['design', 'music', 'game']
+    },
+
+    blog: {
+        featuredTags: ['guide', 'thought']
     },
 
     seo: {
