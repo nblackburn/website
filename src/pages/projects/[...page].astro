@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import { sortBy } from '@utilities/sortBy';
 import { getCollection } from 'astro:content';
 import type { Page, GetStaticPaths } from 'astro';
-import ProjectCard from '@components/projectCard.vue';
+import ListCard from '@components/listCard.vue';
 import FilterableListLayout from '@layouts/filterableList.astro';
 
 interface Props {
@@ -42,7 +42,15 @@ const { page } = Astro.props;
 >
     {
         page.data.map(({ props }) => (
-            <ProjectCard project={props}>
+            <ListCard
+                title={props.data.title}
+                description={props.data.description}
+                tags={props.data.tags}
+                url={props.data.url}
+                createdAt={props.data.pubDate}
+                baseURL={baseURL}
+                linkLabel="View project"
+            >
                 <Image
                     src={props.data.thumbnail}
                     alt={props.data.title}
@@ -52,7 +60,7 @@ const { page } = Astro.props;
                     format="webp"
                     slot="thumbnail"
                 />
-            </ProjectCard>
+            </ListCard>
         ))
     }
 </FilterableListLayout>

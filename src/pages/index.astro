@@ -6,7 +6,7 @@ import { sortBy } from '@utilities/sortBy';
 import avatarUrl from '@assets/img/me.jpg';
 import BaseLayout from '@layouts/base.astro';
 import { getCollection } from 'astro:content';
-import ProjectCard from '@components/projectCard.vue';
+import ListCard from '@components/listCard.vue';
 import LatestProject from '@components/latestProject.vue';
 
 const title = 'Home';
@@ -31,7 +31,15 @@ const description =
         />
     </About>
     <LatestProject>
-        <ProjectCard project={latestProject}>
+        <ListCard
+            title={latestProject.data.title}
+            description={latestProject.data.description}
+            tags={latestProject.data.tags}
+            url={latestProject.data.url}
+            createdAt={latestProject.data.pubDate}
+            baseURL="/projects/tags"
+            linkLabel="View project"
+        >
             <Image
                 src={latestProject.data.thumbnail}
                 alt={latestProject.data.title}
@@ -41,6 +49,6 @@ const description =
                 format="webp"
                 slot="thumbnail"
             />
-        </ProjectCard>
+        </ListCard>
     </LatestProject>
 </BaseLayout>
