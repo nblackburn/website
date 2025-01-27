@@ -2,17 +2,17 @@
 import { Image } from 'astro:assets';
 import Hero from '@components/hero.vue';
 import About from '@components/intro.vue';
+import { sortBy } from '@utilities/sortBy';
 import avatarUrl from '@assets/img/me.jpg';
 import BaseLayout from '@layouts/base.astro';
 import { getCollection } from 'astro:content';
-import sortProjects from '@utilities/sortProjects';
 import ProjectCard from '@components/projectCard.vue';
 import LatestProject from '@components/latestProject.vue';
 
 const title = 'Home';
 const activePage = 'home';
 const projects = await getCollection('project');
-const latestProject = sortProjects(projects)[0];
+const latestProject = sortBy(projects, (p) => p.data.pubDate)[0];
 const description =
     'Specialist in experiences which empower and bring people together.';
 ---

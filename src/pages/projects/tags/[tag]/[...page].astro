@@ -2,9 +2,9 @@
 import config from '@app/config';
 import { Image } from 'astro:assets';
 import slugify from '@utilities/slugify';
+import { sortBy } from '@utilities/sortBy';
 import { getCollection } from 'astro:content';
 import type { GetStaticPaths, Page } from 'astro';
-import sortProjects from '@utilities/sortProjects';
 import ProjectCard from '@components/projectCard.vue';
 import FilterableListLayout from '@layouts/filterableList.astro';
 
@@ -19,7 +19,7 @@ export const uniqueTags = (tags: string[]) => {
 
 export const getStaticPaths = (async ({ paginate }) => {
     const projects = await getCollection('project');
-    const sortedProjects = sortProjects(projects);
+    const sortedProjects = sortBy(projects, (p) => p.data.pubDate);
     const allTags: string[] = uniqueTags(
         projects.flatMap(({ data }) => data.tags)
     );

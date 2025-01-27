@@ -1,9 +1,9 @@
 ---
 import config from '@app/config';
 import { Image } from 'astro:assets';
+import { sortBy } from '@utilities/sortBy';
 import { getCollection } from 'astro:content';
 import type { Page, GetStaticPaths } from 'astro';
-import sortProjects from '@utilities/sortProjects';
 import ProjectCard from '@components/projectCard.vue';
 import FilterableListLayout from '@layouts/filterableList.astro';
 
@@ -13,7 +13,7 @@ interface Props {
 
 export const getStaticPaths = (async ({ paginate }) => {
     const projects = await getCollection('project');
-    const sortedProjects = sortProjects(projects);
+    const sortedProjects = sortBy(projects, (p) => p.data.pubDate);
     const mappedProjects = sortedProjects.map((project) => {
         return {
             props: project
