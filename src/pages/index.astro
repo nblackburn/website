@@ -1,10 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import Hero from '@components/hero.vue';
 import About from '@components/intro.vue';
 import { sortBy } from '@utilities/sortBy';
 import avatarUrl from '@assets/img/me.jpg';
-import BaseLayout from '@layouts/base.astro';
+import HomeLayout from '@layouts/home.astro';
 import { getCollection } from 'astro:content';
 import ListCard from '@components/listCard.vue';
 import LatestProject from '@components/latestProject.vue';
@@ -17,8 +16,7 @@ const description =
     'Specialist in experiences which empower and bring people together.';
 ---
 
-<BaseLayout title={title} description={description} activePage={activePage}>
-    <Hero slot="hero" />
+<HomeLayout title={title} description={description} activePage={activePage}>
     <About>
         <Image
             src={avatarUrl}
@@ -51,4 +49,4 @@ const description =
             />
         </ListCard>
     </LatestProject>
-</BaseLayout>
+</HomeLayout>
