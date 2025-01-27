@@ -1,0 +1,66 @@
+---
+import config from '@app/config';
+import { sortBy } from '@utilities/sortBy';
+import { getCollection } from 'astro:content';
+import type { Page, GetStaticPaths } from 'astro';
+import ListCard from '@components/listCard.vue';
+import FilterableListLayout from '@layouts/filterableList.astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    page: Page;
+}
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const posts = await getCollection('blog');
+    const sortedPosts = sortBy(posts, (post) => post.data.pubDate);
+    const mappedPosts = sortedPosts.map((post) => {
+        return {
+            props: post
+        };
+    });
+
+    return paginate(mappedPosts, { pageSize: config.pagination.limit });
+}) satisfies GetStaticPaths;
+
+const title = 'Blog';
+const activePage = 'blog';
+const featuredTags = config.blog.featuredTags;
+const subTitle = 'A collection of procured thoughts';
+const baseURL = '/blog/tags';
+
+const { page } = Astro.props;
+---
+
+<FilterableListLayout
+    title={title}
+    subTitle={subTitle}
+    activePage={activePage}
+    featuredTags={featuredTags}
+    baseURL={baseURL}
+    page={page}
+>
+    {
+        page.data.map(({ props }) => (
+            <ListCard
+                title={props.data.title}
+                description={props.data.description}
+                tags={props.data.tags}
+                url={'/blog/' + props.id}
+                createdAt={props.data.pubDate}
+                baseURL={baseURL}
+                linkLabel="Read post"
+            >
+                <Image
+                    src={props.data.featuredImage}
+                    alt={props.data.title}
+                    width={768}
+                    height={200}
+                    loading="eager"
+                    format="webp"
+                    slot="thumbnail"
+                />
+            </ListCard>
+        ))
+    }
+</FilterableListLayout>

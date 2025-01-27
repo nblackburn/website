@@ -1,0 +1,87 @@
+---
+import config from '@app/config';
+import slugify from '@utilities/slugify';
+import { sortBy } from '@utilities/sortBy';
+import { getCollection } from 'astro:content';
+import ListCard from '@components/listCard.vue';
+import type { GetStaticPaths, Page } from 'astro';
+import FilterableListLayout from '@layouts/filterableList.astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    page: Page;
+    tag: string;
+}
+
+export const uniqueTags = (tags: string[]) => {
+    return tags.filter((tag, index, array) => index == array.indexOf(tag));
+};
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const posts = await getCollection('blog');
+    const sortedProjects = sortBy(posts, (p) => p.data.pubDate);
+    const allTags: string[] = uniqueTags(
+        posts.flatMap(({ data }) => data.tags)
+    );
+
+    return allTags.flatMap((tag) => {
+        const slug = slugify(tag);
+        const filtered = sortedProjects
+            .filter(({ data }) => data.tags.includes(tag))
+            .map((project) => {
+                return {
+                    props: project,
+                    params: { tag: slug }
+                };
+            });
+
+        return paginate(filtered, {
+            params: { tag: slug },
+            pageSize: config.pagination.limit
+        });
+    });
+}) satisfies GetStaticPaths;
+
+const title = 'Blog';
+const { page } = Astro.props;
+const { tag } = Astro.params;
+const activePage = 'blog';
+const baseURL = '/blog/tags';
+const featuredTags = config.blog.featuredTags;
+const subTitle = 'A collection of procured thoughts';
+---
+
+<FilterableListLayout
+    title={title}
+    subTitle={subTitle}
+    activeTag={tag}
+    baseURL={baseURL}
+    activePage={activePage}
+    featuredTags={featuredTags}
+    page={page}
+>
+    {
+        page.data.map(({ props }) => (
+            <ListCard
+                title={props.data.title}
+                description={props.data.description}
+                tags={props.data.tags}
+                url={'/blog/' + props.id}
+                createdAt={props.data.pubDate}
+                activeTag={tag}
+                baseURL={baseURL}
+                linkLabel="Read post"
+            >
+                <Image
+                    src={props.data.featuredImage}
+                    alt={props.data.title}
+                    width={768}
+                    height={200}
+                    loading="eager"
+                    format="webp"
+                    slot="thumbnail"
+                />
+            </ListCard>
+        ))
+    }
+</FilterableListLayout>
