@@ -1,7 +1,7 @@
 import { style, globalStyle } from '@vanilla-extract/css';
 import { sizes, vars, breakpoints, secondaryAccent } from '@styles/theme.css';
 
-export const projectCard = style({
+export const listCard = style({
     display: 'grid',
     overflow: 'hidden',
     rowGap: sizes.small,

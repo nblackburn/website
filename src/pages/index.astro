@@ -1,37 +1,47 @@
 ---
 import { Image } from 'astro:assets';
-import Hero from '@components/hero.vue';
-import About from '@components/intro.vue';
-import avatarUrl from '@assets/img/me.jpg';
-import BaseLayout from '@layouts/base.astro';
+import { sortBy } from '@utilities/sortBy';
+import HomeLayout from '@layouts/home.astro';
 import { getCollection } from 'astro:content';
-import sortProjects from '@utilities/sortProjects';
-import ProjectCard from '@components/projectCard.vue';
-import LatestProject from '@components/latestProject.vue';
+import ListCard from '@components/listCard.vue';
 
 const title = 'Home';
 const activePage = 'home';
+const posts = await getCollection('blog');
 const projects = await getCollection('project');
-const latestProject = sortProjects(projects)[0];
+const latestPost = sortBy(posts, (p) => p.data.pubDate)[0];
+const latestProject = sortBy(projects, (p) => p.data.pubDate)[0];
 const description =
     'Specialist in experiences which empower and bring people together.';
 ---
 
-<BaseLayout title={title} description={description} activePage={activePage}>
-    <Hero slot="hero" />
-    <About>
-        <Image
-            src={avatarUrl}
-            alt="Nathaniel Blackburn"
-            width={556}
-            height={450}
-            format="webp"
-            slot="image"
-            loading="eager"
-        />
-    </About>
-    <LatestProject>
-        <ProjectCard project={latestProject}>
+<HomeLayout title={title} description={description} activePage={activePage}>
+    <Fragment slot="intro">
+        <h2>About me</h2>
+        <p>
+            My name is Nathaniel and I come from the United Kingdom where it
+            rains quite a lot but don't let that dampen the mood. I specialise
+            in creating experiences which empower people and bring them together
+            for good.
+        </p>
+        <p>
+            I have over 10 years of experience and keep looking to expand my
+            skills. Recently I started learning music and have released a few
+            tracks.
+        </p>
+    </Fragment>
+
+    <section>
+        <h2>Latest project</h2>
+        <ListCard
+            title={latestProject.data.title}
+            description={latestProject.data.description}
+            tags={latestProject.data.tags}
+            url={latestProject.data.url}
+            createdAt={latestProject.data.pubDate}
+            baseURL="/projects/tags"
+            linkLabel="View project"
+        >
             <Image
                 src={latestProject.data.thumbnail}
                 alt={latestProject.data.title}
@@ -41,6 +51,29 @@ const description =
                 format="webp"
                 slot="thumbnail"
             />
-        </ProjectCard>
-    </LatestProject>
-</BaseLayout>
+        </ListCard>
+    </section>
+
+    <section>
+        <h2>Latest post</h2>
+        <ListCard
+            title={latestPost.data.title}
+            description={latestPost.data.description}
+            tags={latestPost.data.tags}
+            url={'/blog/' + latestPost.id}
+            createdAt={latestPost.data.pubDate}
+            baseURL="/blog/tags"
+            linkLabel="Read post"
+        >
+            <Image
+                src={latestPost.data.featuredImage}
+                alt={latestPost.data.title}
+                width={768}
+                height={200}
+                loading="eager"
+                format="webp"
+                slot="thumbnail"
+            />
+        </ListCard>
+    </section>
+</HomeLayout>

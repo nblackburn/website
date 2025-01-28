@@ -21,6 +21,7 @@
             "@config/*": ["src/config/*"],
             "@styles/*": ["src/styles/*"],
             "@assets/*": ["src/assets/*"],
+            "@plugins/*": ["src/plugins/*"],
             "@layouts/*": ["src/layouts/*"],
             "@utilities/*": ["src/utilities/*"],
             "@components/*": ["src/components/*"]

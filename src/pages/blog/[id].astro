@@ -1,0 +1,32 @@
+---
+import * as styles from '@styles/article.css';
+import PostLayout from '@layouts/post.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+
+    return posts.map((post) => ({
+        params: { id: post.id },
+        props: { post }
+    }));
+}
+
+const activePage = 'blog';
+const { post } = Astro.props;
+const { Content, remarkPluginFrontmatter: frontmatter } = await render(post);
+---
+
+<PostLayout
+    activePage={activePage}
+    title={post.data.title}
+    subTitle={post.data.description}
+    tags={post.data.tags}
+    pubDate={post.data.pubDate}
+    featuredImage={post.data.featuredImage}
+    readTime={frontmatter.readTime}
+>
+    <article class={styles.article}>
+        <Content />
+    </article>
+</PostLayout>

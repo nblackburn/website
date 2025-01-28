@@ -79,6 +79,12 @@ const { title, description, image, activePage } = Astro.props;
             title="Nathaniel Blackburn"
             href={new URL('/projects/rss.xml', Astro.site)}
         />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Nathaniel Blackburn"
+            href={new URL('/blog/rss.xml', Astro.site)}
+        />
 
         <!-- scripts -->
         <script

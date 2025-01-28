@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import * as styles from './post.css';
+import type { ImageMetadata } from 'astro';
+import BaseLayout from '@layouts/base.astro';
+import TagList from '../components/tagList.vue';
+import PageHeader from '@components/pageHeader.vue';
+import FormattedDate from '@components/formattedDate.vue';
+
+export interface Props {
+    title: string;
+    subTitle: string;
+    activePage?: string;
+    readTime: string;
+    tags: string[];
+    pubDate?: Date;
+    featuredImage?: ImageMetadata;
+}
+
+const { title, subTitle, featuredImage, activePage, tags, pubDate, readTime } =
+    Astro.props;
+---
+
+<BaseLayout
+    title={title}
+    description={subTitle}
+    image={featuredImage}
+    activePage={activePage}
+>
+    <PageHeader title={title} subTitle={subTitle} slot="hero">
+        <div class={styles.meta}>
+            {
+                pubDate && (
+                    <span class={styles.metaProperty}>
+                        <FormattedDate date={pubDate} />
+                    </span>
+                )
+            }
+            {readTime && <span class={styles.metaProperty}>{readTime}</span>}
+        </div>
+
+        <TagList tags={tags} baseURL="/blog/tags" />
+    </PageHeader>
+    <article class={styles.post}>
+        {
+            featuredImage && (
+                <div class={styles.image}>
+                    <Image
+                        src={featuredImage.src}
+                        alt={title}
+                        width={1200}
+                        height={400}
+                        format="webp"
+                        loading="eager"
+                    />
+                </div>
+            )
+        }
+        <slot />
+    </article>
+</BaseLayout>
