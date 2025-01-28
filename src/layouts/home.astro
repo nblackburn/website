@@ -1,7 +1,12 @@
 ---
+import * as styles from './home.css';
+import { Image } from 'astro:assets';
 import Hero from '@components/hero.vue';
 import type { ImageMetadata } from 'astro';
+import avatarUrl from '@assets/img/me.jpg';
 import BaseLayout from '@layouts/base.astro';
+import NavLink from '@components/navLink.vue';
+import SocialLinks from '@components/socialLinks.vue';
 
 export interface Props {
     title: string;
@@ -20,5 +25,29 @@ const { title, description, image, activePage } = Astro.props;
     activePage={activePage}
 >
     <Hero slot="hero" />
+
+    <section class={styles.intro}>
+        <div class={styles.detail}>
+            <div class={styles.summary}>
+                <slot name="intro" />
+            </div>
+            <div class={styles.readMore}>
+                <SocialLinks class={styles.socialLinks} />
+                <NavLink href="/about">More about me</NavLink>
+            </div>
+        </div>
+        <div class={styles.image}>
+            <Image
+                src={avatarUrl}
+                alt="Nathaniel Blackburn"
+                width={556}
+                height={450}
+                format="webp"
+                slot="image"
+                loading="eager"
+            />
+        </div>
+    </section>
+
     <slot />
 </BaseLayout>

@@ -1,12 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import About from '@components/intro.vue';
 import { sortBy } from '@utilities/sortBy';
-import avatarUrl from '@assets/img/me.jpg';
 import HomeLayout from '@layouts/home.astro';
 import { getCollection } from 'astro:content';
 import ListCard from '@components/listCard.vue';
-import LatestProject from '@components/latestProject.vue';
 
 const title = 'Home';
 const activePage = 'home';
@@ -17,18 +14,23 @@ const description =
 ---
 
 <HomeLayout title={title} description={description} activePage={activePage}>
-    <About>
-        <Image
-            src={avatarUrl}
-            alt="Nathaniel Blackburn"
-            width={556}
-            height={450}
-            format="webp"
-            slot="image"
-            loading="eager"
-        />
-    </About>
-    <LatestProject>
+    <Fragment slot="intro">
+        <h2>About me</h2>
+        <p>
+            My name is Nathaniel and I come from the United Kingdom where it
+            rains quite a lot but don't let that dampen the mood. I specialise
+            in creating experiences which empower people and bring them together
+            for good.
+        </p>
+        <p>
+            I have over 10 years of experience and keep looking to expand my
+            skills. Recently I started learning music and have released a few
+            tracks.
+        </p>
+    </Fragment>
+
+    <section>
+        <h2>Latest project</h2>
         <ListCard
             title={latestProject.data.title}
             description={latestProject.data.description}
@@ -48,5 +50,5 @@ const description =
                 slot="thumbnail"
             />
         </ListCard>
-    </LatestProject>
+    </section>
 </HomeLayout>

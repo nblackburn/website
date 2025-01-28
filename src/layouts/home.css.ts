@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { vars, sizes, breakpoints } from '@styles/theme.css';
 
 export const intro = style({
@@ -36,6 +36,16 @@ export const summary = style({
     marginBottom: sizes.large
 });
 
+globalStyle(`${summary} p`, {
+    lineHeight: 1.75,
+    color: `rgb(${vars.colors.sonicSilver})`,
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            color: `rgb(${vars.colors.battleshipGray})`
+        }
+    }
+});
+
 export const readMore = style({
     display: 'flex',
     alignItems: 'center',
@@ -71,21 +81,6 @@ export const image = style({
         '(prefers-color-scheme: dark)': {
             background: `rgb(${vars.colors.eerieBlack})`,
             borderColor: `rgb(${vars.colors.eerieBlack})`
-        }
-    }
-});
-
-export const title = style({
-    fontSize: sizes.medium,
-    margin: `0 0 ${sizes.small} 0`
-});
-
-export const paragraph = style({
-    lineHeight: 1.3,
-    color: `rgb(${vars.colors.sonicSilver})`,
-    '@media': {
-        '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.battleshipGray})`
         }
     }
 });
