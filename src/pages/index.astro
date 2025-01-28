@@ -7,7 +7,9 @@ import ListCard from '@components/listCard.vue';
 
 const title = 'Home';
 const activePage = 'home';
+const posts = await getCollection('blog');
 const projects = await getCollection('project');
+const latestPost = sortBy(posts, (p) => p.data.pubDate)[0];
 const latestProject = sortBy(projects, (p) => p.data.pubDate)[0];
 const description =
     'Specialist in experiences which empower and bring people together.';
@@ -43,6 +45,29 @@ const description =
             <Image
                 src={latestProject.data.thumbnail}
                 alt={latestProject.data.title}
+                width={768}
+                height={200}
+                loading="eager"
+                format="webp"
+                slot="thumbnail"
+            />
+        </ListCard>
+    </section>
+
+    <section>
+        <h2>Latest post</h2>
+        <ListCard
+            title={latestPost.data.title}
+            description={latestPost.data.description}
+            tags={latestPost.data.tags}
+            url={'/blog/' + latestPost.id}
+            createdAt={latestPost.data.pubDate}
+            baseURL="/blog/tags"
+            linkLabel="Read post"
+        >
+            <Image
+                src={latestPost.data.featuredImage}
+                alt={latestPost.data.title}
                 width={768}
                 height={200}
                 loading="eager"
