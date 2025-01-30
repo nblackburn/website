@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.65.0",
+    "version": "1.66.0",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -20,7 +20,9 @@
         "@eslint/js": "^9.18.0",
         "@playwright/test": "^1.49.1",
         "@types/eslint": "^9.6.1",
+        "@types/markdown-it": "^14",
         "@types/node": "^22.10.7",
+        "@types/sanitize-html": "^2",
         "@typescript-eslint/eslint-plugin": "^8.20.0",
         "@typescript-eslint/parser": "^8.20.0",
         "@vanilla-extract/vite-plugin": "^4.0.19",
@@ -44,9 +46,11 @@
         "@vanilla-extract/css": "^1.17.0",
         "astro": "5.1.7",
         "date-fns": "^4.1.0",
+        "markdown-it": "^14.1.0",
         "mdast-util-to-string": "^4.0.0",
         "npm": "^11.0.0",
         "reading-time": "^1.5.0",
+        "sanitize-html": "^2.14.0",
         "sharp": "^0.33.5",
         "vue": "^3.5.13"
     },
