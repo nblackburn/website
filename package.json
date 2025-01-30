@@ -23,7 +23,7 @@
         "@types/markdown-it": "^14",
         "@types/node": "^22.10.7",
         "@types/sanitize-html": "^2",
-        "@typescript-eslint/eslint-plugin": "^8.20.0",
+        "@typescript-eslint/eslint-plugin": "^8.22.0",
         "@typescript-eslint/parser": "^8.20.0",
         "@vanilla-extract/vite-plugin": "^4.0.19",
         "eslint": "^9.18.0",
