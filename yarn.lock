@@ -176,19 +176,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vue@npm:5.0.5":
-  version: 5.0.5
-  resolution: "@astrojs/vue@npm:5.0.5"
+"@astrojs/vue@npm:5.0.6":
+  version: 5.0.6
+  resolution: "@astrojs/vue@npm:5.0.6"
   dependencies:
     "@vitejs/plugin-vue": "npm:^5.2.1"
     "@vitejs/plugin-vue-jsx": "npm:^4.1.1"
     "@vue/compiler-sfc": "npm:^3.5.13"
-    vite: "npm:^6.0.7"
+    vite: "npm:^6.0.9"
     vite-plugin-vue-devtools: "npm:^7.7.0"
   peerDependencies:
     astro: ^5.0.0
     vue: ^3.2.30
-  checksum: 1a94d0c79d002b7cd2fb69a48ade3838df26ee79e5f0606eae711c4df456cc20421d508af5fd3317e0e00f4a8659afdfb73523a3f02567ec6cb336b834b88f1e
+  checksum: 67dac84896adce48fc296b0bd7520c2448de38b39857d49fbd733d9637921e91add11e2d7f3e16bb3032e70dfb7e1549b601972abca40e736c8ba623e8e14379
   languageName: node
   linkType: hard
 
@@ -1727,7 +1727,7 @@ __metadata:
     "@astrojs/rss": "npm:4.0.11"
     "@astrojs/sitemap": "npm:3.2.1"
     "@astrojs/vercel": "npm:8.0.2"
-    "@astrojs/vue": "npm:5.0.5"
+    "@astrojs/vue": "npm:5.0.6"
     "@commitlint/cli": "npm:^19.6.1"
     "@commitlint/config-conventional": "npm:^19.6.0"
     "@eslint/js": "npm:^9.18.0"
