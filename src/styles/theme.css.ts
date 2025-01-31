@@ -41,15 +41,15 @@ export const vars = createGlobalTheme(':root', {
         white: '255 255 255',
         flame: '217 98 38',
         seaGreen: '46 138 91',
-        hanPurple: '135 88 226',
+        hanPurple: '142 99 227',
         steelPink: '196 49 196',
         battleshipGray: '156 156 156',
         richBlack: '13 13 13',
         eerieBlack: '33 33 33',
-        venetianRed: '213 65 65',
+        venetianRed: '215 71 71',
         sonicSilver: '118 117 117',
         ceruleanBlue: '45 120 200',
-        naplesYellow: '133 117 40',
+        naplesYellow: '141 125 42',
         silverChalice: '229 229 229'
     }
 });
