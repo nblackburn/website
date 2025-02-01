@@ -1,9 +1,13 @@
-import { globalStyle, style } from '@vanilla-extract/css';
 import { sizes, vars } from '@styles/theme.css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
 export const post = style({
     margin: 'auto',
-    maxWidth: '75%'
+    '@media': {
+        '(min-width: 1024px)': {
+            maxWidth: '75%'
+        }
+    }
 });
 
 export const meta = style({
