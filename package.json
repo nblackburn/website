@@ -18,7 +18,7 @@
         "@commitlint/cli": "^19.6.1",
         "@commitlint/config-conventional": "^19.6.0",
         "@eslint/js": "^9.19.0",
-        "@playwright/test": "^1.50.0",
+        "@playwright/test": "^1.50.1",
         "@types/eslint": "^9.6.1",
         "@types/markdown-it": "^14.1.2",
         "@types/node": "^22.12.0",
