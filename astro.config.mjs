@@ -1,5 +1,5 @@
 import vue from '@astrojs/vue';
-import vercel from '@astrojs/vercel';
+import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import { readTime } from './src/plugins/readTime.mjs';
@@ -21,8 +21,8 @@ export default defineConfig({
         remarkPlugins: [readTime]
     },
 
-    adapter: vercel({
-        imageService: true
+    adapter: node({
+        mode: 'standalone'
     }),
 
     vite: {
