@@ -13,15 +13,19 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+
             - uses: actions/setup-node@v4
               with:
                   node-version: lts/*
 
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+
             - name: Install dependencies
-              run: yarn
+              run: pnpm install
 
             - name: Lint
-              run: yarn lint
+              run: pnpm lint
 
             - name: Format
-              run: yarn format
+              run: pnpm format

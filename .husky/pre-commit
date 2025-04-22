@@ -1,2 +1,2 @@
-yarn check
-yarn lint-staged
+pnpm check
+pnpm lint-staged

@@ -1,3 +1,3 @@
 export default {
-    '**/*': ['yarn lint', 'yarn format']
+    '**/*': ['pnpm lint', 'pnpm format']
 };

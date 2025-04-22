@@ -14,18 +14,23 @@ jobs:
                 ${{ github.event.deployment_status.environment_url }}
         steps:
             - uses: actions/checkout@v4
+
             - uses: actions/setup-node@v4
               with:
                   node-version: lts/*
 
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+
             - name: Install dependencies
-              run: yarn
+              run: pnpm install
 
             - name: Install Playwright Browsers
-              run: yarn playwright install --with-deps
+              run: pnpm playwright install --with-deps
 
             - name: Run Playwright tests
-              run: yarn playwright test
+              run: pnpm playwright test
+
             - uses: actions/upload-artifact@v4
               if: ${{ !cancelled() }}
               with:
