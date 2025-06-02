@@ -1393,10 +1393,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.21.0, @eslint/js@npm:^9.21.0":
+"@eslint/js@npm:9.21.0":
   version: 9.21.0
   resolution: "@eslint/js@npm:9.21.0"
   checksum: 6c03f96a3e7c5825e780c707edbaa211ca976007a7194794a1e0cfaba76eae8759c9076ac15cab929b57323a117a385e99711395cbb3e58b8af7e5d95097160c
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.28.0":
+  version: 9.28.0
+  resolution: "@eslint/js@npm:9.28.0"
+  checksum: c2ab0416aef01f28f189525c9a86253f531852a1ed45db94a97f01bcc51d15720f38a8c201af7a7331eb1e80c991a7ef54c4be193b17540e48044672dba69bd8
   languageName: node
   linkType: hard
 
@@ -1747,7 +1754,7 @@ __metadata:
     "@astrojs/vue": "npm:5.0.7"
     "@commitlint/cli": "npm:^19.7.1"
     "@commitlint/config-conventional": "npm:^19.7.1"
-    "@eslint/js": "npm:^9.21.0"
+    "@eslint/js": "npm:^9.28.0"
     "@fontsource/nunito-sans": "npm:^5.2.5"
     "@playwright/test": "npm:^1.50.1"
     "@types/eslint": "npm:^9.6.1"
