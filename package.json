@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.70.0",
+    "version": "1.71.0",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -32,6 +32,7 @@
         "globals": "^15.15.0",
         "husky": "^9.1.7",
         "lint-staged": "^15.4.3",
+        "playwright-ctrf-json-reporter": "^0.0.22",
         "prettier": "^3.5.3",
         "ts-node": "^10.9.2",
         "typescript": "^5.8.2",
@@ -46,6 +47,7 @@
         "@vanilla-extract/css": "^1.17.1",
         "astro": "5.4.2",
         "date-fns": "^4.1.0",
+        "dotenv": "^17.2.1",
         "markdown-it": "^14.1.0",
         "mdast-util-to-string": "^4.0.0",
         "npm": "^11.2.0",
