@@ -1760,6 +1760,7 @@ __metadata:
     "@vanilla-extract/vite-plugin": "npm:^4.0.20"
     astro: "npm:5.4.2"
     date-fns: "npm:^4.1.0"
+    dotenv: "npm:^17.2.1"
     eslint: "npm:^9.21.0"
     eslint-plugin-astro: "npm:^1.3.1"
     eslint-plugin-vue: "npm:^9.33.0"
@@ -4341,6 +4342,13 @@ __metadata:
   dependencies:
     is-obj: "npm:^2.0.0"
   checksum: 33b2561617bd5c73cf9305368ba4638871c5dbf9c8100c8335acd2e2d590a81ec0e75c11cfaea5cc3cf8c2f668cad4beddb52c11856d0c9e666348eee1baf57a
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^17.2.1":
+  version: 17.2.1
+  resolution: "dotenv@npm:17.2.1"
+  checksum: 8fde672d1cc57f176095be8c93de1c5ea100ab38f2db183b50d522323fd9a6c07235e4145da624eec27fa310bb66d061aa8cb766f99e22ebe1e4a7ae78b5e56e
   languageName: node
   linkType: hard
 
