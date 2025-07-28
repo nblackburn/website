@@ -9,7 +9,7 @@ export default defineConfig({
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? 1 : undefined,
-    reporter: process.env.CI ? 'github' : 'html',
+    reporter: process.env.CI ? 'playwright-ctrf-json-reporter' : 'html',
     use: {
         trace: 'on-first-retry'
     },

@@ -1770,6 +1770,7 @@ __metadata:
     markdown-it: "npm:^14.1.0"
     mdast-util-to-string: "npm:^4.0.0"
     npm: "npm:^11.2.0"
+    playwright-ctrf-json-reporter: "npm:^0.0.22"
     prettier: "npm:^3.5.3"
     reading-time: "npm:^1.5.0"
     sanitize-html: "npm:^2.14.0"
@@ -8210,6 +8211,13 @@ __metadata:
   bin:
     playwright-core: cli.js
   checksum: 9a310b8a66bf7fd926e620c1c8e27be29bdbdce91640e5f975b2fd4dc706d0307faec2bb0456cc8e7dedb1e71c0b5eb35c6a58acd5cedc7d8fd849a9067e637b
+  languageName: node
+  linkType: hard
+
+"playwright-ctrf-json-reporter@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "playwright-ctrf-json-reporter@npm:0.0.22"
+  checksum: 60222838d92ec91e6302bb09273dc0a2b22fa5e0698cef0d560451d068d61a1bb7d36f156c61cb0a9f67a070ab2e1b03ad0b7f8bb12eba218a231ec6f75029b5
   languageName: node
   linkType: hard
 
