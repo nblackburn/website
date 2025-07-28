@@ -26,9 +26,11 @@ jobs:
 
             - name: Run Playwright tests
               run: yarn playwright test
-            - uses: actions/upload-artifact@v4
-              if: ${{ !cancelled() }}
+
+            - name: Publish test report
+              uses: ctrf-io/github-test-reporter@v1
+              if: always()
               with:
-                  name: playwright-report
-                  path: playwright-report/
-                  retention-days: 30
+                report-path: './ctrf/*.json'
+                github-report: true
+              
