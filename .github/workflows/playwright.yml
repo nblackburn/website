@@ -1,4 +1,6 @@
 name: Playwright
+permissions:
+  pull-requests: write
 on:
     deployment_status:
 jobs:
@@ -32,5 +34,10 @@ jobs:
               if: always()
               with:
                 report-path: './ctrf/*.json'
+                pull-request: true
                 github-report: true
+                overwrite-comment: true
+                comment-tag: '${{ github.workflow }}-${{ github.job }}'
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               
