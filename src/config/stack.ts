@@ -40,28 +40,18 @@ export const stack: StackItem[] = [
         type: StackType.DEVELOPMENT
     },
     {
-        title: 'Affinity Designer',
-        href: 'https://affinity.serif.com/en-gb/designer',
+        title: 'Affinity',
+        href: 'https://affinity.studio',
         type: StackType.DESIGN
     },
     {
-        title: 'Affinity Photo',
-        href: 'https://affinity.serif.com/en-gb/photo',
-        type: StackType.DESIGN
-    },
-    {
-        title: 'Affinity Publisher',
-        href: 'https://affinity.serif.com/en-gb/publisher',
+        title: 'Expressive Animator',
+        href: 'https://expressive.app/expressive-animator',
         type: StackType.DESIGN
     },
     {
         title: '1Password',
         href: 'https://1password.com',
-        type: StackType.TOOLS
-    },
-    {
-        title: 'Morgen',
-        href: 'https://morgen.so',
         type: StackType.TOOLS
     },
     {
@@ -78,5 +68,20 @@ export const stack: StackItem[] = [
         title: 'Godot',
         href: 'https://godotengine.org',
         type: StackType.DEVELOPMENT
+    },
+    {
+        title: 'Dataflare',
+        href: 'https://dataflare.app',
+        type: StackType.DEVELOPMENT
+    },
+    {
+        title: 'Raycast',
+        href: 'https://www.raycast.com',
+        type: StackType.TOOLS
+    },
+    {
+        title: 'Fastmail',
+        href: 'https://fastmail.com',
+        type: StackType.TOOLS
     }
 ];
