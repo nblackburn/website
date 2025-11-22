@@ -24,7 +24,7 @@ jobs:
                   node-version: lts/*
 
             - name: Install dependencies
-              run: pnpm
+              run: pnpm install
 
             - name: Install Playwright Browsers
               run: pnpm playwright install --with-deps
