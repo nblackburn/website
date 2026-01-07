@@ -9,9 +9,7 @@
                     title="Previous Page"
                     icon
                 >
-                    <svg width="24" height="24" role="img">
-                        <use href="#arrow-left" />
-                    </svg>
+                    <PhArrowLeft :size="18" />
                 </NavLink>
             </li>
             <li :class="styles.item">
@@ -27,9 +25,7 @@
                     title="Next Page"
                     icon
                 >
-                    <svg width="24" height="24" role="img">
-                        <use href="#arrow-right" />
-                    </svg>
+                    <PhArrowRight :size="18" />
                 </NavLink>
             </li>
         </ol>
@@ -37,6 +33,7 @@
 </template>
 
 <script lang="ts" setup>
+import { PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue';
 import * as styles from './pagination.css';
 import NavLink from '@components/navLink.vue';
 
