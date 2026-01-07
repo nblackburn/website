@@ -17,14 +17,7 @@
                         :class="styles.link"
                         :aria-label="item.title + ' (External link)'"
                     >
-                        <svg
-                            width="18"
-                            height="18"
-                            role="img"
-                            :class="styles.icon"
-                        >
-                            <use href="#external" />
-                        </svg>
+                        <PhArrowSquareOut :size="18" :class="styles.icon" />
                         <span>{{ item.title }}</span>
                     </Link>
                 </li>
@@ -37,6 +30,7 @@
 import Link from '@components/link.vue';
 import * as styles from './linkGroups.css';
 import { Group } from '@utilities/groupItems';
+import { PhArrowSquareOut } from '@phosphor-icons/vue';
 
 interface Props {
     groups?: Group[];

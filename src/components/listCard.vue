@@ -24,15 +24,7 @@
                     :class="styles.projectLink"
                     :aria-label="ariaLabel"
                 >
-                    <svg
-                        width="18"
-                        height="18"
-                        role="img"
-                        :class="styles.externalIcon"
-                        v-if="isExternalLink(url)"
-                    >
-                        <use :href="'#external'" />
-                    </svg>
+                    <PhArrowSquareOut :size="18" :class="styles.externalIcon" />
                     <span>{{ linkLabel }}</span>
                 </NavLink>
             </div>
@@ -47,6 +39,7 @@ import * as styles from './listCard.css';
 import NavLink from '@components/navLink.vue';
 import FormattedDate from './formattedDate.vue';
 import { isExternalLink } from '@utilities/refLink';
+import { PhArrowSquareOut } from '@phosphor-icons/vue';
 
 interface Props {
     title: string;
