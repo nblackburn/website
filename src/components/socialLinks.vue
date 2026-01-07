@@ -8,9 +8,7 @@
                     :title="link.name + ' (External link)'"
                     icon
                 >
-                    <svg width="24" height="24" role="img">
-                        <use :href="'#' + link.id" />
-                    </svg>
+                    <component :is="resolveIcon(link.id)" :size="24" />
                 </NavLink>
             </li>
         </ol>
@@ -21,4 +19,33 @@
 import * as styles from './socialLinks.css';
 import NavLink from '@components/navLink.vue';
 import { socialLinks } from '@config/socialLinks';
+import {
+    PhDribbbleLogo,
+    PhEnvelope,
+    PhGithubLogo,
+    PhLinkedinLogo,
+    PhSoundcloudLogo
+} from '@phosphor-icons/vue';
+
+const resolveIcon = (icon: string) => {
+    switch (icon) {
+        case 'at-sign':
+            return PhEnvelope;
+
+        case 'linkedin':
+            return PhLinkedinLogo;
+
+        case 'dribbble':
+            return PhDribbbleLogo;
+
+        case 'soundcloud':
+            return PhSoundcloudLogo;
+
+        case 'github':
+            return PhGithubLogo;
+
+        default:
+            return undefined;
+    }
+};
 </script>
