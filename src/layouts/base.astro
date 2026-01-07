@@ -3,7 +3,6 @@ import '@styles/reset.css';
 import '@fontsource/nunito-sans';
 import * as styles from './base.css';
 import Main from '@components/main.vue';
-import Icons from '@components/icons.vue';
 import type { ImageMetadata } from 'astro';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
@@ -97,7 +96,6 @@ const { title, description, image, activePage } = Astro.props;
     </head>
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
-        <Icons />
         <Header activePage={activePage} />
         <slot name="hero" />
         <Main>
