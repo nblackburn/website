@@ -2368,6 +2368,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@eslint/js": "npm:^9.39.2"
     "@fontsource/nunito-sans": "npm:^5.2.7"
+    "@phosphor-icons/vue": "npm:^2.2.1"
     "@playwright/test": "npm:^1.57.0"
     "@types/eslint": "npm:^9.6.1"
     "@types/markdown-it": "npm:^14.1.2"
@@ -2735,6 +2736,15 @@ __metadata:
   version: 1.1.0
   resolution: "@oslojs/encoding@npm:1.1.0"
   checksum: 9122ad5fa5c3557c1205825b11ea51facbaf08153a47c349c6b1a613b6797e9b22f290d31f5b6faaa45ece39a2437ecdb866815c73beb182e2b203d1f2201e98
+  languageName: node
+  linkType: hard
+
+"@phosphor-icons/vue@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@phosphor-icons/vue@npm:2.2.1"
+  peerDependencies:
+    vue: ">=3.2.39"
+  checksum: a8135fffcc0f6ea5a7e5c688ad339d47c0376768d2d129827f87bcb49fa88a1de570c328178e147a6b8a6a09ea1475f7288847db4f5048740e33b64e95389ec6
   languageName: node
   linkType: hard
 
