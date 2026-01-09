@@ -40,7 +40,7 @@
     "dependencies": {
         "@astrojs/rss": "4.0.14",
         "@astrojs/sitemap": "3.6.1",
-        "@astrojs/vercel": "8.2.11",
+        "@astrojs/vercel": "9.0.3",
         "@astrojs/vue": "5.1.4",
         "@fontsource/nunito-sans": "^5.2.7",
         "@phosphor-icons/vue": "^2.2.1",
