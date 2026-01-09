@@ -1,5 +1,12 @@
+export type LinkIdentifier =
+    | 'at-sign'
+    | 'linkedin'
+    | 'dribbble'
+    | 'soundcloud'
+    | 'github';
+
 export type SocialLink = {
-    id: string;
+    id: LinkIdentifier;
     name: string;
     href: string;
 };

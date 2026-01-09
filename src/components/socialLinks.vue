@@ -8,7 +8,11 @@
                     :title="link.name + ' (External link)'"
                     icon
                 >
-                    <component :is="resolveIcon(link.id)" :size="24" />
+                    <component
+                        :is="iconMap[link.id]"
+                        :size="24"
+                        v-if="iconMap[link.id]"
+                    />
                 </NavLink>
             </li>
         </ol>
@@ -16,9 +20,10 @@
 </template>
 
 <script lang="ts" setup>
+import type { Component } from 'vue';
 import * as styles from './socialLinks.css';
 import NavLink from '@components/navLink.vue';
-import { socialLinks } from '@config/socialLinks';
+import { socialLinks, type LinkIdentifier } from '@config/socialLinks';
 import {
     PhDribbbleLogo,
     PhEnvelope,
@@ -27,25 +32,11 @@ import {
     PhSoundcloudLogo
 } from '@phosphor-icons/vue';
 
-const resolveIcon = (icon: string) => {
-    switch (icon) {
-        case 'at-sign':
-            return PhEnvelope;
-
-        case 'linkedin':
-            return PhLinkedinLogo;
-
-        case 'dribbble':
-            return PhDribbbleLogo;
-
-        case 'soundcloud':
-            return PhSoundcloudLogo;
-
-        case 'github':
-            return PhGithubLogo;
-
-        default:
-            return undefined;
-    }
+const iconMap: Partial<Record<LinkIdentifier, Component>> = {
+    'at-sign': PhEnvelope,
+    linkedin: PhLinkedinLogo,
+    dribbble: PhDribbbleLogo,
+    soundcloud: PhSoundcloudLogo,
+    github: PhGithubLogo
 };
 </script>
