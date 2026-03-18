@@ -20,6 +20,12 @@ jobs:
               with:
                   node-version: lts/*
 
+            - name: Install Corepack
+              run: npm install -g corepack
+
+            - name: Enable Corepack
+              run: corepack enable
+
             - name: Install dependencies
               run: pnpm install
 
