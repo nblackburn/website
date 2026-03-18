@@ -6,7 +6,7 @@ test('click blog link', async ({ page }) => {
     await page.goto(`${envURL}/blog`);
 
     // Find the link
-    const postLink = await page
+    const postLink = page
         .getByRole('link', {
             name: 'Read post'
         })
@@ -26,10 +26,10 @@ test('click blog tags', async ({ page }) => {
     await page.goto(`${envURL}/blog`);
 
     // Find a project tag
-    const projectTag = await page.getByLabel('Tags').first();
+    const projectTag = page.getByLabel('Tags').first();
 
     // Find a tag link
-    const tagLink = await projectTag.getByRole('link').first();
+    const tagLink = projectTag.getByRole('link').first();
 
     // Click the link
     await tagLink.click();
