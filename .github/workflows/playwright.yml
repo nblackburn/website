@@ -1,6 +1,6 @@
 name: Playwright
 permissions:
-  contents: read
+    contents: read
 on:
     deployment_status:
 jobs:
