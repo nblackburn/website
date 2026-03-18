@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.74.0",
+    "version": "1.75.0",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -12,7 +12,7 @@
         "postinstall": "husky install",
         "format": "prettier . --write --ignore-unknown"
     },
-    "packageManager": "yarn@4.0.2",
+    "packageManager": "pnpm@10.32.1",
     "devDependencies": {
         "@astrojs/check": "^0.9.6",
         "@commitlint/cli": "^19.8.1",

@@ -6,7 +6,7 @@ test('click email link', async ({ page }) => {
     await page.goto(envURL);
 
     // Find the link
-    const emailLink = await page.getByRole('link', {
+    const emailLink = page.getByRole('link', {
         name: 'Email (External link)'
     });
 
@@ -22,7 +22,7 @@ test('click email link', async ({ page }) => {
     const mailtoRequest = await mailtoLink;
 
     // Check the mailto link
-    await expect(mailtoRequest.url()).toBe('mailto:support@nblackburn.uk');
+    expect(mailtoRequest.url()).toBe('mailto:support@nblackburn.uk');
 
     // Take a screenshot to verify
     await page.screenshot({ path: 'screenshot.jpg' });
@@ -32,7 +32,7 @@ test('click github link', async ({ page }) => {
     await page.goto(envURL);
 
     // Find the link
-    const githubLink = await page.getByRole('link', {
+    const githubLink = page.getByRole('link', {
         name: 'GitHub (External link)'
     });
 
@@ -50,7 +50,7 @@ test('click dribbble link', async ({ page }) => {
     await page.goto(envURL);
 
     // Find the link
-    const dribbbleLink = await page.getByRole('link', {
+    const dribbbleLink = page.getByRole('link', {
         name: 'Dribbble (External link)'
     });
 
@@ -68,7 +68,7 @@ test('click soundcloud link', async ({ page }) => {
     await page.goto(envURL);
 
     // Find the link
-    const soundCloudLink = await page.getByRole('link', {
+    const soundCloudLink = page.getByRole('link', {
         name: 'Soundcloud (External link)'
     });
 
@@ -86,7 +86,7 @@ test('click about link', async ({ page }) => {
     await page.goto(envURL);
 
     // Find the link
-    const aboutLink = await page.getByRole('link', {
+    const aboutLink = page.getByRole('link', {
         name: 'More about me'
     });
 

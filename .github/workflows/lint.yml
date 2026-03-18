@@ -1,6 +1,6 @@
 name: Lint
 permissions:
-  contents: read
+    contents: read
 
 on:
     pull_request:
@@ -19,11 +19,17 @@ jobs:
               with:
                   node-version: lts/*
 
+            - name: Install Corepack
+              run: npm install -g corepack
+
+            - name: Enable Corepack
+              run: corepack enable
+
             - name: Install dependencies
-              run: yarn
+              run: pnpm install
 
             - name: Lint
-              run: yarn lint
+              run: pnpm run lint
 
             - name: Format
-              run: yarn format
+              run: pnpm run format

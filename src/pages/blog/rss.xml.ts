@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import MarkdownIt from 'markdown-it';
 import sanitizeHtml from 'sanitize-html';
 import { getCollection } from 'astro:content';
-import type { RSSOptions } from '@astrojs/rss';
+import type { RSSFeedItem, RSSOptions } from '@astrojs/rss';
 
 export async function GET(context: RSSOptions) {
     const parser = new MarkdownIt();
@@ -13,7 +13,7 @@ export async function GET(context: RSSOptions) {
         description: 'A collection of procured thoughts.',
         site: `${context.site}/blog`,
         items: posts.map(({ id, data, body }) => {
-            const post = {
+            const post: RSSFeedItem = {
                 ...data,
                 link: `/blog/${id}`,
                 categories: data.tags

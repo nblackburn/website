@@ -11,6 +11,6 @@ people and bring them together for good.
 
 ## Built using
 
--   [Astro](https://astro.build)
--   [Vue](https://vuejs.org)
--   [Vanilla Extract](https://vanilla-extract.style)
+- [Astro](https://astro.build)
+- [Vue](https://vuejs.org)
+- [Vanilla Extract](https://vanilla-extract.style)

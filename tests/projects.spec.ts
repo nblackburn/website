@@ -6,7 +6,7 @@ test('click project link', async ({ page }) => {
     await page.goto(`${envURL}/projects`);
 
     // Find the link
-    const projectLink = await page
+    const projectLink = page
         .getByRole('link', {
             name: 'View project (External link)'
         })
@@ -26,7 +26,7 @@ test('click project link', async ({ page }) => {
     const linkRequest = await linkListener;
 
     // Check the page redirects to the correct URL
-    await expect(linkRequest.url()).toBe(projectHref);
+    expect(linkRequest.url()).toBe(projectHref);
 
     // Take a screenshot to verify
     await page.screenshot({ path: 'screenshot.jpg' });
@@ -36,10 +36,10 @@ test('click project tags', async ({ page }) => {
     await page.goto(`${envURL}/projects`);
 
     // Find a project tag
-    const projectTag = await page.getByLabel('Tags').first();
+    const projectTag = page.getByLabel('Tags').first();
 
     // Find a tag link
-    const tagLink = await projectTag.getByRole('link').first();
+    const tagLink = projectTag.getByRole('link').first();
 
     // Click the link
     await tagLink.click();
@@ -55,7 +55,7 @@ test('click next page', async ({ page }) => {
     await page.goto(`${envURL}/projects`);
 
     // Find the link
-    const nextLink = await page.getByRole('link', {
+    const nextLink = page.getByRole('link', {
         name: 'Next'
     });
 
@@ -73,7 +73,7 @@ test('click last page', async ({ page }) => {
     await page.goto(`${envURL}/projects`);
 
     // Find the next link
-    const nextLink = await page.getByRole('link', {
+    const nextLink = page.getByRole('link', {
         name: 'Next'
     });
 
@@ -81,7 +81,7 @@ test('click last page', async ({ page }) => {
     await nextLink.click();
 
     // Find the previous link
-    const previousLink = await page.getByRole('link', {
+    const previousLink = page.getByRole('link', {
         name: 'Previous'
     });
 
