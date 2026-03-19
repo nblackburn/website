@@ -1,8 +1,6 @@
 import config from '@root/src/config';
 import type { APIRoute } from 'astro';
-
-const resendApikey = import.meta.env.RESEND_API_KEY;
-const turnstyleSecretKey = import.meta.env.TURNSTILE_SECRET_KEY;
+import { RESEND_API_KEY, TURNSTILE_SECRET_KEY } from 'astro:env/server';
 
 export const runtime = 'edge';
 export const prerender = false;
@@ -34,7 +32,7 @@ const verifyCaptcha = async (form: FormData) => {
     const challengeResponse = form.get('cf-turnstile-response');
 
     // Build the request body
-    data.append('secret', turnstyleSecretKey);
+    data.append('secret', TURNSTILE_SECRET_KEY);
 
     if (challengeResponse) {
         data.append('response', challengeResponse);
@@ -62,7 +60,7 @@ const sendEmail = (data: FormData) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${resendApikey}`
+            Authorization: `Bearer ${RESEND_API_KEY}`
         },
         body: JSON.stringify({
             from: config.mail.from,
@@ -89,7 +87,7 @@ export const POST: APIRoute = async ({ request }) => {
     const requiredFields = ['name', 'email', 'message'];
 
     // Make sure the api key was set
-    if (!resendApikey || !turnstyleSecretKey) {
+    if (!RESEND_API_KEY || !TURNSTILE_SECRET_KEY) {
         return buildResponse(500, {
             message: {
                 code: 'missing_api_key'

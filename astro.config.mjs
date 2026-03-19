@@ -1,7 +1,7 @@
 import vue from '@astrojs/vue';
 import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
 import { readTime } from './src/plugins/readTime.mjs';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
@@ -10,6 +10,25 @@ export default defineConfig({
     compressHTML: true,
     site: 'https://nblackburn.uk/',
     integrations: [vue(), sitemap()],
+
+    env: {
+        schema: {
+            RESEND_API_KEY: envField.string({
+                context: 'server',
+                access: 'secret'
+            }),
+
+            TURNSTILE_SITE_KEY: envField.string({
+                context: 'client',
+                access: 'public'
+            }),
+
+            TURNSTILE_SECRET_KEY: envField.string({
+                context: 'server',
+                access: 'secret'
+            })
+        }
+    },
 
     fonts: [
         {
