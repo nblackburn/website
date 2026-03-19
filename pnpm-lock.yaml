@@ -22,9 +22,6 @@ importers:
             '@astrojs/vue':
                 specifier: 6.0.1
                 version: 6.0.1(@types/node@25.5.0)(astro@6.0.7(@types/node@25.5.0)(@vercel/functions@3.4.3)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(vue@3.5.30(typescript@5.9.3))(yaml@2.8.2)
-            '@fontsource/nunito-sans':
-                specifier: ^5.2.7
-                version: 5.2.7
             '@phosphor-icons/vue':
                 specifier: ^2.2.1
                 version: 2.2.1(vue@3.5.30(typescript@5.9.3))
@@ -1207,12 +1204,6 @@ packages:
                 integrity: sha512-iH1B076HoAshH1mLpHMgwdGeTs0CYwL0SPMkGuSebZrwBp16v415e9NZXg2jtrqPVQjf6IANe2Vtlr5KswtcZQ==
             }
         engines: { node: ^20.19.0 || ^22.13.0 || >=24 }
-
-    '@fontsource/nunito-sans@5.2.7':
-        resolution:
-            {
-                integrity: sha512-Vh+xhMsrH1eA9Q83Va82su3rDmNilYg+ur/TfHAOyr5kTpCOWMB8B1tDoJvSe+yJPpZ2jEWtnBHGqI2LUPVxUA==
-            }
 
     '@humanfs/core@0.19.1':
         resolution:
@@ -6847,8 +6838,6 @@ snapshots:
         dependencies:
             '@eslint/core': 1.1.1
             levn: 0.4.1
-
-    '@fontsource/nunito-sans@5.2.7': {}
 
     '@humanfs/core@0.19.1': {}
 

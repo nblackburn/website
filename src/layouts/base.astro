@@ -1,6 +1,6 @@
 ---
 import '@styles/reset.css';
-import '@fontsource/nunito-sans';
+import { Font } from 'astro:assets';
 import * as styles from './base.css.ts';
 import Main from '@components/main.vue';
 import type { ImageMetadata } from 'astro';
@@ -69,6 +69,9 @@ const { title, description, image, activePage } = Astro.props;
         />
 
         <!-- styles -->
+        <Font cssVariable="--font-nunito-sans" preload />
+
+        <!-- icons -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
         <!-- feeds ---->

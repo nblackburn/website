@@ -1,7 +1,7 @@
 import vue from '@astrojs/vue';
 import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
 import { readTime } from './src/plugins/readTime.mjs';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
@@ -10,6 +10,14 @@ export default defineConfig({
     compressHTML: true,
     site: 'https://nblackburn.uk/',
     integrations: [vue(), sitemap()],
+
+    fonts: [
+        {
+            name: 'Nunito Sans',
+            cssVariable: '--font-nunito-sans',
+            provider: fontProviders.fontsource()
+        }
+    ],
 
     markdown: {
         shikiConfig: {
