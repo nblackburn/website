@@ -8,7 +8,7 @@ const project = defineCollection({
         z.object({
             title: z.string(),
             pubDate: z.date(),
-            url: z.string().url(),
+            url: z.url(),
             thumbnail: image(),
             description: z.string(),
             tags: z.array(z.string())
