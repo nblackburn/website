@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css';
-import { sizes, vars, secondaryAccent } from '@styles/theme.css';
+import { sizes, vars, secondaryAccent } from '@styles/theme.css.ts';
 
 export const article = style({});
 

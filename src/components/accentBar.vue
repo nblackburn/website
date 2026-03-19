@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './accentBar.css';
+import * as styles from './accentBar.css.ts';
 </script>

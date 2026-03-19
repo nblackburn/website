@@ -1,4 +1,4 @@
-import { sizes, vars } from '@styles/theme.css';
+import { sizes, vars } from '@styles/theme.css.ts';
 import { globalStyle, style } from '@vanilla-extract/css';
 
 export const post = style({

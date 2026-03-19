@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { secondaryAccent, sizes, vars } from '@styles/theme.css';
+import { secondaryAccent, sizes, vars } from '@styles/theme.css.ts';
 
 export const filterBar = style({
     margin: 'auto',

@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './navLink.css';
+import * as styles from './navLink.css.ts';
 import Link from '@components/link.vue';
 
 interface Props {

@@ -1,4 +1,4 @@
-import { vars } from '@styles/theme.css';
+import { vars } from '@styles/theme.css.ts';
 import { style } from '@vanilla-extract/css';
 
 export const body = style({

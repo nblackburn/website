@@ -1,4 +1,4 @@
-import { defaultPalette } from '@styles/palettes.css';
+import { defaultPalette } from '@styles/palettes.css.ts';
 
 type PaletteConfig = {
     default: string;

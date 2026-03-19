@@ -1,5 +1,10 @@
 import { style } from '@vanilla-extract/css';
-import { sizes, breakpoints, vars, secondaryAccent } from '@styles/theme.css';
+import {
+    sizes,
+    breakpoints,
+    vars,
+    secondaryAccent
+} from '@styles/theme.css.ts';
 
 export const tagList = style({
     margin: 0,

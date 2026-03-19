@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-import { primaryAccent, secondaryAccent } from '@styles/theme.css';
+import { primaryAccent, secondaryAccent } from '@styles/theme.css.ts';
 
 interface Props {
     size?: number;

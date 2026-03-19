@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import type { Component } from 'vue';
-import * as styles from './socialLinks.css';
+import * as styles from './socialLinks.css.ts';
 import NavLink from '@components/navLink.vue';
 import { socialLinks, type LinkIdentifier } from '@config/socialLinks';
 import {

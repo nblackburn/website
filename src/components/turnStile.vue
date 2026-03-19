@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import * as styles from './turnStile.css';
+import * as styles from './turnStile.css.ts';
 import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({

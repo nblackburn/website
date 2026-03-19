@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './pageHeader.css';
+import * as styles from './pageHeader.css.ts';
 
 interface Props {
     title: string;

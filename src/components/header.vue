@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { nav } from '@config/nav';
-import * as styles from './header.css';
+import * as styles from './header.css.ts';
 import Logo from '@components/logo.vue';
 import Link from '@components/link.vue';
 import Navbar from '@components/navBar.vue';

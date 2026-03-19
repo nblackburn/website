@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './footer.css';
+import * as styles from './footer.css.ts';
 import { version } from '@root/package.json';
 
 const currentYear = new Date().getFullYear();

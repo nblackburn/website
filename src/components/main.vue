@@ -5,5 +5,5 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './main.css';
+import * as styles from './main.css.ts';
 </script>
