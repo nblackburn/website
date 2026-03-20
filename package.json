@@ -49,7 +49,7 @@
         "date-fns": "^4.1.0",
         "markdown-it": "^14.1.0",
         "mdast-util-to-string": "^4.0.0",
-        "npm": "^11.7.0",
+        "npm": "^11.12.0",
         "reading-time": "^1.5.0",
         "sanitize-html": "^2.17.0",
         "sharp": "^0.33.5",
