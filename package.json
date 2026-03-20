@@ -21,7 +21,7 @@
         "@playwright/test": "^1.57.0",
         "@types/eslint": "^9.6.1",
         "@types/markdown-it": "^14.1.2",
-        "@types/node": "^22.19.3",
+        "@types/node": "^25.5.0",
         "@types/sanitize-html": "^2.16.0",
         "@typescript-eslint/eslint-plugin": "^8.52.0",
         "@typescript-eslint/parser": "^8.52.0",
