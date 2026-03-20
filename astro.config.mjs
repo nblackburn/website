@@ -49,7 +49,9 @@ export default defineConfig({
         remarkPlugins: [readTime]
     },
 
-    adapter: cloudflare(),
+    adapter: cloudflare({
+        imageService: 'cloudflare'
+    }),
 
     vite: {
         plugins: [vanillaExtractPlugin()],
