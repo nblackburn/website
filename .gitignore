@@ -4,7 +4,7 @@ test-results/
 node_modules
 *.env
 .astro/
-.vercel
+.wrangler/
 /playwright-report/
 /blob-report/
 /playwright/.cache/

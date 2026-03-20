@@ -1,6 +1,6 @@
 import vue from '@astrojs/vue';
-import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
+import cloudflare from '@astrojs/cloudflare';
 import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
 import { readTime } from './src/plugins/readTime.mjs';
@@ -49,8 +49,8 @@ export default defineConfig({
         remarkPlugins: [readTime]
     },
 
-    adapter: vercel({
-        imageService: true
+    adapter: cloudflare({
+        imageService: 'cloudflare'
     }),
 
     vite: {

@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.76.0",
+    "version": "1.77.0",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -10,7 +10,8 @@
         "lint": "eslint . --fix",
         "preview": "astro preview",
         "postinstall": "husky install",
-        "format": "prettier . --write --ignore-unknown"
+        "format": "prettier . --write --ignore-unknown",
+        "generate-types": "wrangler types"
     },
     "packageManager": "pnpm@10.32.1",
     "devDependencies": {
@@ -38,9 +39,9 @@
         "typescript-eslint": "^8.57.1"
     },
     "dependencies": {
+        "@astrojs/cloudflare": "^13.1.2",
         "@astrojs/rss": "4.0.17",
         "@astrojs/sitemap": "3.7.1",
-        "@astrojs/vercel": "10.0.2",
         "@astrojs/vue": "6.0.1",
         "@phosphor-icons/vue": "^2.2.1",
         "@vanilla-extract/css": "^1.19.1",
@@ -52,7 +53,8 @@
         "reading-time": "^1.5.0",
         "sanitize-html": "^2.17.2",
         "sharp": "^0.34.5",
-        "vue": "^3.5.30"
+        "vue": "^3.5.30",
+        "wrangler": "^4.76.0"
     },
     "resolutions": {
         "vite": "^6.0.1"
