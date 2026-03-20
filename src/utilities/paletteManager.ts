@@ -4,7 +4,7 @@ import {
     christmasPalette,
     halloweenPalette,
     paletteClasses
-} from '@styles/palettes.css';
+} from '@styles/palettes.css.ts';
 
 export const getActivePalette = (): string => {
     const now = new Date();

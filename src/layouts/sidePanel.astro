@@ -1,5 +1,5 @@
 ---
-import * as styles from './sidePanel.css';
+import * as styles from './sidePanel.css.ts';
 import type { ImageMetadata } from 'astro';
 import PageLayout from '@layouts/page.astro';
 
@@ -11,10 +11,10 @@ export interface Props {
     image?: ImageMetadata;
 }
 
-const {title, subTitle, image, activePage, layout = '7fr 3fr'} = Astro.props;
+const { title, subTitle, image, activePage, layout = '7fr 3fr' } = Astro.props;
 ---
 
-<style define:vars={{layout}}></style>
+<style define:vars={{ layout }}></style>
 
 <PageLayout
     title={title}

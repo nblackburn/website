@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
 import listenOnce from '@utilities/listenOnce';
-import * as styles from '@components/fieldSet.css';
+import * as styles from '@components/fieldSet.css.ts';
 
 interface Props {
     name?: string;

@@ -1,4 +1,4 @@
-import { sizes, vars } from '@styles/theme.css';
+import { sizes, vars } from '@styles/theme.css.ts';
 import { style, globalStyle } from '@vanilla-extract/css';
 
 export const image = style({

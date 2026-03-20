@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './navBar.css';
+import * as styles from './navBar.css.ts';
 import type { NavItem } from '@config/nav';
 import NavLink from '@components/navLink.vue';
 

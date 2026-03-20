@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { breakpoints, sizes } from '../styles/theme.css';
+import { breakpoints, sizes } from '../styles/theme.css.ts';
 
 export const sidePanel = style({
     display: 'grid',

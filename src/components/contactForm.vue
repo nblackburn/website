@@ -60,7 +60,7 @@
 
 <script lang="ts">
 import Input from '@components/input.vue';
-import * as styles from './contactForm.css';
+import * as styles from './contactForm.css.ts';
 import Button from '@components/button.vue';
 import listenOnce from '@utilities/listenOnce';
 import TextArea from '@components/textArea.vue';

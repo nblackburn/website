@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { vars, primaryAccent, secondaryAccent } from './theme.css';
+import { vars, primaryAccent, secondaryAccent } from './theme.css.ts';
 
 export const defaultPalette = style({
     vars: {

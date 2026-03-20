@@ -1,5 +1,10 @@
 import { style, globalStyle } from '@vanilla-extract/css';
-import { sizes, vars, breakpoints, secondaryAccent } from '@styles/theme.css';
+import {
+    sizes,
+    vars,
+    breakpoints,
+    secondaryAccent
+} from '@styles/theme.css.ts';
 
 export const listCard = style({
     display: 'grid',

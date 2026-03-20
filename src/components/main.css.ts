@@ -4,7 +4,7 @@ import {
     containers,
     primaryAccent,
     secondaryAccent
-} from '@styles/theme.css';
+} from '@styles/theme.css.ts';
 
 export const main = style({
     flex: 1,

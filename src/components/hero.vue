@@ -10,5 +10,5 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './hero.css';
+import * as styles from './hero.css.ts';
 </script>

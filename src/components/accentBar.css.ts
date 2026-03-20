@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { sizes, primaryAccent, secondaryAccent } from '@styles/theme.css';
+import { sizes, primaryAccent, secondaryAccent } from '@styles/theme.css.ts';
 
 export const accentBar = style({
     width: '100%',

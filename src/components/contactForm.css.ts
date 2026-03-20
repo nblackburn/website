@@ -1,6 +1,6 @@
-import { validated } from './fieldSet.css';
+import { validated } from './fieldSet.css.ts';
 import { style } from '@vanilla-extract/css';
-import { sizes, vars } from '@styles/theme.css';
+import { sizes, vars } from '@styles/theme.css.ts';
 
 export const contactForm = style({
     position: 'relative'

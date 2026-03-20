@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { vars, sizes, primaryAccent } from '@styles/theme.css';
+import { vars, sizes, primaryAccent } from '@styles/theme.css.ts';
 
 export const textArea = style({
     width: '100%',

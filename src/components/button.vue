@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './button.css';
+import * as styles from './button.css.ts';
 
 interface Props {
     disabled?: boolean;

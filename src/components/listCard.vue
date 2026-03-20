@@ -35,7 +35,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import TagList from './tagList.vue';
-import * as styles from './listCard.css';
+import * as styles from './listCard.css.ts';
 import NavLink from '@components/navLink.vue';
 import FormattedDate from './formattedDate.vue';
 import { isExternalLink } from '@utilities/refLink';

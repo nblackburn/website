@@ -16,6 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './contactDetails.css';
+import * as styles from './contactDetails.css.ts';
 import SocialLinks from '@components/socialLinks.vue';
 </script>

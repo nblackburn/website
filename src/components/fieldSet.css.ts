@@ -1,4 +1,4 @@
-import { sizes } from '@styles/theme.css';
+import { sizes } from '@styles/theme.css.ts';
 import { style } from '@vanilla-extract/css';
 
 export const fieldSet = style({

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { sizes, vars, primaryAccent, containers } from '@styles/theme.css';
+import { sizes, vars, primaryAccent, containers } from '@styles/theme.css.ts';
 
 export const notFound = style({
     flex: 1,

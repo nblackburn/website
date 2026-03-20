@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import * as styles from './input.css';
+import * as styles from './input.css.ts';
 
 interface Props {
     type?: string;
