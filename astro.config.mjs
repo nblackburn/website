@@ -1,5 +1,6 @@
 import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
+import cloudflare from '@astrojs/cloudflare';
 import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
 import { readTime } from './src/plugins/readTime.mjs';
@@ -47,6 +48,8 @@ export default defineConfig({
 
         remarkPlugins: [readTime]
     },
+
+    adapter: cloudflare(),
 
     vite: {
         plugins: [vanillaExtractPlugin()],
