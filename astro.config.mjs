@@ -1,5 +1,4 @@
 import vue from '@astrojs/vue';
-import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
@@ -48,10 +47,6 @@ export default defineConfig({
 
         remarkPlugins: [readTime]
     },
-
-    adapter: vercel({
-        imageService: true
-    }),
 
     vite: {
         plugins: [vanillaExtractPlugin()],

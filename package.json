@@ -40,7 +40,6 @@
     "dependencies": {
         "@astrojs/rss": "4.0.17",
         "@astrojs/sitemap": "3.7.1",
-        "@astrojs/vercel": "10.0.2",
         "@astrojs/vue": "6.0.1",
         "@phosphor-icons/vue": "^2.2.1",
         "@vanilla-extract/css": "^1.19.1",
