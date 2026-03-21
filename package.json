@@ -1,7 +1,7 @@
 {
     "name": "@nblackburn/website",
     "private": true,
-    "version": "1.78.0",
+    "version": "1.79.0",
     "type": "module",
     "scripts": {
         "start": "astro dev",
@@ -55,8 +55,5 @@
         "sharp": "^0.34.5",
         "vue": "^3.5.30",
         "wrangler": "^4.76.0"
-    },
-    "resolutions": {
-        "vite": "^6.0.1"
     }
 }
