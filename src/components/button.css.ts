@@ -11,18 +11,18 @@ export const button = style({
     borderRadius: sizes.tiny,
     justifyContent: 'center',
     transition: 'all 0.2s ease-in-out',
-    background: `rgb(${primaryAccent})`,
+    background: primaryAccent,
     boxShadow: '0px 0px 0px 0px transparent',
-    border: `1px rgb(${vars.colors.silverChalice}) solid`,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     selectors: {
         '&:hover:not(:disabled)': {
             cursor: 'pointer',
-            borderColor: `rgb(${primaryAccent})`,
-            boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
+            borderColor: primaryAccent,
+            boxShadow: `0px 0px 0px 4px color-mix(in oklab, ${primaryAccent} 10%, transparent)`
         },
         '&:focus': {
-            borderColor: `rgb(${primaryAccent})`,
-            boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
+            borderColor: primaryAccent,
+            boxShadow: `0px 0px 0px 4px color-mix(in oklab, ${primaryAccent} 10%, transparent)`
         },
         '&:disabled': {
             opacity: 0.5
@@ -30,8 +30,8 @@ export const button = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.white})`,
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            color: vars.colors.white,
+            borderColor: vars.colors.carbonBlack
         }
     }
 });

@@ -18,7 +18,7 @@ export const container = style({
 export const title = style({
     margin: 0,
     fontWeight: 'bold',
-    color: `rgb(${primaryAccent})`,
+    color: primaryAccent,
     fontSize: sizes.xtraLarge,
     marginBottom: sizes.small
 });
@@ -26,10 +26,10 @@ export const title = style({
 export const subTitle = style({
     margin: 0,
     fontSize: sizes.medium,
-    color: `rgb(${vars.colors.battleshipGray})`,
+    color: vars.colors.coolSteel,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.silverChalice})`
+            color: vars.colors.alabasterGrey
         }
     }
 });

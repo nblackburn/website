@@ -2,10 +2,10 @@ import { style } from '@vanilla-extract/css';
 import { vars, sizes, breakpoints, containers } from '@styles/theme.css.ts';
 
 export const footer = style({
-    borderTop: `1px rgb(${vars.colors.silverChalice}) solid`,
+    borderTop: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            borderColor: vars.colors.carbonBlack
         }
     }
 });

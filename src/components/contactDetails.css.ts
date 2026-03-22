@@ -11,10 +11,10 @@ export const title = style({
 
 export const paragraph = style({
     lineHeight: 1.3,
-    color: `rgb(${vars.colors.sonicSilver})`,
+    color: vars.colors.dimGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.battleshipGray})`
+            color: vars.colors.coolSteel
         }
     }
 });

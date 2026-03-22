@@ -11,7 +11,7 @@ export const label = style({
     marginBottom: sizes.tiny,
     selectors: {
         [`${validated}:invalid &`]: {
-            color: `rgb(${vars.colors.venetianRed})`
+            color: vars.colors.redOchre
         }
     }
 });

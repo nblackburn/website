@@ -10,10 +10,10 @@ globalStyle(`${article} h1, h2, h3, h4, h5, h6`, {
 globalStyle(`${article} p`, {
     lineHeight: '1.75rem',
     margin: `0 0 ${sizes.small} 0`,
-    color: `rgb(${vars.colors.sonicSilver})`,
+    color: vars.colors.dimGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.battleshipGray})`
+            color: vars.colors.coolSteel
         }
     }
 });
@@ -22,21 +22,21 @@ globalStyle(`${article} blockquote`, {
     padding: sizes.nano,
     borderRadius: sizes.mini,
     margin: `0 0 ${sizes.small} 0`,
-    background: `rgb(${vars.colors.silverChalice})`,
-    borderLeft: `5px rgba(${secondaryAccent}) solid`,
+    background: vars.colors.alabasterGrey,
+    borderLeft: `5px ${secondaryAccent} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `rgb(${vars.colors.eerieBlack})`
+            background: vars.colors.carbonBlack
         }
     }
 });
 
 globalStyle(`${article} blockquote p`, {
     margin: sizes.tiny,
-    color: `rgb(${vars.colors.eerieBlack})`,
+    color: vars.colors.carbonBlack,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.silverChalice})`
+            color: vars.colors.alabasterGrey
         }
     }
 });
@@ -45,10 +45,10 @@ globalStyle(`${article} ul, ${article} ol`, {
     padding: 0,
     lineHeight: '1.75rem',
     listStylePosition: 'inside',
-    color: `rgb(${vars.colors.sonicSilver})`,
+    color: vars.colors.dimGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.battleshipGray})`
+            color: vars.colors.coolSteel
         }
     }
 });
@@ -56,12 +56,12 @@ globalStyle(`${article} ul, ${article} ol`, {
 globalStyle(`${article} code:not(pre code)`, {
     borderRadius: sizes.tiny,
     padding: `${sizes.nano} ${sizes.tiny}`,
-    color: `rgb(${vars.colors.eerieBlack})`,
-    background: `rgb(${vars.colors.silverChalice})`,
+    color: vars.colors.carbonBlack,
+    background: vars.colors.alabasterGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.silverChalice})`,
-            background: `rgb(${vars.colors.eerieBlack})`
+            color: vars.colors.alabasterGrey,
+            background: vars.colors.carbonBlack
         }
     }
 });
@@ -69,10 +69,10 @@ globalStyle(`${article} code:not(pre code)`, {
 globalStyle(`${article} hr`, {
     marginTop: sizes.medium,
     marginBottom: sizes.medium,
-    color: `rgb(${vars.colors.silverChalice})`,
+    color: vars.colors.alabasterGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.eerieBlack})`
+            color: vars.colors.carbonBlack
         }
     }
 });

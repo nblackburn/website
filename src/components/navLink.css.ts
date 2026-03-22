@@ -17,15 +17,15 @@ export const navLink = style({
 });
 
 export const primary = style({
-    borderColor: `rgb(${vars.colors.silverChalice})`,
+    borderColor: vars.colors.alabasterGrey,
     selectors: {
         '&:hover': {
-            borderColor: `rgb(${primaryAccent})`
+            borderColor: primaryAccent
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            borderColor: vars.colors.carbonBlack
         }
     }
 });
@@ -34,14 +34,14 @@ export const secondary = style({
     border: '1px transparent solid',
     selectors: {
         '&:hover': {
-            borderColor: `rgb(${vars.colors.silverChalice})`
+            borderColor: vars.colors.alabasterGrey
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:hover': {
-                    borderColor: `rgb(${vars.colors.eerieBlack})`
+                    borderColor: vars.colors.carbonBlack
                 }
             }
         }
@@ -49,17 +49,17 @@ export const secondary = style({
 });
 
 export const active = style({
-    borderColor: `rgb(${primaryAccent})`,
+    borderColor: primaryAccent,
     selectors: {
         '&:hover': {
-            borderColor: `rgb(${primaryAccent})`
+            borderColor: primaryAccent
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:hover': {
-                    borderColor: `rgb(${primaryAccent})`
+                    borderColor: primaryAccent
                 }
             }
         }
@@ -73,7 +73,7 @@ export const icon = style({
 export const disabled = style({
     cursor: 'not-allowed',
     borderColor: 'transparent',
-    color: `rgb(${vars.colors.sonicSilver})`,
+    color: vars.colors.dimGrey,
     selectors: {
         '&:hover': {
             borderColor: 'transparent'
@@ -82,7 +82,7 @@ export const disabled = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             borderColor: 'transparent',
-            color: `rgb(${vars.colors.battleshipGray})`,
+            color: vars.colors.coolSteel,
             selectors: {
                 '&:hover': {
                     borderColor: 'transparent'
