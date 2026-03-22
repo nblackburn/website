@@ -1,13 +1,12 @@
 <template>
-    <header :class="styles.header">
-        <AccentBar />
-        <div :class="styles.container">
+    <div :class="styles.container">
+        <header :class="styles.header">
             <Link href="/">
-                <Logo />
+                <Logo :size="40" />
             </Link>
             <Navbar :links="nav" :active-page="activePage" />
-        </div>
-    </header>
+        </header>
+    </div>
 </template>
 
 <script lang="ts" setup>
@@ -16,7 +15,6 @@ import * as styles from './header.css.ts';
 import Logo from '@components/logo.vue';
 import Link from '@components/link.vue';
 import Navbar from '@components/navBar.vue';
-import AccentBar from '@components/accentBar.vue';
 
 interface Props {
     activePage?: string;
