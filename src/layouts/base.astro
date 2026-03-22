@@ -6,7 +6,6 @@ import Main from '@components/main.vue';
 import type { ImageMetadata } from 'astro';
 import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
-import PostHog from '@components/posthog.astro';
 import fallbackImage from '@assets/img/me.jpg';
 import DynamicPalette from '@components/dynamicPalette.vue';
 import { getActivePalette } from '@utilities/paletteManager';
@@ -94,8 +93,6 @@ const { title, description, image, activePage } = Astro.props;
             is:inline
             async
             defer></script>
-
-        <PostHog />
     </head>
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
