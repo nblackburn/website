@@ -18,11 +18,11 @@ export const button = style({
         '&:hover:not(:disabled)': {
             cursor: 'pointer',
             borderColor: primaryAccent,
-            boxShadow: `0px 0px 0px 4px color-mix(in srgb, ${primaryAccent} 10%, transparent)`
+            boxShadow: `0px 0px 0px 4px color-mix(in oklab, ${primaryAccent} 10%, transparent)`
         },
         '&:focus': {
             borderColor: primaryAccent,
-            boxShadow: `0px 0px 0px 4px color-mix(in srgb, ${primaryAccent} 10%, transparent)`
+            boxShadow: `0px 0px 0px 4px color-mix(in oklab, ${primaryAccent} 10%, transparent)`
         },
         '&:disabled': {
             opacity: 0.5

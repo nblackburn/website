@@ -23,30 +23,30 @@ export const tag = style({
     padding: '0.4em 0.8em',
     display: 'inline-block',
     transition: 'all 0.2s ease-in-out',
-    background: `color-mix(in srgb, ${vars.colors.silverChalice} 80%, transparent)`,
+    background: `color-mix(in oklab, ${vars.colors.silverChalice} 80%, transparent)`,
     selectors: {
         '&:not(:last-child)': {
             marginRight: '0.5rem'
         },
         '&:hover': {
             color: vars.colors.white,
-            background: `color-mix(in srgb, ${secondaryAccent} 80%, transparent)`
+            background: `color-mix(in oklab, ${secondaryAccent} 80%, transparent)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white,
-            background: `color-mix(in srgb, ${vars.colors.eerieBlack} 80%, transparent)`
+            background: `color-mix(in oklab, ${vars.colors.eerieBlack} 80%, transparent)`
         }
     }
 });
 
 export const activeTag = style({
     color: vars.colors.white,
-    background: `color-mix(in srgb, ${secondaryAccent} 80%, transparent)`,
+    background: `color-mix(in oklab, ${secondaryAccent} 80%, transparent)`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `color-mix(in srgb, ${secondaryAccent} 80%, transparent)`
+            background: `color-mix(in oklab, ${secondaryAccent} 80%, transparent)`
         }
     }
 });

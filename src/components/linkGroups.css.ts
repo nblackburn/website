@@ -13,7 +13,7 @@ export const heading = style({
     fontWeight: 'bold',
     marginBottom: sizes.nano,
     paddingBottom: sizes.nano,
-    borderBottom: `1px color-mix(in srgb, ${vars.colors.white} 10%, transparent) solid`
+    borderBottom: `1px color-mix(in oklab, ${vars.colors.white} 10%, transparent) solid`
 });
 
 export const items = style({
@@ -27,14 +27,14 @@ export const item = style({
     borderRadius: '0.25rem',
     selectors: {
         '&:nth-child(even)': {
-            background: `color-mix(in srgb, ${vars.colors.silverChalice} 80%, transparent)`
+            background: `color-mix(in oklab, ${vars.colors.silverChalice} 80%, transparent)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:nth-child(even)': {
-                    background: `color-mix(in srgb, ${vars.colors.eerieBlack} 80%, transparent)`
+                    background: `color-mix(in oklab, ${vars.colors.eerieBlack} 80%, transparent)`
                 }
             }
         }

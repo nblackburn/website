@@ -16,18 +16,18 @@ export const listCard = style({
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
-    background: `color-mix(in srgb, ${vars.colors.white} 30%, transparent)`,
+    background: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     transition: 'border 0.2s ease-in-out',
     border: `1px ${vars.colors.silverChalice} solid`,
     selectors: {
         '&:hover': {
             borderColor: secondaryAccent,
-            boxShadow: `0 0 10px color-mix(in srgb, ${vars.colors.black} 30%, transparent)`
+            boxShadow: `0 0 10px color-mix(in oklab, ${vars.colors.black} 30%, transparent)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `color-mix(in srgb, ${vars.colors.black} 30%, transparent)`,
+            background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
             borderColor: vars.colors.eerieBlack
         },
         [breakpoints.medium]: {

@@ -8,11 +8,11 @@ export const filterBar = style({
     borderRadius: '9999px',
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
-    background: `color-mix(in srgb, ${vars.colors.white} 30%, transparent)`,
+    background: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     border: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `color-mix(in srgb, ${vars.colors.black} 30%, transparent)`,
+            background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
             borderColor: vars.colors.eerieBlack
         }
     }
@@ -29,7 +29,7 @@ export const items = style({
 
 export const activeItem = style({
     color: vars.colors.white,
-    background: `color-mix(in srgb, ${secondaryAccent} 80%, transparent)`
+    background: `color-mix(in oklab, ${secondaryAccent} 80%, transparent)`
 });
 
 export const item = style({
@@ -38,10 +38,10 @@ export const item = style({
     transition: 'background 0.2s ease-in-out',
     selectors: {
         [`&:not(${activeItem}):hover`]: {
-            background: `color-mix(in srgb, ${vars.colors.silverChalice} 80%, transparent)`,
+            background: `color-mix(in oklab, ${vars.colors.silverChalice} 80%, transparent)`,
             '@media': {
                 '(prefers-color-scheme: dark)': {
-                    background: `color-mix(in srgb, ${vars.colors.eerieBlack} 80%, transparent)`
+                    background: `color-mix(in oklab, ${vars.colors.eerieBlack} 80%, transparent)`
                 }
             }
         },

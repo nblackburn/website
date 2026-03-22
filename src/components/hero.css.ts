@@ -34,7 +34,7 @@ export const accent = style({
     backgroundSize: '200%',
     WebkitBackgroundClip: 'text',
     backgroundClip: 'text',
-    color: `color-mix(in srgb, ${vars.colors.white} 5%, transparent)`,
+    color: `color-mix(in oklab, ${vars.colors.white} 5%, transparent)`,
     animation: `${animatedAccent} 5s ease-in-out infinite`,
     backgroundImage: `radial-gradient(circle, ${primaryAccent} 0%, ${secondaryAccent} 100%)`,
     '@media': {

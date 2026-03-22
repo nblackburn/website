@@ -12,7 +12,7 @@ export const input = style({
     selectors: {
         '&:focus': {
             borderColor: primaryAccent,
-            boxShadow: `0px 0px 0px 4px color-mix(in srgb, ${primaryAccent} 10%, transparent)`
+            boxShadow: `0px 0px 0px 4px color-mix(in oklab, ${primaryAccent} 10%, transparent)`
         },
         '&:disabled': {
             color: vars.colors.battleshipGray
@@ -20,7 +20,7 @@ export const input = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `color-mix(in srgb, ${vars.colors.black} 30%, transparent)`,
+            background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
             color: vars.colors.white,
             border: `1px ${vars.colors.eerieBlack} solid`
         }

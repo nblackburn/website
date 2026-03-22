@@ -25,7 +25,7 @@ export const main = style({
             height: '100vh',
             content: '\\0020',
             position: 'absolute',
-            background: `linear-gradient(180deg, color-mix(in srgb, ${primaryAccent} 10%, transparent) 0%, color-mix(in srgb, ${secondaryAccent} 10%, transparent) 75%, transparent 100%)`
+            background: `linear-gradient(180deg, color-mix(in oklab, ${primaryAccent} 10%, transparent) 0%, color-mix(in oklab, ${secondaryAccent} 10%, transparent) 75%, transparent 100%)`
         }
     }
 });
