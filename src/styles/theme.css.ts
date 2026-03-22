@@ -38,6 +38,7 @@ export const sizes = {
 
 export const vars = createGlobalTheme(':root', {
     colors: {
+        black: 'rgb(0 0 0)',
         white: 'rgb(255 255 255)',
         flame: 'rgb(217 98 38)',
         seaGreen: 'rgb(46 138 91)',
