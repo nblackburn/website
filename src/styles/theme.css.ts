@@ -38,18 +38,18 @@ export const sizes = {
 
 export const vars = createGlobalTheme(':root', {
     colors: {
-        white: '255 255 255',
-        flame: '217 98 38',
-        seaGreen: '46 138 91',
-        hanPurple: '142 99 227',
-        steelPink: '196 49 196',
-        battleshipGray: '156 156 156',
-        richBlack: '13 13 13',
-        eerieBlack: '33 33 33',
-        venetianRed: '215 71 71',
-        sonicSilver: '118 117 117',
-        ceruleanBlue: '45 120 200',
-        naplesYellow: '141 125 42',
-        silverChalice: '229 229 229'
+        white: 'rgb(255 255 255)',
+        flame: 'rgb(217 98 38)',
+        seaGreen: 'rgb(46 138 91)',
+        hanPurple: 'rgb(142 99 227)',
+        steelPink: 'rgb(196 49 196)',
+        battleshipGray: 'rgb(156 156 156)',
+        richBlack: 'rgb(13 13 13)',
+        eerieBlack: 'rgb(33 33 33)',
+        venetianRed: 'rgb(215 71 71)',
+        sonicSilver: 'rgb(118 117 117)',
+        ceruleanBlue: 'rgb(45 120 200)',
+        naplesYellow: 'rgb(141 125 42)',
+        silverChalice: 'rgb(229 229 229)'
     }
 });
