@@ -10,6 +10,8 @@ export const navLink = style({
     textDecoration: 'none',
     borderRadius: '9999px',
     justifyContent: 'center',
+    paddingLeft: sizes.small,
+    paddingRight: sizes.small,
     border: '1px transparent solid',
     transition: 'border 0.2s ease-in-out'
 });
