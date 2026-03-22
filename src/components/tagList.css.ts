@@ -23,7 +23,7 @@ export const tag = style({
     padding: '0.4em 0.8em',
     display: 'inline-block',
     transition: 'all 0.2s ease-in-out',
-    background: `color-mix(in oklab, ${vars.colors.silverChalice} 80%, transparent)`,
+    background: `color-mix(in oklab, ${vars.colors.alabasterGrey} 80%, transparent)`,
     selectors: {
         '&:not(:last-child)': {
             marginRight: '0.5rem'
@@ -36,7 +36,7 @@ export const tag = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white,
-            background: `color-mix(in oklab, ${vars.colors.eerieBlack} 80%, transparent)`
+            background: `color-mix(in oklab, ${vars.colors.carbonBlack} 80%, transparent)`
         }
     }
 });

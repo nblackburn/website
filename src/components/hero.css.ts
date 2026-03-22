@@ -45,7 +45,7 @@ export const accent = style({
 });
 
 export const reset = style({
-    color: vars.colors.eerieBlack,
+    color: vars.colors.carbonBlack,
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white

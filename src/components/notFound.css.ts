@@ -26,10 +26,10 @@ export const title = style({
 export const subTitle = style({
     margin: 0,
     fontSize: sizes.medium,
-    color: vars.colors.battleshipGray,
+    color: vars.colors.coolSteel,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.silverChalice
+            color: vars.colors.alabasterGrey
         }
     }
 });

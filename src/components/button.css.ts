@@ -13,7 +13,7 @@ export const button = style({
     transition: 'all 0.2s ease-in-out',
     background: primaryAccent,
     boxShadow: '0px 0px 0px 0px transparent',
-    border: `1px ${vars.colors.silverChalice} solid`,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     selectors: {
         '&:hover:not(:disabled)': {
             cursor: 'pointer',
@@ -31,7 +31,7 @@ export const button = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white,
-            borderColor: vars.colors.eerieBlack
+            borderColor: vars.colors.carbonBlack
         }
     }
 });

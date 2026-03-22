@@ -7,10 +7,10 @@ export const pageHeader = style({
     paddingTop: sizes.large,
     marginBottom: sizes.large,
     paddingBottom: sizes.large,
-    borderBottom: `1px ${vars.colors.silverChalice} solid`,
+    borderBottom: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            borderColor: vars.colors.carbonBlack
         }
     }
 });
@@ -34,10 +34,10 @@ export const subTitle = style({
     fontSize: '1.2rem',
     fontWeight: 'normal',
     marginBottom: sizes.small,
-    color: vars.colors.sonicSilver,
+    color: vars.colors.dimGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.battleshipGray
+            color: vars.colors.coolSteel
         }
     }
 });

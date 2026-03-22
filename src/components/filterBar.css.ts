@@ -9,11 +9,11 @@ export const filterBar = style({
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     background: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
-    border: `1px ${vars.colors.silverChalice} solid`,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
-            borderColor: vars.colors.eerieBlack
+            borderColor: vars.colors.carbonBlack
         }
     }
 });
@@ -38,10 +38,10 @@ export const item = style({
     transition: 'background 0.2s ease-in-out',
     selectors: {
         [`&:not(${activeItem}):hover`]: {
-            background: `color-mix(in oklab, ${vars.colors.silverChalice} 80%, transparent)`,
+            background: `color-mix(in oklab, ${vars.colors.alabasterGrey} 80%, transparent)`,
             '@media': {
                 '(prefers-color-scheme: dark)': {
-                    background: `color-mix(in oklab, ${vars.colors.eerieBlack} 80%, transparent)`
+                    background: `color-mix(in oklab, ${vars.colors.carbonBlack} 80%, transparent)`
                 }
             }
         },

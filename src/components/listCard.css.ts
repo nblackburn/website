@@ -18,7 +18,7 @@ export const listCard = style({
     gridTemplateColumns: '1fr 3fr',
     background: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     transition: 'border 0.2s ease-in-out',
-    border: `1px ${vars.colors.silverChalice} solid`,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     selectors: {
         '&:hover': {
             borderColor: secondaryAccent,
@@ -28,7 +28,7 @@ export const listCard = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
-            borderColor: vars.colors.eerieBlack
+            borderColor: vars.colors.carbonBlack
         },
         [breakpoints.medium]: {
             gridTemplateColumns: '1fr'
@@ -43,10 +43,10 @@ export const thumbnail = style({
     objectPosition: 'top',
     justifySelf: 'flex-end',
     borderRadius: sizes.mini,
-    background: vars.colors.silverChalice,
+    background: vars.colors.alabasterGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack
+            background: vars.colors.carbonBlack
         }
     }
 });
@@ -86,10 +86,10 @@ export const title = style({
 export const description = style({
     margin: 0,
     lineHeight: 1.3,
-    color: vars.colors.sonicSilver,
+    color: vars.colors.dimGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.battleshipGray
+            color: vars.colors.coolSteel
         }
     }
 });

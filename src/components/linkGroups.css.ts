@@ -27,14 +27,14 @@ export const item = style({
     borderRadius: '0.25rem',
     selectors: {
         '&:nth-child(even)': {
-            background: `color-mix(in oklab, ${vars.colors.silverChalice} 80%, transparent)`
+            background: `color-mix(in oklab, ${vars.colors.alabasterGrey} 80%, transparent)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:nth-child(even)': {
-                    background: `color-mix(in oklab, ${vars.colors.eerieBlack} 80%, transparent)`
+                    background: `color-mix(in oklab, ${vars.colors.carbonBlack} 80%, transparent)`
                 }
             }
         }

@@ -14,11 +14,11 @@ export const header = style({
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     background: `color-mix(in oklab, ${vars.colors.white} 80%, transparent)`,
-    border: `1px ${vars.colors.silverChalice} solid`,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack,
-            background: `color-mix(in oklab, ${vars.colors.richBlack} 80%, transparent)`
+            borderColor: vars.colors.carbonBlack,
+            background: `color-mix(in oklab, ${vars.colors.pitchBlack} 80%, transparent)`
         },
         [breakpoints.medium]: {
             borderTop: 0,

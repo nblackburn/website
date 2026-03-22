@@ -40,17 +40,17 @@ export const vars = createGlobalTheme(':root', {
     colors: {
         black: 'oklab(0 0 0)',
         white: 'oklab(1 0 0)',
-        flame: 'oklab(0.6671 0.1005 0.1352)',
-        seaGreen: 'oklab(0.6031 -0.1271 0.0439)',
-        hanPurple: 'oklab(0.6006 0.0982 -0.2217)',
-        steelPink: 'oklab(0.5985 0.2254 -0.1713)',
-        battleshipGray: 'oklab(0.709 0 0)',
-        richBlack: 'oklab(0.1469 0.0027 0.0031)',
-        eerieBlack: 'oklab(0.2686 0 0)',
-        venetianRed: 'oklab(0.5542 0.1565 0.1116)',
-        sonicSilver: 'oklab(0.5555 0 0)',
-        ceruleanBlue: 'oklab(0.5933 -0.0627 -0.1368)',
-        naplesYellow: 'oklab(0.5548 0.0586 0.1127)',
-        silverChalice: 'oklab(0.9219 0 0)'
+        ochre: 'oklab(0.6671 0.1005 0.1352)',
+        shamrock: 'oklab(0.6031 -0.1271 0.0439)',
+        mediumSlateBlue: 'oklab(0.6006 0.0982 -0.2217)',
+        vividOrchid: 'oklab(0.5985 0.2254 -0.1713)',
+        coolSteel: 'oklab(0.709 0 0)',
+        pitchBlack: 'oklab(0.1469 0.0027 0.0031)',
+        carbonBlack: 'oklab(0.2686 0 0)',
+        redOchre: 'oklab(0.5542 0.1565 0.1116)',
+        dimGrey: 'oklab(0.5555 0 0)',
+        steelBlue: 'oklab(0.5933 -0.0627 -0.1368)',
+        copperwood: 'oklab(0.5548 0.0586 0.1127)',
+        alabasterGrey: 'oklab(0.9219 0 0)'
     }
 });

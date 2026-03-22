@@ -35,12 +35,12 @@ export const image = style({
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
     marginBottom: sizes.medium,
-    background: vars.colors.silverChalice,
-    border: `1px ${vars.colors.silverChalice} solid`,
+    background: vars.colors.alabasterGrey,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack,
-            borderColor: vars.colors.eerieBlack
+            background: vars.colors.carbonBlack,
+            borderColor: vars.colors.carbonBlack
         }
     }
 });

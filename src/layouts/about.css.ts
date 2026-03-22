@@ -11,12 +11,12 @@ export const image = style({
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
     marginBottom: sizes.medium,
-    background: vars.colors.silverChalice,
-    border: `1px ${vars.colors.silverChalice} solid`,
+    background: vars.colors.alabasterGrey,
+    border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: vars.colors.eerieBlack,
-            borderColor: vars.colors.eerieBlack
+            background: vars.colors.carbonBlack,
+            borderColor: vars.colors.carbonBlack
         }
     }
 });
@@ -26,16 +26,16 @@ export const story = style({});
 globalStyle(`${story} p`, {
     lineHeight: 1.3,
     fontSize: '1.1rem',
-    color: vars.colors.sonicSilver,
+    color: vars.colors.dimGrey,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: vars.colors.battleshipGray
+            color: vars.colors.coolSteel
         }
     }
 });
 
 globalStyle(`${story} a`, {
-    color: vars.colors.eerieBlack,
+    color: vars.colors.carbonBlack,
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white

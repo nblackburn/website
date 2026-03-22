@@ -17,7 +17,7 @@ export const navLink = style({
 });
 
 export const primary = style({
-    borderColor: vars.colors.silverChalice,
+    borderColor: vars.colors.alabasterGrey,
     selectors: {
         '&:hover': {
             borderColor: primaryAccent
@@ -25,7 +25,7 @@ export const primary = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: vars.colors.eerieBlack
+            borderColor: vars.colors.carbonBlack
         }
     }
 });
@@ -34,14 +34,14 @@ export const secondary = style({
     border: '1px transparent solid',
     selectors: {
         '&:hover': {
-            borderColor: vars.colors.silverChalice
+            borderColor: vars.colors.alabasterGrey
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:hover': {
-                    borderColor: vars.colors.eerieBlack
+                    borderColor: vars.colors.carbonBlack
                 }
             }
         }
@@ -73,7 +73,7 @@ export const icon = style({
 export const disabled = style({
     cursor: 'not-allowed',
     borderColor: 'transparent',
-    color: vars.colors.sonicSilver,
+    color: vars.colors.dimGrey,
     selectors: {
         '&:hover': {
             borderColor: 'transparent'
@@ -82,7 +82,7 @@ export const disabled = style({
     '@media': {
         '(prefers-color-scheme: dark)': {
             borderColor: 'transparent',
-            color: vars.colors.battleshipGray,
+            color: vars.colors.coolSteel,
             selectors: {
                 '&:hover': {
                     borderColor: 'transparent'
