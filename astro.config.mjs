@@ -38,6 +38,11 @@ export default defineConfig({
         }
     ],
 
+    image: {
+        layout: 'constrained',
+        responsiveStyles: true
+    },
+
     markdown: {
         shikiConfig: {
             themes: {
