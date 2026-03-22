@@ -7,10 +7,10 @@ export const pageHeader = style({
     paddingTop: sizes.large,
     marginBottom: sizes.large,
     paddingBottom: sizes.large,
-    borderBottom: `1px rgb(${vars.colors.silverChalice}) solid`,
+    borderBottom: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            borderColor: vars.colors.eerieBlack
         }
     }
 });
@@ -34,10 +34,10 @@ export const subTitle = style({
     fontSize: '1.2rem',
     fontWeight: 'normal',
     marginBottom: sizes.small,
-    color: `rgb(${vars.colors.sonicSilver})`,
+    color: vars.colors.sonicSilver,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.battleshipGray})`
+            color: vars.colors.battleshipGray
         }
     }
 });

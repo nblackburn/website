@@ -16,19 +16,19 @@ export const listCard = style({
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
-    background: 'rgba(255 255 255 / 30%)',
+    background: `color-mix(in srgb, ${vars.colors.white} 30%, transparent)`,
     transition: 'border 0.2s ease-in-out',
-    border: `1px rgb(${vars.colors.silverChalice}) solid`,
+    border: `1px ${vars.colors.silverChalice} solid`,
     selectors: {
         '&:hover': {
-            borderColor: `rgb(${secondaryAccent})`,
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
+            borderColor: secondaryAccent,
+            boxShadow: `0 0 10px color-mix(in srgb, ${vars.colors.black} 30%, transparent)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: 'rgba(0 0 0 / 30%)',
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            background: `color-mix(in srgb, ${vars.colors.black} 30%, transparent)`,
+            borderColor: vars.colors.eerieBlack
         },
         [breakpoints.medium]: {
             gridTemplateColumns: '1fr'
@@ -43,10 +43,10 @@ export const thumbnail = style({
     objectPosition: 'top',
     justifySelf: 'flex-end',
     borderRadius: sizes.mini,
-    background: `rgb(${vars.colors.silverChalice})`,
+    background: vars.colors.silverChalice,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `rgb(${vars.colors.eerieBlack})`
+            background: vars.colors.eerieBlack
         }
     }
 });
@@ -86,10 +86,10 @@ export const title = style({
 export const description = style({
     margin: 0,
     lineHeight: 1.3,
-    color: `rgb(${vars.colors.sonicSilver})`,
+    color: vars.colors.sonicSilver,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            color: `rgb(${vars.colors.battleshipGray})`
+            color: vars.colors.battleshipGray
         }
     }
 });

@@ -13,12 +13,12 @@ export const header = style({
     justifyContent: 'space-between',
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
-    background: 'rgba(255 255 255 / 0.8)',
-    border: `1px rgb(${vars.colors.silverChalice}) solid`,
+    background: `color-mix(in srgb, ${vars.colors.white} 80%, transparent)`,
+    border: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            borderColor: `rgb(${vars.colors.eerieBlack})`,
-            background: `rgba(${vars.colors.richBlack} / 0.8)`
+            borderColor: vars.colors.eerieBlack,
+            background: `color-mix(in srgb, ${vars.colors.richBlack} 80%, transparent)`
         },
         [breakpoints.medium]: {
             borderTop: 0,

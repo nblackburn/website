@@ -13,7 +13,7 @@ export const heading = style({
     fontWeight: 'bold',
     marginBottom: sizes.nano,
     paddingBottom: sizes.nano,
-    borderBottom: '1px rgba(255 255 255 / 10%) solid'
+    borderBottom: `1px color-mix(in srgb, ${vars.colors.white} 10%, transparent) solid`
 });
 
 export const items = style({
@@ -27,14 +27,14 @@ export const item = style({
     borderRadius: '0.25rem',
     selectors: {
         '&:nth-child(even)': {
-            background: `rgba(${vars.colors.silverChalice} / 80%)`
+            background: `color-mix(in srgb, ${vars.colors.silverChalice} 80%, transparent)`
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
             selectors: {
                 '&:nth-child(even)': {
-                    background: `rgba(${vars.colors.eerieBlack} / 80%)`
+                    background: `color-mix(in srgb, ${vars.colors.eerieBlack} 80%, transparent)`
                 }
             }
         }

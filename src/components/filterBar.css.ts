@@ -8,12 +8,12 @@ export const filterBar = style({
     borderRadius: '9999px',
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
-    background: 'rgba(255 255 255 / 30%)',
-    border: `1px rgb(${vars.colors.silverChalice}) solid`,
+    background: `color-mix(in srgb, ${vars.colors.white} 30%, transparent)`,
+    border: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: 'rgba(0 0 0 / 30%)',
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            background: `color-mix(in srgb, ${vars.colors.black} 30%, transparent)`,
+            borderColor: vars.colors.eerieBlack
         }
     }
 });
@@ -28,8 +28,8 @@ export const items = style({
 });
 
 export const activeItem = style({
-    color: `rgb(${vars.colors.white})`,
-    background: `rgba(${secondaryAccent} / 80%)`
+    color: vars.colors.white,
+    background: `color-mix(in srgb, ${secondaryAccent} 80%, transparent)`
 });
 
 export const item = style({
@@ -38,10 +38,10 @@ export const item = style({
     transition: 'background 0.2s ease-in-out',
     selectors: {
         [`&:not(${activeItem}):hover`]: {
-            background: `rgba(${vars.colors.silverChalice} / 80%)`,
+            background: `color-mix(in srgb, ${vars.colors.silverChalice} 80%, transparent)`,
             '@media': {
                 '(prefers-color-scheme: dark)': {
-                    background: `rgba(${vars.colors.eerieBlack} / 80%)`
+                    background: `color-mix(in srgb, ${vars.colors.eerieBlack} 80%, transparent)`
                 }
             }
         },

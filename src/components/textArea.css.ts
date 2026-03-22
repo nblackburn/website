@@ -11,21 +11,21 @@ export const textArea = style({
     backdropFilter: 'blur(10px)',
     transition: 'all 0.2s ease-in-out',
     boxShadow: '0px 0px 0px 0px transparent',
-    border: `1px rgb(${vars.colors.silverChalice}) solid`,
+    border: `1px ${vars.colors.silverChalice} solid`,
     selectors: {
         '&:focus': {
-            borderColor: `rgb(${primaryAccent})`,
-            boxShadow: `0px 0px 0px 4px rgba(${primaryAccent} / 0.1)`
+            borderColor: primaryAccent,
+            boxShadow: `0px 0px 0px 4px color-mix(in srgb, ${primaryAccent} 10%, transparent)`
         },
         '&:disabled': {
-            color: `rgb(${vars.colors.battleshipGray})`
+            color: vars.colors.battleshipGray
         }
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: 'rgba(0 0 0 / 0.3)',
-            color: `rgb(${vars.colors.white})`,
-            border: `1px rgb(${vars.colors.eerieBlack}) solid`
+            background: `color-mix(in srgb, ${vars.colors.black} 30%, transparent)`,
+            color: vars.colors.white,
+            border: `1px ${vars.colors.eerieBlack} solid`
         }
     }
 });
@@ -35,10 +35,10 @@ export const validated = style([
     {
         selectors: {
             '&:invalid': {
-                borderColor: `1px rgb(${vars.colors.venetianRed}) solid`,
+                borderColor: `1px ${vars.colors.venetianRed} solid`,
                 '@media': {
                     '(prefers-color-scheme: dark)': {
-                        border: `1px rgb(${vars.colors.venetianRed}) solid`
+                        border: `1px ${vars.colors.venetianRed} solid`
                     }
                 }
             }

@@ -35,12 +35,12 @@ export const image = style({
     justifySelf: 'flex-end',
     borderRadius: sizes.small,
     marginBottom: sizes.medium,
-    background: `rgb(${vars.colors.silverChalice})`,
-    border: `1px rgb(${vars.colors.silverChalice}) solid`,
+    background: vars.colors.silverChalice,
+    border: `1px ${vars.colors.silverChalice} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `rgb(${vars.colors.eerieBlack})`,
-            borderColor: `rgb(${vars.colors.eerieBlack})`
+            background: vars.colors.eerieBlack,
+            borderColor: vars.colors.eerieBlack
         }
     }
 });
