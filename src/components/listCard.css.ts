@@ -16,7 +16,9 @@ export const listCard = style({
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
-    background: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
+    backgroundRepeat: 'repeat',
+    backgroundImage: "url('/textures/grain.svg')",
+    backgroundColor: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     transition: 'border 0.2s ease-in-out',
     border: `1px ${vars.colors.alabasterGrey} solid`,
     selectors: {
@@ -27,7 +29,7 @@ export const listCard = style({
     },
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
+            backgroundColor: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
             borderColor: vars.colors.carbonBlack
         },
         [breakpoints.medium]: {
