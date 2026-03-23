@@ -6,11 +6,13 @@ export const body = style({
     flexDirection: 'column',
     fontFamily: 'var(--font-nunito-sans)',
     color: vars.colors.carbonBlack,
-    background: vars.colors.white,
+    backgroundColor: vars.colors.white,
+    backgroundRepeat: 'repeat',
+    backgroundImage: "url('/textures/grain.svg')",
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white,
-            background: vars.colors.pitchBlack
+            backgroundColor: vars.colors.pitchBlack
         }
     }
 });
