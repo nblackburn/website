@@ -8,11 +8,13 @@ export const filterBar = style({
     borderRadius: '9999px',
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
-    background: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
+    backgroundRepeat: 'repeat',
+    backgroundImage: "url('/textures/grain.svg')",
+    backgroundColor: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
-            background: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
+            backgroundColor: `color-mix(in oklab, ${vars.colors.black} 30%, transparent)`,
             borderColor: vars.colors.carbonBlack
         }
     }
