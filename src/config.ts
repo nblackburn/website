@@ -25,11 +25,22 @@ type BlogConfig = {
     featuredTags: string[];
 };
 
+type HeroLine = {
+    action: string;
+    kind: string;
+    purpose: string;
+};
+
+type HeroConfig = {
+    lines: HeroLine[];
+};
+
 interface Config {
     url: string;
     seo: SEOConfig;
     mail: MailConfig;
     blog: BlogConfig;
+    hero: HeroConfig;
     palette: PaletteConfig;
     projects: ProjectsConfig;
     pagination: PaginationConfig;
@@ -37,6 +48,15 @@ interface Config {
 
 const config: Config = {
     url: 'https://nblackburn.uk',
+
+    hero: {
+        lines: [
+            { action: 'develop', kind: 'games', purpose: 'make you think' },
+            { action: 'compose', kind: 'music', purpose: 'heals your soul' },
+            { action: 'write', kind: 'articles', purpose: 'show you how' },
+            { action: 'build', kind: 'apps', purpose: 'make life better' }
+        ]
+    },
 
     projects: {
         featuredTags: ['design', 'music', 'game']
