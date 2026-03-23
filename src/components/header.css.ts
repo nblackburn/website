@@ -13,12 +13,14 @@ export const header = style({
     justifyContent: 'space-between',
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
-    background: `color-mix(in oklab, ${vars.colors.white} 80%, transparent)`,
+    backgroundRepeat: 'repeat',
+    backgroundImage: "url('/textures/grain.svg')",
+    backgroundColor: `color-mix(in oklab, ${vars.colors.white} 80%, transparent)`,
     border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
         '(prefers-color-scheme: dark)': {
             borderColor: vars.colors.carbonBlack,
-            background: `color-mix(in oklab, ${vars.colors.pitchBlack} 80%, transparent)`
+            backgroundColor: `color-mix(in oklab, ${vars.colors.pitchBlack} 80%, transparent)`
         },
         [breakpoints.medium]: {
             borderTop: 0,
