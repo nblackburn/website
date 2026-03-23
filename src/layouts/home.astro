@@ -24,7 +24,7 @@ const { title, description, image, activePage } = Astro.props;
     image={image}
     activePage={activePage}
 >
-    <Hero slot="hero" />
+    <Hero slot="hero" client:load />
 
     <section class={styles.intro}>
         <div class={styles.detail}>
