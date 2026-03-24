@@ -1,14 +1,22 @@
 <template>
     <section :class="styles.hero">
-        <h1 :class="styles.strapLine">
-            I
-            <span :class="styles.accent"
-                >{{ picked.action }} {{ picked.kind }}</span
-            ><br />
-            that
-            <span :class="styles.accent">{{ picked.purpose }}</span
-            >.
-        </h1>
+        <div :class="styles.heading">
+            <h1 :class="styles.strapLine">
+                I
+                <span :class="styles.accent"
+                    >{{ picked.action }} {{ picked.kind }}</span
+                ><br />
+                that
+                <span :class="styles.accent">{{ picked.purpose }}</span
+                >.
+            </h1>
+        </div>
+
+        <div :class="styles.scrollPrompt">
+            <div :class="styles.arrow">
+                <PhCaretDoubleDown :size="28" />
+            </div>
+        </div>
     </section>
 </template>
 
@@ -17,6 +25,7 @@ import config from '@app/config';
 import * as styles from './hero.css.ts';
 import { ref, onUnmounted } from 'vue';
 import pickOne from '@utilities/pickOne.ts';
+import { PhCaretDoubleDown } from '@phosphor-icons/vue';
 
 const heroConfig = config.hero;
 const lines = config.hero?.lines ?? [];
