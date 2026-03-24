@@ -1,8 +1,9 @@
 <template>
     <section :class="styles.hero">
         <h1 :class="styles.strapLine">
-            I {{ picked.action }}
-            <span :class="styles.accent">{{ picked.kind }}</span
+            I
+            <span :class="styles.accent"
+                >{{ picked.action }} {{ picked.kind }}</span
             ><br />
             that
             <span :class="styles.accent">{{ picked.purpose }}</span
