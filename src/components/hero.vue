@@ -13,16 +13,30 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
-import * as styles from './hero.css.ts';
 import config from '@app/config';
+import * as styles from './hero.css.ts';
+import { ref, onUnmounted } from 'vue';
 import pickOne from '@utilities/pickOne.ts';
 
-const pickLine = () => {
-    const lines = config.hero?.lines ?? [];
+const heroConfig = config.hero;
+const lines = config.hero?.lines ?? [];
 
+const pickLine = () => {
     return pickOne(lines);
 };
 
-const picked = computed(pickLine);
+let timer = ref();
+let picked = ref(lines[0]);
+
+timer.value = setInterval(() => {
+    picked.value = pickLine();
+}, heroConfig.timeout);
+
+onUnmounted(() => {
+    if (!timer.value) {
+        return;
+    }
+
+    clearInterval(timer.value);
+});
 </script>
