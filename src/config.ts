@@ -51,9 +51,9 @@ const config: Config = {
 
     hero: {
         lines: [
-            { action: 'develop', kind: 'games', purpose: 'make you think' },
-            { action: 'compose', kind: 'music', purpose: 'heals your soul' },
             { action: 'write', kind: 'articles', purpose: 'show you how' },
+            { action: 'develop', kind: 'games', purpose: 'help you escape' },
+            { action: 'compose', kind: 'music', purpose: 'heals your soul' },
             { action: 'build', kind: 'apps', purpose: 'make life better' }
         ]
     },
