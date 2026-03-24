@@ -32,6 +32,7 @@ type HeroLine = {
 };
 
 type HeroConfig = {
+    timeout: number;
     lines: HeroLine[];
 };
 
@@ -50,6 +51,7 @@ const config: Config = {
     url: 'https://nblackburn.uk',
 
     hero: {
+        timeout: 5000,
         lines: [
             { action: 'write', kind: 'articles', purpose: 'show you how' },
             { action: 'develop', kind: 'games', purpose: 'help you escape' },
