@@ -1,4 +1,5 @@
 <template>
+    <a href="#main" :class="styles.skipToContent">Skip to content</a>
     <div :class="styles.container">
         <header :class="styles.header">
             <Link href="/">
