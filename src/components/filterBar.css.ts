@@ -9,7 +9,7 @@ export const filterBar = style({
     WebkitBackdropFilter: 'blur(10px)',
     backdropFilter: 'blur(10px)',
     backgroundRepeat: 'repeat',
-    backgroundImage: "url('/textures/grain.svg')",
+    backgroundImage: "url('/textures/grain.png')",
     backgroundColor: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     border: `1px ${vars.colors.alabasterGrey} solid`,
     '@media': {
