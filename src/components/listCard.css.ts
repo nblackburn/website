@@ -17,7 +17,7 @@ export const listCard = style({
     backdropFilter: 'blur(10px)',
     gridTemplateColumns: '1fr 3fr',
     backgroundRepeat: 'repeat',
-    backgroundImage: "url('/textures/grain.svg')",
+    backgroundImage: "url('/textures/grain.png')",
     backgroundColor: `color-mix(in oklab, ${vars.colors.white} 30%, transparent)`,
     transition: 'border 0.2s ease-in-out',
     border: `1px ${vars.colors.alabasterGrey} solid`,

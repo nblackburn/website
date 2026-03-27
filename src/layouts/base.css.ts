@@ -8,7 +8,7 @@ export const body = style({
     color: vars.colors.carbonBlack,
     backgroundColor: vars.colors.white,
     backgroundRepeat: 'repeat',
-    backgroundImage: "url('/textures/grain.svg')",
+    backgroundImage: "url('/textures/grain.png')",
     '@media': {
         '(prefers-color-scheme: dark)': {
             color: vars.colors.white,
