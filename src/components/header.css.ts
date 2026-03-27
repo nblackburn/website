@@ -47,3 +47,20 @@ export const container = style({
         }
     }
 });
+
+export const skipToContent = style({
+    top: 'auto',
+    width: '1px',
+    height: '1px',
+    color: 'inherit',
+    left: '-10000px',
+    overflow: 'hidden',
+    position: 'absolute',
+    selectors: {
+        '&:focus': {
+            width: 'auto',
+            height: 'auto',
+            position: 'static'
+        }
+    }
+});
