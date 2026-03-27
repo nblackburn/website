@@ -8,13 +8,39 @@ import {
 
 export const hero = style({
     display: 'flex',
+    gap: sizes.medium,
     textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    paddingLeft: sizes.small,
+    paddingRight: sizes.small,
     marginBottom: sizes.small,
     paddingTop: sizes.xtraLarge,
     height: 'calc(100vh - 90px)',
     paddingBottom: sizes.xtraLarge
+});
+
+export const heading = style({
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+});
+
+export const scrollPrompt = style({});
+
+const animatedArrow = keyframes({
+    '0%': { transform: 'translateY(0px)' },
+    '50%': { transform: 'translateY(10px)' },
+    '100%': { transform: 'translateY(0px)' }
+});
+
+export const arrow = style({
+    animation: `${animatedArrow} 2s ease-in-out infinite`,
+    '@media': {
+        '(prefers-reduced-motion)': {
+            animation: 'none'
+        }
+    }
 });
 
 export const strapLine = style({
