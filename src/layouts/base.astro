@@ -8,6 +8,7 @@ import Header from '@components/header.vue';
 import Footer from '@components/footer.vue';
 import fallbackImage from '@assets/img/me.jpg';
 import DynamicPalette from '@components/dynamicPalette.vue';
+import PageBackground from '@components/pageBackground.vue';
 import { getActivePalette } from '@utilities/paletteManager';
 
 export interface Props {
@@ -15,10 +16,11 @@ export interface Props {
     activePage?: string;
     description?: string;
     image?: ImageMetadata;
+    pageBackground?: ImageMetadata;
 }
 
 const activePalette = getActivePalette();
-const { title, description, image, activePage } = Astro.props;
+const { title, description, image, activePage, pageBackground } = Astro.props;
 ---
 
 <html lang="en">
@@ -96,6 +98,8 @@ const { title, description, image, activePage } = Astro.props;
     </head>
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
+        {pageBackground && <PageBackground image={pageBackground} />}
+        
         <Header activePage={activePage} />
         <slot name="hero" />
         <Main>

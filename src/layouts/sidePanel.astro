@@ -9,9 +9,10 @@ export interface Props {
     subTitle: string;
     activePage: string;
     image?: ImageMetadata;
+    pageBackground?: ImageMetadata;
 }
 
-const { title, subTitle, image, activePage, layout = '7fr 3fr' } = Astro.props;
+const { title, subTitle, image, activePage, layout = '7fr 3fr', pageBackground } = Astro.props;
 ---
 
 <style define:vars={{ layout }}></style>
@@ -21,6 +22,7 @@ const { title, subTitle, image, activePage, layout = '7fr 3fr' } = Astro.props;
     subTitle={subTitle}
     image={image}
     activePage={activePage}
+    pageBackground={pageBackground}
 >
     <div class={styles.sidePanel}>
         <section class={styles.left}>
