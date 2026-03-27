@@ -11,6 +11,8 @@ export const hero = style({
     gap: sizes.medium,
     textAlign: 'center',
     flexDirection: 'column',
+    paddingLeft: sizes.small,
+    paddingRight: sizes.small,
     marginBottom: sizes.small,
     paddingTop: sizes.xtraLarge,
     height: 'calc(100vh - 90px)',
