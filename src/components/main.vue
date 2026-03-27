@@ -1,5 +1,5 @@
 <template>
-    <main :class="styles.main">
+    <main :class="styles.main" id="main">
         <slot />
     </main>
 </template>
