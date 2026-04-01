@@ -8,13 +8,18 @@
                 </div>
                 <ol :class="styles.items">
                     <li :class="styles.item">
-                        <a :class="styles.link" href="/privacy-policy"
-                            >Privacy policy</a
+                        <a :class="styles.link" href="/cookie-policy"
+                            >Cookie Policy</a
                         >
                     </li>
                     <li :class="styles.item">
-                        <a :class="styles.link" href="/terms-of-service"
-                            >Terms of service</a
+                        <a :class="styles.link" href="/privacy-policy"
+                            >Privacy Policy</a
+                        >
+                    </li>
+                    <li :class="styles.item">
+                        <a :class="styles.link" href="/acceptable-use"
+                            >Acceptable use</a
                         >
                     </li>
                 </ol>
