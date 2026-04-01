@@ -13,13 +13,45 @@ export const footer = style({
 export const container = style({
     margin: 'auto',
     display: 'flex',
-    alignItems: 'center',
     padding: sizes.medium,
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
     maxWidth: containers.xtraLarge,
     '@media': {
         [breakpoints.medium]: {
             flexDirection: 'column'
+        }
+    }
+});
+
+export const legal = style({
+    display: 'flex',
+    gap: sizes.mini,
+    flexDirection: 'column'
+});
+
+export const items = style({
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+    listStylePosition: 'inside'
+});
+
+export const item = style({
+    display: 'inline-block',
+    selectors: {
+        '&:not(&:last-child)': {
+            marginRight: sizes.tiny
+        }
+    }
+});
+
+export const link = style({
+    fontSize: sizes.small,
+    color: vars.colors.dimGrey,
+    '@media': {
+        '(prefers-color-scheme: dark)': {
+            color: vars.colors.coolSteel
         }
     }
 });

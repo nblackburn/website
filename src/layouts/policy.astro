@@ -1,0 +1,36 @@
+---
+import * as styles from './policy.css.ts';
+import BaseLayout from '@layouts/base.astro';
+import PageHeader from '@components/pageHeader.vue';
+import FormattedDate from '@components/formattedDate.vue';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout
+    title={frontmatter.title}
+>
+    <PageHeader title={frontmatter.title} subTitle='' slot="hero">
+        <div class={styles.meta}>
+            {
+                frontmatter && frontmatter.effectiveDate && (
+                    <span class={styles.metaProperty}>
+                        <span>Effective from:</span>
+                        <FormattedDate date={frontmatter.effectiveDate} />
+                    </span>
+                )
+            }
+            {
+                frontmatter && frontmatter.effectiveDate && (
+                    <span class={styles.metaProperty}>
+                        <span>Last updated:</span>
+                        <FormattedDate date={frontmatter.effectiveDate} />
+                    </span>
+                )
+            }
+        </div>
+    </PageHeader>
+    <article class={styles.policy}>
+        <slot />
+    </article>
+</BaseLayout>
