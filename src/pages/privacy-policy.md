@@ -2,7 +2,7 @@
 title: Privacy Policy
 layout: ../layouts/policy.astro
 effectiveDate: 2026-04-01
-lastUpdated: 2026-04-01
+lastUpdated: 2026-04-02
 ---
 
 Your privacy is important to us. It is Nathaniel Blackburn's policy to respect
@@ -166,7 +166,11 @@ We may disclose personal information to:
 
 Third parties we currently use include:
 
+- Cloudflare DNS
+- Cloudflare Turnstile
+- Cloudflare Workers
 - Cloudflare Web Analytics
+- Resend
 
 ## Your rights and controlling your personal information
 
