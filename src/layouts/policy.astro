@@ -21,10 +21,10 @@ const { frontmatter } = Astro.props;
                 )
             }
             {
-                frontmatter && frontmatter.effectiveDate && (
+                frontmatter && frontmatter.lastUpdated && (
                     <span class={styles.metaProperty}>
                         <span>Last updated:</span>
-                        <FormattedDate date={frontmatter.effectiveDate} />
+                        <FormattedDate date={frontmatter.lastUpdated} />
                     </span>
                 )
             }
