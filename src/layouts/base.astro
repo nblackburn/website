@@ -88,7 +88,7 @@ const { title, description, image, activePage, pageBackground } = Astro.props;
             title="Nathaniel Blackburn"
             href={new URL('/blog/rss.xml', Astro.site)}
         />
-        
+
         <!-- site maps -->
         <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -108,7 +108,7 @@ const { title, description, image, activePage, pageBackground } = Astro.props;
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
         {pageBackground && <PageBackground image={pageBackground} />}
-        
+
         <Header activePage={activePage} />
         <slot name="hero" />
         <Main>
