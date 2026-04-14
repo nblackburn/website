@@ -88,15 +88,17 @@ const { title, description, image, activePage, pageBackground } = Astro.props;
             title="Nathaniel Blackburn"
             href={new URL('/blog/rss.xml', Astro.site)}
         />
-        
+
         <!-- site maps -->
         <link rel="sitemap" href="/sitemap-index.xml" />
 
         <!-- scripts -->
         <script
             src="https://gettermscmp.com/cookie-consent/embed/74c62277-9611-4fa1-867a-bacab99408aa/en-au?auto=true"
-            is:inline></script>
-        
+            is:inline
+            async
+            defer></script>
+
         <script
             src="https://challenges.cloudflare.com/turnstile/v0/api.js"
             is:inline
@@ -106,7 +108,7 @@ const { title, description, image, activePage, pageBackground } = Astro.props;
     <body class:list={[styles.body, activePalette]}>
         <DynamicPalette client:load />
         {pageBackground && <PageBackground image={pageBackground} />}
-        
+
         <Header activePage={activePage} />
         <slot name="hero" />
         <Main>
