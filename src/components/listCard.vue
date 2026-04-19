@@ -24,7 +24,11 @@
                     :class="styles.projectLink"
                     :aria-label="ariaLabel"
                 >
-                    <PhArrowSquareOut :size="18" :class="styles.externalIcon" />
+                    <PhArrowSquareOut
+                        :size="18"
+                        :class="styles.externalIcon"
+                        v-if="isExternal"
+                    />
                     <span>{{ linkLabel }}</span>
                 </NavLink>
             </div>
@@ -60,8 +64,10 @@ const { url, createdAt, linkLabel, baseURL } = withDefaults(
     }
 );
 
+const isExternal = isExternalLink(url);
+
 const ariaLabel = computed(() => {
-    if (isExternalLink(url)) {
+    if (isExternal) {
         return `${linkLabel} (External link)`;
     }
 
