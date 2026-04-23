@@ -21,6 +21,7 @@ const blog = defineCollection({
         z.object({
             title: z.string(),
             description: z.string(),
+            series: z.string().optional(),
             pubDate: z.date(),
             featuredImage: image(),
             tags: z.array(z.string())
