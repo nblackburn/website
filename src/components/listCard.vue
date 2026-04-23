@@ -42,7 +42,7 @@ import TagList from './tagList.vue';
 import * as styles from './listCard.css.ts';
 import NavLink from '@components/navLink.vue';
 import FormattedDate from './formattedDate.vue';
-import { isExternalLink } from '@utilities/refLink';
+import { isExternalLink } from '@utilities/ref-link';
 import { PhArrowSquareOut } from '@phosphor-icons/vue';
 
 interface Props {

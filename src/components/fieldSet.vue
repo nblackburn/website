@@ -10,7 +10,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-import listenOnce from '@utilities/listenOnce';
+import listenOnce from '@utilities/listen-once';
 import * as styles from '@components/fieldSet.css.ts';
 
 interface Props {

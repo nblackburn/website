@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { onMounted } from 'vue';
-import { getActivePalette, applyPalette } from '@utilities/paletteManager';
+import { getActivePalette, applyPalette } from '@utilities/palette-manager';
 
 onMounted(() => {
     const bodyElement = document.body;

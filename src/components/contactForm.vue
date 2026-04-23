@@ -62,7 +62,7 @@
 import Input from '@components/input.vue';
 import * as styles from './contactForm.css.ts';
 import Button from '@components/button.vue';
-import listenOnce from '@utilities/listenOnce';
+import listenOnce from '@utilities/listen-once';
 import TextArea from '@components/textArea.vue';
 import FieldSet from '@components/fieldSet.vue';
 import TurnStile from '@components/turnStile.vue';

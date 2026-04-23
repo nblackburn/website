@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import config from '@app/config';
-import { isExternalLink, buildRefLink } from '@utilities/refLink';
+import { isExternalLink, buildRefLink } from '@utilities/ref-link';
 
 interface Props {
     href?: string;

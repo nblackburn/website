@@ -29,7 +29,7 @@
 <script lang="ts" setup>
 import Link from '@components/link.vue';
 import * as styles from './linkGroups.css.ts';
-import { Group } from '@utilities/groupItems';
+import { Group } from '@utilities/group-items';
 import { PhArrowSquareOut } from '@phosphor-icons/vue';
 
 interface Props {

@@ -1,4 +1,4 @@
-import config from '@root/src/config';
+import config from '@app/config';
 import type { APIRoute } from 'astro';
 import { RESEND_API_KEY, TURNSTILE_SECRET_KEY } from 'astro:env/server';
 
