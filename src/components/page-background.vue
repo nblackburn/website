@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import type { ImageMetadata } from 'astro';
-import * as styles from './pageBackground.css.ts';
+import * as styles from './page-background.css.ts';
 
 interface Props {
     image: ImageMetadata;

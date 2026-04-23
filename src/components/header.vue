@@ -15,7 +15,7 @@ import { nav } from '@config/nav';
 import * as styles from './header.css.ts';
 import Logo from '@components/logo.vue';
 import Link from '@components/link.vue';
-import Navbar from '@components/navBar.vue';
+import Navbar from '@components/nav-bar.vue';
 
 interface Props {
     activePage?: string;

@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './filterBar.css.ts';
+import * as styles from './filter-bar.css.ts';
 
 interface Props {
     tags?: string[];

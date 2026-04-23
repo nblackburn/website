@@ -35,7 +35,7 @@
 <script lang="ts" setup>
 import { PhArrowLeft, PhArrowRight } from '@phosphor-icons/vue';
 import * as styles from './pagination.css.ts';
-import NavLink from '@components/navLink.vue';
+import NavLink from '@components/nav-link.vue';
 
 type URL = {
     prev?: string;

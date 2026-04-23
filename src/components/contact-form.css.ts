@@ -1,4 +1,4 @@
-import { validated } from './fieldSet.css.ts';
+import { validated } from './field-set.css.ts';
 import { style } from '@vanilla-extract/css';
 import { sizes, vars } from '@styles/theme.css.ts';
 

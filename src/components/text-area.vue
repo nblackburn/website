@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import * as styles from './textArea.css.ts';
+import * as styles from './text-area.css.ts';
 
 interface Props {
     name?: string;
