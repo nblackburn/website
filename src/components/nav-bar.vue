@@ -16,9 +16,9 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './navBar.css.ts';
+import * as styles from './nav-bar.css.ts';
 import type { NavItem } from '@config/nav';
-import NavLink from '@components/navLink.vue';
+import NavLink from '@components/nav-link.vue';
 
 interface Props {
     activePage?: string;

@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './tagList.css.ts';
+import * as styles from './tag-list.css.ts';
 import Link from '@components/link.vue';
 import slugify from '@utilities/slugify';
 

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
 
-export const turnStile = style({
+export const turnstile = style({
     height: '75px'
 });

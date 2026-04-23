@@ -24,7 +24,7 @@
 import config from '@app/config';
 import * as styles from './hero.css.ts';
 import { ref, onUnmounted } from 'vue';
-import pickOne from '@utilities/pickOne.ts';
+import pickOne from '@utilities/pick-one.ts';
 import { PhCaretDoubleDown } from '@phosphor-icons/vue';
 
 const heroConfig = config.hero;

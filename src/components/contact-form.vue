@@ -44,7 +44,7 @@
         <FieldSet name="captcha">
             <div :class="styles.field">
                 <label :class="styles.label">Are you human?</label>
-                <TurnStile
+                <Turnstile
                     @expired="onCaptchaExpired"
                     @callback="onCaptureVerified"
                     @unsupported="onCaptchaUnsupported"
@@ -60,17 +60,17 @@
 
 <script lang="ts">
 import Input from '@components/input.vue';
-import * as styles from './contactForm.css.ts';
+import * as styles from './contact-form.css.ts';
 import Button from '@components/button.vue';
-import listenOnce from '@utilities/listenOnce';
-import TextArea from '@components/textArea.vue';
-import FieldSet from '@components/fieldSet.vue';
-import TurnStile from '@components/turnStile.vue';
+import listenOnce from '@utilities/listen-once';
+import TextArea from '@components/text-area.vue';
+import FieldSet from '@components/field-set.vue';
+import Turnstile from '@components/turnstile.vue';
 import { ref, defineComponent, computed } from 'vue';
 
 export default defineComponent({
     props: { method: String, action: String },
-    components: { Input, Button, TextArea, FieldSet, TurnStile },
+    components: { Input, Button, TextArea, FieldSet, Turnstile },
 
     setup() {
         const name = ref();

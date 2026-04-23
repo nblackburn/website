@@ -12,5 +12,5 @@
 </template>
 
 <script lang="ts" setup>
-import * as styles from './notFound.css.ts';
+import * as styles from './not-found.css.ts';
 </script>

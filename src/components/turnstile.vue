@@ -1,9 +1,9 @@
 <template>
-    <div ref="element" :class="styles.turnStile" :data-sitekey="siteKey"></div>
+    <div ref="element" :class="styles.turnstile" :data-sitekey="siteKey"></div>
 </template>
 
 <script lang="ts">
-import * as styles from './turnStile.css.ts';
+import * as styles from './turnstile.css.ts';
 import { defineComponent, onMounted, ref } from 'vue';
 import { TURNSTILE_SITE_KEY } from 'astro:env/client';
 
@@ -14,18 +14,18 @@ export default defineComponent({
         const siteKey = TURNSTILE_SITE_KEY;
 
         const setupScript = () => {
-            const turnStile = window.turnstile;
+            const turnstile = window.turnstile;
 
-            if (!turnStile) {
+            if (!turnstile) {
                 return;
             }
 
-            turnStile.render(element.value, {
+            turnstile.render(element.value, {
                 sitekey: siteKey,
                 callback: (token: string) => ctx.emit('callback', token),
                 'error-callback': (error: number) => ctx.emit('error', error),
                 'expired-callback': () =>
-                    ctx.emit('expired', { reset: turnStile.reset }),
+                    ctx.emit('expired', { reset: turnstile.reset }),
                 'unsupported-callback': () => ctx.emit('unsupported')
             });
         };
