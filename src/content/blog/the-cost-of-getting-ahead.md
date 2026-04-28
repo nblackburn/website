@@ -32,7 +32,7 @@ along that alternative route.
 The cost here is to yourself and others under the guise of saving time, but in
 reality, you are just stuck somewhere else, with added traffic. The point here
 is to demonstrate that your choices, no matter how small and inconsequential
-they seem to impact both yourself and others, so it’s important when making
+they seem, impact both yourself and others. So it’s important when making
 decisions to consider the impact those decisions have on both you and others.
 
 ## The creators burden
