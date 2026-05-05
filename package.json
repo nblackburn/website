@@ -13,7 +13,7 @@
         "format": "prettier . --write --ignore-unknown",
         "generate-types": "wrangler types"
     },
-    "packageManager": "pnpm@10.32.1",
+    "packageManager": "pnpm@11.0.6+sha512.97f906e1da2bedac3df83cadae04b4753a130092dd49d55cd36825ad3e623e9df3f97754f8f259e699172a360fac569acf2f908e7732bdae3eddb2dcf7e121fd",
     "devDependencies": {
         "@astrojs/check": "0.9.8",
         "@commitlint/cli": "^20.5.0",
