@@ -1,6 +1,7 @@
 import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
+import { unified } from '@astrojs/markdown-remark';
 import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
 import { readTime } from './src/plugins/read-time.mjs';
@@ -44,14 +45,16 @@ export default defineConfig({
     },
 
     markdown: {
+        processor: unified({
+            remarkPlugins: [readTime]
+        }),
+        
         shikiConfig: {
             themes: {
                 light: 'github-light',
                 dark: 'github-dark'
             }
         },
-
-        remarkPlugins: [readTime]
     },
 
     adapter: cloudflare(),
