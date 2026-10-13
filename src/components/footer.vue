@@ -17,11 +17,6 @@
                             >Privacy Policy</a
                         >
                     </li>
-                    <li :class="styles.item">
-                        <a :class="styles.link" href="/acceptable-use"
-                            >Acceptable use</a
-                        >
-                    </li>
                 </ol>
             </div>
             <div :class="styles.version">v{{ version }}</div>
