@@ -1,10 +1,10 @@
 import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
-import { unified } from '@astrojs/markdown-remark';
+import { satteri } from "@astrojs/markdown-satteri";
 import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
-import { readTime } from './src/plugins/read-time.mjs';
+import { readTime } from '@app/mdast/reading-time';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
@@ -45,8 +45,8 @@ export default defineConfig({
     },
 
     markdown: {
-        processor: unified({
-            remarkPlugins: [readTime]
+        processor: satteri({
+            mdastPlugins: [readTime],
         }),
         
         shikiConfig: {
