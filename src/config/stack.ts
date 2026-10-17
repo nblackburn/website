@@ -30,8 +30,8 @@ export const stack: StackItem[] = [
         type: StackType.MUSIC
     },
     {
-        title: 'Visual Studio Code',
-        href: 'https://code.visualstudio.com',
+        title: 'Zed',
+        href: 'https://zed.dev',
         type: StackType.DEVELOPMENT
     },
     {
