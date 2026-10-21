@@ -46,7 +46,7 @@
         "@vanilla-extract/css": "^1.21.3",
         "astro": "7.4.2",
         "date-fns": "^4.4.0",
-        "markdown-it": "^15.0.2",
+        "markdown-it": "^15.0.3",
         "reading-time": "^1.5.0",
         "sanitize-html": "^2.18.0",
         "satteri": "^0.10.5",
