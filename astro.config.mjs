@@ -8,6 +8,7 @@ import { readTime } from '@app/mdast/reading-time';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
+    session: false,
     compressHTML: true,
     site: 'https://nblackburn.uk/',
     integrations: [vue(), sitemap()],
