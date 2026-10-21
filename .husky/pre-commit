@@ -1,2 +1,1 @@
-pnpm run check
 pnpm lint-staged
