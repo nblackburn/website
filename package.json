@@ -48,7 +48,7 @@
         "date-fns": "^4.4.0",
         "markdown-it": "^15.0.2",
         "reading-time": "^1.5.0",
-        "sanitize-html": "^2.18.0",
+        "sanitize-html": "^2.18.1",
         "satteri": "^0.10.5",
         "sharp": "^0.35.5",
         "vue": "3.5.39",
