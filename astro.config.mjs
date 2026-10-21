@@ -1,7 +1,7 @@
 import vue from '@astrojs/vue';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
-import { satteri } from "@astrojs/markdown-satteri";
+import { satteri } from '@astrojs/markdown-satteri';
 import { defineConfig, envField, fontProviders } from 'astro/config';
 import { fileURLToPath, URL } from 'node:url';
 import { readTime } from '@app/mdast/reading-time';
@@ -47,15 +47,15 @@ export default defineConfig({
 
     markdown: {
         processor: satteri({
-            mdastPlugins: [readTime],
+            mdastPlugins: [readTime]
         }),
-        
+
         shikiConfig: {
             themes: {
                 light: 'github-light',
                 dark: 'github-dark'
             }
-        },
+        }
     },
 
     adapter: cloudflare(),

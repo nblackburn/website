@@ -1,9 +1,5 @@
 export type LinkIdentifier =
-    | 'at-sign'
-    | 'linkedin'
-    | 'dribbble'
-    | 'soundcloud'
-    | 'github';
+    'at-sign' | 'linkedin' | 'dribbble' | 'soundcloud' | 'github';
 
 export type SocialLink = {
     id: LinkIdentifier;
